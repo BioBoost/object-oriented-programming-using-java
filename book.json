@@ -1,0 +1,21 @@
+{
+    "plugins": [
+        "callouts",
+        "image-captions",
+        "simple-page-toc"
+    ],
+    "pluginsConfig": {
+        "callouts":
+        {
+            "showTypeInHeader": true,
+            "assignment": {
+                "alert": "success",
+                "picto": "fa-lightbulb-o"
+            }
+        },
+        "simple-page-toc": {
+            "maxDepth": 3,
+            "skipFirstH1": true
+        }
+    }
+}
