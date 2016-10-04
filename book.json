@@ -2,7 +2,8 @@
     "plugins": [
         "callouts",
         "image-captions",
-        "simple-page-toc"
+        "simple-page-toc",
+        "copy-code-button"
     ],
     "pluginsConfig": {
         "callouts":
