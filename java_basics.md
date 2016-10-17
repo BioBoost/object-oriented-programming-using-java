@@ -88,9 +88,9 @@ for (initialization ; condition ; increment) {
 }
 ```
 
-* The initialization statement is executed only once before the loop mechanism is started.
-* The condition is checked before each iteration and will determine if the code block is executed or not
-* The increment expression is invoked after each iteration through the loop. Most often this expression is used to increment or decrement a condition variable.
+* The **initialization** statement is executed only once before the loop mechanism is started.
+* The **condition** is checked before each iteration and will determine if the code block is executed or not
+* The **increment** expression is invoked after each iteration through the loop. Most often this expression is used to increment or decrement a condition variable.
 
 Each of these can be left empty. For example an endless loop can be written as:
 
@@ -110,7 +110,7 @@ for (int i = 0; i < 10; i++) {
 
 In the example above the initialization step is used to create a local variable `i` which serves as a simple counter. Next the condition is checked and the text is outputted to the terminal. Next `i` is incremented (1 is added). Before the next iteration the value of `i` is checked in the condition and the loop continues.
 
-The last iteration happens when `i` was incremented to 9. The loop is executed a last time and the value of `i` is incremented a last time to 10. Next the condition is checked but not met. The loop terminated and execution jumps after the for loop.
+The last iteration happens when `i` was incremented to 9. The loop is executed a last time and the value of `i` is incremented a last time to 10. Next the condition is checked but not met. The loop is terminated and execution jumps after the for loop.
 
 Want to see the values of i? Use the following code:
 
@@ -135,7 +135,8 @@ This outputs:
 9: Hello
 ```
 
-Want to know the last value of i then use this code example:
+Important to note is that the variable `i` used here has local scope. This means that it only exists in the for-loop. If you wish to know the last value of `i` you can create a variable before the for-loop and skip the initialization step in the for-loop header. The code below shows an example of this. Do note that you still need to add a semicolon in the for-loop header to separate the initialization from the condition part.
+
 ```java
 int i = 0;
 System.out.println("i = " + i + " before for loop");
@@ -176,4 +177,4 @@ While every while loop can also be written as a for loop that does not mean it s
 
 
 
-END OF FILE
+...
