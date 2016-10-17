@@ -319,9 +319,9 @@ for (initialization ; condition ; increment) {
 }
 ```
 
-* The initialization statement is executed only once before the loop mechanism is started.
-* The condition is checked before each iteration and will determine if the code block is executed or not
-* The increment expression is invoked after each iteration through the loop. Most often this expression is used to increment or decrement a condition variable.
+* The **initialization** statement is executed only once before the loop mechanism is started.
+* The **condition** is checked before each iteration and will determine if the code block is executed or not
+* The **increment** expression is invoked after each iteration through the loop. Most often this expression is used to increment or decrement a condition variable.
 
 Each of these can be left empty. For example an endless loop can be written as:
 
@@ -408,4 +408,4 @@ While every while loop can also be written as a for loop that does not mean it s
 
 
 
-END OF FILE
+...
