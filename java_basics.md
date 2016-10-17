@@ -1,5 +1,236 @@
 <!-- toc -->
 
+## Variables in Java
+
+The programs that we create need to store all sorts of data. From simple things such as
+integers, floating point numbers, characters and Strings to complex data types that we
+define ourselves.
+
+This data is stored, manipulated and outputted through our program. The data itself
+is stored inside the memory of the computer or system the program is running on.
+
+### Declaring a variable
+
+To allow for easy access inside our programs source code, the variables have a symbolic name
+that can be used from within the source code.
+
+In Java, each variable has a specific type, which determines the size and layout of the variable's memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.
+
+> #### Hint::Declare a variable before using it
+>
+>  You must declare a variable before it can be used.
+
+In Java you need to specify the **type** of the variables followed by a **chosen name**. Optionally you can immediately initialize the variable by assigning a value to it.
+
+Examples of variable declaration with and without initialization:
+
+```java
+int age;
+int numberOfStudents = 55;    // Initialize to 55
+char startOfAlfabet = 'a';    // Initialize to 'a'
+double vatOnSalery;
+String helloWorld = "Hello World!";    // Initialize to "Hello World!"
+String nameOfStudent;
+```
+
+### Primitive and non-primitive data types
+
+Java actually has two categories of data types:
+
+* **Primitive data types**: char, byte, short, int, long, double, float and boolean.
+* **Non-primitive data types**: String, ArrayList, Complex, Random, ...
+
+Primitive data types are simple and integrated in the language (they are most of the time keywords in the language itself). Non-primitive data types are actually classes. This means that when we use the String data type we are actually using objects of the class String. The cool thing about non-primitive data types is that we can create our own.
+
+### Variable types
+
+Variables in Java can be defined anywhere in the code (inside a class, inside a method or as a method argument) and can have different modifiers. Depending on these conditions variables in Java can be divided into four categories:
+
+* Instance variables or class attributes
+* Static class variables
+* Local variables
+* Method arguments
+
+#### Instance variables or class attributes
+
+Instance variables are actually the attributes of a class. They are the data members that
+store the state of objects. Instance variables are declared inside a class but outside of a method or constructor.
+Such variables are called instance variables because their values are instance (object) specific and values of these variables are not shared among instances.
+
+For example the following Bicycle class has three instance variables:
+
+```java
+public class Bicycle {
+  private int numberOfGears;
+  private String brand;
+  private double priceExcludingVat;
+}
+```
+
+Below is an object diagram of three instances of the class `Bicycle`. As can be
+seen from the diagram each instance variable has its own separate memory storage and can contain
+it's own values.
+
+![Object diagram of three instances of the class `Bicycle`](img/object_diagram_bicycle.png)
+
+#### Static class variables
+
+Variables which are declared with a `static` keyword inside a class (outside any method) are known as class variables or static variables. They are known as class level variables because values of these variables are not specific to any instance but are common to all instances of a class. Such variables will be shared by all instances of an object of that class.
+
+A common example of a static class variable is an object counter that keeps track of
+the number of objects that where created of that class. Let's see an example:
+
+```java
+public class SnakeSegment {
+  private static int objectCounter = 0;
+
+  public SnakeSegment() {
+    // ...
+    objectCounter++;
+    System.out.println("You have created " + objectCounter + " instances of this class so far.");
+  }
+}
+```
+
+A more common use for static variables however is the use of constants. Constants are variables that cannot be
+changed once they have been assigned.
+
+```java
+public class Snake {
+  private static final int MAX_SNAKE_SEGMENTS = 100;
+}
+```
+
+There are two things you need to note in the example above:
+
+* The keyword `final` which states that the variable is a constant and cannot be changed
+anymore after it has been assigned a value.
+* The **capital letters** of the variable name. This is common in almost all programming languages.
+Variables that are constant should have a name with only capital letters.
+
+Their use is strongly encouraged to remove the use of what are called **magic numbers**.
+Magic numbers are literal values (ex. 10, 125, 13.2, ...) that are used in your code. They may seem obvious in the beginning
+but their clearness decreases as time passes. They are also dangerous in use as code changes.
+It is very easy to forget to change all the occurrences of the value that needs to change. On top of that you may change an occurrence
+of the magic number to many.
+
+Take a look at the following example. Can you identify within 10 seconds what literals
+need to change to make the snake longer than 100 segments ?
+
+```java
+public class Snake {
+  // ...
+  public void evolve() {
+    for (int i = 0; i < 100; i++) {
+        int x = 100;
+        int y = 100 + i;
+        SnakeSegment segment = new SnakeSegment(x, y);
+        // ...
+        snake.addSegment(segment);
+        totalLength += 1;
+    }
+    score = score + (totalLength - 100) * 3.872;
+  }
+}
+```
+
+Now let's see the exact same code but with constants replacing the magic numbers:
+
+```java
+public class Snake {
+  private static final int SNAKE_EVOLVE_LENGTH = 100;
+  private static final int CENTER_OF_SCREEN_X = 100;
+  private static final int CENTER_OF_SCREEN_Y = 100;
+  private static final double SCORE_SEGMENT_MULTIPLIER = 3.872;
+
+  // ...
+
+  public void evolve() {
+    for (int i = 0; i < SNAKE_EVOLVE_LENGTH; i++) {
+        int x = CENTER_OF_SCREEN_X;
+        int y = CENTER_OF_SCREEN_Y + i;
+        SnakeSegment segment = new SnakeSegment(x, y);
+        // ...
+        snake.addSegment(segment);
+        totalLength += 1;
+    }
+    score = score + (totalLength - SNAKE_EVOLVE_LENGTH) * SCORE_SEGMENT_MULTIPLIER;
+  }
+}
+```
+
+#### Local variables
+
+When a variable is declared inside a method or code block it is known as a local variable.
+The scope of local variables is only inside the method or code block,
+meaning that local variables cannot be accessed outside that method or code block.
+
+In the example below the attribute `diameter` is an instance variable. The variables
+`circumference`, `radius` and `radiusSquared` are local variables. When the method is
+called from another object, memory is reserved for the local variables. Once the method
+is finished the variable's memory space is freed for other data.
+
+```java
+public class Circle {
+
+  private double diameter;
+
+  public double calculateCircumference() {
+    double circumference = Math.PI * diameter;
+    return circumference;
+  }
+
+  public double calculateArea() {
+    double radius = diameter / 2;
+    double radiusSquared = radius * radius;
+    return Math.PI * radiusSquared;
+  }
+}
+```
+
+Another example of a local variable can be found often in a for-loop. Here a variable
+is used as an iteration counter to keep track of the number of times the code inside
+the loop has been executed. The variable is often abbreviated as `i` or `k`. The code
+below shows an example of a simple for-loop. The scope of the variable `i` is limited to
+the body and header of the for-loop.
+
+```java
+// Say hello a number of times
+for (int i = 0; i < NUMBER_OF_TIMES_TO_SAY_HELLO; i++) {
+  System.out.println(i + ": Hello");
+}
+// i is not accessible anymore, it is out of scope
+```
+
+#### Method arguments
+
+Method arguments are actually the same as local variables. Their scope is limited to the
+method they belong too and they are also freed once the method call has passed.
+
+An example of some arguments are shown in the code below.
+
+```java
+public class Student {
+
+  private String firstname;
+  private String lastname;
+
+  public void setFirstname(String firstname) {
+    this.firstname = firstname;
+  }
+
+  public void setLastname(String lastname) {
+    this.lastname = lastname;
+  }
+}
+```
+
+Note that in the code above the arguments have the same name as the attributes
+(instance variables) of a Student. This means that stating `firstname = firstname` is wrong.
+In the code above `this.firstname` refers to the attribute and `firstname` refers to the
+argument of the method `setFirstname`.
+
+
 ## Control Flow Statements
 
 The statements inside your source files are generally executed from top to bottom, in the order that they appear. Control flow statements, however, break up the flow of execution by employing decision making, looping, and branching, enabling your program to conditionally execute particular blocks of code. This section describes the decision-making statements (if-then, if-then-else, switch), the looping statements (for, while, do-while), and the branching statements (break, continue, return) supported by the Java programming language.
@@ -110,7 +341,7 @@ for (int i = 0; i < 10; i++) {
 
 In the example above the initialization step is used to create a local variable `i` which serves as a simple counter. Next the condition is checked and the text is outputted to the terminal. Next `i` is incremented (1 is added). Before the next iteration the value of `i` is checked in the condition and the loop continues.
 
-The last iteration happens when `i` was incremented to 9. The loop is executed a last time and the value of `i` is incremented a last time to 10. Next the condition is checked but not met. The loop terminated and execution jumps after the for loop.
+The last iteration happens when `i` was incremented to 9. The loop is executed a last time and the value of `i` is incremented a last time to 10. Next the condition is checked but not met. The loop is terminated and execution jumps after the for loop.
 
 Want to see the values of i? Use the following code:
 
@@ -135,7 +366,8 @@ This outputs:
 9: Hello
 ```
 
-Want to know the last value of i then use this code example:
+Important to note is that the variable `i` used here has local scope. This means that it only exists in the for-loop. If you wish to know the last value of `i` you can create a variable before the for-loop and skip the initialization step in the for-loop header. The code below shows an example of this. Do note that you still need to add a semicolon in the for-loop header to separate the initialization from the condition part.
+
 ```java
 int i = 0;
 System.out.println("i = " + i + " before for loop");
