@@ -297,3 +297,146 @@ public static void main(String[] args) {
 ```
 Note that the variable `numberOfRabits` is only available after declaration and
 inside the curly braces where it is declared.
+
+### Values and References
+
+When you declare a variable of a primitive type in Java, the variable will point to
+the actual value that you assigned to it.
+
+Example:
+
+```java
+double pi = 3.1415;
+System.out.println(pi);       // Output: 3.1415
+```
+
+This can be represented using a simple diagram:
+
+![Variable holding primitive value](img/primitive_value.png)
+
+However when you create an object and assign the result of the `new` statement to a
+variable, the variable will not hold the object itself. It will instead hold a **reference**
+to the location of the object in memory.
+
+Example:
+
+```java
+Random randomGenerator = new Random();
+```
+
+This can be represented using a simple diagram:
+
+![Variable holding reference to object](img/object_reference.png)
+
+While you might not be thinking about it, this has serious consequences. Take for
+example the following code where a class `MathHelper` has a method `triple` which
+takes an argument of type `int` which is changed inside the `triple` method.
+
+```java
+// MathHelper.java
+public class MathHelper {
+    public void triple(int value) {
+        value = 3 * value;
+    }
+}
+```
+
+Now using the class with the code below:
+
+```java
+MathHelper helper = new MathHelper();  
+
+int aNumber = 15;
+System.out.println("Before: " + aNumber);       // Before: 15
+helper.triple(aNumber);
+System.out.println("After: " + aNumber);        // After: 15
+```
+
+As can be seen from the output, the original variable `aNumber` is **NOT** changed.
+
+This is because when the `triple` method is called, a copy of the value inside `aNumber`
+is made into the argument variable `value` of the `triple` method.
+This is also called **passed-by-value**.
+
+Basically this means that a method cannot ever change the value of the original passed argument if
+this is of a primitive type (byte, char, short, int, double, float or boolean).
+
+When the argument is not of a primitive type the case is different. This because the variable
+actually contains a reference to the object. This reference is also passed-by-value but that only
+means that the variable cannot be changed to point to another object. The object itself can however
+be manipulated through it's public interface.
+
+Let's define a class `Point` which has an `x` and a `y` coordinate.
+
+```java
+public class Point {
+    private int x;
+    private int y;
+
+    public void setCoordinates(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public void print() {
+        System.out.println("[x, y] = [" + x + ", " + y + "]");
+    }
+}
+```
+
+We also define a class `PointerHelper` which has a method called `resetPoint` that
+can be used to reset the Point to the origin of the coordinate system.
+
+```java
+public class PointHelper {   
+    public void resetPoint(Point point) {
+        point = new Point();
+    }
+}
+```
+
+Using the following code to test it all:
+
+```java
+PointHelper helper = new PointHelper();  
+
+Point originalPoint = new Point();
+originalPoint.setCoordinates(10, 15);
+System.out.println("Before: " + originalPoint);       // Before: [x, y] = [10, 15]
+helper.resetPoint(originalPoint);
+System.out.println("After: " + originalPoint);        // After: [x, y] = [10, 15]
+```
+
+As can be seen from the output, `originalPoint` is actually not changed. It is not possible
+to change the actual reference to which `originalPoint` is pointing from a method that
+takes the Point as an argument. Kinda the same as with a primitive data type.
+
+We are however able to manipulate `originalPoint` through the local argument of the `resetPoint`
+method of `PointerHelper`.
+
+
+```java
+public class PointHelper {   
+    public void resetPoint(Point point) {
+        point.setCoordinates(0, 0);
+    }
+}
+```
+
+Using the same code as before to test it all:
+
+```java
+PointHelper helper = new PointHelper();  
+
+Point originalPoint = new Point();
+originalPoint.setCoordinates(10, 15);
+System.out.println("Before: " + originalPoint);       // Before: [x, y] = [10, 15]
+helper.resetPoint(originalPoint);
+System.out.println("After: " + originalPoint);        // After: [x, y] = [0, 0]
+```
+
+Basically when we pass an object as an argument to a method, we pass a reference to
+the object. A copy of this reference is made when it is passed and not a copy of the object.
+
+Later we will see that there are actually more implications than mentioned here. however
+more on this topic later.
