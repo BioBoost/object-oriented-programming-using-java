@@ -11,4 +11,8 @@
 
 ----
 
+* [Exercises](exercises.md)
+
+----
+
 * [Sources](sources.md)
