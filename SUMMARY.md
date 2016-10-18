@@ -4,7 +4,7 @@
 
 ### Java Basics
 
-* [Java Basics](java/basics.md)
+* [Introduction](java/introduction.md)
 * [Variables](java/variables.md)
 * [Control Flow](java/control_flow.md)
 
