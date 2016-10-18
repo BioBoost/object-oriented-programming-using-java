@@ -7,6 +7,7 @@
 * [Introduction](java/introduction.md)
 * [Variables](java/variables.md)
 * [Control Flow](java/control_flow.md)
+* [Arrays](java/arrays.md)
 
 ----
 
