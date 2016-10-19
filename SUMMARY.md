@@ -21,5 +21,4 @@
 
 ----
 
-* [Good Practices](good_practices.md)
 * [Sources](sources.md)
