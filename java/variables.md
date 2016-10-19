@@ -200,6 +200,25 @@ for (int i = 0; i < NUMBER_OF_TIMES_TO_SAY_HELLO; i++) {
 // i is not accessible anymore, it is out of scope
 ```
 
+Important to note is that the `final` keyword can also be used for local variables. Let's for example take a look at a method that generates a random location for a `Point` class.
+
+```java
+public class Point {
+    private int x;
+    private int y;
+
+    public void generateRandomLocation() {
+        final int MAX_LOCATION = 400;
+
+        Random randomGenerator = new Random();
+        this.x = randomGenerator.nextInt(MAX_LOCATION);
+        this.y = randomGenerator.nextInt(MAX_LOCATION);
+    }
+}
+```
+
+`MAX_LOCATION` could for example serve as a boundary for the point to be visible on the screen.
+
 #### Method arguments
 
 Method arguments are actually the same as local variables. Their scope is limited to the
