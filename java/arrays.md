@@ -62,7 +62,7 @@ What is special about the array above is that it is an array of references to ob
 >
 > ![Confirming that the array contains nulls](img/confirm_netbeans_array_nulls.png)
 
-To fix this we need to assign a object reference to each element of the array as shown in the next code snippet.
+To fix this we need to assign an object reference to each element of the array as shown in the next code snippet.
 
 ```java
 final int NUMBER_OF_POINTS = 5;
@@ -73,10 +73,6 @@ for (int i = 0; i < NUMBER_OF_POINTS; i++) {
   polygon[i] = new Point();
 }
 ```
-
-
-
-
 
 
 ### Summary
