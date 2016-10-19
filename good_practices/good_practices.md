@@ -1,4 +1,4 @@
-# Good Practices^1
+# Good Practices[^1]
 
 [^1]: Some of the following sections are based on https://sourcemaking.com
 
