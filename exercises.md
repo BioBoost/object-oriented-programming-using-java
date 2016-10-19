@@ -6,8 +6,7 @@ Create a class that takes the base and height of a parallelogram.
 
 ![Parallelogram](img/parallelogram.png)
 
-Add two methods to the class. One to determine the area and one to determine the
-circumference of the parallelogram.
+Add two methods to the class. One to determine the area and one to determine the circumference of the parallelogram.
 
 Make a small main program to show that the implementation works.
 
@@ -47,5 +46,4 @@ creating. The constructor should also take in the number of generated random num
 You can use the `nextInt(max)` method of the class `Random` to generate random integers.
 Make sure to select a low max (for example 50) or your sum will overflow.
 
-Make a small main program to show that the implementation works. Generate for example
-5000 random numbers.
+Make a small main program to show that the implementation works. Generate for example 5000 random numbers.
