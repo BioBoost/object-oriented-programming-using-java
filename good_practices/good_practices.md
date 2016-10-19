@@ -1,4 +1,6 @@
-# Good Practices
+# Good Practices^1
+
+[^1]: Some of the following sections are based on https://sourcemaking.com
 
 ## Refactoring Smelly Code
 
