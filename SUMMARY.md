@@ -17,7 +17,7 @@
 
 ### Exercises
 
-* [Exercises](exercises.md)
+* [Basic](exercises/basic.md)
 
 ----
 

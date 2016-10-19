@@ -1,6 +1,6 @@
-# Exercises
+## Basic Exercises
 
-## Circumference and area of a parallelogram
+### Circumference and area of a parallelogram
 
 Create a class that takes the base and height of a parallelogram.
 
@@ -10,10 +10,12 @@ Add two methods to the class. One to determine the area and one to determine the
 
 Make a small main program to show that the implementation works.
 
-## A resistor model
+### A resistor model
 
 Create a class that simulates the behavior of a resistor. You should be able
 to only set the resistance once through a constructor of the class.
+
+![Resistor](img/resistor.jpg)
 
 You should also supply methods to set the current that passes through the resistor.
 In this case the resulting voltage is calculated using U = I x R.
@@ -26,7 +28,7 @@ Make sure to choose floating point values for all attributes of the resistor cla
 
 Make a small main program to show that the implementation works.
 
-## ASCII valued Strings
+### ASCII valued Strings
 
 Create a class that takes a single String as argument of its constructor.
 Add a method that calculates the value of all the characters of the string.
@@ -36,7 +38,7 @@ The length of the string can be requested using the `length()` method.
 
 Make a small main program to show that the implementation works.
 
-## Randomizer checker
+### Randomizer checker
 
 Make a class that calculates the average of a number of randomly generated numbers.
 
