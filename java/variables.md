@@ -438,5 +438,81 @@ System.out.println("After: " + originalPoint);        // After: [x, y] = [0, 0]
 Basically when we pass an object as an argument to a method, we pass a reference to
 the object. A copy of this reference is made when it is passed and not a copy of the object.
 
-Later we will see that there are actually more implications than mentioned here. however
-more on this topic later.
+The same goes for assigning one reference variable to another. For example:
+
+```java
+Point centerOfCircle = new Point(5, 13);
+System.out.println("Center circle: " + centerOfCircle);
+    // Center: [x, y] = [5, 13]
+
+Point centerOfTriangle = centerOfCircle;        // Assign one reference to another
+System.out.println("Center triangle: " + centerOfTriangle);
+    // Center triangle: [x, y] = [5, 13]
+
+centerOfTriangle.setCoordinates(2, 2);
+System.out.println("Center circle: " + centerOfCircle);
+    // Center: [x, y] = [2, 2]
+```
+
+As can be seen from the code above, `centerOfTriangle` points to the same object as `centerOfCircle`. This is illustrated in the diagram below. So the object is not copied when the reference is assigned to another variable.
+
+![Copying the reference to an object](img/copy_reference_to_object.png)
+
+Later we will see that there are actually more implications than mentioned here. However more on this topic later.
+
+### The null value
+
+When declaring a variable of a non-primitive type without assigning a value to it, it has nothing to reference. This is indicated in the Java language using the `null` reference.
+
+Let's for example take a look at the code below:
+
+```java
+Point centerOfUniverse;
+//...
+System.out.println(centerOfUniverse);     // Output: null
+```
+
+Graphically we represent this as:
+
+![Variable containing null reference](img/null_reference.png)
+
+We can later assign a reference to it by for example creating a new object and
+assigning it to the variable as follows:
+
+```java
+Point centerOfUniverse;
+//...
+centerOfUniverse = new Point(1, 3);
+```
+
+The dangerous thing about this is that if you try to call a method on a null-reference,
+your program will crash.
+
+```java
+Point centerOfUniverse;
+// ...
+centerOfUniverse.setCoordinates(1, 4);        // PROGRAM CRASH !!!!!!!!!!
+```
+
+If there is any chance that the reference you are using is `null`,
+then you should first check for it as shown in the code below:
+
+```java
+Point centerOfUniverse;
+// ...
+if (centerOfUniverse != null) {
+  centerOfUniverse.setCoordinates(1, 4);
+}
+```
+
+Or you could create an object if the reference contains a null:
+
+```java
+Point centerOfUniverse;
+// ...
+if (centerOfUniverse == null) {
+  centerOfUniverse = new Point(0, 0);
+}
+// ...
+centerOfUniverse.setCoordinates(1, 4);
+```
