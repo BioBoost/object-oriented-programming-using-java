@@ -1,5 +1,13 @@
 ## Basic Exercises
 
+The exercises in this chapter require a basic knowledge of:
+
+* Variables
+* Methods
+* Classes and Objects
+* For-loop
+* Strings
+
 ### Circumference and area of a parallelogram
 
 Create a class that takes the base and height of a parallelogram.
