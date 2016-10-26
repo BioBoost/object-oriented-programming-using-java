@@ -11,9 +11,10 @@ int[] randomNumbers = new int[10];
 ```
 
 Notice how square brackets after the element type specify that this is an array.
-As an array is actually an object so the actual creation needs to be done using the `new` operator, at which stage the length of the array also needs to be specified.
 
-A visualization of the array may look something like below:
+As **an array is actually an object** so the actual creation needs to be done using the `new` operator, at which stage the length of the array also needs to be specified.
+
+A visualization of the array may look something like this:
 
 ![An array of 10 integers](img/arrays_of_ten_integers.gif)
 
@@ -54,8 +55,6 @@ Point[] polygon = new Point[NUMBER_OF_POINTS];
 
 What is special about the array above is that it is an array of references to objects. This also implies that all the references are null at this point. In other words if you create an array of object references, all elements are null until you assign them the actual reference.
 
-!You can confirm this by setting a break
-
 > #### Hint::Debug to confirm
 >
 >  You can actually confirm this by setting a breakpoint in NetBeans on the line where you declare the polygon variable. Then take a look at the _Variables_ window as shown in the image below.
@@ -73,7 +72,6 @@ for (int i = 0; i < NUMBER_OF_POINTS; i++) {
   polygon[i] = new Point();
 }
 ```
-
 
 ### Summary
 
