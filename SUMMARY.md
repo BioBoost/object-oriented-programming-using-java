@@ -18,6 +18,7 @@
 ### Exercises
 
 * [Basic](exercises/basic.md)
+* [Arrays](exercises/arrays.md)
 
 ----
 
