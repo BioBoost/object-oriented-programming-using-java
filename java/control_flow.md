@@ -289,3 +289,15 @@ do {
     answer = console.nextLine();
 } while (!answer.equalsIgnoreCase("yes") && !answer.equalsIgnoreCase("no"));
 ```
+
+The condition in the while statement above may seem contradictory at the beginning. If you need to model more complex conditions it is sometimes necessary to build them step by step.
+
+The following diagram shows a step by step method for building the condition above.
+
+![While condition for user answer](img/stop_and_while_conditions_inverted.png)
+
+1. First determine the condition necessart to stop the while loop. In this case that is when the user answers either "yes" or "no".
+2. Next invert the whole condition to use it with a while loop. This is actually the necessary condition to keep the while loop running.
+3. Next you can simplify the condition by using De Morgan's laws
+
+Note that Strings are actually objects and we cannot use the simple comparison operator `==`. This would actually compare the references and not the content of the objects. More on this later.
