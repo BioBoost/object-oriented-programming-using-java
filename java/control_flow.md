@@ -4,9 +4,76 @@ The statements inside your source files are generally executed from top to botto
 
 ### Making Decisions in Java
 
+To allow our program to make certain decisions we first need to take a look at conditions and how they are evaluated.
+
+A condition is some sort of comparison (or a combination of comparisons) that can be evaluated by the compiler or interpreter. After solving all comparisons and combining all the individual parts, the compiler resolves it to a single resulting value that is `true` or `false` (also keywords in Java), which are actually values the data type `boolean` can take. Generally spoken we state that the compiler evaluates the condition to be true or false.
+
+The true and false values can differ from language to language, however internal in memory false is most of the time 0 and true is not 0.
+
+#### Comparison Operators
+
+The table below shows the available comparison operators that can be used in Java to build a condition.
+
+| Operator | Description |
+|---|---|
+| == | equal to |
+| != | not equal to |
+| > | greater than |
+| >= | greater than or equal to |
+| < | less than |
+| <= | less than or equal to |
+
+Since a conditional statement actually produces a single 'true' or 'false' result, this result can actually be assigned to a variable of type `boolean`.
+
+Let's see some examples of conditional statements:
+
+```Java
+int a = 4;
+int b = 8;
+boolean result;
+result = (a < b);   // true
+result = (a > b);   // false
+result = (a <= 4);  // a smaller or equal to 4 - true
+result = (b >= 9);  // b bigger or equal to 9 - false
+result = (a == b);  // a equal to b - false
+result = (a != b);  // a is not equal to b - true
+```
+
+#### Conditional Operators
+
+When creating more complex conditional statements you will need to use the conditional operators to create combinations of conditions.
+
+The table below gives an overview of the available conditional operators in Java.
+
+| Operator | Description |
+|---|---|
+| && | AND |
+| &#124;&#124; | OR |
+| ! | NOT |
+
+> #### Alert::Lazy evaluation
+>
+>  These operators exhibit "short-circuiting" behavior, which means that the second operand is evaluated only if needed. This is also called lazy evaluations.
+
+These work as you know them from the boolean logic. The `||` (OR) operator will return `true` if either of the operands evaluate to `true`. The `&&` (AND) operator will return `true` if both operands evaluate to `true`. A logical expression can be negated by placing the `!` (NOT) operator in front of it.
+
+The code example below checks if a person is a child based on it's `age` (between 0 and 14 years of age).
+
+```Java
+int age = 16;
+boolean isChild = (age >= 0 && age <= 14);      // false
+```
+
+> #### Hint::De Morgan's Laws
+>
+> In some cases it can be useful to rewrite complex conditions using De Morgan's Laws
+> (https://en.wikipedia.org/wiki/De_Morgan%27s_laws). Do take note that shorter not always
+> implies more readable or less complex.
+
+
 #### The if statement
 
-The `if` statement is the most basic of all the control flow statements. It tells your program to execute a certain section of code only if a particular test evaluates to true.
+The `if` statement is the most basic of all the control flow statements. It tells your program to execute a certain section of code only if a particular condition evaluates to true.
 
 Let's take for example a very simple example where we test if the students score (generated randomly for this example) is below 70% and if so we output an encouraging speech.
 
