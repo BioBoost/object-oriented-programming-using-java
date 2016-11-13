@@ -20,6 +20,10 @@
 * [Basic](exercises/basic.md)
 * [Arrays](exercises/arrays.md)
 
+### Solutions
+
+* [Arrays](solutions/arrays.md)
+
 ----
 
 * [Sources](sources.md)

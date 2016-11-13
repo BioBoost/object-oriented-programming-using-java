@@ -27,7 +27,7 @@ Since a conditional statement actually produces a single 'true' or 'false' resul
 
 Let's see some examples of conditional statements:
 
-```Java
+```java
 int a = 4;
 int b = 8;
 boolean result;
@@ -55,11 +55,11 @@ The table below gives an overview of the available conditional operators in Java
 >
 >  These operators exhibit "short-circuiting" behavior, which means that the second operand is evaluated only if needed. This is also called lazy evaluations.
 
-These work as you know them from the boolean logic. The `||` (OR) operator will return `true` if either of the operands evaluate to `true`. The `&&` (AND) operator will return `true` if both operands evaluate to `true`. A logical expression can be negated by placing the `!` (NOT) operator in front of it.
+These work as you know them from the Boolean algebra. The `||` (OR) operator will return `true` if either of the operands evaluate to `true`. The `&&` (AND) operator will return `true` if both operands evaluate to `true`. A logical expression can be negated by placing the `!` (NOT) operator in front of it.
 
 The code example below checks if a person is a child based on it's `age` (between 0 and 14 years of age).
 
-```Java
+```java
 int age = 16;
 boolean isChild = (age >= 0 && age <= 14);      // false
 ```
@@ -228,12 +228,64 @@ i = 0 before for loop
 i = 10 after for loop
 ```
 
-### The do-while loop
-
-A do-while loop is used when the code block needs to be executed at least once. After the first iteration a condition is checked which determined if the code block should be executed again or not.
-
 ### The while loop
 
 The while loop is used when the code block may not even run at all if the condition is not met. The condition is checked before the code block is executed.
 
 While every while loop can also be written as a for loop that does not mean it should. Complex for loops can often be refactored into less complex while or do-while loops.
+
+The while loop adheres to the following construction template:
+
+```java
+while (condition) {
+  // Code block
+}
+```
+
+The code below prints out a list of random numbers that are dividable by a certain number. In this case it prints 10 numbers that are dividable by 5.
+
+```java
+
+final int DIVIDER = 5;
+final int NUMBERS_TO_FIND = 10;
+final int MAX_NUMBER = 10000;
+
+Random randomizer = new Random();
+
+int numbersFound = 0;
+while (numbersFound <= NUMBERS_TO_FIND) {
+  int currentNumber = randomizer.nextInt(MAX_NUMBER);
+
+  if (currentNumber % DIVIDER == 0) {
+    System.out.println(currentNumber + " is dividable by " + DIVIDER);
+    numbersFound++;
+  }
+}
+
+```
+
+### The do-while loop
+
+A do-while loop is used when the code block needs to be executed at least once. After the first iteration a condition is checked which determines if the code block should be executed again or not.
+
+The do-while loop adheres to the following construction template:
+
+```java
+do {
+  // Code block
+} while (condition);
+```
+
+Take note that after the closing round bracket a semicolon is required.
+
+The next code examples asks the user to answer 'yes' or 'no' to a question. It keeps asking the user the question until it get's a valid answer.
+
+```java
+Scanner console = new Scanner(System.in);
+
+String answer = "";
+do {
+    System.out.print("Would you like to learn Java ? [yes,no]: ");
+    answer = console.nextLine();
+} while (!answer.equalsIgnoreCase("yes") && !answer.equalsIgnoreCase("no"));
+```
