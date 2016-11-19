@@ -8,6 +8,7 @@
 * [Variables](java/variables.md)
 * [Control Flow](java/control_flow.md)
 * [Arrays](java/arrays.md)
+* [Inheritance](java/inheritance.md)
 
 ### Good Practices
 
