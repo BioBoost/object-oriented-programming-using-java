@@ -62,12 +62,63 @@ A similar refactor needs to be done to the `Food` class.
 
 ![Dervived Food class UML Diagram](img/food_class_with_inheritance.png)
 
+In an UML class diagram inheritance is depicted by drawing a closed arrow from the subclass to the base class as shown in the diagram below.
 
-[TODO: UML of all classes]
+![UML class diagram of Food and Clothing inheriting from Product](img/product_food_clothing_inheritance.png)
+
+### Is-a relationships
+
+The superclass and subclass have an **"is-a"** relationship between them. This means we can state that `Food` is-a `Product` and `Clothing` is-a `Product` if we take the previous example.
+
+If you cannot logically state that 'subclass' is-a 'superclass' than you made a mistake to make 'subclass' inherit from 'superclass'. An example of this would be the case when you would create a subclass `Cement` from `Food` because `Cement` also has an expiration date. This may seem DRY but it is illogical. You can't state that `Cement` is-a `Food`.
+
+Let's see some examples:
+
+If we needed to model both a *Bus* class and a *Car* class it makes perfect sense to create a *Vehicle* class and make both *Bus* and *Car* inherit from them. It's perfectly valid to state that
+* a Bus is a Vehicle
+* a Car is a Vehicle
+
+When implementing inheritance you should always make sure that it makes sense to inherit. Let's take a look at a bad example of inheritance. Take for a example a class `Vector`. You can find what a `Vector` is @ oracle [https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html](https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html).
+
+> The Vector class implements a growable array of objects. Like an array, it contains components that can be accessed using an integer index. However, the size of a Vector can grow or shrink as needed to accommodate adding and removing items after the Vector has been created.
+
+It has for example the methods `add(int index, E element)` to insert an element at a given index and `elementAt(int index)` to retrieve an element at a given index.
+
+Now if we take a look at the class `Stack` found @ oracle [https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html](https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html)
+
+> The Stack class represents a last-in-first-out (LIFO) stack of objects. It extends class Vector with five operations that allow a vector to be treated as a stack. The usual push and pop operations are provided, as well as a method to peek at the top item on the stack, a method to test for whether the stack is empty, and a method to search the stack for an item and discover how far it is from the top.
+
+The fundamental flaw here is that the `Stack` class also inherits the *public* methods of the `Vector` class meaning you can write the following in Java:
+
+```java
+Stack messages = new Stack();
+
+messages.push("Hello");
+messages.push("World");
+messages.add(1, "Should be at the top");
+```
+
+Making your stack look like this:
+
+```text
+Hello
+Should be at the top
+World
+```
+
+The `add(int index, E element)` should not be part of the `Stack` public interface, meaning `Stack` should not have been inherited from `Vector`.
+
+### Inheritance in Java
+
+TODO:
+* Extends keyword
+* Calling constructor of base class using super()
+* Calling another method of base class super.method()
+* Method overriding
+* Cannot access private attributes or methods
 
 
 
-
-### Is-a relationship
-
-The superclass and subclass have “is-a” relationship between them. Let’s have a look at the example below.
+alert
+super() and the no-argument constructor
+If super() is not specified in a subclass constructor, and if the superclass doesn't declare a no-argument constructor, then the compiler will report an error. This is because the subclass constructor must call a no-argument superclass constructor when super() isn't present.
