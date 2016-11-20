@@ -110,16 +110,126 @@ The `add(int index, E element)` should not be part of the `Stack` public interfa
 
 ### Inheritance in Java
 
-To implement inheritance in Java all you need is a baseclass and a subclass. The subclass needs to extend the baseclass and this can be accomplished by using the `extends` keyword as shown below.
+To implement inheritance in Java all you need is a baseclass and a subclass. The subclass needs to extend the baseclass and this can be accomplished by using the `extends` keyword as shown below in the code template.
+
+```java
+public class <subclass> extends <baseclass> {
+  // Implementation
+}
+```
 
 
+#### Applied to store application
+
+Applying all the principles mentioned in the previous section we come to the following implementation in Java.
+
+```java
+public class Product {
+    // Normally product would be saved in database and the ID would
+    // be retrieved from the database however to simulate automatic id
+    // generation we keep a private static lastId
+    private static int lastId = 0;
+
+    private int id;
+    private String description;
+    private double price;
+
+    public Product(String description, double price) {
+        this.description = description;
+        this.price = price;
+        setId(lastId++);
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Product: { id: " + id + ", price: " + price + "}"
+                    + "\n" + "[" + description + "]";
+    }
+}
+```
+
+```java
+public class Clothing extends Product {
+    private String size;
+
+    public Clothing(String description, double price, String size) {
+        super(description, price);
+        this.size = size;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    @Override
+    public String toString() {
+        String result = super.toString();
+        return result + "\nClothing: {size: " + size + "}";
+    }
+}
+```
+
+```java
+public class Food extends Product {
+    private Date expirationDate;
+
+    public Food(String description, double price, Date expirationDate) {
+        super(description, price);
+        this.expirationDate = expirationDate;
+    }
+
+    public Date getExpirationDate() {
+        return expirationDate;
+    }
+
+    @Override
+    public String toString() {
+        String result = super.toString();
+        return result + "\nFood: {Expires: " + expirationDate + "}";
+    }
+}
+```
+
+With a small main program:
+
+```java
+public static void main(String[] args) throws ParseException {
+    // Some date helper object
+    DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
+
+    // Creating a Food object
+    Food canOfTomatoSoup = new Food("Can of tomato soup with meat balls",
+            2.99, dateFormat.parse("21/12/2018"));
+
+    // Creating a piece of clothing
+    Clothing socks = new Clothing("Pair of black socks for men", 3.45, "XL");
+
+    // You can actually store the reference to a
+    // Food or Clothing object inside a Product reference
+    Product metallicaShirt = new Clothing("Cool t-shirt of Metallica", 18.99, "L");
+
+    // Lets print everything
+    System.out.println(canOfTomatoSoup + "\n");
+    System.out.println(socks + "\n");
+    System.out.println(metallicaShirt + "\n");
+}
+```
 
 
+<!-- TODO:
 
-
-
-TODO:
-* Extends keyword
 * Calling constructor of base class using super()
 * Calling another method of base class super.method()
 * Method overriding
@@ -129,4 +239,4 @@ TODO:
 
 alert
 super() and the no-argument constructor
-If super() is not specified in a subclass constructor, and if the superclass doesn't declare a no-argument constructor, then the compiler will report an error. This is because the subclass constructor must call a no-argument superclass constructor when super() isn't present.
+If super() is not specified in a subclass constructor, and if the superclass doesn't declare a no-argument constructor, then the compiler will report an error. This is because the subclass constructor must call a no-argument superclass constructor when super() isn't present. -->
