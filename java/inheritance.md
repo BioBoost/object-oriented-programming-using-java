@@ -110,6 +110,14 @@ The `add(int index, E element)` should not be part of the `Stack` public interfa
 
 ### Inheritance in Java
 
+To implement inheritance in Java all you need is a baseclass and a subclass. The subclass needs to extend the baseclass and this can be accomplished by using the `extends` keyword as shown below.
+
+
+
+
+
+
+
 TODO:
 * Extends keyword
 * Calling constructor of base class using super()
