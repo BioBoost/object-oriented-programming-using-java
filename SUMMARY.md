@@ -20,6 +20,7 @@
 
 * [Basic](exercises/basic.md)
 * [Arrays](exercises/arrays.md)
+* [Inheritance](exercises/inheritance.md)
 
 ### Solutions
 

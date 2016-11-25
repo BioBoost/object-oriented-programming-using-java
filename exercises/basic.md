@@ -2,10 +2,11 @@
 
 The exercises in this chapter require a basic knowledge of:
 
-* Variables
-* Methods
 * Classes and Objects
-* For-loop
+* Constructors
+* Attributes and variables
+* Methods
+* The for-loop
 * Strings
 
 ### Circumference and area of a parallelogram
@@ -21,16 +22,20 @@ Make a small main program to show that the implementation works.
 ### A resistor model
 
 Create a class that simulates the behavior of a resistor. You should be able
-to only set the resistance once through a constructor of the class.
+to only set the resistance once through a constructor of the class. This means that
+the resistance cannot change after an object of the Resistor class has been created.
 
 ![Resistor](img/resistor.jpg)
 
-You should also supply methods to set the current that passes through the resistor.
+You should supply methods to set the current that passes through the resistor.
 In this case the resulting voltage is calculated using U = I x R.
 
 It should also be possible to change the voltage that is applied across the resistor.
 In that case the resulting current through the resistor should be calculated using
 I = U / R.
+
+You should make sure that the created objects are in a valid state at all times. This
+means if the current changes, the voltage should also change and vice versa.
 
 Make sure to choose floating point values for all attributes of the resistor class.
 
