@@ -54,13 +54,13 @@ We also provided an implementation for the `toString()` method.
 
 Now our derived class `Clothing` can be refactored to a very simple class with only the specific size attribute, a constructor, a getter and a more specific implementation of `toString()`.
 
-![Dervived Clothing class UML Diagram](img/clothing_class_with_inheritance.png)
+![Derived Clothing class UML Diagram](img/clothing_class_with_inheritance.png)
 
 Note how we do need to add the necessary arguments of the base class to the constructor in order to make an object of `Clothing`. So to create a piece of clothing we do need to provide it's description, price and size. Description and price are part of the base class `Product` but are inherited by the `Clothing` class.
 
 A similar refactor needs to be done to the `Food` class.
 
-![Dervived Food class UML Diagram](img/food_class_with_inheritance.png)
+![Derived Food class UML Diagram](img/food_class_with_inheritance.png)
 
 In an UML class diagram inheritance is depicted by drawing a closed arrow from the subclass to the base class as shown in the diagram below.
 
