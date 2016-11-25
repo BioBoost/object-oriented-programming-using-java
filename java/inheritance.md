@@ -88,6 +88,101 @@ public class <subclass> extends <baseclass> {
 }
 ```
 
+Note that *extending* the baseclass is exactly what we are doing when implementing inheritance. We take a general class and add something to it: data, behavior or both.
+
+#### Constructors and inheritance
+
+When creating objects, Java will not only call the constructor of the type you are creating but it will implicitly call a constructor of each baseclass. Let's take a look at the inheritance hierarchy below.
+
+![Inheritance hierarchy of computer hardware](img/computer_hardware_inheritance.png)
+
+When for example creating an object of type *QuadCore*, the constructor of *QuadCode* will implicitly call the constructor of *Processor* which will call the constructor of *ComputerHardware* which will call the constructor of *Product*. These calls are provided by default by Java and are done before anything else. That means that the rest of you constructor code will be executed ofter the contructor call to the baseclass.
+
+ This basically means that the *Product* will be constructed first, next the *ComputerHardware*, after which the *Processor* and last the *QuadCore*. This is a bit logical as you can only initialize the specific data of *ComputerHardware* after the data of *Product* has been initialized.
+
+There is however a catch to this whole constructing system.
+
+Remember that if you do not define a constructor in Java, it will provide you with a *default constructor* for a class. However once you create a constructor yourself
+Java will not provide this default constructor anymore. That means if you create a single constructor that takes arguments, your class will not have a default constructor anymore.
+
+Let's take a look at a simplified `Product` class:
+
+```java
+public class Product {
+
+    private String description;
+    private double price;
+
+    public Product(String description, double price) {
+
+        // Initialization
+    }
+}
+```
+
+The implementation above defines a single constructor taking a *description* and a *price*. This means that we can only construct objects using that constructor an **NOT** as follows:
+
+```java
+// This fails because Product has no default constructor !!
+Product tootPaste = new Product();
+```
+
+Now take a subclass `Clothing` of *Product* as defined below. As can be seen a single constructor is provided.
+
+```java
+public class Clothing extends Product {
+    private String size;
+
+    public Clothing(String description, double price, String size) {
+
+        // Your code
+    }
+}
+```
+
+This code will actually not work because Java will add an implicit call to the default constructor of Product as the first line of code in the `Clothing` class.
+In other words if no default constructor exists for the baseclass your program will fail.
+
+This can be fixed using two approaches:
+* add a default constructor to the baseclass. This is however not always possible or even advisable as you may not have access to the implementation of the baseclass or it might not make sence to add a default constructor.
+* explicitly call another constructor of the baseclass. This can be achieved by using the keyword `super` which can be called as a method `super()` to indicate that a baseclass constructor needs to be called first.
+
+The second approach mostly takes the preference. Important to note here is that this call to the baseclass constructor has to happen **before anything** else in the constructor. This means that `super()` will be the first line of code inside your constructor in this case.
+
+Let us apply this knowledge to the `Product` and `Clothing` classes.
+
+```java
+public class Product {
+
+    private String description;
+    private double price;
+
+    public Product(String description, double price) {
+      this.description = description;
+      this.price = price;
+    }
+}
+```
+
+```java
+public class Clothing extends Product {
+    private String size;
+
+    public Clothing(String description, double price, String size) {
+      super(description, price);    // Call baseclass constructor FIRST !!!!
+
+      // Rest of initialization for Clothing
+      this.size = size;
+    }
+}
+```
+
+##### Quick summary
+
+* Java provides a default constructor if you provide no constructor(s).
+* With inheritance each constructor is called from bottom to top but actually executed from top to bottom.
+* If no default constructor exists for the baseclass you will need to add one or call another constructor explicitly as first line of code in the current class constructor using  `super()` and provide the required arguments.
+
 
 #### Applied to store application
 
@@ -135,7 +230,9 @@ public class Clothing extends Product {
     private String size;
 
     public Clothing(String description, double price, String size) {
-        super(description, price);
+        super(description, price);    // Call baseclass constructor FIRST !!!!
+
+        // Rest of initialization for Clothing
         this.size = size;
     }
 
@@ -156,7 +253,9 @@ public class Food extends Product {
     private Date expirationDate;
 
     public Food(String description, double price, Date expirationDate) {
-        super(description, price);
+        super(description, price);    // Call baseclass constructor FIRST !!!!
+
+        // Rest of initialization for Food
         this.expirationDate = expirationDate;
     }
 
@@ -196,6 +295,29 @@ public static void main(String[] args) throws ParseException {
     System.out.println(metallicaShirt + "\n");
 }
 ```
+
+#### Polymorphism
+
+Array of baseclass products
+
+#### What is accessible from the baseclass
+
+public and protected
+
+
+
+#### Method overriding
+
+[TODO]:
+Calling another method of base class super.method()
+
+
+
+
+
+
+
+
 
 ### When not to use inheritance
 
@@ -270,16 +392,3 @@ public class Stack {
 ```
 
 Now the public interface of our *Stack* class consists of a constructor, the `push()` and `pop()` methods and a `toString()` method.
-
-<!-- TODO:
-
-* Calling constructor of base class using super()
-* Calling another method of base class super.method()
-* Method overriding
-* Cannot access private attributes or methods
-
-
-
-alert
-super() and the no-argument constructor
-If super() is not specified in a subclass constructor, and if the superclass doesn't declare a no-argument constructor, then the compiler will report an error. This is because the subclass constructor must call a no-argument superclass constructor when super() isn't present. -->
