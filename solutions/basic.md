@@ -71,6 +71,18 @@ public class GitBookResistor {
 }
 ```
 
+Output of main program:
+
+```text
+Pullup:
+Resistor with R = 10000.0ohm
+U = 3.3V, I = 3.3E-4A
+
+Red LED:
+Resistor with R = 680.0ohm
+U = 13.6V, I = 0.02A
+```
+
 ### ASCII valued Strings
 
 [TODO]
