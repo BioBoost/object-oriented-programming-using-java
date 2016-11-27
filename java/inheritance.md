@@ -298,8 +298,35 @@ public static void main(String[] args) throws ParseException {
 
 #### Method overriding
 
-[TODO]:
-Calling another method of base class super.method()
+[This paragraph is not final and still under construction]
+
+An instance method in a subclass with the same signature (name, plus the number and the type of its parameters) and return type as an instance method in the superclass overrides the superclass's method.
+
+The ability of a subclass to override a method allows a class to inherit from a superclass whose behavior is "close enough" and then to modify behavior as needed. The overriding method has the same name, number and type of parameters, and return type as the method that it overrides. An overriding method can also return a subtype of the type returned by the overridden method. This subtype is called a covariant return type.
+
+When overriding a method, you might want to use the `@Override` annotation that instructs the compiler that you intend to override a method in the superclass. If, for some reason, the compiler detects that the method does not exist in one of the superclasses, then it will generate an error.
+
+Some rules:
+
+* The argument list should be exactly the same as that of the overridden method.
+* The return type should be the same or a subtype of the return type declared in the original overridden method in the super class.
+* The access level cannot be more restrictive than the overridden method’s access level. For example: if the super class method is declared public then the overridding method in the sub class cannot be either private or protected.
+* Instance methods can be overridden only if they are inherited by the subclass.
+* A method declared final cannot be overridden.
+* A method declared static cannot be overridden but can be re-declared.
+* If a method cannot be inherited then it cannot be overridden.
+* A subclass within the same package as the instance’s superclass can override any superclass method that is not declared private or final.
+* A subclass in a different package can only override the non-final methods declared public or protected.
+* An overriding method can throw any uncheck exceptions, regardless of whether the overridden method throws exceptions or not. However the overriding method should not throw checked exceptions that are new or broader than the ones declared by the overridden method. The overriding method can throw narrower or fewer exceptions than the overridden method.
+* Constructors cannot be overridden.
+
+You can call methods of the base class by using the `super` keyword followed by a `.` and the name of the method you wish to call.
+
+Example:
+
+```java
+String result = super.toString();
+```
 
 #### Polymorphism
 
@@ -488,3 +515,7 @@ public class Stack {
 ```
 
 Now the public interface of our *Stack* class consists of a constructor, the `push()` and `pop()` methods and a `toString()` method.
+
+### Abstract classes
+
+[TODO]
