@@ -6,6 +6,7 @@
 
 * [Introduction](java/introduction.md)
 * [Variables](java/variables.md)
+* [Methods and Constructors](java/methods_and_constructors.md)
 * [Control Flow](java/control_flow.md)
 * [Arrays](java/arrays.md)
 * [Inheritance](java/inheritance.md)
@@ -25,7 +26,7 @@
 ### Solutions
 
 * [Arrays](solutions/arrays.md)
-
+* [Inheritance](solutions/inheritance.md)
 ----
 
 * [Sources](sources.md)
