@@ -1,5 +1,9 @@
 ## Variables in Java
 
+<!-- toc -->
+
+### Introduction
+
 The programs that we create need to store all sorts of data. From simple things such as
 integers, floating point numbers, characters and Strings to complex data types that we
 define ourselves.

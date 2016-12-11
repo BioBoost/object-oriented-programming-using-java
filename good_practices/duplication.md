@@ -1,5 +1,9 @@
 ## Code Duplication
 
+<!-- toc -->
+
+### Introduction
+
 One of the first code smells that are created by each beginning programmer is code duplication. Sometimes we write code at different times and just forget we already did it once. Or we are working together with someone else and we both created very similar code. Other times we are lazy and copy-past parts of code to get the problem solved quicker.
 
 But is it quicker ? Maybe at the time of copy-pasting that code, yes. But in the end it will always cost you more then it will earn you. Because duplication will bite you in the ass when one of its parts needs to change or if it contains a bug.

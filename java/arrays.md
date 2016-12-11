@@ -1,5 +1,9 @@
 ## Arrays
 
+<!-- toc -->
+
+### Introduction
+
 Arrays are **container objects** that store a fixed amount of values of a single type.
 The length of the array is specified when the array object is created. After the array is
 created its length cannot be changed.
