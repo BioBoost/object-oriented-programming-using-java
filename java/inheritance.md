@@ -1,5 +1,9 @@
 ## Inheritance
 
+<!-- toc -->
+
+### Introduction
+
 Inheritance is one of the main pillars of an object-oriented programming language. It allows us to reuse classes, make our code cleaner and more hierarchical.
 
 ### A store application example
