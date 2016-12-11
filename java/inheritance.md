@@ -563,4 +563,4 @@ public abstract class Shape {
 When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract methods in its parent class.
 However, if it does not, then the subclass must also be declared abstract.
 
-A class can also be made abstract to force the user of the class to create a subclass from the base class and not allow him/her to directly instantiate objects from the base class. This night also be useful if you wanted to add abstract methods in the future.
+A class can also be made abstract to force the user of the class to create a subclass from the base class and not allow him/her to directly instantiate objects from the base class. This might also be useful if you wanted to add abstract methods in the future.
