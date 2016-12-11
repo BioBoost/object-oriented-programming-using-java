@@ -10,6 +10,7 @@
 * [Control Flow](java/control_flow.md)
 * [Arrays](java/arrays.md)
 * [Inheritance](java/inheritance.md)
+* [Collections](java/collections.md)
 
 ### Good Practices
 
