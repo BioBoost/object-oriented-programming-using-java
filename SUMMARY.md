@@ -2,7 +2,11 @@
 
 * [Introduction](README.md)
 
-### Java Basics
+### Object Oriented Programming
+
+* [Introduction](oop/introduction.md)
+
+### Java
 
 * [Introduction](java/introduction.md)
 * [Variables](java/variables.md)
@@ -11,6 +15,10 @@
 * [Arrays](java/arrays.md)
 * [Inheritance](java/inheritance.md)
 * [Collections](java/collections.md)
+
+### C++
+
+* [Introduction](cpp/introduction.md)
 
 ### Good Practices
 
