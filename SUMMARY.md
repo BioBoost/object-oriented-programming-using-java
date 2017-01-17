@@ -23,6 +23,7 @@
 ### Good Practices
 
 * [Introduction](good_practices/good_practices.md)
+* [Code Formatting](good_practices/code_formatting.md)
 * [Duplication](good_practices/duplication.md)
 * [Magic Numbers](good_practices/magic_numbers.md)
 
