@@ -145,14 +145,13 @@ The first prototype-oriented programming language was Self, developed by David U
 
 ### Defining Classes
 
-
-Let's take a look at how a class can be defined to create a model of a simple cookie.
+Let's take a look at how a class can be defined to create a simple model of a cookie.
 
 ![A cookie](img/cookie.jpg)
 
-A simple representation can be created using UML (Unified Modeling Language) class diagrams. UML is a general-purpose, modeling language in the field of software engineering, that is intended to provide a standard way to visualize the design of a system.
+A graphical representation can be created using UML (Unified Modeling Language) class diagrams. UML is a general-purpose, modeling language in the field of software engineering, that is intended to provide a standard way to visualize the design of a system.
 
-Below an example class diagram of a Cookie is shown. Do take note that some things are still missing from the diagram but these will be added gradually as the course continues.
+Below an example is shown of a class diagram of a Cookie. Do take note that some things are still missing from the diagram but these will be added gradually as the course progresses.
 
 ```uml
 @startuml
@@ -172,12 +171,8 @@ Below an example class diagram of a Cookie is shown. Do take note that some thin
 @enduml
 ```
 
+Notice how the UML class diagram is separated into three distinct parts:
 
-
-
-
-
-
-<!-- When multiple objects of a same class are instantiated they both are assigned their own separate memory regions. This means that the attributes of object 'A' are not shared with the attributes of object 'B'. Each object gets its own copy.
-
-This is not always the case with methods. They are often shared in memory as an optimization. The actual implementation here is compiler/interpreter dependent. -->
+* The top part: the name of the class
+* The middle part: the attributes of the class
+* The bottom part: the methods of the class
