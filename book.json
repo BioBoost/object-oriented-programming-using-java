@@ -4,7 +4,7 @@
         "image-captions",
         "simple-page-toc",
         "copy-code-button",
-        "uml"
+        "puml"
     ],
     "pluginsConfig": {
         "callouts":
@@ -23,7 +23,7 @@
             "maxDepth": 3,
             "skipFirstH1": true
         },
-        "uml": {
+        "puml": {
           "format": "png"
         }
     }
