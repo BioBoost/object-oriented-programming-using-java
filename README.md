@@ -13,3 +13,5 @@ Check out my github repos: https://github.com/BioBoost
 ## Requirements
 
 To follow along you will at least need to install Java and an IDE like NetBeans.
+
+The exercises for mBed can be developed online at https://developer.mbed.org/compiler/ or using the offline toolchain https://docs.mbed.com/docs/mbed-os-handbook/en/latest/dev_tools/cli/
