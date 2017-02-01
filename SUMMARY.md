@@ -4,7 +4,7 @@
 
 ### OOP
 
-* [Introduction to OOP](oop/introduction.md)
+* [Introduction](oop/introduction.md)
 
 ### Java
 

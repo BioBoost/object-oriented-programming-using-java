@@ -157,6 +157,20 @@ A simple representation can be created using UML (Unified Modeling Language) cla
 
 Below an example class diagram of a Cookie is shown. Do take note that some things are still missing from the diagram but these will be added gradually as the course continues.
 
-{% plantuml %}
-Bob->Alice : hello
-{% endplantuml %}
+```uml
+@startuml
+
+  Class Cookie {
+    -recipe
+    -numberOfSmarties
+    -diameter
+    -weight
+    -batch
+    -expirationDate
+    +addSmarty()
+    +getDiameter()
+    +getExpirationDate()
+  }
+
+@enduml
+```
