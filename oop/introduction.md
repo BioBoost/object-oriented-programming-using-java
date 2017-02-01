@@ -153,23 +153,20 @@ A graphical representation can be created using UML (Unified Modeling Language) 
 
 Below an example is shown of a class diagram of a Cookie. Do take note that some things are still missing from the diagram but these will be added gradually as the course progresses.
 
-```uml
-@startuml
+{% plantuml %}
+Class Cookie {
+  -recipe
+  -numberOfSmarties
+  -diameter
+  -weight
+  -batch
+  -expirationDate
+  +addSmarty()
+  +getDiameter()
+  +getExpirationDate()
+}
+{% endplantuml %}
 
-  Class Cookie {
-    -recipe
-    -numberOfSmarties
-    -diameter
-    -weight
-    -batch
-    -expirationDate
-    +addSmarty()
-    +getDiameter()
-    +getExpirationDate()
-  }
-
-@enduml
-```
 
 Notice how the UML class diagram is separated into three distinct parts:
 
