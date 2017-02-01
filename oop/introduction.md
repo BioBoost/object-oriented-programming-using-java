@@ -143,11 +143,8 @@ Lets use the idea of "fruit" as one example. A "fruit" object would represent th
 
 The first prototype-oriented programming language was Self, developed by David Ungar and Randall Smith in the mid-1980s to research topics in object-oriented language design. Since the late 1990s, the classless paradigm has grown increasingly popular.Some current prototype-oriented languages are JavaScript (and other ECMAScript implementations, JScript and Flash's ActionScript 1.0), Lua, Cecil, NewtonScript, Io, Ioke, MOO, REBOL, Lisaac and AHk.
 
-### Creating Objects
+### Defining Classes
 
-When multiple objects of a same class are instantiated they both are assigned their own separate memory regions. This means that the attributes of object 'A' are not shared with the attributes of object 'B'. Each object gets its own copy.
-
-This is not always the case with methods. They are often shared in memory as an optimization. The actual implementation here is compiler/interpreter dependent.
 
 Let's take a look at how a class can be defined to create a model of a simple cookie.
 
@@ -174,3 +171,13 @@ Below an example class diagram of a Cookie is shown. Do take note that some thin
 
 @enduml
 ```
+
+
+
+
+
+
+
+<!-- When multiple objects of a same class are instantiated they both are assigned their own separate memory regions. This means that the attributes of object 'A' are not shared with the attributes of object 'B'. Each object gets its own copy.
+
+This is not always the case with methods. They are often shared in memory as an optimization. The actual implementation here is compiler/interpreter dependent. -->
