@@ -154,6 +154,8 @@ A graphical representation can be created using UML (Unified Modeling Language) 
 Below an example is shown of a class diagram of a Cookie. Do take note that some things are still missing from the diagram but these will be added gradually as the course progresses.
 
 {% plantuml %}
+skinparam classAttributeIconSize 0
+
 Class Cookie {
   -recipe
   -numberOfSmarties
