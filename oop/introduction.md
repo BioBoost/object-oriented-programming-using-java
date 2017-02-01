@@ -157,7 +157,7 @@ A simple representation can be created using UML (Unified Modeling Language) cla
 
 Below an example class diagram of a Cookie is shown. Do take note that some things are still missing from the diagram but these will be added gradually as the course continues.
 
-```uml
+<!-- ```uml
 @startuml
 skinparam classAttributeIconSize 0
 
@@ -176,4 +176,4 @@ Class Timeout {
 }
 
 @enduml
-```
+``` -->
