@@ -4,7 +4,7 @@
 
 ### Object Oriented Programming
 
-* [Introduction](oop/introduction.md)
+* [Introduction to OOP](oop/introduction.md)
 
 ### Java
 
