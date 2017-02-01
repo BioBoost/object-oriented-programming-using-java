@@ -154,3 +154,26 @@ Let's take a look at how a class can be defined to create a model of a simple co
 ![A cookie](img/cookie.jpg)
 
 A simple representation can be created using UML (Unified Modeling Language) class diagrams. UML is a general-purpose, modeling language in the field of software engineering, that is intended to provide a standard way to visualize the design of a system.
+
+Below an example class diagram of a Cookie is shown. Do take note that some things are still missing from the diagram but these will be added gradually as the course continues.
+
+```uml
+@startuml
+skinparam classAttributeIconSize 0
+
+Class Timeout {
+  - bakingColor
+  - numberOfSmarties
+  - diameter
+  - weight
+  - thickness
+  - batch
+  - expirationDate
+  + addSmarty()
+  + getDiameter()
+  + getWeight()
+  + getExpirationDate()
+}
+
+@enduml
+```

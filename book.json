@@ -3,7 +3,8 @@
         "callouts",
         "image-captions",
         "simple-page-toc",
-        "copy-code-button"
+        "copy-code-button",
+        "uml"
     ],
     "pluginsConfig": {
         "callouts":
@@ -12,6 +13,10 @@
             "assignment": {
                 "alert": "success",
                 "picto": "fa-lightbulb-o"
+            },
+            "definition": {
+                "alert": "note",
+                "picto": "fa-edit"
             }
         },
         "simple-page-toc": {
