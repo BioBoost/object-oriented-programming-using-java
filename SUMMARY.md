@@ -2,6 +2,10 @@
 
 * [Introduction](README.md)
 
+### Programming
+
+* [Introduction](programming/introduction.md)
+
 ### OOP
 
 * [Introduction](oop/introduction.md)
