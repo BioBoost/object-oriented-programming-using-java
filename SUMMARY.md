@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 
-### Object Oriented Programming
+### OOP
 
 * [Introduction to OOP](oop/introduction.md)
 
