@@ -1,4 +1,4 @@
-# Object Oriented Programming using Java and C++
+# Object Oriented Programming using Java
 
 Welcome to the course Object Oriented Programming (OOP). In this course we will try to learn to become good or better OOP programmers. While the language used for the examples is Java, any or most other OOP programming languages can be used in combination with this course.
 
