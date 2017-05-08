@@ -2,9 +2,12 @@
 
 * [Introduction](README.md)
 
-### Programming
+### Introduction into Programming
 
-* [Introduction](programming/introduction.md)
+* [Introduction into Programming](introduction_into_programming/introduction.md)
+<!-- * [Summary](introduction_into_programming/summary.md) -->
+<!-- * [Quiz](introduction_into_programming/quiz.md) -->
+<!-- * [Exercises](introduction_into_programming/exercises.md) -->
 
 ### OOP
 
@@ -19,10 +22,6 @@
 * [Arrays](java/arrays.md)
 * [Inheritance](java/inheritance.md)
 * [Collections](java/collections.md)
-
-### C++
-
-* [Introduction](cpp/introduction.md)
 
 ### Good Practices
 
