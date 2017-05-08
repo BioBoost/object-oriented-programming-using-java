@@ -80,6 +80,20 @@ In both these areas, **practice is essential**. Exposure to a wide variety of pr
 
 Learn to work with others in a **team** environment. People have different strengths and weaknesses and a good team can bring together people whose strengths and weaknesses are complementary. The members of a team can teach each other. Most importantly, teams can tackle problems that would be too big for an individual. Beware, though, teams are not easy to lead and you can easily make a project a disaster by just gathering as many people as you can. If you want to work with a team, come with a solid design and a strong vision of what the project should look like when it's finished. If other members of the team suggest new ideas, take them with consideration but do not fall in the feature-greed pitfall, e.g. your project is never finished because the final goal grows beyond all proportions.
 
+## Console and GUI applications
 
-<!-- TODOs -->
-<!-- Terminal and GUI applications -->
+A console application is a computer program designed to be used via a text-only computer interface, such as a text terminal, the command line interface of some operating systems (Unix, DOS, etc.) or the text-based interface included with most Graphical User Interface (GUI) operating systems, such as the Win32 console in Microsoft Windows, the Terminal in Mac OS X, and xterm in Unix. A user typically interacts with a console application using only a keyboard and display screen, as opposed to GUI applications, which normally require the use of a mouse or other pointing device. Many console applications such as command line interpreters are command line tools, but numerous text-based user interface (TUI) programs also exist.
+
+![A Modern Terminal[^2]](img/Bash_screenshot.png)
+
+[^2]: Source https://en.wikipedia.org/wiki/Graphical_user_interface
+
+As the speed and ease-of-use of GUIs applications have improved over time, the use of console applications has greatly diminished, but not disappeared. Some users simply prefer console based applications, while some organizations still rely on existing console applications to handle key data processing tasks.
+
+The ability to create console applications is kept as a feature of modern programming environments such as Visual Studio and the .NET Framework on Microsoft Windows because it greatly simplifies the learning process of a new programming language by removing the complexity of a graphical user interface (see an example in the C# article).
+
+For data processing tasks and computer administration, these programming environments represent the next level of operating system or data processing control after scripting. If an application is only going to be run by the original programmer and/or a few colleagues, there may be no need for a pretty graphical user interface, leaving the application leaner, faster and easier to maintain.
+
+![A Modern Graphical User Interface application[^3]](img/750px-E17_bw_screenshot.png)
+
+[^3]: Source https://en.wikipedia.org/wiki/Graphical_user_interface
