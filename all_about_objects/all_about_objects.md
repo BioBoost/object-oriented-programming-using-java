@@ -106,3 +106,19 @@ Notice how the UML class diagram is separated into three distinct parts:
 * The top part: the name of the class
 * The middle part: the attributes of the class
 * The bottom part: the methods of the class
+
+#### Baking Cookies
+
+Metaphorically you can compare creating objects with baking cookies.
+
+The dough we use is basically the computer memory we have at our disposal.
+
+![Cookie Dough - Computer memory](img/dough.jpg)
+
+The template for our cookie is the class we define.
+
+![Cookie Template - Class](img/template.jpg)
+
+The resulting cookies are the instances of our class called objects.
+
+![Baked Cookies - Object instances](img/cookies.jpg)
