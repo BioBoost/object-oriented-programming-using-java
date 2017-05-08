@@ -183,8 +183,8 @@ public static void main(String[] args) {
 
 ![Syntax Error indicated by NetBeans](img/semicolon_expected.png)
 
-Strings can be concatenated in Java using a `+` between the different parts. Java can also concatenate strings
-with other things such as numbers. The code below shows different examples of string concatenations.
+Strings can be concatenated in Java by placing a `+` sign between the different parts. Java can also concatenate strings
+with other types such as numbers. The code below shows different examples of string concatenations.
 
 ```java
 public static void main(String[] args) {
