@@ -30,10 +30,10 @@ It will automatically generate an empty application with the code shown below.
 
 > #### Info::Console Applications
 >
-> When developing applications a choice must be made between a GUI and a terminal application.
-> As discussed earlier, a terminal application has no real graphical user interface and interacts
+> When developing applications a choice must be made between a GUI and a console application.
+> As discussed earlier, a console application has no real graphical user interface and interacts
 > with the user via the terminal (console). The only option for input and output are essentially text.
-> This course will focus on terminal applications. Object Oriented Programming 2 will introduce JavaFX
+> This course will focus on console applications. Object Oriented Programming 2 will introduce JavaFX
 > allowing the creation of graphical applications in Java.
 
 ```java
