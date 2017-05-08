@@ -1,10 +1,6 @@
 # Object Oriented Programming using Java and C++
 
-Welcome to the course Object Oriented Programming (OOP). In this course we will try to learn to become good or better OOP programmers. While the languages used for examples are Java and C++, any or most other OOP programming languages can be used in combination with this course.
-
-This course is actually split in three parts. Two are based on Java and the last is C++.
-
-The third part will also contain some specifics for mBed platforms as they can be programmed in C++. This means that some exercises can only be made on the mBed platform (if there are hardware dependencies). In this case a note will be added to the exercise description.
+Welcome to the course Object Oriented Programming (OOP). In this course we will try to learn to become good or better OOP programmers. While the language used for the examples is Java, any or most other OOP programming languages can be used in combination with this course.
 
 Most of the material used in this course is created by Nico De Witte. However some paragraphs, definitions, examples, images, ... may be copied from other online sources. In that case a reference can be found in the Sources chapter or as a footnote.
 
@@ -13,8 +9,6 @@ Check out my github repos: https://github.com/BioBoost
 ## Requirements
 
 To follow along you will at least need to install Java and an IDE like NetBeans.
-
-The exercises for mBed can be developed online at https://developer.mbed.org/compiler/ or using the offline toolchain https://docs.mbed.com/docs/mbed-os-handbook/en/latest/dev_tools/cli/
 
 ## About this course
 
@@ -46,12 +40,6 @@ Some really good books about object oriented programming are listed below.
 
 [^3]: Source: https://www.pearsonhighered.com/program/Weisfeld-Object-Oriented-Thought-Process-The-4th-Edition/PGM323375.html
 
-The C++ part of this course is partially based on the book **Thinking in C++** written by Bruce Eckel.
-
-![Thinking in C++ by Bruce Eckel[^4]](http://mindview.net/Books/TICPP/Cpp2V1Cover.jpg)
-
-[^4]: Source: http://mindview.net/Books/TICPP/ThinkingInCPP2e.html
-
 ### Theory
 
 While all you need to know for the exam is in this course, not all you should know is in here. It is extremely preferable to take notes in the lessons. And of course you are also encouraged to search the Internet and books for extra knowledge.
@@ -62,7 +50,7 @@ Feel free to ask questions in the lessons, via email or via slack.
 
 The LABs are there to practice what you have learned in the theory lessons. You will get some assignments through the semester on which you will be graded.
 
-This course also contains extra exercises to practice your OOP skills in either Java or C++ (or another language of your preference).
+This course also contains extra exercises to practice your OOP skills in Java (or another language of your preference).
 
 There may be occasions for tests but these will mostly be announced.
 
