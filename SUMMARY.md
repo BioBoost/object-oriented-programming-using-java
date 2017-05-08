@@ -2,16 +2,19 @@
 
 * [Introduction](README.md)
 
-### Introduction into Programming
+### Programs and Software
 
-* [Introduction into Programming](introduction_into_programming/introduction.md)
-<!-- * [Summary](introduction_into_programming/summary.md) -->
-<!-- * [Quiz](introduction_into_programming/quiz.md) -->
-<!-- * [Exercises](introduction_into_programming/exercises.md) -->
+* [Programs and Software](programs_and_software/programs_and_software.md)
+<!-- * [Summary](programs_and_software/summary.md) -->
+<!-- * [Quiz](programs_and_software/quiz.md) -->
+<!-- * [Exercises](programs_and_software/exercises.md) -->
 
-### OOP
+### All About Objects
 
-* [Introduction](oop/introduction.md)
+* [All About Objects](all_about_objects/all_about_objects.md)
+<!-- * [Summary](all_about_objects/summary.md) -->
+<!-- * [Quiz](all_about_objects/quiz.md) -->
+<!-- * [Exercises](all_about_objects/exercises.md) -->
 
 ### Java
 
