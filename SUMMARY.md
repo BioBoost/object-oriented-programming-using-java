@@ -9,6 +9,13 @@
 <!-- * [Quiz](programs_and_software/quiz.md) -->
 <!-- * [Exercises](programs_and_software/exercises.md) -->
 
+### Starting in Java
+
+* [Starting in Java](starting_in_java/starting_in_java.md)
+<!-- * [Summary](starting_in_java/summary.md) -->
+<!-- * [Quiz](starting_in_java/quiz.md) -->
+<!-- * [Exercises](starting_in_java/exercises.md) -->
+
 ### All About Objects
 
 * [All About Objects](all_about_objects/all_about_objects.md)
