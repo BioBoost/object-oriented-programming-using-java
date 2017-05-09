@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Programs and Software
 
 Based on https://en.wikiversity.org/wiki/Introduction_to_Programming/About_Programming

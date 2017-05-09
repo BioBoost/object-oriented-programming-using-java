@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # All About Objects
 
 This chapter will teach you the basics of the Object Oriented Programming.
