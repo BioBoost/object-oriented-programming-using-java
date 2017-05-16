@@ -453,10 +453,86 @@ by Bjarne Stroustrup
 --------------------------------------------------------
 ```
 
+## Mathematical Operators
+
+The Java programming languages has a lot of operators. Two operators have already been discussed, namely the assignment operator `=` and the string concatenation operator `+`.
+
+The most basic operators are the mathematical operators. They are easy to understand because they have the same function as in math. The following operators are available to do basic math operations:
+
+* `+` Additive operator (also used for String concatenation)
+* `-` Subtraction operator
+* `*` Multiplication operator
+* `/` Division operator
+* `%` Remainder operator
+
+These operators are part of the **binary operators** because they take **two operands**, namely a left and a right operator. For example in the summation below `L` is the left operand and `R` is the right operand. The result of the operation is stored in the variable `sum`.
+
+```java
+int R = 14;
+int L = 12;
+
+int result = R + L;     // Result is now 26
+```
+
+The `+`, `-` and `*` operators function the same as in math. Their use can be seen in the code below.
+
+```java
+int a = 2 + 3;      // a = 5
+int b = a + 5;      // b = 10
+
+int c = 6 * b;      // c = 60
+int d = c - 120;    // d = -60
+```
+
+The division and remainder operators deserve some special attention. The division operator has a different result based on the types of its left and right operand. If both are of an integral type (`short`, `int`, `byte`) then a whole division will be performed. Meaning that `3 / 2` will result in `1`. If either operand is a floating point operand (`float` or `double`) than the division operator will perform a real division: `3.0 / 2` will result in `1.5`.
+
+If your operands are of integral type and you wish to perform a real division, you can always multiply one of the operands with `1.0` to explicitly convert it to a floating point number without having to change its actual data type. Let us take a look at some examples.
+
+```java
+int x = 5;
+int y = 2;
+
+int z = x / y;              // z = 2 (whole division)
+double w = x / y;           // w = 2.0 (still whole division)
+double q = 1.0 * x / y;     // w = 2.5 (real division)
+
+double a = 3.0;
+double b = 2;       // 2 will actually be converted to 2.0
+
+double k = a / b;   // k = 1.5 (real division)
+```
+
+Notice that even `double w = x / y;` results in `2.0`. The reason behind this is that `x / y` equals to `2` as it is a whole division since both operand are of integral type. The result is then implicitly converted to a double, and stored in `w`.
+
+While the order in which mathematical operations are performed is defined in Java, most programmers do not know all of them by heart. It is much more clear and simpler to use round brackets `()` to enforce the order of the calculations. Take a look at the following piece of code:
+
+```java
+int a = 5;
+int b = 6;
+int c = 10;
+int d = 2;
+
+int result = a * b + c - d * a / 5 - 3;     // result = 35
+
+System.out.println("The result is " + result);
+```
+
+The result of the code above is `35`. Would you have known? By using round brackets this becomes much clearer and the change of making a mistake is a lot smaller.
+
+```java
+int a = 5;
+int b = 6;
+int c = 10;
+int d = 2;
+
+int result = (a * b) + c - (d * a / 5) - 3;     // result = 35
+
+System.out.println("The result is " + result);
+```
 
 
 
-
+<!-- Naming is case sensitive -->
 
 
 <!-- Operators -->
