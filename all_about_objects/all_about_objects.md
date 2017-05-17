@@ -37,7 +37,7 @@ What actions can that person perform ? He/she can:
 * stand up
 * ...
 
-These are called the **methods** of an object. They define the possible behavior of an object.
+These are called the **methods** of an object. They define the possible behavior or actions of an object.
 
 This leads to a more formal definition of an object:
 
@@ -91,25 +91,7 @@ Lets use the idea of "fruit" as one example. A "fruit" object would represent th
 
 The first prototype-oriented programming language was Self, developed by David Ungar and Randall Smith in the mid-1980s to research topics in object-oriented language design. Since the late 1990s, the classless paradigm has grown increasingly popular.Some current prototype-oriented languages are JavaScript (and other ECMAScript implementations, JScript and Flash's ActionScript 1.0), Lua, Cecil, NewtonScript, Io, Ioke, MOO, REBOL, Lisaac and AHk.
 
-### Defining Classes
-
-Let's take a look at how a class can be defined to create a simple model of a cookie.
-
-![A cookie](img/cookie.jpg)
-
-A graphical representation can be created using UML (Unified Modeling Language) class diagrams. UML is a general-purpose, modeling language in the field of software engineering, that is intended to provide a standard way to visualize the design of a system.
-
-Below an example is shown of a class diagram of a Cookie. Do take note that some things are still missing from the diagram but these will be added gradually as the course progresses.
-
-![UML class diagram of a Cookie](img/uml_cookie.png)
-
-Notice how the UML class diagram is separated into three distinct parts:
-
-* The top part: the name of the class
-* The middle part: the attributes of the class
-* The bottom part: the methods of the class
-
-#### Baking Cookies
+### Baking Cookies
 
 Metaphorically you can compare creating objects with baking cookies.
 
@@ -124,3 +106,61 @@ The template for our cookie is the class we define.
 The resulting cookies are the instances of our class called objects.
 
 ![Baked Cookies - Object instances](img/cookies.jpg)
+
+## Creating and using Objects
+
+Before we delve into creating and using objects, consider the following example. A fictive `LightBulb` class that contains the characteristics and the behavior of a simple lightbulb. You can create objects from this class and you can turn each lightbulb on or off.
+
+![A Lightbulb](https://www.lucidchart.com/publicSegments/view/16e1cb4b-efa6-4566-bfff-cfaa5b25210c/image.png)
+
+Creating objects (instances of a class) in Java is done using the `new` keyword. The `new` keyword is then followed by a call to a constructor. The constructor is a special method that initializes the new object. More on this later.
+
+To be able to use the object, it needs to be accessible through a variable. For this reason the result of the `new` operator (a reference to the object) is stored in a variable.
+
+Let us take a look at a simple example where we create an object of type `LightBulb`.
+
+```java
+LightBulb kitchenLight;
+kitchenLight = new LightBulb();
+
+LightBulb cellarLight = new LightBulb();
+```
+
+The first part `LightBulb kitchenLight` or `LightBulb cellarLight` is actually the same syntax as used with a variable of a primitive type such as `int` or `double`. You first specify the type, in this case it is the name of the class instead of the primitive type, and next you choose a name for your variable.
+
+Similar to initializing a primitive variable, you can also split the declaration and initialization in two lines. However most often you will see this being done using a single line of code.
+
+Next comes the assignment using the assignment operator `=`. The next part consists of the `new` operator followed by the call to a constructor of the class, which returns a reference to an object of the class.
+
+### Methods
+
+Objects store data but also have a behavioral part. This means that objects can perform actions that are defined for that class. The actions that an object can perform are called the `methods` of the object or class. For example a class `Radio` could have methods `turnOff()`, `turnOn()`, `changeFrequency()`, `setVolume()`, ...
+
+In the example above the LightBulb has the methods `turnOff()` and `turnOn()`.
+
+To execute the method we need to specify the name followed by round brackets. However you cannot just state `turnOn()`. Java will not know what to turn on. So when calling a method of an object, you also need to make clear to Java what method of which object needs to be called. This is done using the `.` (dot) operator as shown in the following code example.
+
+```Java
+LightBulb cellarLight = new LightBulb();
+
+cellarLight.turnOn();
+```
+
+You actually already have used this syntax when printing information to the console:
+
+```java
+System.out.println("Println() is a method");
+```
+
+Methods often take information, use that information to manipulate the object the method is called on, and sometimes also output a result. So actually a method can considered to be a small process system on its own. It has a state (that of the object), it takes inputs and it can generate an output. The inputs to the method are called it's **arguments**. The output is called the **return value**.
+
+Consider the example below. Here a `Point` object is created using a special constructor, one that takes an `x` and a `y` argument to initialize its coordinate attributes. A point objects represents a location in *(x,y)* coordinate space.
+
+```java
+Point origin = new Point(0, 0);
+```
+
+But how does one know what constructor to call or even which constructors for a class exists. Because there can be more than one constructor for a class, each different in the arguments that they take. Actually either by looking at the code or by looking at the documentation. Luckely there is an extensive documentation system for Java classes that are included with Java. This documentation is called the Java API and can be found at https://docs.oracle.com/javase/8/docs/api/
+
+For example for the `Point` class: https://docs.oracle.com/javase/8/docs/api/java/awt/Point.html
+Here you can see that the Point class has three constructors. One that takes no arguments and initializes its attributes x and y to 0. One that takes an x and y as arguments and one that takes another Point as argument. The latter puts the Point at the same location as the Point provided to the constructor.
