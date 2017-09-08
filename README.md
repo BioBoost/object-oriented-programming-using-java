@@ -8,7 +8,7 @@ Check out my github repos: https://github.com/BioBoost
 
 ## Requirements
 
-To follow along you will at least need to install Java and an IDE like NetBeans.
+To follow along you will at least need to install Java and an IDE like NetBeans. You can find a tutorial for the installation of NetBeans in the [Software Installation Guide @ https://sillevl.gitbooks.io/software-installation-guide](https://sillevl.gitbooks.io/software-installation-guide).
 
 ## About this course
 
@@ -24,7 +24,7 @@ The main focus lies in learning to think in an object oriented way and in the me
 
 Most of the ideas, knowledge and understanding is achieved by reading books. It can only be encouraged to read books and broaden your horizon. Challenge yourself and others with your newly acquired knowledge.
 
-But don't only become book-smart. Also become do-smart. Make exercises, create programs, beat challenges, test new things, ...
+But don't only become book-smart. Also become do-smart. Make exercises, solve problems, create programs, beat challenges, test new things, ...
 
 Some really good books about object oriented programming are listed below.
 
@@ -42,13 +42,13 @@ Some really good books about object oriented programming are listed below.
 
 ### Theory
 
-While all you need to know for the exam is in this course, not all you should know is in here. It is extremely preferable to take notes in the lessons. And of course you are also encouraged to search the Internet and books for extra knowledge.
+While all you need to know for the exam is in this course, not all you should know is in here. **It is extremely preferable to take notes in the lessons.** And of course you are also encouraged to search the Internet and books for extra knowledge.
 
-Feel free to ask questions in the lessons, via email or via slack.
+Feel free to ask questions in the lessons, via email or via Slack @ [https://eo-ict-vives.slack.com](https://eo-ict-vives.slack.com).
 
 ### LABs, assignments and tests
 
-The LABs are there to practice what you have learned in the theory lessons. You will get some assignments through the semester on which you will be graded.
+The LABs are there to practice what you have learned in the lessons. You will get some assignments through the semester on which you will be graded.
 
 This course also contains extra exercises to practice your OOP skills in Java (or another language of your preference).
 
@@ -56,4 +56,4 @@ There may be occasions for tests but these will mostly be announced.
 
 ### ECTS
 
-For the exact details on the LABs, exams and tests you should take a look at the ECTS fiche of this course.
+For the exact details on the LABs, exams and tests you should take a look at the ECTS fiche of this course which can be found via [http://onderwijsaanbod.vives-noord.be](http://onderwijsaanbod.vives-noord.be/syllabi/n/B3N001N.htm).
