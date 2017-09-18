@@ -3,7 +3,7 @@
 * [About this Course](README.md)
 
 ### Introduction to Computer Programming
-* [Introduction to Computer Programming](introduction_to_computer_programming/introduction_to_computer_programming.md)
+* [Introduction to Computer Programming](introduction_to_computer_programming/readme.md)
 <!-- * [Summary](introduction_to_computer_programming/summary.md) -->
 <!-- * [Quiz](introduction_to_computer_programming/quiz.md) -->
 <!-- * [Exercises](introduction_to_computer_programming/exercises.md) -->

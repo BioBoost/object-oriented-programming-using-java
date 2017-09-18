@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Introduction to Computer Programming
 
 Today, most people don't need to know how a computer works. Most people can simply turn on a computer or a mobile phone and point at some little graphical object on the display, click a button or swipe a finger or two, and the computer does something. How to interact with a computer program is all the average person needs to know.
@@ -13,7 +15,6 @@ Basically, writing software (computer programs) involves describing processes an
 > **al-go-rithm / Noun:** An ordered set of steps to solve a problem.
 
 An important reason to consider learning about how to program a computer is that the concepts underlying this will be valuable to you, regardless of whether or not you go on to make a career out of it.  One thing that you will learn quickly is that a computer is very dumb, but obedient.  It does exactly what you tell it to do, which is not necessarily what you wanted.  Programming will help you learn the importance of clarity of expression.
-
 
 > It has often been said that a person does not really
 > understand something until he teaches it to someone else.
@@ -60,15 +61,21 @@ While this is certainly a useful exercise you can already feel that programming 
 >
 > *Stephen Wolfram*
 
+### Graphical Programming Languages
 
+A little less than fifteen years ago, Mitchel Resnick and friends at MIT introduced a programming environment called Scratch. It provides a new approach to teaching computer programming through a graphical user interface that eliminates the possibility of making certain mistakes common in text-based programming.
 
+Programs are constructed by connecting blocks, each representing some functionality available in the system.
 
+![Scratch Example^1](img/scratch_example.png)
 
+[^1]: Source: https://growageneration.com/2013/02/18/scratch-programming-and-3rd-grade-common-core/
 
+The image above shows a simple program that generates a random number and gives the user three goes at guessing it. The shapes of the blocks determine where they can be placed to form an acceptable program.
 
+One of Scratch's strengths is the ease with which students can construct games and animated simulations and stories.  Another strength is the Scratch website itself which provides access to many tutorials and a community of users with programs they've written.
 
-
-
+Blocks-based programming is a great way to get started. But, as the size of the programs you want to write grows or you need a feature not available in Scratch, it's time to switch to text-based programming.
 
 
 
