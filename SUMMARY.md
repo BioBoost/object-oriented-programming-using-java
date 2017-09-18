@@ -8,6 +8,16 @@
 <!-- * [Quiz](introduction_to_computer_programming/quiz.md) -->
 <!-- * [Exercises](introduction_to_computer_programming/exercises.md) -->
 
+### Building Blocks of a Programming Language
+* [Building Blocks of a Programming Language](building_blocks/readme.md)
+<!-- * [Summary](introduction_to_computer_programming/summary.md) -->
+<!-- * [Quiz](introduction_to_computer_programming/quiz.md) -->
+<!-- * [Exercises](introduction_to_computer_programming/exercises.md) -->
+
+
+
+
+
 <!-- ### Programs and Software -->
 
 <!-- * [Programs and Software](programs_and_software/programs_and_software.md) -->
