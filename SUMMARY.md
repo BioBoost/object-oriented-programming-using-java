@@ -15,16 +15,6 @@
 <!-- * [Exercises](introduction_to_computer_programming/exercises.md) -->
 
 
-
-
-
-<!-- ### Programs and Software -->
-
-<!-- * [Programs and Software](programs_and_software/programs_and_software.md) -->
-<!-- * [Summary](programs_and_software/summary.md) -->
-<!-- * [Quiz](programs_and_software/quiz.md) -->
-<!-- * [Exercises](programs_and_software/exercises.md) -->
-
 <!-- ### Starting in Java
 
 * [Starting in Java](starting_in_java/starting_in_java.md) -->
