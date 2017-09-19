@@ -8,19 +8,12 @@
 <!-- * [Quiz](introduction_to_computer_programming/quiz.md) -->
 <!-- * [Exercises](introduction_to_computer_programming/exercises.md) -->
 
-### Building Blocks of a Programming Language
-* [Building Blocks of a Programming Language](building_blocks/readme.md)
-<!-- * [Summary](introduction_to_computer_programming/summary.md) -->
-<!-- * [Quiz](introduction_to_computer_programming/quiz.md) -->
-<!-- * [Exercises](introduction_to_computer_programming/exercises.md) -->
+### Starting in Java
 
-
-<!-- ### Starting in Java
-
-* [Starting in Java](starting_in_java/starting_in_java.md) -->
+* [Starting in Java](starting_in_java/readme.md)
 <!-- * [Summary](starting_in_java/summary.md) -->
 <!-- * [Quiz](starting_in_java/quiz.md) -->
-<!-- * [Exercises](starting_in_java/exercises.md) -->
+* [Exercises](starting_in_java/exercises.md)
 
 <!-- ### All About Objects -->
 
