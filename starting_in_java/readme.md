@@ -241,12 +241,9 @@ More information about escape characters can be found at https://en.wikipedia.or
 
 ## Storing and using information
 
-The programs that we create need to store all sorts of data. From simple things such as
-numbers, characters and string to complex data types that a programmer can define for himself.
+The programs that we create need to store all sorts of data. From simple things such as numbers, characters and string to complex data types that a programmer can define for himself.
 
-This data is stored, manipulated and outputted through our application. The data itself
-is stored inside the memory of the computer or system the program is running on. Inside your application
-you do not need to access the memory directly, for this you can make use of variables.
+This data is stored, manipulated and outputted through our application. The data itself is stored inside the memory of the computer or system the program is running on. Inside your application you do not need to access the memory directly, for this you can make use of variables.
 
 ### Variables
 
@@ -277,9 +274,7 @@ y = f(x) = ax + b
 
 ### Declaring a variable
 
-Before a variable can be used inside an application, it needs be **declared**. Declaring a variable can be thought of as stating to the Java interpreter
-that is needs to request memory for data and make it accessible using a symbolic variable name. Because the Java interpreter
-needs to know how much memory to set aside, you as a programmer need to specify what **type of data** the variable will hold.
+Before a variable can be used inside an application, it needs be **declared**. Declaring a variable can be thought of as stating to the Java interpreter that is needs to request memory for data and make it accessible using a symbolic variable name. Because the Java interpreter needs to know how much memory to set aside, you as a programmer need to specify what **type of data** the variable will hold.
 
 The type of the variable determines the size and layout of the variable's memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.
 
@@ -322,7 +317,7 @@ public static void main(String[] args) {
 }
 ```
 
-Note how the variable is declared (created by stating a type and name) before it is used. The following code is therefore flawed and will not run:
+Note how the variable needs to be declared (created by stating a type and name) before it is used. The following code is therefore flawed and will not run. `numberOfStudents` and `numberOfEmailAddresses` are used before they are declared.
 
 ```java
 public static void main(String[] args) {
@@ -380,6 +375,10 @@ Integer is not the only type that is supported by Java. A full overview of the d
 * `boolean`: The boolean data type has only two possible values: `true` and `false`. Use this data type for simple flags that track true/false conditions. This data type represents one bit of information, but its "size" isn't something that's precisely defined.
 
 * `char`: The char data type is a single 16-bit Unicode character. It has a minimum value of 0 and a maximum value of 65,535 inclusive.
+
+> #### Warning::String is not a primitive datatype
+>
+>  Note that String is not listed above as a primitive datatype. That is because Strings are actually objects. More on this later.
 
 Examples of variable declarations of different data types:
 
