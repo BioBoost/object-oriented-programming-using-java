@@ -6,5 +6,5 @@ Make sure to upload your solution to the git remote. Also do not forget to add a
 
 ## Week 1
 
-* [Function Printer](2017/function_printer.md)
-* [Circle Properties](2017/circle_properties.md)
+* [Function Printer](assignments/2017/function_printer.md)
+* [Circle Properties](assignments/2017/circle_properties.md)
