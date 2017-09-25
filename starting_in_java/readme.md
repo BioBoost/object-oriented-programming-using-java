@@ -515,6 +515,43 @@ int result = (a * b) + c - (d * a / 5) - 3;     // result = 35
 System.out.println("The result is " + result);
 ```
 
+## Equality and Relational Operators
+
+The equality and relational operators determine if one operand is greater than, less than, equal to, or not equal to another operand. The majority of these operators will probably look familiar to you as well. The result of these equality and relational operators is always `true` or `false`. This means that their result can actually be stored in a variable of type `boolean`.
+
+The following equality and relational operators are available in Java:
+
+| Operator | Description |
+| --- | ---|
+| `==`     | equal to |
+| `!=`     | not equal to |
+| `>`      | greater than |
+| `>=`     | greater than or equal to |
+| `<`      | less than |
+| `<=`     | less than or equal to |
+
+Take a look at the examples below.
+
+```java
+boolean isFourBiggerThanSixteen = (4 > 16);
+System.out.println("4 > 16 ? " + isFourBiggerThanSixteen);
+
+boolean isTwelveEqualToTwelve = (12 == 12);
+System.out.println("12 == 12 ? " + isTwelveEqualToTwelve);
+
+int a = -6;
+int b = 88;
+System.out.println(a + " <= " + b + "? " + (a <= b));
+```
+
+Note how we need to use two equality signs `==` to test if two values are equal, while we use a single sign `=` for assignment.
+
+While these operators will not often be used in a situation as shown in the code above, they will often be used when making decisions in your program. More on this later.
+
+
+
+
+
 
 <!-- Naming is case sensitive -->
 <!-- Operators -->
