@@ -49,6 +49,12 @@
 
 * [Arrays](solutions/arrays.md)
 * [Inheritance](solutions/inheritance.md) -->
+
+
+----
+
+* [Assignments](assignments/2017/readme.md)
+
 ----
 
 * [Sources](sources.md)
