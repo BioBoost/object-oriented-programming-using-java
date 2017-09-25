@@ -53,7 +53,7 @@
 
 ----
 
-* [Assignments](assignments/2017/readme.md)
+* [Assignments](assignments/readme.md)
 
 ----
 
