@@ -489,7 +489,7 @@ double k = a / b;   // k = 1.5 (real division)
 
 Notice that even `double w = x / y;` results in `2.0`. The reason behind this is that `x / y` equals to `2` as it is a whole division since both operand are of integral type. The result is then implicitly converted to a double, and stored in `w`.
 
-While the order in which mathematical operations are performed is defined in Java, most programmers do not know all of them by heart. It is much more clear and simpler to use round brackets `()` to enforce the order of the calculations. Take a look at the following piece of code:
+While the precedence (order) in which mathematical operations are performed is defined in Java, most programmers do not know all of them by heart. It is much more clear and simpler to use round brackets `()` to enforce the precedence of the calculations. Take a look at the following piece of code:
 
 ```java
 int a = 5;
@@ -502,7 +502,7 @@ int result = a * b + c - d * a / 5 - 3;     // result = 35
 System.out.println("The result is " + result);
 ```
 
-The result of the code above is `35`. Would you have known? By using round brackets this becomes much clearer and the change of making a mistake is a lot smaller.
+The result of the code above is `35`. Would you have known? By using round brackets this becomes much clearer and the chance of making a mistake is a lot smaller.
 
 ```java
 int a = 5;
