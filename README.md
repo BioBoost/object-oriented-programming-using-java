@@ -57,3 +57,7 @@ There may be occasions for tests but these will mostly be announced.
 ### ECTS
 
 For the exact details on the LABs, exams and tests you should take a look at the ECTS fiche of this course which can be found via [http://onderwijsaanbod.vives-noord.be](http://onderwijsaanbod.vives-noord.be/syllabi/n/B3N001N.htm).
+
+## Extra practice
+
+While this course does contain a lot of exercises and things to try, you may find some extra practice or inspiration at https://www.w3resource.com/java-exercises/. You will find a lot of exercises there and even an online code editor to tinker with. While the solutions are also available they have not been checked and approved by the teacher of this course. Be critical about the solutions and try to apply the things you have learned in this course.
