@@ -54,6 +54,7 @@
 ----
 ### Assignments
 
+* [Assignments](assignments/readme.md)
 * [Week 1](assignments/week_1.md)
 
 ----
