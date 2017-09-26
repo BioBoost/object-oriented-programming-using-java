@@ -4,7 +4,7 @@ Create a new project for each assignment. Give it the same name as the exercise.
 
 Make sure to upload your solution to the git remote. Also do not forget to add a `README.md` report file to each assignment.
 
-* [Function Printer](assignments/2017/function_printer.md)
+* [Function Printer](2017/function_printer.md)
 
 ## Week 1
 
