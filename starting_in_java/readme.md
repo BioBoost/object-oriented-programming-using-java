@@ -456,7 +456,7 @@ These operators are part of the **binary operators** because they take **two ope
 int R = 14;
 int L = 12;
 
-int result = R + L;     // Result is now 26
+int result = L + R;     // Result is now 26
 ```
 
 The `+`, `-` and `*` operators function the same as in math. Their use can be seen in the code below.
@@ -514,6 +514,51 @@ int result = (a * b) + c - (d * a / 5) - 3;     // result = 35
 
 System.out.println("The result is " + result);
 ```
+
+### Compound Operators
+
+Programmers are very lazy creatures that are always looking for ways to make their life's easier. That is why the compound operators were invented. They are a way to write shorter mathematical operations on the same variable as the result should be store in.
+
+```java
+int x = 5;
+
+x += 4;   // Same as writing x = x + 4;
+x -= 4;   // Same as writing x = x - 4;
+x *= 4;   // Same as writing x = x * 4;
+x /= 4;   // Same as writing x = x / 4;
+x %= 4;   // Same as writing x = x % 4;
+```
+
+### Increment and Decrement
+
+Incrementing (+1) and decrementing (-1) a variable is done very often in a programming language. It is one of the most used operations on integral values. It is most common used in loop-constructs as we will see in this chapter later on.
+
+Because of this a shorter way has been introduced using an increment `++` or decrement `--` operator as shown below.
+
+```java
+int i = 5;
+
+i++;    // Same as writing i = i + 1;
+i--;    // Same as writing i = i - 1;
+```
+
+There is however a caveat to keep in mind. Both operators come in a **suffix** (e.g. `i++`) and a **prefix** (e.g. `++i`) version. The end result of both versions is exactly the same, but there is a difference if you assign their value to another variable while using the increment or decrement operator.
+
+Let us take a look at two examples. First we take a look at the prefix version. In this case the value of `i` will be incremented to 6 before its value assigned to the variable `b`. Meaning at the end of this code both `i` and `b` will have a value of 6.
+
+```java
+int i = 5;
+int b = ++i;
+```
+
+Next we take a look at the suffix version. In this case the value of `i` will first be assigned to `b` before it is incremented. This results in a `b` having a value of 5 and `i` having a value of 6 at the end of the example.
+
+```java
+int i = 5;
+int b = i++;
+```
+
+While this may not seem all that important at the moment we will require to know if once we start to work with arrays (lists).
 
 ## Control Flow Statements
 
@@ -630,7 +675,7 @@ if (studentScore < 70) {
 }
 ```
 
-The if-else statement can be extended with even more if-else statements. Each if-else will need a new condition that needs to be checked. The first one that evaluates to true is executed, after which control jumps to the end of the if-else statements.
+The if-else statement can be extended with **even more if-else statements**. Each if-else will need a new condition that needs to be checked. The first one that evaluates to true is executed, after which control jumps to the end of the if-else statements.
 
 Let's extend our grading example to be a bit more student friendly:
 
@@ -653,6 +698,97 @@ if (studentScore >= 90) {
 ```
 
 You may have noticed that the value of `studentScore` can satisfy more than one expression in the compound statement. However the conditions are checked sequentially and once a condition is satisfied, the appropriate statements are executed and the remaining conditions are not evaluated.
+
+#### Switch statement
+
+Let us take a look at some code that will allow the user to enter the number of the day of the week. The program will than determine the name of the day and output it to the user.
+
+```java
+Scanner console = new Scanner(System.in);
+int dayOfTheWeek = 0;
+
+do {
+  System.out.print("What day of the week is it today [1-7]?");
+  dayOfTheWeek = console.nextInt();
+
+  if (dayOfTheWeek == 1) {
+      System.out.println("Ah ok, than it's Monday today");
+  } else if (dayOfTheWeek == 2) {
+      System.out.println("Ah ok, than it's Tuesday today");
+  } else if (dayOfTheWeek == 3) {
+      System.out.println("Ah ok, than it's Wednesday today");
+  } else if (dayOfTheWeek == 4) {
+      System.out.println("Ah ok, than it's Thursday today");
+  } else if (dayOfTheWeek == 5) {
+      System.out.println("Ah ok, than it's Friday today");
+  } else if (dayOfTheWeek == 6) {
+      System.out.println("Ah ok, than it's Saturday today");
+  } else if (dayOfTheWeek == 7) {
+      System.out.println("Ah ok, than it's Sunday today");
+  } else {
+      System.out.println("Not a valid day of the week");
+  }
+} while (dayOfTheWeek < 1 || dayOfTheWeek > 7);
+```
+
+When checking a single variable for equality using multiple if-else statements, it can be replaced with another structure called a switch structure. The template of the switch structure is shown below. Each case needs a single integral literal value to compare the variable against. If it matches (equals) than the code between the colon `:` and the `break;` statement is executed. The break is required for the switch to be stopped when a match is found.
+
+```java
+switch (<variable>) {
+  case <integral_literal_1>:
+    // Code to be executed
+    break;
+  case <integral_literal_2>:
+    // Code to be executed
+    break;
+  case <integral_literal_3>:
+    // Code to be executed
+    break;
+  // ...
+  default:
+    // Code to be executed in case no match found
+}
+```
+
+Replacing the if-else structure of the day-of-the-week example with a switch statement results in the following code.
+
+```java
+Scanner console = new Scanner(System.in);
+int dayOfTheWeek = 0;
+
+do {
+  System.out.print("What day of the week is it today [1-7]?");
+  dayOfTheWeek = console.nextInt();
+
+  switch (dayOfTheWeek) {
+      case 1:
+          System.out.println("Ah ok, than it's Monday today");
+          break;
+      case 2:
+          System.out.println("Ah ok, than it's Tuesday today");
+          break;
+      case 3:
+          System.out.println("Ah ok, than it's Wednesday today");
+          break;
+      case 4:
+          System.out.println("Ah ok, than it's Thursday today");
+          break;
+      case 5:
+          System.out.println("Ah ok, than it's Friday today");
+          break;
+      case 6:
+          System.out.println("Ah ok, than it's Saturday today");
+          break;
+      case 7:
+          System.out.println("Ah ok, than it's Sunday today");
+          break;
+      default:
+          System.out.println("Not a valid day of the week");
+  }
+} while (dayOfTheWeek < 1 || dayOfTheWeek > 7);
+```
+
+No general rule exists for when to use which construct. Some programmers don't like the switch statement. In most cases it is a case of preference.
 
 ## Loop statements
 
@@ -819,11 +955,45 @@ The following diagram shows a step by step method for building the condition abo
 
 ![While condition for user answer](img/stop_and_while_conditions.png)
 
-1. First determine the condition necessart to stop the while loop. In this case that is when the user answers either "yes" or "no".
+1. First determine the condition necessary to stop the while loop. In this case that is when the user answers either "yes" or "no".
 2. Next invert the whole condition to use it with a while loop. This is actually the necessary condition to keep the while loop running.
 3. Next you can simplify the condition by using De Morgan's laws
 
 Note that Strings are actually objects and we cannot use the simple comparison operator `==`. This would actually compare the references and not the content of the objects. More on this later.
 
+## Nesting control structures
+
+Each of the control structures (if, for, while, do-while, switch, ...) discussed in the previous sections can actually be nested. This means that we can place a loop inside an if code block, or an if inside another if.
+
+Let us for example take a look at the code below where we ask the user to input positive and negative integers. By setting the condition of the do-while loop to `number != 0`, we keep asking for more numbers until the user enters `0`. Each number is then added to a `totalPositive` or `totalNegative` based on whether it's greater or less than zero. If the condition for the do-while is not met anymore (user enters `0`), the loop finishes and the results are shown to the user.
+
+```java
+Scanner console = new Scanner(System.in);
+
+int totalPositive = 0;
+int totalNegative = 0;
+int number = 0;
+
+do {
+  System.out.print("Please enter a positive or negative integer [0 to stop]: ");
+  number = console.nextInt();
+
+  if (number < 0) {
+    totalNegative += number;
+  } else {
+    totalPositive += number;
+  }
+} while (number != 0);
+
+System.out.println("Total Positive: " + totalPositive);
+System.out.println("Total Negative: " + totalNegative);
+```
+
+The example above shows how an if-else construct can be nested inside a while loop. While the number of times you can nest a structure inside another is directly limited it should be kept to a minimum. The deeper structures get nested the more complex your code starts to become. Later we will see different strategies to overcome this complexity.
+
 <!-- Naming is case sensitive -->
 <!-- Programming in Style -->
+<!-- Comparing floats and doubles -->
+<!-- Lazy evaluation -->
+<!-- Equals versus == -->
+<!-- Literals -->
