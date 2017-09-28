@@ -626,7 +626,7 @@ int age = 16;
 boolean isAChild = (age >= 0 && age <= 14);      // false
 ```
 
-> #### Hint::De Morgan's Laws
+> #### Info::De Morgan's Laws
 >
 > In some cases it can be useful to rewrite complex conditions using De Morgan's Laws (https://en.wikipedia.org/wiki/De_Morgan%27s_laws). Do take note that shorter not always implies more readable or less complex.
 
