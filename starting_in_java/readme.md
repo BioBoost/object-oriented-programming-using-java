@@ -628,15 +628,13 @@ boolean isAChild = (age >= 0 && age <= 14);      // false
 
 > #### Hint::De Morgan's Laws
 >
-> In some cases it can be useful to rewrite complex conditions using De Morgan's Laws
-> (https://en.wikipedia.org/wiki/De_Morgan%27s_laws). Do take note that shorter not always
-> implies more readable or less complex.
+> In some cases it can be useful to rewrite complex conditions using De Morgan's Laws (https://en.wikipedia.org/wiki/De_Morgan%27s_laws). Do take note that shorter not always implies more readable or less complex.
 
 <!-- How to break here ? -->
 
 > #### Alert::Lazy evaluation
 >
->  These operators exhibit "short-circuiting" behavior, which means that the second operand is evaluated only if needed. This is also called lazy evaluations. So for example in an OR statement, if the first operand is truem the outcome must also be true. For this reason the second operand is not checked anymore.
+> These operators exhibit "short-circuiting" behavior, which means that the second operand is evaluated only if needed. This is also called lazy evaluations. So for example in an OR statement, if the first operand is truem the outcome must also be true. For this reason the second operand is not checked anymore.
 
 #### The if statement
 
