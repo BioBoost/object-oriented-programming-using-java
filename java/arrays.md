@@ -4,46 +4,6 @@
 
 ### Introduction
 
-Arrays are **container objects** that store a fixed amount of values of a single type.
-The length of the array is specified when the array object is created. After the array is
-created its length cannot be changed.
-
-The example code below shows how to declare and create an array of 10 integers:
-
-```java
-int[] randomNumbers = new int[10];
-```
-
-Notice how square brackets after the element type specify that this is an array.
-
-As **an array is actually an object** so the actual creation needs to be done using the `new` operator, at which stage the length of the array also needs to be specified.
-
-A visualization of the array may look something like this:
-
-![An array of 10 integers](img/arrays_of_ten_integers.gif)
-
-Each item in an array is called an element, and each element is accessed by its numerical index. As shown in the preceding visualization, numbering begins with 0 (this is called **zero-indexed**). The 9th element, for example, would therefore be accessed at index 8.
-
-Let's look at some code that generates a random number of each element and then prints the array of integers to the terminal:
-
-```java
-final int NUMBER_OF_RANDOMS = 10;
-
-int[] randomNumbers = new int[NUMBER_OF_RANDOMS];
-Random randomGenerator = new Random();
-
-// First generate random numbers
-for (int i = 0; i < NUMBER_OF_RANDOMS; i++) {
-    randomNumbers[i] = randomGenerator.nextInt();
-}
-
-// Print out all the values
-for (int i = 0; i < NUMBER_OF_RANDOMS; i++) {
-    System.out.println("randomNumbers[" + i + "]: " + randomNumbers[i]);
-}
-```
-
-From the code above can be seen that you can access elements by using `[]` with the index specified between them.
 
 ### Arrays of object references
 
@@ -77,14 +37,6 @@ for (int i = 0; i < NUMBER_OF_POINTS; i++) {
 }
 ```
 
-### Summary
 
-Arrays are:
-
-* Fixed-size, meaning that ones their size is set they cannot be resized.
-* Single-typed, meaning they can only hold 1 type of data.
-* Zero-indexed, meaning that the first element is located at position 0.
-* Sequential collections, meaning that the elements are positioned one after another in memory.
-* Ordered, meaning that the order of the elements will not change unless you change them.
 
 We can create arrays of primitive and non-primitive types. Non-primitive types are initialized to null and each element needs to be assigned an object reference before using it.
