@@ -42,7 +42,7 @@ Open NetBeans and create a new Project by selecting `File => New Project => Java
 
 It will automatically generate an empty application with the code shown below.
 
-> #### Info::Console Applications
+> #### info::Console Applications
 >
 > When developing applications a choice must be made between a GUI and a console application. As discussed earlier, a console application has no real graphical user interface and interacts with the user via the terminal (console). The only option for input and output are essentially text. This course will focus on console applications. Object Oriented Programming 2 will introduce JavaFX allowing the creation of graphical applications in Java.
 
