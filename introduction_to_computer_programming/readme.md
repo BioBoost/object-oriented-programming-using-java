@@ -52,7 +52,7 @@ A computer is a tool for solving problems with data. A program or an application
 
 Before we see what a computer programming language looks like, let's use a spoken language such as the English language to describe how to do something as a series of steps. A common exercise that really gets you thinking about what computer programming can be like is to describe a process you are familiar with.
 
-> #### primary:: Assignment - Cleaning a Car
+> #### Assignment::Cleaning a Car
 >
 >  Come up with a sequence of instructions to tell someone how to clean a car. Don't leave out any steps, or put them in the wrong order.
 
@@ -66,7 +66,7 @@ While this is certainly a useful exercise you can already feel that programming 
 
 <!-- How to break this up? -->
 
-> #### primary::Assignment - Don't blame the Computer, blame the programmer
+> #### Assignment::Don't blame the Computer, blame the programmer
 >
 >  As a future programmer you should never state that the computer is doing something wrong when your applications fails, crashes or does something unexpected. You should instead ask yourself, did I tell the computer how to do the job correctly? Did I forget something? Did I misinterpret the problem or do I have the solution wrong?
 
@@ -120,7 +120,7 @@ x = 1 + 2;
 
 The variation between different programming languages can be quite extensive.
 
-> #### primary::Assignment - Different Programming Languages
+> #### Assignment::Different Programming Languages
 >
 >  Find 5 examples of different programming languages. Try to find a small code example and determine if the language is interpreted or compiled.
 
