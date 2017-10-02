@@ -1,4 +1,4 @@
-.callout {
-  border-left: black solid 2px;
-  padding-left: 2px;
+.panel {
+  border-left: grey solid 2px;
+  padding-left: 1em;
 }
