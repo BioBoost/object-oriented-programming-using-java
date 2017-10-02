@@ -632,7 +632,7 @@ boolean isAChild = (age >= 0 && age <= 14);      // false
 
 <!-- How to break here ? -->
 
-> #### Alert::Lazy evaluation
+> #### Warning::Lazy evaluation
 >
 > These operators exhibit "short-circuiting" behavior, which means that the second operand is evaluated only if needed. This is also called lazy evaluations. So for example in an OR statement, if the first operand is truem the outcome must also be true. For this reason the second operand is not checked anymore.
 
