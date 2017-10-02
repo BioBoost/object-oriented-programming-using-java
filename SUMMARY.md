@@ -11,6 +11,7 @@
 ### Starting in Java
 
 * [Starting in Java](starting_in_java/readme.md)
+* [Methods](starting_in_java/methods.md)
 <!-- * [Summary](starting_in_java/summary.md) -->
 <!-- * [Quiz](starting_in_java/quiz.md) -->
 * [Exercises](starting_in_java/exercises.md)
@@ -56,6 +57,7 @@
 
 * [Assignments](assignments/readme.md)
 * [Week 1](assignments/week_1.md)
+* [Week 2](assignments/week_2.md)
 
 ----
 
