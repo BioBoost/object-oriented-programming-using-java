@@ -11,10 +11,27 @@
 ### Starting in Java
 
 * [Starting in Java](starting_in_java/readme.md)
+* [Building Blocks](starting_in_java/building_blocks.md)
+* [Hello World](starting_in_java/hello_world.md)
+* [Storing Information](starting_in_java/storing_information.md)
+* [Mathematical Operators](starting_in_java/mathematical_operators.md)
+* [Control Flow](starting_in_java/control_flow_statements.md)
+* [Simple Arrays](starting_in_java/simple_arrays.md)
+* [Constants](starting_in_java/constants.md)
 * [Methods](starting_in_java/methods.md)
 <!-- * [Summary](starting_in_java/summary.md) -->
 <!-- * [Quiz](starting_in_java/quiz.md) -->
 * [Exercises](starting_in_java/exercises.md)
+
+
+
+
+
+
+
+
+
+
 
 <!-- ### All About Objects -->
 
