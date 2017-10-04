@@ -1,3 +1,4 @@
+<!-- toc -->
 
 ## Methods
 
@@ -46,34 +47,7 @@ void printWelcome() {
 Note the return type which is set to `void` because the method actually does not return anything. It just prints some text to the terminal. Also notice that no parameters are needed as the method does not really need any data.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- Voorbeeld programma voor de les: de oppervlakte berekenen van een aantal shapes (circle, rechthoek, triangle, ...). Alles in 1 blok code. Dan daarna beginnen met een aantal methodes te maken. -->
-
-
-
 
 
 <!-- Some programmers also speak about functions and procedures. However for object oriented languages this is not entirely correct. Functions and procedures are part of functional programming languages such as C. In those languages a procedure is a function that does not return a result value. In object oriented programming this difference is not made and they are all called methods. Of course some object oriented languages allow you to define methods that are not part of a class, in this case the name functions can be considered correct. -->
