@@ -1,3 +1,5 @@
+<!-- toc -->
+
 ## Constant values
 
 Constants are variables that cannot be changed once they have been assigned a value. To declare a variable as constant you will need to place the `final` keyword before the type and assign the variable a value as shown in the following examples.

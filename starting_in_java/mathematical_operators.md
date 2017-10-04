@@ -1,3 +1,5 @@
+<!-- toc -->
+
 ## Mathematical Operators
 
 The Java programming languages has a lot of operators. Two operators have already been discussed, namely the assignment operator `=` and the string concatenation operator `+`.

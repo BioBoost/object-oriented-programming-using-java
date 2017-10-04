@@ -1,5 +1,3 @@
-<!-- toc -->
-
 # Starting in Java
 
 This chapter lays the foundation of a simple application. As a reader you will get acquainted with the basic building blocks of a programming language.

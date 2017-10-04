@@ -1,3 +1,5 @@
+<!-- toc -->
+
 ## Storing and using information
 
 The programs that we create need to store all sorts of data. From simple things such as numbers, characters and string to complex data types that a programmer can define for himself.

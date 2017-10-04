@@ -1,3 +1,5 @@
+<!-- toc -->
+
 ## Building Blocks of a Programming Language
 
 Almost every programming language out there has a number of basics building blocks required to solve problems and build programs.
