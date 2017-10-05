@@ -1,10 +1,10 @@
 <!-- toc -->
 
-## Control Flow Statements
+# Flow Control Statements
 
 The statements inside your source files are generally executed from top to bottom, in the order that they appear. Control flow statements, however, break up the flow of execution by employing decision making, looping, and branching, enabling your program to conditionally execute particular blocks of code. This section describes the decision-making statements (if-then, if-then-else, switch), the looping statements (for, while, do-while), and the branching statements (break, continue, return) supported by the Java programming language.
 
-### Making Decisions in Java
+## Making Decisions in Java
 
 To allow our program to make certain decisions we first need to take a look at conditions and how they are evaluated.
 
@@ -12,7 +12,7 @@ A condition is some sort of comparison (or a combination of comparisons) that ca
 
 The true and false values can differ from language to language, however internal in memory false is most of the time "0" and true is "not 0".
 
-#### Comparison Operators
+### Comparison Operators
 
 The table below shows the available comparison operators that can be used in Java to build a condition.
 
@@ -45,7 +45,7 @@ Note how we need to use two equality signs `==` to test if two values are equal,
 
 While the comparison operators will not often be used in a situation as shown in the code above, they will often be used when making decisions in your program.
 
-#### Conditional Operators
+### Conditional Operators
 
 When creating more complex conditional statements you will need to use the conditional operators to create combinations of conditions.
 
@@ -76,7 +76,7 @@ boolean isAChild = (age >= 0 && age <= 14);      // false
 >
 > These operators exhibit "short-circuiting" behavior, which means that the second operand is evaluated only if needed. This is also called lazy evaluations. So for example in an OR statement, if the first operand is truem the outcome must also be true. For this reason the second operand is not checked anymore.
 
-#### The if statement
+### The if statement
 
 The `if` statement is the most basic of all the control flow statements. It tells your program to execute a certain section of code only if a particular condition evaluates to true.
 
@@ -96,7 +96,7 @@ if (studentScore < 70) {
 
 If this test evaluates to `false` (meaning that the score is equal or above 70), control jumps to the end of the if statement.
 
-#### The if-else Statement
+### The if-else Statement
 
 The if-else statement provides a secondary path of execution when an "if" clause evaluates to `false`. Taking the previous example you could output a "good job" speech when the students score is equal or above 70%.
 
@@ -137,7 +137,7 @@ if (studentScore >= 90) {
 
 You may have noticed that the value of `studentScore` can satisfy more than one expression in the compound statement. However the conditions are checked sequentially and once a condition is satisfied, the appropriate statements are executed and the remaining conditions are not evaluated.
 
-#### Switch statement
+### Switch statement
 
 Let us take a look at some code that will allow the user to enter the number of the day of the week. The program will than determine the name of the day and output it to the user.
 
@@ -228,7 +228,7 @@ do {
 
 No general rule exists for when to use which construct. Some programmers don't like the switch statement. In most cases it is a case of preference.
 
-### Loop statements
+## Loop statements
 
 There may be a situation when you need to execute a block of code several number of times. In general, statements are executed sequentially: The first statement in a block is executed first, followed by the second, and so on. Programming languages provide various control structures that allow for more complicated execution paths.
 
@@ -238,7 +238,7 @@ Java programming language provides the following types of loops to handle loopin
 * **while loop**: Repeats a code block while a given condition is true. It tests the condition before executing the body of the loop.
 * **do-while loop**: Like a while statement, except that it tests the condition at the end of the loop body.
 
-#### The for loop
+### The for loop
 
 Basically a for loop is most often used when the number of iterations is pre-determined. A typical example would be a list of items where an actions needs to be applied to each item in the list.
 
@@ -325,7 +325,7 @@ i = 0 before for loop
 i = 10 after for loop
 ```
 
-#### The while loop
+### The while loop
 
 The while loop is used when the code block may not even run at all if the condition is not met. The condition is checked before the code block is executed.
 
@@ -361,7 +361,7 @@ while (numbersFound <= NUMBERS_TO_FIND) {
 
 ```
 
-#### The do-while loop
+### The do-while loop
 
 A do-while loop is used when the code block needs to be executed at least once. After the first iteration a condition is checked which determines if the code block should be executed again or not.
 
@@ -399,7 +399,7 @@ The following diagram shows a step by step method for building the condition abo
 
 Note that Strings are actually objects and we cannot use the simple comparison operator `==`. This would actually compare the references and not the content of the objects. More on this later.
 
-### Nesting control structures
+## Nesting control structures
 
 Each of the control structures (if, for, while, do-while, switch, ...) discussed in the previous sections can actually be nested. This means that we can place a loop inside an if code block, or an if inside another if.
 

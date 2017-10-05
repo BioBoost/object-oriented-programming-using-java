@@ -1,6 +1,6 @@
 <!-- toc -->
 
-## Methods
+# Methods
 
 Methods allow us to **group blocks of code** together and **separate** them from the rest of our code. Using the name of the method we can then ask the compiler/interpreter to execute the code inside of it. This is also known as **calling the method**. Why would we want to do this? Several reasons:
 * It makes our code more clear to the reader/developer of it, if we name the methods correctly and clearly
