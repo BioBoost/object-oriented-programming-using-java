@@ -41,7 +41,7 @@
 * [Methods](methods/readme.md)
 <!-- * [Summary](methods/summary.md) -->
 <!-- * [Quiz](methods/quiz.md) -->
-<!-- * [Exercises](methods/exercises.md) -->
+* [Exercises](methods/exercises.md)
 
 
 
@@ -85,6 +85,7 @@
 * [Assignments](assignments/readme.md)
 * [Week 1](assignments/week_1.md)
 * [Week 2](assignments/week_2.md)
+* [Week 3](assignments/week_3.md)
 
 ----
 
