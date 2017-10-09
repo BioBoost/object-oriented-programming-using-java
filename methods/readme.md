@@ -194,7 +194,51 @@ Two ways to print the return value of the `createWelcomeMessage()` are shown in 
 
 ## Methods that take arguments
 
-You could for example create a method that calculates the square of a number. The input data would than be a number and the return value would be `number * number`.
+Most methods require some data to act upon. This data can be supplied by the code that is calling the method. It is said that the **data is passed** to the method.
+
+Let us take the method below. It takes the following arguments:
+* the name of the user (as a String)
+* his/her age (as an integer)
+It prints a personalized message about the user stating if he/she is a baby, a child, a teenager or an adult.
+
+```java
+public static void printUserAgeInfo(String name, int age) {
+  System.out.print("Hello " + name + ", you are considered a");
+  if (age < 2) {
+    System.out.println(" baby");
+  } else if (age < 10) {
+    System.out.println(" child");
+  } else if (age < 18) {
+    System.out.println(" teenager");
+  } else {
+    System.out.println("n adult");
+  }
+}
+```
+
+Calling this method inside your main would result in the following code:
+
+```java
+public static void main(String[] args) {
+  // Passing values to the method directly
+  printUserAgeInfo("Lenny", 12);
+
+  // Or passing variables
+  Scanner console = new Scanner(System.in);
+  String nameOfUser = console.next();
+  int age = console.nextInt();
+
+  printUserAgeInfo(nameOfUser, age);
+}
+```
+
+As can be seen from the example code above, you can pass values to the method and/or variables. Do note that you have to pass them in the **correct order** and make sure they are of the **correct type**, otherwise your program will not run.
+
+The names of the arguments have no relation with the variables in the code that calls the method. They are local to the method itself. This is also illustrated in the code above; while the age variable has the same name as the argument, the String variable does not.
+
+## Methods that take arguments and returns a result
+
+Last but not least methods can take arguments and return a value. This is most often the case. You could for example create a method that calculates the square of a number. The input data would than be a number and the return value would be `number * number`.
 
 ```java
 public static int square(int number) {
@@ -205,6 +249,8 @@ public static void main(String[] args) {
     // TODO code application logic here
 }
 ```
+
+Notice that no variable is created to hold the value of `number * number` inside the method. Instead the value is immediately returned. While it would not have been wrong to create a temporary variable to hold the result, it would make the code longer than needed.
 
 Calling this method inside your main would result in the following code:
 
