@@ -192,13 +192,27 @@ public static void main(String[] args) {
 
 Two ways to print the return value of the `createWelcomeMessage()` are shown in the code above. A first stores the return value inside a variable and then prints the value of the variable. A second option consists of immediately passing the return value of `createWelcomeMessage()` to the `println` method.
 
-
-<!-- ## Methods that take arguments
+## Methods that take arguments
 
 You could for example create a method that calculates the square of a number. The input data would than be a number and the return value would be `number * number`.
 
+```java
+public static int square(int number) {
+  return number * number;
+}
 
-## Methods that take arguments -->
+public static void main(String[] args) {
+    // TODO code application logic here
+}
+```
+
+Calling this method inside your main would result in the following code:
+
+```java
+public static void main(String[] args) {
+  System.out.println("The square of 5 is " + square(5));
+}
+```
 
 
 
