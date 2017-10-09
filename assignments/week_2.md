@@ -30,7 +30,7 @@ Please input your decimal number (0 to 255): 288
 Sorry, cannot convert negative numbers or numbers greater than 255.
 Please input your decimal number (0 to 255): 16
 
-The number 16 in decimal notation is represented as 0xF0 in hexadecimal notation.
+The number 16 in decimal notation is represented as 0x10 in hexadecimal notation.
 
 Thank you for using our software.
 ```
