@@ -43,6 +43,9 @@
 <!-- * [Quiz](methods/quiz.md) -->
 * [Exercises](methods/exercises.md)
 
+### Hangman Demo
+
+* [Hangman](demo_hangman/readme.md)
 
 
 <!-- * [All About Objects](all_about_objects/all_about_objects.md) -->
