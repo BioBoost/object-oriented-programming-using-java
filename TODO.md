@@ -13,3 +13,6 @@ Glossary of most important terms
 <!-- Lazy evaluation -->
 <!-- Equals versus == -->
 <!-- Literals -->
+
+<!-- Explain variable scope -->
+<!-- Explain code blocks with curly braces -->

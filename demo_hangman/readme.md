@@ -387,3 +387,98 @@ public static void main(String[] args) {
 ```
 
 Did that main just became a lot more readable or what?
+
+### Step 4 - Stats
+
+The next logical step would be to keep asking the user for guesses. However for this we need to keep track of some things such as the number of guesses the user has made, the number of wrong guesses, the letters that he/she guessed but are incorrect.
+
+To keep track of the number wrong and correct guesses two variables are needed of type `int`. Both need to be initialized to `0`. So:
+
+```java
+int numberOfWrongGuesses = 0;
+int numberOfCorrectGuesses = 0;
+```
+
+In the hangman game the player loses if he/she makes 9 wrong guesses. So we also need to implement the maximum number of wrong guesses the user has before he/she loses the game. This can be achieved using a constant value (indicated by the `final` keyword) as shown in the code below.
+
+```java
+final int MAX_NUMBER_OF_WRONG_GUESSES = 9;
+
+int numberOfWrongGuesses = 0;
+int numberOfCorrectGuesses = 0;
+```
+
+This code can be placed at the top of our main method.
+
+```java
+public static void main(String[] args) {
+    final int MAX_NUMBER_OF_WRONG_GUESSES = 9;
+
+    int numberOfWrongGuesses = 0;
+    int numberOfCorrectGuesses = 0;
+
+    String secretWord = selectRandomWord();        
+    String guessedLetters = initializeGuessedLetters(secretWord.length());
+
+    System.out.println("Secret Word: " + secretWord);
+    System.out.println("Guessed Letters: " + guessedLetters);
+
+    char userGuess = getGuessFromUser();
+
+    for (int i = 0; i < secretWord.length(); i++) {
+        if (secretWord.charAt(i) == userGuess) {
+            guessedLetters = replaceCharacterInString(guessedLetters, i, userGuess);
+        }
+    }
+
+    System.out.println("Guessed Letters: " + guessedLetters);
+}
+```
+
+Now let's create a method that creates a nice print for the terminal each time the player makes a guess. We need to display the following information to the user:
+* His/Her current correctly guessed letters, which can be found in the variable `guessedLetters`
+* The number of wrong guesses he/she made: `numberOfWrongGuesses`
+* The number of correct guesses he/she made: `numberOfCorrectGuesses`
+* The number of tries he/she has left before losing the game. This needs to be calculated using the formula `MAX_NUMBER_OF_WRONG_GUESSES - numberOfWrongGuesses`
+
+A possible implementation of a method that display this information is:
+
+```java
+public static void displayPlayerStatistics(String guessedLetters,
+    int numberOfWrongGuesses, int numberOfCorrectGuesses, int numberOfTriesLeft) {
+
+      System.out.println("\nYour current progress: " + guessedLetters);
+      System.out.println("You made " + numberOfCorrectGuesses + " correct guesses.");
+      System.out.println("You did however make " + numberOfWrongGuesses + " mistakes.");
+      System.out.println("This leaves you with " + numberOfTriesLeft + " guesses left before you are hung.\n");
+}
+```
+
+This information can be displayed before the user is asked to make a guess as shown in the implementation below.
+
+```java
+public static void main(String[] args) {
+    final int MAX_NUMBER_OF_WRONG_GUESSES = 9;
+
+    int numberOfWrongGuesses = 0;
+    int numberOfCorrectGuesses = 0;
+
+    String secretWord = selectRandomWord();        
+    String guessedLetters = initializeGuessedLetters(secretWord.length());
+
+    System.out.println("Secret Word: " + secretWord);
+
+    displayPlayerStatistics(guessedLetters, numberOfWrongGuesses,
+            numberOfCorrectGuesses, MAX_NUMBER_OF_WRONG_GUESSES-numberOfWrongGuesses);
+
+    char userGuess = getGuessFromUser();
+
+    for (int i = 0; i < secretWord.length(); i++) {
+        if (secretWord.charAt(i) == userGuess) {
+            guessedLetters = replaceCharacterInString(guessedLetters, i, userGuess);
+        }
+    }
+
+    System.out.println("Guessed Letters: " + guessedLetters);
+}
+```
