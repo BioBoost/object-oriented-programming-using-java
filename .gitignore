@@ -28,3 +28,7 @@ _book/
 book.pdf
 book.epub
 book.mobi
+
+# Netbeans projects
+/demo_hangman/code/HangmanTheGame/nbproject/private/
+/demo_hangman/code/HangmanTheGame/build/
