@@ -684,3 +684,401 @@ There are however some improvements that should also be added to the game:
 While we could keep working with the current code, it is not a good idea to do so. The code is becoming to long and it will become a mess. Extending it will also become harder as we advance.
 
 The best option here is not add any functionality to the current state but change it until it is more maintainable. This is called **refactoring**.
+
+Basically our goals is to make our main method as small as possible.
+
+### Step 1 - Refactor info and rules to a method
+
+The simplest step we can take in the refactor process is to put the print statements of the rules and welcome message into a method. This method will not take any arguments and does not need to return anything for the moment.
+
+The method could be named `displayInfoAndRules`:
+
+```java
+public static void displayInfoAndRules() {
+    System.out.println("-----------------------------------------------------------------------------------------------");
+    System.out.println("Hello and welcome to Hangman the Sequel");
+    System.out.println("Hangman is a word guessing game.");
+    System.out.println("The player needs to try to guess the secret word by suggesting letters.");
+    System.out.println("The player needs to guess all letters and each miss generates a part of the gallow.");
+    System.out.println("This continues until the player wins the game or the gallow is completed and the player loses.");
+    System.out.println("In this version you have 9 wrong guessed before you lose the game.");
+    System.out.println("Good luck and have fun");
+    System.out.println("-----------------------------------------------------------------------------------------------\n\n");
+}
+```
+
+Next replace the actual code in the main with a call to the new method:
+
+```java
+// ......
+
+// Step 6 - Updating stats (part 1)
+final int MAX_NUMBER_OF_WRONG_GUESSES = 9;
+int numberOfWrongGuesses = 0;
+int numberOfCorrectGuesses = 0;
+
+// Step 1 - Display info to user
+displayInfoAndRules();
+
+// Step 2 - The secret
+// TODO: Select a random word instead of a literal
+String secretWord = "hello";
+System.out.println("We are searching for a word with "
+    + secretWord.length() + " letters");
+
+  // ......
+```
+
+Test your app and make sure that everything still works.
+
+### Step 2 - Initialize Guessed Letters
+
+The initialization process of the guessed letters array can also be extracted to its own method. It will however require some basic information such as the length of the secret. This method can then return a ready to use char array.
+
+```java
+public static char[] createGuessedLetters(int lengthOfSecret) {
+    char[] guessedLetters = new char[lengthOfSecret];
+    for (int i = 0; i < guessedLetters.length; i++) {
+        guessedLetters[i] = '_';
+    }
+    return guessedLetters;
+}
+```
+
+Why take the length of the secret word and not the secret word itself? While it would not have been wrong to take the secret word itself, it is actually more information than the `createGuessedLetters` method needs. Basically, you need to consider which solutions you have to solve your problem and take the most logical one. Its a skill you will train as you advance in your programming career.
+
+Do not forget to set the return type of the method to `char[]` and add a return statement after the for-loop. This way the method will create an array, initialize it and return it to the main method where the method is being called.
+
+To actually make the call we need three things:
+* the name of the method, which is `createGuessedLetters`
+* the length of the secret word as an argument for the method, which is `secretWord.length()`
+* a variable to store the result in that the method return, which is a variable of type `char[]`.
+
+This leads to the following method call:
+
+```java
+// Part 3 - Creating an array of guesses letters and placing underscores in the beginning
+char[] guessedLetters = createGuessedLetters(secretWord.length());
+```
+
+### Step 3 - Asking the User for a Guess
+
+Next we can refactor the for-loop that requests a guess from the user to its own method. This method actually needs no outside information and should only return a single character. It does need the `Scanner` but no other code uses it, so we can actually also place it inside the method.
+
+```java
+public static char askUserForGuess() {
+    Scanner console = new Scanner(System.in);
+
+    // Making sure we get lower case letter and only a single letter
+    char userGuess;
+    do {
+        System.out.print("Please enter your guess (single letter): ");
+        userGuess = console.next().toLowerCase().charAt(0);
+    } while (!(userGuess >= 'a' && userGuess <= 'z'));
+    return userGuess;
+}
+```
+
+The result of this method needs to be stored inside a local variable in the main method, where the method is called. We need it later on.
+
+```java
+// ....
+
+boolean gameOver = false;
+do {
+    // Making sure we get lower case letter and only a single letter
+    char userGuess = askUserForGuess();
+
+    // Step 5 - Check if guess is correct
+    boolean correctGuess = false;
+    for (int i = 0; i < guessedLetters.length; i++) {
+        if (secretWord.charAt(i) == userGuess) {
+            correctGuess = true;
+            guessedLetters[i] = userGuess;      // Update guessed letters
+        }
+    }
+// ....
+}
+```
+
+### Step 4 - Updating the Guessed Letters
+
+Next the for-loop that updates the `guessedLetters` array and determines if the user made a correct guess can be extracted. It does require some outside information which needs to be passed to the method via arguments, namely: `secretWord`, `userGuess` and `guessedLetters`. The return value of the method can be if the guess was correct or not, so a `boolean` value.
+
+```java
+public static boolean updateGuessedLetters(String secretWord, char[] guessedLetters, char userGuess) {
+    boolean correctGuess = false;
+    for (int i = 0; i < guessedLetters.length; i++) {
+        if (secretWord.charAt(i) == userGuess) {
+            correctGuess = true;
+            guessedLetters[i] = userGuess;      // Update guessed letters
+        }
+    }
+    return correctGuess;
+}
+```
+
+To call the method you need to store the result and pass the needed arguments:
+
+```java
+// Step 5 - Check if guess is correct
+boolean correctGuess = updateGuessedLetters(secretWord, guessedLetters, userGuess);
+```
+
+### Step 5 - Displaying the stats
+
+Next we can also extract the print statements of the different stats. The stats can be passed as arguments and the method does not need to return anything.
+
+```java
+public static void displayStats(int numberOfWrongGuesses, int numberOfCorrectGuesses, char[] guessedLetters, int maxGuesses) {
+    // Here we should make the mistake of just concatinating the guessedLetters
+    System.out.println("\nYour current progress: " + String.valueOf(guessedLetters));
+    System.out.println("You made " + numberOfCorrectGuesses + " correct guesses.");
+    System.out.println("You did however make " + numberOfWrongGuesses + " mistakes.");
+    System.out.println("This leaves you with " + (maxGuesses-numberOfWrongGuesses)
+            + " guesses left before you are hung.\n");
+}
+```
+
+Note that the name of the `MAX_NUMBER_OF_WRONG_GUESSES` has been changed to `maxGuesses`. This is however local to the method.
+
+Calling the method has to be done as shown below:
+
+```java
+// Step 7 - Displaying stats
+displayStats(numberOfWrongGuesses, numberOfCorrectGuesses, guessedLetters, MAX_NUMBER_OF_WRONG_GUESSES);
+```
+
+### Step 6 - Won or Lost
+
+The if-construct that checks if the game is over can also be placed inside its own method. The result of the method is a `boolean` that represents if the game is over or not. It does need some information that should be passed via arguments.
+
+```java
+public static boolean isGameOver(String secret, char[] guessedLetters, int numberOfWrongGuesses, int maxGuesses) {
+    if (secret.equals(String.valueOf(guessedLetters))) {
+        System.out.println("\nCongratz! You won the guessing game.");
+        return true;
+    } else if (numberOfWrongGuesses == maxGuesses) {
+        System.out.println("\nSorry, you failed to guess the word '" + secret + "'");
+        return true;
+    }
+    return false;
+}
+```
+
+Calling the method from main:
+
+```java
+// Step 8 - Won or lost?
+gameOver = isGameOver(secretWord, guessedLetters, numberOfWrongGuesses, MAX_NUMBER_OF_WRONG_GUESSES);
+```
+
+### Step 7 - Create Secret
+
+Later on we would like to replace the literal String `"hello"` with a randomly selected word from a file or words. Because of this it would be a good idea to create a method `generateSecret()` which returns a String that can be stored in the `secretWord` variable. This way if we want to change the actual selection of the secret we just need to change the implementation of that method. For the moment we just return `"hello"` from the method.
+
+```java
+public static String generateSecret() {
+    // TODO: Select a random word instead of a literal
+    return "hello";
+}
+```
+
+Also move the TODO to the method implementation instead of the call. In main we call it using:
+
+```java
+// Step 2 - The secret
+String secretWord = generateSecret();
+System.out.println("We are searching for a word with "
+    + secretWord.length() + " letters");
+```
+
+### Step 8 - A play method
+
+Last but not least we could actually extract most of the code from the main by creating a method called `play()` that contains the game loop. We could actually just leave a call to the `displayInfoAndRules()` method and a call to the `play()` method as shown below:
+
+```java
+    public static void main(String[] args) {
+        // Step 1 - Display info to user
+        displayInfoAndRules();
+
+        // Play the game
+        play();
+    }
+```
+
+Notice that even the stats can be moved to the play method.
+
+```java
+public static void play() {
+    // Step 6 - Updating stats (part 1)
+    final int MAX_NUMBER_OF_WRONG_GUESSES = 9;
+    int numberOfWrongGuesses = 0;
+    int numberOfCorrectGuesses = 0;
+
+    // Step 2 - The secret
+    String secretWord = generateSecret();
+    System.out.println("We are searching for a word with "
+        + secretWord.length() + " letters");
+
+    // Part 3 - Creating an array of guesses letters and placing underscores in the beginning
+    char[] guessedLetters = createGuessedLetters(secretWord.length());
+
+    // TODO: Remove print when finished
+    //System.out.println("Guessed letters: " + guessedLetters);
+    System.out.println("Guessed letters: " + String.valueOf(guessedLetters));
+
+    boolean gameOver = false;
+    do {
+        // Making sure we get lower case letter and only a single letter
+        char userGuess = askUserForGuess();
+
+        // Step 5 - Check if guess is correct
+        boolean correctGuess = updateGuessedLetters(secretWord, guessedLetters, userGuess);
+
+        // Step 6 - Updating stats (part 2)
+        if (correctGuess) {
+            System.out.println("Correct guess. Nice!");
+            numberOfCorrectGuesses++;
+        } else {
+            System.out.println("Incorrect guess.");
+            numberOfWrongGuesses++;
+        }
+
+        // Step 7 - Displaying stats
+        displayStats(numberOfWrongGuesses, numberOfCorrectGuesses, guessedLetters, MAX_NUMBER_OF_WRONG_GUESSES);
+
+        // Step 8 - Won or lost?
+        gameOver = isGameOver(secretWord, guessedLetters, numberOfWrongGuesses, MAX_NUMBER_OF_WRONG_GUESSES);
+    } while (!gameOver);
+}
+```
+
+### Final Result
+
+There are also some print statements that can be removed from our code. We have tagged them using TODO comments so they are easy to identify.
+
+This leads to our second version of the hangman game. It should be clear by now that while the code got a bit longer, it should also be a bit more understandable.
+
+```java
+public class HangmanTheSecond {
+
+    public static void main(String[] args) {
+        // Step 1 - Display info to user
+        displayInfoAndRules();
+
+        // Play the game
+        play();
+    }
+
+    public static void play() {
+        // Step 6 - Updating stats (part 1)
+        final int MAX_NUMBER_OF_WRONG_GUESSES = 9;
+        int numberOfWrongGuesses = 0;
+        int numberOfCorrectGuesses = 0;
+
+        // Step 2 - The secret
+        String secretWord = generateSecret();
+        System.out.println("We are searching for a word with "
+            + secretWord.length() + " letters");
+
+        // Part 3 - Creating an array of guesses letters and placing underscores in the beginning
+        char[] guessedLetters = createGuessedLetters(secretWord.length());
+
+        // TODO: Remove print when finished
+        //System.out.println("Guessed letters: " + guessedLetters);
+        System.out.println("Guessed letters: " + String.valueOf(guessedLetters));
+
+        boolean gameOver = false;
+        do {
+            // Making sure we get lower case letter and only a single letter
+            char userGuess = askUserForGuess();
+
+            // Step 5 - Check if guess is correct
+            boolean correctGuess = updateGuessedLetters(secretWord, guessedLetters, userGuess);
+
+            // Step 6 - Updating stats (part 2)
+            if (correctGuess) {
+                System.out.println("Correct guess. Nice!");
+                numberOfCorrectGuesses++;
+            } else {
+                System.out.println("Incorrect guess.");
+                numberOfWrongGuesses++;
+            }
+
+            // Step 7 - Displaying stats
+            displayStats(numberOfWrongGuesses, numberOfCorrectGuesses, guessedLetters, MAX_NUMBER_OF_WRONG_GUESSES);
+
+            // Step 8 - Won or lost?
+            gameOver = isGameOver(secretWord, guessedLetters, numberOfWrongGuesses, MAX_NUMBER_OF_WRONG_GUESSES);
+        } while (!gameOver);
+    }
+
+    public static void displayInfoAndRules() {
+        System.out.println("-----------------------------------------------------------------------------------------------");
+        System.out.println("Hello and welcome to Hangman the Sequel");
+        System.out.println("Hangman is a word guessing game.");
+        System.out.println("The player needs to try to guess the secret word by suggesting letters.");
+        System.out.println("The player needs to guess all letters and each miss generates a part of the gallow.");
+        System.out.println("This continues until the player wins the game or the gallow is completed and the player loses.");
+        System.out.println("In this version you have 9 wrong guessed before you lose the game.");
+        System.out.println("Good luck and have fun");
+        System.out.println("-----------------------------------------------------------------------------------------------\n\n");
+    }
+
+    public static String generateSecret() {
+        // TODO: Select a random word instead of a literal
+        return "hello";
+    }
+
+    public static char[] createGuessedLetters(int lengthOfSecret) {
+        char[] guessedLetters = new char[lengthOfSecret];
+        for (int i = 0; i < guessedLetters.length; i++) {
+            guessedLetters[i] = '_';
+        }
+        return guessedLetters;
+    }
+
+    public static char askUserForGuess() {
+        Scanner console = new Scanner(System.in);
+        char userGuess;
+        do {
+            System.out.print("Please enter your guess (single letter): ");
+            userGuess = console.next().toLowerCase().charAt(0);
+        } while (!(userGuess >= 'a' && userGuess <= 'z'));
+        return userGuess;
+    }
+
+    public static boolean updateGuessedLetters(String secretWord, char[] guessedLetters, char userGuess) {
+        boolean correctGuess = false;
+        for (int i = 0; i < guessedLetters.length; i++) {
+            if (secretWord.charAt(i) == userGuess) {
+                correctGuess = true;
+                guessedLetters[i] = userGuess;      // Update guessed letters
+            }
+        }
+        return correctGuess;
+    }
+
+    public static void displayStats(int numberOfWrongGuesses, int numberOfCorrectGuesses, char[] guessedLetters, int maxGuesses) {
+        // Here we should make the mistake of just concatinating the guessedLetters
+        System.out.println("\nYour current progress: " + String.valueOf(guessedLetters));
+        System.out.println("You made " + numberOfCorrectGuesses + " correct guesses.");
+        System.out.println("You did however make " + numberOfWrongGuesses + " mistakes.");
+        System.out.println("This leaves you with " + (maxGuesses-numberOfWrongGuesses)
+                + " guesses left before you are hung.\n");
+    }
+
+    public static boolean isGameOver(String secret, char[] guessedLetters, int numberOfWrongGuesses, int maxGuesses) {
+        if (secret.equals(String.valueOf(guessedLetters))) {
+            System.out.println("\nCongratz! You won the guessing game.");
+            return true;
+        } else if (numberOfWrongGuesses == maxGuesses) {
+            System.out.println("\nSorry, you failed to guess the word '" + secret + "'");
+            return true;
+        }
+        return false;
+    }
+
+}
+```

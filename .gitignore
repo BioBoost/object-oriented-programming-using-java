@@ -32,3 +32,5 @@ book.mobi
 # Netbeans projects
 /demo_hangman/code/HangmanTheGame/nbproject/private/
 /demo_hangman/code/HangmanTheGame/build/
+/demo_hangman/code/HangmanTheFirst/nbproject/private/
+/demo_hangman/code/HangmanTheSecond/nbproject/private/

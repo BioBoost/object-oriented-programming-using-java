@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hangmanthegame;
+package hangmanthefirst;
 
 import java.util.Scanner;
 
@@ -12,7 +12,8 @@ import java.util.Scanner;
  * @author nicod
  */
 public class HangmanTheFirst {
-    public void play() {
+
+    public static void main(String[] args) {
         // Step 6 - Updating stats (part 1)
         final int MAX_NUMBER_OF_WRONG_GUESSES = 9;
         int numberOfWrongGuesses = 0;
@@ -103,6 +104,6 @@ public class HangmanTheFirst {
         // Our boss want an extension to this. Asking the user to play again.
         // - This will lead to not such nice code (the while thing has to be put into another loop
         // - Show a list of the wrong letters already tried
-        
     }
+    
 }
