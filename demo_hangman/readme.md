@@ -1082,3 +1082,87 @@ public class HangmanTheSecond {
 
 }
 ```
+
+## Phase 3 - Bug Fixes and Extensions
+
+### Step 1 - Bug Fix of already tried letters
+
+To fix the bug where the user cannot input letters he/she has already tried we need to keep track of the letters that the user already tried. The letters the user has already tried that were correct are already stored in the variable `guessedLetters`. So we need to create a variable to store the letters that were not correct, for example in a `String` called `wrongLettersTried`.
+
+This can be placed inside the `play()` method:
+
+```java
+// Step 6 - Updating stats (part 1)
+final int MAX_NUMBER_OF_WRONG_GUESSES = 9;
+int numberOfWrongGuesses = 0;
+int numberOfCorrectGuesses = 0;
+
+// Remember the tried letters
+String wrongLettersTried = "";
+```
+
+When a user guesses a wrong letter, we just append it at the back of the String. We can do this in the if-construct that updates the stats:
+
+```java
+// Step 6 - Updating stats (part 2)
+if (correctGuess) {
+    System.out.println("Correct guess. Nice!");
+    numberOfCorrectGuesses++;
+} else {
+    System.out.println("Incorrect guess.");
+    numberOfWrongGuesses++;
+    wrongLettersTried += userGuess;
+}
+```
+
+As a help to the user we should also print the letters he/she already tried. This can be done inside the `displayStats()` method. For this we do need to pass the `wrongLettersTried` to the method. Of course an argument of type String needs to be added to the method.
+
+```java
+public static void displayStats(int numberOfWrongGuesses, int numberOfCorrectGuesses, char[] guessedLetters, int maxGuesses, String wrongLettersTried) {
+    // Here we should make the mistake of just concatinating the guessedLetters
+    System.out.println("\nYour current progress: " + String.valueOf(guessedLetters));
+    System.out.println("You made " + numberOfCorrectGuesses + " correct guesses.");
+    System.out.println("You did however make " + numberOfWrongGuesses + " mistakes.");
+    System.out.println("Tried characters that are incorrect: " + wrongLettersTried);
+    System.out.println("This leaves you with " + (maxGuesses-numberOfWrongGuesses)
+            + " guesses left before you are hung.\n");
+}
+```
+
+Changing the call to the method as shown below:
+
+```java
+// Step 7 - Displaying stats
+displayStats(numberOfWrongGuesses, numberOfCorrectGuesses, guessedLetters, MAX_NUMBER_OF_WRONG_GUESSES, wrongLettersTried);
+```
+
+Last we need to take the letters that user tried into account. This can be done inside the `askUserForGuess()` method. Again we need to change the method a bit to take the `wrongLettersTried` and `guessedLetters` as arguments.
+
+To check if a string contains a certain letter we could create a for-loop construct that checks each letter of the string. An easier approach is to use the method `indexOf()` of String that return the index of a substring inside a string. If it is not found, the methods returns `-1`.
+
+It's best to create a boolean `isValidLetter` that contains `true` of the letter is valid or `false` if it is invalid. The value of that `boolean` can be used as condition for the do-while loop.
+
+```java
+public static char askUserForGuess(String wrongLettersTried, char[] guessedLetters) {
+    Scanner console = new Scanner(System.in);
+    char userGuess;
+    boolean isValidLetter;
+    do {
+        System.out.print("Please enter your guess (single letter): ");
+        userGuess = console.next().toLowerCase().charAt(0);
+        isValidLetter = true;
+        if (!(userGuess >= 'a' && userGuess <= 'z')) {
+            isValidLetter = false;
+            System.out.println("Invalid character. Please specify letter between a and z");
+        } else if (wrongLettersTried.indexOf(userGuess) >= 0
+                || String.valueOf(guessedLetters).indexOf(userGuess) >= 0) {
+            isValidLetter = false;
+            System.out.println("You have already tried that letter");
+        }
+
+    } while (!isValidLetter);
+    return userGuess;
+}
+```
+
+While the method did get a bit more complex, we did get more feedback to the user.
