@@ -395,286 +395,7 @@ Please enter your guess (single letter): x
 Incorrect guess.
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-While one could just use the code `String secretWord = 'hello';`, it would be better to create a method that returns the randomly selected String (which is for the moment just the string `"hello"`). Later on the implementation of this method can easily be changed, while the rest of the application can be left unchanged.
-
-
-
-```java
-public class HangmanTheGame {
-
-    public static String selectRandomWord() {
-        return "hello";
-    }
-
-    public static void main(String[] args) {
-        String secretWord = selectRandomWord();
-
-        System.out.println("Secret Word: " + secretWord);
-    }
-}
-```
-
-Notice how the method `selectRandomWord()` is used to create a String for the main method where the result is then saved in a String variable.
-
-### Step 2 - The guessed letters
-
-
-One of our goals is to keep our methods as short as possible (in a sensible way of course) and to make sure our code stays understandable. A good idea here would be to create a method that generates the `guessedLetters` String and returns the result. Important to see here is that the method requires knowledge of the `secretWord` or actually to be more exact, its length needs to be known. This means the `initializeGuessedLetters()` methods will need to take an argument of type `int`, namely the length of the secret word.
-
-```java
-public class HangmanTheGame {
-
-    public static String selectRandomWord() {
-        return "hello";
-    }
-
-    public static String initializeGuessedLetters(int lengthOfSecretWord) {
-        String guessedLetters = "";
-        for (int i = 0; i < lengthOfSecretWord; i++) {
-            guessedLetters += "_";
-        }
-        return guessedLetters;
-    }
-
-    public static void main(String[] args) {
-        String secretWord = selectRandomWord();        
-        String guessedLetters = initializeGuessedLetters(secretWord.length());
-
-        System.out.println("Secret Word: " + secretWord);
-        System.out.println("Guessed Letters: " + guessedLetters);
-    }
-}
-```
-
-Notice how the length of the secret word is passed to the `initializeGuessedLetters()` method. No variable is first created; the result of `length()` is directly passed as a value to the `initializeGuessedLetters()` method.
-
-While the code actually became longer, it did also become more easy to read. If you got this code from someone and had to try to understand what is happening it would take you less time than when no methods would have been used. This only works when your methods have clear names that tell exactly what that method does.
-
-Note that we first implemented the logic inside the main method and later created a separate method for it. This also happens a lot in real-life. Even advanced programmers don't always create methods immediately. Often they are the result of code that already works and is then refactored (changed without adding more functionality).
-
-### Step 3 - User Input
-
-Next is user input. The user needs to supply his/her guess. Once retrieved from the terminal, the game needs to check if the guess of the user is a letter that is part of the secret word. If so the all the occurrences of that letter need to be placed in the `guessedLetters` variable. If the user his/her guess is incorrect, we need to make this clear to the user.
-
-To read a letter from the terminal a `Scanner` can be used. The `next()` method supplies the next token/word entered by the user. To make sure the letter is lowercased we can also call the method `toLowerCase()`. Special about these methods is that they all return the resulting String. This means that one method can be called after another. This is called method chaining and we will come back to this later.
-
-However the result is a String, while we actually need a single character (type `char`), even while the String only contains a single letter it is still a String. To fix this the last method we call is the `charAt()` method that will return the character at the specified index. So by passing the value `0` to the `charAt()` method, we get the first character of the String.
-
-This results in the following piece of code:
-
-```java
-Scanner console = new Scanner(System.in);
-
-System.out.print("Please supply a letter as a guess: ");
-char userGuess = console.next().toLowerCase().charAt(0);
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Placing this code and the code to retrieve the input from the user into our main method, would result in the code shown below. To check if everything is working as expected it is also a good idea to add a print statement of the `guessedLetters` after the for-loop. This allows us to experiment a bit and see the result of our coding efforts.
-
-```java
-public class HangmanTheGame {
-
-    public static String selectRandomWord() {
-        return "hello";
-    }
-
-    public static String initializeGuessedLetters(int lengthOfSecretWord) {
-        String guessedLetters = "";
-        for (int i = 0; i < lengthOfSecretWord; i++) {
-            guessedLetters += "_";
-        }
-        return guessedLetters;
-    }
-
-    public static void main(String[] args) {
-        String secretWord = selectRandomWord();        
-        String guessedLetters = initializeGuessedLetters(secretWord.length());
-
-        System.out.println("Secret Word: " + secretWord);
-        System.out.println("Guessed Letters: " + guessedLetters);
-
-        Scanner console = new Scanner(System.in);
-
-        System.out.print("Please supply a letter as a guess: ");
-        char userGuess = console.next().toLowerCase().charAt(0);
-
-        for (int i = 0; i < secretWord.length(); i++) {
-            if (secretWord.charAt(i) == userGuess) {
-                String newGuessedLetters = "";
-
-                if (i != 0) {
-                    newGuessedLetters += guessedLetters.substring(0, i);
-                }
-
-                newGuessedLetters += userGuess;
-
-                if (i != guessedLetters.length()) {
-                    newGuessedLetters += guessedLetters.substring(i+1, guessedLetters.length());
-                }            
-
-                guessedLetters = newGuessedLetters;
-            }
-        }
-
-        System.out.println("Guessed Letters: " + guessedLetters);
-    }
-}
-```
-
-Let us refactor this again. The code to retrieve a letter as a guess from the user can again be placed in a separate method. Let us call it `getGuessFromUser()` which has a return type of `char`.
-
-```java
-public class HangmanTheGame {
-
-    public static String selectRandomWord() {
-        return "hello";
-    }
-
-    public static String initializeGuessedLetters(int lengthOfSecretWord) {
-        String guessedLetters = "";
-        for (int i = 0; i < lengthOfSecretWord; i++) {
-            guessedLetters += "_";
-        }
-        return guessedLetters;
-    }
-
-    public static char getGuessFromUser() {
-        Scanner console = new Scanner(System.in);
-
-        System.out.print("Please supply a letter as a guess: ");
-        return console.next().toLowerCase().charAt(0);
-    }
-
-    public static void main(String[] args) {
-        String secretWord = selectRandomWord();        
-        String guessedLetters = initializeGuessedLetters(secretWord.length());
-
-        System.out.println("Secret Word: " + secretWord);
-        System.out.println("Guessed Letters: " + guessedLetters);
-
-        char userGuess = getGuessFromUser();
-
-        for (int i = 0; i < secretWord.length(); i++) {
-            if (secretWord.charAt(i) == userGuess) {
-                String newGuessedLetters = "";
-
-                if (i != 0) {
-                    newGuessedLetters += guessedLetters.substring(0, i);
-                }
-
-                newGuessedLetters += userGuess;
-
-                if (i != guessedLetters.length()) {
-                    newGuessedLetters += guessedLetters.substring(i+1, guessedLetters.length());
-                }            
-
-                guessedLetters = newGuessedLetters;
-            }
-        }
-
-        System.out.println("Guessed Letters: " + guessedLetters);
-    }
-}
-```
-
-The for-loop is harder to extract because it actually accesses multiple variables (`secretWord`, `guessedLetters` and `userGuess`). However the replacement of a letter of the `guessedLetters` String can be easily extracted. This will actually make the main code a lot easier to understand. So let us start by making a method of that. For this we need a couple of pieces of information:
-* the `guessedLetters` String which is actually the original string with the underscores still inside
-* the index of the letter to replace in the original string
-* the letter that needs to be placed inside the new string at the position of index
-
-This would lead to this method:
-```java
-    public static String replaceCharacterInString(String original, int index, char letter) {
-        String newString = "";
-
-        if (index != 0) {
-            newString += original.substring(0, index);
-        }
-
-        newString += letter;
-
-        if (index != original.length()) {
-            newString += original.substring(index+1, original.length());
-        }            
-
-        return newString;
-    }
-```
-
-Notice that the names of the arguments have been chosen to make more sense in a general way. The names of the arguments have no influence on the names of the variables inside the main code. It does however imply that we also had to change the names inside the actual code of the `replaceCharacterInString()` method. This method might actually be useful in another place later on. Who knows.
-
-Of course the main code also has to be changed to make use of our new method:
-
-```java
-public static void main(String[] args) {
-    String secretWord = selectRandomWord();        
-    String guessedLetters = initializeGuessedLetters(secretWord.length());
-
-    System.out.println("Secret Word: " + secretWord);
-    System.out.println("Guessed Letters: " + guessedLetters);
-
-    char userGuess = getGuessFromUser();
-
-    for (int i = 0; i < secretWord.length(); i++) {
-        if (secretWord.charAt(i) == userGuess) {
-            guessedLetters = replaceCharacterInString(guessedLetters, i, userGuess);
-        }
-    }
-
-    System.out.println("Guessed Letters: " + guessedLetters);
-}
-```
-
-Did that main just became a lot more readable or what?
-
-### Step 4 - Stats
+### Step 6 - Updating Stats and Progress
 
 The next logical step would be to keep asking the user for guesses. However for this we need to keep track of some things such as the number of guesses the user has made, the number of wrong guesses, the letters that he/she guessed but are incorrect.
 
@@ -685,86 +406,281 @@ int numberOfWrongGuesses = 0;
 int numberOfCorrectGuesses = 0;
 ```
 
-In the hangman game the player loses if he/she makes 9 wrong guesses. So we also need to implement the maximum number of wrong guesses the user has before he/she loses the game. This can be achieved using a constant value (indicated by the `final` keyword) as shown in the code below.
+In the hangman game the player loses if he/she makes 9 wrong guesses. So we also need to implement the maximum number of wrong guesses the user has before he/she loses the game. This can be achieved using a constant value (indicated by the `final` keyword) as shown in the code below. This already makes sure we don't have magic numbers in our code.
 
 ```java
+// Step 6 - Updating stats (part 1)
 final int MAX_NUMBER_OF_WRONG_GUESSES = 9;
-
 int numberOfWrongGuesses = 0;
 int numberOfCorrectGuesses = 0;
 ```
 
 This code can be placed at the top of our main method.
 
+These stats can already be updated by adding some code to the if-else construct we implemented in the previous step. When the user makes a correct guess we increment `numberOfCorrectGuesses` and if he/she makes an incorrect guess we increment `numberOfWrongGuesses`.
+
+Or in code:
+
 ```java
-public static void main(String[] args) {
-    final int MAX_NUMBER_OF_WRONG_GUESSES = 9;
-
-    int numberOfWrongGuesses = 0;
-    int numberOfCorrectGuesses = 0;
-
-    String secretWord = selectRandomWord();        
-    String guessedLetters = initializeGuessedLetters(secretWord.length());
-
-    System.out.println("Secret Word: " + secretWord);
-    System.out.println("Guessed Letters: " + guessedLetters);
-
-    char userGuess = getGuessFromUser();
-
-    for (int i = 0; i < secretWord.length(); i++) {
-        if (secretWord.charAt(i) == userGuess) {
-            guessedLetters = replaceCharacterInString(guessedLetters, i, userGuess);
-        }
-    }
-
-    System.out.println("Guessed Letters: " + guessedLetters);
+// Step 6 - Updating stats (part 2)
+if (correctGuess) {
+    System.out.println("Correct guess. Nice!");
+    numberOfCorrectGuesses++;
+} else {
+    System.out.println("Incorrect guess.");
+    numberOfWrongGuesses++;
 }
 ```
 
-Now let's create a method that creates a nice print for the terminal each time the player makes a guess. We need to display the following information to the user:
-* His/Her current correctly guessed letters, which can be found in the variable `guessedLetters`
+### Step 7 - Displaying stats and progress
+
+Now let's create some code that displays a nice print to the terminal each time the player makes a guess. We need to display the following information to the user:
+* His/Her current correctly guessed letters, which can be found in the variable `guessedLetters`. Remember we need to use the `valueOf` method of `String` to get a string with the content of the character array.
 * The number of wrong guesses he/she made: `numberOfWrongGuesses`
 * The number of correct guesses he/she made: `numberOfCorrectGuesses`
-* The number of tries he/she has left before losing the game. This needs to be calculated using the formula `MAX_NUMBER_OF_WRONG_GUESSES - numberOfWrongGuesses`
+* The number of tries he/she has left before losing the game. This needs to be calculated using the formula `MAX_NUMBER_OF_WRONG_GUESSES - numberOfWrongGuesses`. You will need to add parentheses around this mathematical operation because otherwise Java will think you want to subtract a string representation of `numberOfWrongGuesses` from the rest of the string already build. By adding parentheses Java will first determine the result of the math operation and then convert it to a string.
 
-A possible implementation of a method that display this information is:
+A possible implementation to display this information is:
 
 ```java
-public static void displayPlayerStatistics(String guessedLetters,
-    int numberOfWrongGuesses, int numberOfCorrectGuesses, int numberOfTriesLeft) {
+// Step 7 - Displaying stats
+// Here we should make the mistake of just concatinating the guessedLetters
+System.out.println("\nYour current progress: " + String.valueOf(guessedLetters));
+System.out.println("You made " + numberOfCorrectGuesses + " correct guesses.");
+System.out.println("You did however make " + numberOfWrongGuesses + " mistakes.");
+System.out.println("This leaves you with " + (MAX_NUMBER_OF_WRONG_GUESSES-numberOfWrongGuesses)
+        + " guesses left before you are hung.\n");
+```
 
-      System.out.println("\nYour current progress: " + guessedLetters);
-      System.out.println("You made " + numberOfCorrectGuesses + " correct guesses.");
-      System.out.println("You did however make " + numberOfWrongGuesses + " mistakes.");
-      System.out.println("This leaves you with " + numberOfTriesLeft + " guesses left before you are hung.\n");
+Our full code now looks like this:
+
+```java
+public class HangmanTheFirst {
+    public static void main(String[] args) {
+        // Step 6 - Updating stats (part 1)
+        final int MAX_NUMBER_OF_WRONG_GUESSES = 9;
+        int numberOfWrongGuesses = 0;
+        int numberOfCorrectGuesses = 0;
+
+        // Step 1 - Display info to user
+        System.out.println("-----------------------------------------------------------------------------------------------");
+        System.out.println("Hello and welcome to Hangman the Sequel");
+        System.out.println("Hangman is a word guessing game.");
+        System.out.println("The player needs to try to guess the secret word by suggesting letters.");
+        System.out.println("The player needs to guess all letters and each miss generates a part of the gallow.");
+        System.out.println("This continues until the player wins the game or the gallow is completed and the player loses.");
+        System.out.println("In this version you have 9 wrong guessed before you lose the game.");
+        System.out.println("Good luck and have fun");
+        System.out.println("-----------------------------------------------------------------------------------------------\n\n");
+
+        // Step 2 - The secret
+        // TODO: Select a random word instead of a literal
+        String secretWord = "hello";
+        System.out.println("We are searching for a word with "
+            + secretWord.length() + " letters");
+
+        // Part 3 - Creating an array of guesses letters and placing underscores in the beginning
+        char[] guessedLetters = new char[secretWord.length()];
+        for (int i = 0; i < guessedLetters.length; i++) {
+            guessedLetters[i] = '_';
+        }
+
+        // TODO: Remove print when finished
+        System.out.println("Guessed letters: " + String.valueOf(guessedLetters));
+
+        // Step 4 - Asking user for input
+        Scanner console = new Scanner(System.in);
+
+        // Making sure we get lower case letter and only a single letter
+        char userGuess;
+        do {
+            System.out.print("Please enter your guess (single letter): ");
+            userGuess = console.next().toLowerCase().charAt(0);
+        } while (!(userGuess >= 'a' && userGuess <= 'z'));
+
+        // Step 5 - Check if guess is correct
+        boolean correctGuess = false;
+        for (int i = 0; i < guessedLetters.length; i++) {
+            if (secretWord.charAt(i) == userGuess) {
+                correctGuess = true;
+                guessedLetters[i] = userGuess;      // Update guessed letters
+            }
+        }
+
+        // Step 6 - Updating stats (part 2)
+        if (correctGuess) {
+            System.out.println("Correct guess. Nice!");
+            numberOfCorrectGuesses++;
+        } else {
+            System.out.println("Incorrect guess.");
+            numberOfWrongGuesses++;
+        }
+
+        // Step 7 - Displaying stats
+        // Here we should make the mistake of just concatinating the guessedLetters
+        System.out.println("\nYour current progress: " + String.valueOf(guessedLetters));
+        System.out.println("You made " + numberOfCorrectGuesses + " correct guesses.");
+        System.out.println("You did however make " + numberOfWrongGuesses + " mistakes.");
+        System.out.println("This leaves you with " + (MAX_NUMBER_OF_WRONG_GUESSES-numberOfWrongGuesses)
+                + " guesses left before you are hung.\n");
+    }
 }
 ```
 
-This information can be displayed before the user is asked to make a guess as shown in the implementation below.
+Try out the code and make sure it works as it should.
+
+### Step 8 - Winning or Losing
+
+Next we should cehck if the user won or lost the game. Once this is determined we can also easily keep asking the user for more letters based on that outcome.
+
+To determine if the user won the game we cannot just check if `numberOfCorrectGuesses == secretWord.length()` because this would be incorrect if the secret word contained double letters like for example the letter 'l' in the word "hello". There are two other solutions:
+* We could check if the `guessedLetters` arrays still contains underscores. If not, the user has found all the letters.
+* We could just compare the string `secretWord` with `String.valueOf(guessedLetters)`.
+
+The last solution is actually the most logical and the most readable. Do take note that we cannot use the comparison operator `==` to compare the content of two strings. For this we need to use a method `equals()` of the strings as shown below.
+
+To check if the user lost the game we just need to check if `numberOfWrongGuesses` equals `MAX_NUMBER_OF_WRONG_GUESSES`. In that case the user used up all his/her guesses and the game should end.
+
+```java
+// .......
+
+// Step 7 - Displaying stats
+// Here we should make the mistake of just concatinating the guessedLetters
+System.out.println("\nYour current progress: " + String.valueOf(guessedLetters));
+System.out.println("You made " + numberOfCorrectGuesses + " correct guesses.");
+System.out.println("You did however make " + numberOfWrongGuesses + " mistakes.");
+System.out.println("This leaves you with " + (MAX_NUMBER_OF_WRONG_GUESSES-numberOfWrongGuesses)
+        + " guesses left before you are hung.\n");
+
+// Step 8 - Won or lost?
+// Cannot just compare numberOfCorrectGuesses to number of guessed letters because of double letters
+// Solution 1: Check if guessedLetters contains '_'? OK, maybe
+// Solution 2: Compare secretWord to guessedLetters? More logical so this one
+if (secretWord.equals(String.valueOf(guessedLetters))) {
+    System.out.println("\nCongratz! You won the guessing game.");
+} else if (numberOfWrongGuesses == MAX_NUMBER_OF_WRONG_GUESSES) {
+    System.out.println("\nSorry, you failed to guess the word '" + secretWord + "'");
+}
+```
+
+### Step 9 - Looping the game
+
+It is a pretty useless guessing game if you can only guess for a single letter. To allow the user to make multiple guesses, we need to add a loop construct around most of the code we have created so far.
+
+The condition for the loop has actually become quite simple. The only thing we need to do is check if the game was won or lost and if neither we need to continue playing. So in other words we can use the previous if-else construct to populate a variable 'gameOver' of type `boolean` and keep looping while the game is not over.
+
+Important to note is that we need to create the variable outside of the loop. This because we need it inside the loop-condition. It should also be initialized to `false`. This way we can use the if-else construct to set it to `true` in both cases (won or lost), while it keeps it's false value as long as neither of those two conditions has been met.
 
 ```java
 public static void main(String[] args) {
+    // Step 6 - Updating stats (part 1)
     final int MAX_NUMBER_OF_WRONG_GUESSES = 9;
-
     int numberOfWrongGuesses = 0;
     int numberOfCorrectGuesses = 0;
 
-    String secretWord = selectRandomWord();        
-    String guessedLetters = initializeGuessedLetters(secretWord.length());
+    // Step 1 - Display info to user
+    System.out.println("-----------------------------------------------------------------------------------------------");
+    System.out.println("Hello and welcome to Hangman the Sequel");
+    System.out.println("Hangman is a word guessing game.");
+    System.out.println("The player needs to try to guess the secret word by suggesting letters.");
+    System.out.println("The player needs to guess all letters and each miss generates a part of the gallow.");
+    System.out.println("This continues until the player wins the game or the gallow is completed and the player loses.");
+    System.out.println("In this version you have 9 wrong guessed before you lose the game.");
+    System.out.println("Good luck and have fun");
+    System.out.println("-----------------------------------------------------------------------------------------------\n\n");
 
-    System.out.println("Secret Word: " + secretWord);
+    // Step 2 - The secret
+    // TODO: Select a random word instead of a literal
+    String secretWord = "hello";
+    System.out.println("We are searching for a word with "
+        + secretWord.length() + " letters");
 
-    displayPlayerStatistics(guessedLetters, numberOfWrongGuesses,
-            numberOfCorrectGuesses, MAX_NUMBER_OF_WRONG_GUESSES-numberOfWrongGuesses);
-
-    char userGuess = getGuessFromUser();
-
-    for (int i = 0; i < secretWord.length(); i++) {
-        if (secretWord.charAt(i) == userGuess) {
-            guessedLetters = replaceCharacterInString(guessedLetters, i, userGuess);
-        }
+    // Part 3 - Creating an array of guesses letters and placing underscores in the beginning
+    char[] guessedLetters = new char[secretWord.length()];
+    for (int i = 0; i < guessedLetters.length; i++) {
+        guessedLetters[i] = '_';
     }
 
-    System.out.println("Guessed Letters: " + guessedLetters);
+    // TODO: Remove print when finished
+    System.out.println("Guessed letters: " + String.valueOf(guessedLetters));
+
+    // Step 4 - Asking user for input
+    Scanner console = new Scanner(System.in);
+
+    boolean gameOver = false;
+    do {
+        // Making sure we get lower case letter and only a single letter
+        char userGuess;
+        do {
+            System.out.print("Please enter your guess (single letter): ");
+            userGuess = console.next().toLowerCase().charAt(0);
+        } while (!(userGuess >= 'a' && userGuess <= 'z'));
+
+        // Step 5 - Check if guess is correct
+        boolean correctGuess = false;
+        for (int i = 0; i < guessedLetters.length; i++) {
+            if (secretWord.charAt(i) == userGuess) {
+                correctGuess = true;
+                guessedLetters[i] = userGuess;      // Update guessed letters
+            }
+        }
+
+        // Step 6 - Updating stats (part 2)
+        if (correctGuess) {
+            System.out.println("Correct guess. Nice!");
+            numberOfCorrectGuesses++;
+        } else {
+            System.out.println("Incorrect guess.");
+            numberOfWrongGuesses++;
+        }
+
+        // Step 7 - Displaying stats
+        // Here we should make the mistake of just concatinating the guessedLetters
+        System.out.println("\nYour current progress: " + String.valueOf(guessedLetters));
+        System.out.println("You made " + numberOfCorrectGuesses + " correct guesses.");
+        System.out.println("You did however make " + numberOfWrongGuesses + " mistakes.");
+        System.out.println("This leaves you with " + (MAX_NUMBER_OF_WRONG_GUESSES-numberOfWrongGuesses)
+                + " guesses left before you are hung.\n");
+
+        // Step 8 - Won or lost?
+        // Cannot just compare numberOfCorrectGuesses to number of guessed letters because of double letters
+        // Solution 1: Check if guessedLetters contains '_'? OK, maybe
+        // Solution 2: Compare secretWord to guessedLetters? More logical so this one
+        if (secretWord.equals(String.valueOf(guessedLetters))) {
+            System.out.println("\nCongratz! You won the guessing game.");
+            gameOver = true;
+        } else if (numberOfWrongGuesses == MAX_NUMBER_OF_WRONG_GUESSES) {
+            System.out.println("\nSorry, you failed to guess the word '" + secretWord + "'");
+            gameOver = true;
+        }
+    } while (!gameOver);
 }
 ```
+
+If all went well this should be a basic working version of the game.
+
+```text
+...
+Please enter your guess (single letter): l
+Correct guess. Nice!
+
+Your current progress: __ll_
+You made 1 correct guesses.
+You did however make 2 mistakes.
+This leaves you with 7 guesses left before you are hung.
+...
+```
+
+### Bugs and Extensions
+
+You may or may not have noticed but there is actually a bug in the game. The player can enter the same letter over and over again. This should not be possible.
+
+There are however some improvements that should also be added to the game:
+* Ask the player to play again when finished. With the current code we need to add another loop level in the hierarchy which leads to more complicated code.
+* The game should also show a list of wrong letters that have already been tried by the user.
+
+## Phase 2 - Refactoring using Methods
+
+While we could keep working with the current code, it is not a good idea to do so. The code is becoming to long and it will become a mess. Extending it will also become harder as we advance.
+
+The best option here is not add any functionality to the current state but change it until it is more maintainable. This is called **refactoring**.
