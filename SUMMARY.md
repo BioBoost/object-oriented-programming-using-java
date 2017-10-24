@@ -47,11 +47,13 @@
 
 * [Hangman](demo_hangman/readme.md)
 
+### All About Objects
 
-<!-- * [All About Objects](all_about_objects/all_about_objects.md) -->
+* [All About Objects](all_about_objects/readme.md)
 <!-- * [Summary](all_about_objects/summary.md) -->
 <!-- * [Quiz](all_about_objects/quiz.md) -->
-<!-- * [Exercises](all_about_objects/exercises.md) -->
+* [Exercises](all_about_objects/exercises.md)
+
 
 <!-- ### Java -->
 
