@@ -128,3 +128,5 @@ System.out.println("\nTotal sum = " + sum + " Average = " + sum/NUMBERS_TO_PROCE
 ```
 
 Does it also not help make the code more readable? If we wish to read 10 numbers from the users, we only have to change the single value. Magic numbers are never good. Even if they occur only once inside your code. Always try to avoid them.
+
+<!-- TODO: Add the foreach loop construct here -->

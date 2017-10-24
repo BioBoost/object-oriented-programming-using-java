@@ -1,5 +1,7 @@
 <!-- toc -->
 
+<!-- TODO: Next year place this after objects and classes. It's not so logical to place it here. Too much of a mess with the static. Methods chapter will also be placed after the *all about objects*. That way phase 2 can be create a class and play method and then refactor to different smaller methods -->
+
 # Creating a Simple Hangman Game
 https://en.wikipedia.org/wiki/Hangman_(game)
 It is a good idea to build a bigger application or game to really apply all the knowledge that you gained so far. This section will help you create a simple version of the Hangman game.

@@ -183,6 +183,69 @@ Bedroom: Rectangle[x=0.0, y=0.0, width=12.8, height=8.6, fill=0x000000ff]
 
 How does one know which classes are available from Java and what methods the objects of these classes contain? Simple, google or the Java API documentation [https://docs.oracle.com/javase/8/docs/api/index.html](https://docs.oracle.com/javase/8/docs/api/index.html).
 
+### The Random class
+
+An object of the Random class can be used to generate a stream of pseudorandom numbers. Information about the different methods available can be found at [https://docs.oracle.com/javase/8/docs/api/java/util/Random.html](https://docs.oracle.com/javase/8/docs/api/java/util/Random.html).
+
+Let us create an object of the class Random and output some random numbers.
+
+```java
+final int MAX = 150;
+Random generator = new Random();
+
+System.out.print("Random numbers:");
+for (int i = 0; i < 10; i++) {
+  System.out.print(" " + generator.nextInt(MAX));
+}
+```
+
+So `generator` is the name of our variable that holds a reference to an object of the class `Random`. The variable can then be used to call method of that particular instance like for example the method `nextInt(int bound)` that can take an argument of type `int` to pass the maximum bound you would like to generate. The method needs to be called on an instance of the class `Random`, using the dot `.` operator, so on the object which `generator` is referencing.
+
+The random numbers are actually generated based what is a called a *seed*. When you use the same seed again, you get the same random numbers. To set the seed of the generator object you can call the `setSeed(long seed)` method.
+
+Run the following code example multiple times and you will see the effect. Try changing the seed and run it another couple of times.
+
+```java
+final int MAX = 150;
+final long SEED = 1337;
+Random generator = new Random();
+generator.setSeed(SEED);
+
+System.out.print("Random numbers with SEED = " + SEED + ":");
+for (int i = 0; i < 10; i++) {
+  System.out.print(" " + generator.nextInt(MAX));
+}
+```
+
+Using the seed shown above the output will be:
+
+```text
+Random numbers with SEED = 1337: 121 144 59 22 9 148 53 4 127 117
+```
+
+This can be useful if you wish to reproduce the same output more than once.
+
+You may or may not have noticed that the Random class has more than one constructor (a method with the same name of the class used to initialize the object). The API docs show the different constructors that a class contains:
+
+![Constructors of Random](img/random_constructors.png)
+
+If you take a look at the second constructor `Random(long seed)`, it states that it *creates a new random number generator using a single long seed.*. So in other words the previous code example can be replaced by the code below (the method call `setSeed()` is removed).
+
+```java
+final int MAX = 150;
+final long SEED = 1337;
+Random generator = new Random(SEED);
+
+System.out.print("Random numbers with SEED = " + SEED + ":");
+for (int i = 0; i < 10; i++) {
+  System.out.print(" " + generator.nextInt(MAX));
+}
+```
+
+While the previous code does exactly the same, it demonstrates that some classes posses multiple constructors, allowing us - as the user of the class - to select the constructor that suits our needs best. Always take a look at the documentation to see which constructors are available.
+
+Some classes only have constructors that have arguments. This means that an object cannot be created without outside information.
+
 ### The ArrayList class
 
 While arrays allow us to store multiple items of a certain type in a single place they do have their limitations. The biggest one is that an array has a
@@ -195,3 +258,35 @@ Each ArrayList instance (object) has a certain capacity. The capacity is the siz
 An ArrayList is a **sequential list**. So, the order of the elements will not change.
 
 More information about the ArrayList class can be found at [https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html).
+
+An example application is shown below. It creates `Rectangle` objects and stores them in the `ArrayList`. The user is asked to supply both the *width* and *height* of the rectangles (which represent rooms of a house).
+
+```java
+ArrayList listOfRooms = new ArrayList();
+Scanner console = new Scanner(System.in);
+
+double width = 0;
+double height = 0;
+
+System.out.println("Please specify width and height of rooms. Enter negative for either to stop.");
+do {
+    System.out.print("Please enter the width of the chamber: ");
+    width = console.nextDouble();
+
+    System.out.print("Please enter the height of the chamber: ");
+    height = console.nextDouble();
+
+    if (width > 0 && height > 0) {
+        Rectangle room = new Rectangle(width, height);
+        listOfRooms.add(room);
+    }
+} while (width > 0 && height > 0);
+
+for (int i = 0; i < listOfRooms.size(); i++) {
+    System.out.println("Room: " + listOfRooms.get(i));
+}
+```
+
+If you do not understand each line of code above, make sure to read the online documentation of the class and methods.
+
+The example code above makes use of different classes and objects. It shows the actual power of object oriented programming. The instances of the different classes provide a certain functionality, accessible via the methods of the objects of those classes. The different objects interact with one another by sending messages to each other. For example: *the `room` objects that are created in the for-loop actually send a message to the `listOfRooms` with a request to be added to the list.*
