@@ -18,7 +18,19 @@ public class HangmanTheThird {
         displayInfoAndRules();
 
         // Play the game
-        play();
+        do {
+            play();
+        } while (doesUserWantToPLayAgain());
+    }
+    
+    public static boolean doesUserWantToPLayAgain() {
+        Scanner console = new Scanner(System.in);
+        String answer;
+        do {
+            System.out.print("Would you like to play again [yes/no]? ");
+            answer = console.next().toLowerCase();
+        } while (!(answer.equals("yes") || answer.equals("no")));
+        return answer.equals("yes");
     }
     
     public static void play() {

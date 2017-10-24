@@ -1168,3 +1168,39 @@ public static char askUserForGuess(String wrongLettersTried, char[] guessedLette
 ```
 
 While the method did get a bit more complex, we did get more feedback to the user.
+
+### Step 2 - Ask user to play again
+
+Playing the game again is actually really simple. All we need to do is put the call to the play method in a loop construct based on a boolean. The value of this boolean should be set based on the answer the user gives to the question "Would you like to play again?".
+
+Let us do it good this time and create a method that asks the user if he/she wishes to play again and returns a boolean based on the answer.
+
+```java
+public static boolean doesUserWantToPLayAgain() {
+    Scanner console = new Scanner(System.in);
+    String answer;
+    do {
+        System.out.print("Would you like to play again [yes/no]? ");
+        answer = console.next().toLowerCase();
+    } while (!(answer.equals("yes") || answer.equals("no")));
+    return answer.equals("yes");
+}
+```
+
+The code above keeps asking to user until he/she enters the text "yes" or "no". Then based on that the method returns `true` of `false`.
+
+To make use of this value we can alter the call to the play method inside main as follows:
+
+```java
+public static void main(String[] args) {
+    // Step 1 - Display info to user
+    displayInfoAndRules();
+
+    // Play the game
+    do {
+        play();
+    } while (doesUserWantToPLayAgain());
+}
+```
+
+Now once the first game is finished the method `doesUserWantToPLayAgain()` is called and its result is used in the condition of the do-while loop. If the user answers "no", the loop is terminated and the game ends. If he/she answers "yes" the play method is called again and the game restarts.
