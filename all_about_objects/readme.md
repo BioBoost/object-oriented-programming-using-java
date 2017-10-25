@@ -168,19 +168,19 @@ Consider the example below where we set the width and the height of the bedroom 
 ```java
 Rectangle bedroom = new Rectangle();
 
-System.out.println("Bedroom: " + bedroom);
+System.out.println("Bedroom before: " + bedroom);
 
 bedroom.setWidth(12.8);
 bedroom.setHeight(8.6);
 
-System.out.println("Bedroom: " + bedroom);
+System.out.println("Bedroom after: " + bedroom);
 ```
 
 Which outputs:
 
 ```text
-Bedroom: Rectangle[x=0.0, y=0.0, width=0.0, height=0.0, fill=0x000000ff]
-Bedroom: Rectangle[x=0.0, y=0.0, width=12.8, height=8.6, fill=0x000000ff]
+Bedroom before: Rectangle[x=0.0, y=0.0, width=0.0, height=0.0, fill=0x000000ff]
+Bedroom after: Rectangle[x=0.0, y=0.0, width=12.8, height=8.6, fill=0x000000ff]
 ```
 
 How does one know which classes are available from Java and what methods the objects of these classes contain? Simple, google or the Java API documentation [https://docs.oracle.com/javase/8/docs/api/index.html](https://docs.oracle.com/javase/8/docs/api/index.html).
