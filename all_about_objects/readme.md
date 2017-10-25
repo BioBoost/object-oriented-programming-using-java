@@ -18,6 +18,8 @@ What is an object ?
 
 Sounds like a complex question, but the answer is actually really simple. Humans already tend to **think in terms of objects**, without taking to much effort. Students already know about objects, even if they don't realize it.
 
+Actually **all things around us can be considered objects**: a chair, a table, an electricity outlet, a window, a student, a teacher, ... but also more abstract things such as air, wind, sunrays, ... When thinking in terms of objects in software design we will find such things as an email, a browser, a text message, a file, a mouse, an icon on your desktop, ... All these things can be objects. These objects are comprised of two important things: properties and actions.
+
 If you are reading this in a classroom, than take a look around you. Try to focus on a person in the room and identify some properties of this person. Some examples could be his/her:
 
 * name
