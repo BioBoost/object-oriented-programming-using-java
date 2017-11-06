@@ -1,9 +1,5 @@
 ## Basic Exercises
 
-### Circumference and area of a parallelogram
-
-[TODO]
-
 ### A resistor model
 
 The Resistor class:
