@@ -6,7 +6,7 @@ This weeks assignments will encompass extending this existing code with some nic
 
 [include](code/HangmanTheGame/src/hangmanthegame/HangmanTheGame.java)
 
-Try to place separate functionality into separate methods if possible.
+Try to place separate functionality into separate methods if possible. You can change the existing code as much as you want. Show me some creativity.
 
 ## Assignment - Stats and Layout
 
