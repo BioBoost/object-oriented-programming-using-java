@@ -292,3 +292,100 @@ for (int i = 0; i < listOfRooms.size(); i++) {
 If you do not understand each line of code above, make sure to read the online documentation of the class and methods.
 
 The example code above makes use of different classes and objects. It shows the actual power of object oriented programming. The instances of the different classes provide a certain functionality, accessible via the methods of the objects of those classes. The different objects interact with one another by sending messages to each other. For example: *the `room` objects that are created in the for-loop actually send a message to the `listOfRooms` with a request to be added to the list.*
+
+<!-- TODO: Difference between primitive type and object reference variable -->
+<!-- Object diagram difference between primitive variable type and object reference -->
+<!-- Passing variables into methods! -->
+
+## Creating our own Classes
+
+Creating your own classes is one of the main responsibilities of an object oriented programmer. As stated before, an application is a collection of objects that interact with each other. These objects are created based on a class developed by a programmer. If we wish to implement some functionality that is not yet available in the language or it is not exactly what we need, we are required to build it ourselves.
+
+<!-- Luckily even if a class is not readily available for us, we will be able to reuse other classes which contain a partial functionality of the class we which to create. -->
+
+It's natural to think of **objects as collections of other objects**. Think about a television which contains a tuner, a screen, a power supply, an embedded system, ... We say that a television object is **composed** of these other objects. Luckily this same concept is available to us in an object oriented programming language. We can also create objects by bundling other objects. This has the big advantage that we can use objects from classes that someone else made or are part of the language libraries. This saves us a lot of time and effort. This sort of code reuse is one of the major advantages of object oriented languages.
+
+### Visual UML Diagrams
+
+When creating an application it can often be useful to put some diagrams on paper on how you are going to tackle the problem. One of the most used diagrams in the world of object oriented programming is the UML (Unified Modeling Language) class diagram.
+
+A class diagram is a static diagram that describes the attributes and methods of a class and the also the relationships between the different classes in an application. Class diagrams are widely used in the modeling of object oriented systems because they are the only UML diagrams, which can be mapped directly with object-oriented languages.
+
+Before we dive into the development of custom classes in Java we will document some example applications/solutions using nothing but visual UML class diagrams. The first few diagrams are actually not official UML class diagrams as certain concepts still need to be explained as we are advancing through the examples.
+
+The examples that follow will not model full applications but only certain parts from it.
+
+#### A Simple LightBulb Class
+
+Let's start simple to get to know a bit about the UML class diagrams.
+
+Consider a class that represents a simple lightbulb in your house. It has only a single property, the state of the light - it's either 'on' or 'off'. We call the class `LightBulb` because the convention in Java for class names is that they should be named using Pascal Case.
+
+> #### Info::Pascal Case and camel Case
+>
+> Pascal case is a subset of Camel Case where the first letter is capitalized. That is, userAccount is a camel case and UserAccount is a Pascal case.
+> In Java the convention is that methods names are camel cased while class names are Pascal cased.
+> It is easy to remember. Pascal is a proper noun so capitalize the first letter.
+camel is a common noun, so you do not capitalize the first letter.
+
+<!-- How to break these? -->
+
+> #### Info::snake_case
+> Snake case (or snake_case) is the practice of writing compound words or phrases in which the elements are separated with one underscore character `_` and no spaces, with each element's initial letter usually lowercased within the compound and the first letter either upper or lower case - as in "foo_bar" and "Hello_world".
+
+The class shape in a class diagram consists of a rectangle with three rows. The top row contains the name of the class, the middle row has the attributes of the class, and the bottom section expresses the methods or operations that the class has. In a diagram, classes and subclasses are grouped together to show the relationship between objects of these classes.
+
+![Start of a class diagram of LightBulb](img/light_bulb_properties.png)
+
+Note how the name of the class is placed in the upper compartment of the class diagram. The attributes (properties) of the class reside in the middle compartment.
+
+Now what could one do with an object of the class `LightBulb`. Actually not all that much. A simple classic lightbulb can be turned on and can be turned off. Well then let us document two methods for those actions. A method `on()` and a method `off()`.
+
+![A LightBulb class with methods](img/light_bulb_methods.png)
+
+When modeling software it's normal that not all details are available from the start. For example the type of the attributes should also be documented in the UML diagram, as are the arguments and return types of the methods. However sometimes those details haven't been decided yet. In that case we just leave them out.
+
+##### Access Specifiers - Data Hiding
+
+An attentive reader may have noticed that the attributes are listed with a prefixing `-` and the methods are listed with a prefixing `+`. There is an important difference between the two. Namely, a minus sign `-` indicates **private** attributes or methods while a plus sign `+` indicates **public** attributes or methods. These are called **access specifiers** and they indicate if the attribute/method is accessible from outside or not. Java also supports the **protected** (`#`) and **package** (has no UML equivalent symbol) access specifiers but more on these later.
+
+Why would one not make everything public and allow the user of the class access to everything? Because objects should NOT be able to directly change attributes of other objects. This is basically a necessity for two reasons: to **protect the user of the class** from himself and to **protect the class from the user**. *Things that are hidden cannot be misused*.
+
+Consider a human being as an object. As another human being (object) it is not possible for me to make you
+* grow (by changing your length)
+* hungry (by speeding up your metabolism)
+* blush (by doubling your heartrate)
+
+I can influence some of these factors by for example:
+* asking you to run a lap around the school
+* offering you growth hormones
+* placing a nice crusty pizza hawai in front of you
+
+Restricting access to attributes and certain methods is called data hiding. The attributes of a class should always be made private. A user of your class should never be able to change the inner properties directly from outside the class.
+
+How can one than change the state of the objects? Simple, by regulating the access to the state of the object using methods. In the case of the `LightBulb` two methods were added to be able to turn it off or on. Now what if the user has to be able to check the current state (see if it's on or off). For this you can create a method that is called for example `get_state()` which returns the value of the `state` attribute.
+
+![Adding a get_state() method to LightBulb](img/light_bulb_get_state.png)
+
+While methods can also be made private, often these are omitted from the UML diagram. This is often the case because most programmers find them cluttering the class diagram and they are often created as needed and not important for the outside user.
+
+#### A Student Class
+
+*An elementary school wishes us to build an application that keeps track of some information about their students. They want to store the gender of the student, the age of the student, an address and the cellphone number. They wish the application to automatically generate an email address of the school and an s-number to uniquely identify each student.*
+
+When modeling object oriented applications you should always keep a lookout for **nouns** (example car, point, record, cat, animal, user, ...) when describing the functionality of the application. These often denote candidates for classes.
+
+Here the core of the application is the perfect candidate for class, namely a student. In Java, and most other OOP languages the name of a class starts with a capital and so does each consecutive word. This is called Pascal Case.
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Later on they want to generate an email address.  the following information of each student: name, age, gender, s-number, address and cellphone number.* -->

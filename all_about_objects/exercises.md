@@ -17,7 +17,11 @@ Make sure to select a low max (for example 50) or your sum will overflow.
 
 Make a small main program to show that the implementation works. Generate for example 5000 random numbers.
 
-## Exercise 4 - Circumference and area of a parallelogram
+### Exercise 4 - Modeling an Advanced Light Bulb
+
+Take the example from the course of a LightBulb. Now think about a more advanced light bulb where you wish to keep track of the number of hours that it was on (it breaks for example after 10'000 hours). Instead of two states this lightbulb can be dimmed. How would you save that property? Create a UML diagram of this LEDBulb.
+
+## Exercise 5 - Circumference and area of a parallelogram
 
 Create a class that stores the base and height of a parallelogram.
 
@@ -27,7 +31,7 @@ Add two methods to the class. One to determine the area and one to determine the
 
 Make a small main program to show that the implementation works.
 
-## Exercise 5 - A resistor model
+## Exercise 6 - A resistor model
 
 Create a class that simulates the behavior of a resistor. You should be able
 to only set the resistance once through a constructor of the class. This means that
