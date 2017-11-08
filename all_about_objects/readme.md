@@ -395,23 +395,36 @@ Let us add a constructor to the `LightBulb` class that takes no arguments. Later
 
 Constructors are most of the time placed on top in the method list. This because these are the first methods you will need when making use of the class.
 
-<!-- #### A Student Class
+#### A Student Class
 
-*An elementary school wishes us to build an application that keeps track of some information about their students. They want to store the gender of the student, the age of the student, an address and the cellphone number. They wish the application to automatically generate an email address of the school and an s-number to uniquely identify each student.*
+*An elementary school wishes us to build an application that keeps track of some information about their students. They want to store the gender of the student, the age of the student, an address and the cellphone number. They wish the application to automatically generate an email address of the school and an s-number to uniquely identify each student. They also wish the application to be able to generate a list of all students where all information of the students is printed to the screen.*
 
-When modeling object oriented applications you should always keep a lookout for **nouns** (example car, point, record, cat, animal, user, ...) when describing the functionality of the application. These often denote candidates for classes.
+When modeling object oriented applications you should always keep a lookout for **nouns** (example car, point, record, cat, animal, list, user, ...) when describing the functionality of the application. These often denote candidates for classes.
 
-Here the core of the application is the perfect candidate for class, namely a student. In Java, and most other OOP languages the name of a class starts with a capital and so does each consecutive word. This is called Pascal Case. -->
+Here the core of the application is the perfect candidate for class, namely a student.
 
+##### Attributes
 
+When reading the description of the application again we can determine what pieces of information are related to a student. These are probable part of the state of a student and in other words attributes that need to be stored inside the objects.
 
+This leads us to a first version of a class `Student`.
 
+![Basic model of a Student class](img/student_class_attributes.png)
 
+Before we start adding methods it would be a good idea to take it one step further than with the previous example and try to map data types on the attributes of the Student class. If later on they turn out to be inadequate we can always change them.
 
+Remember that Java knows the following primitive types:
 
+![Basic model of a Student class](img/java_primitive_data_types.png)
 
+Attributes do not necessarily need to be of a primitive type. They can also refer to objects of other classes (for example `String` in this case).
 
+To indicate the data types of an attribute in UML you need to place a colon `:` behind the name followed by the type of the attribute (for example `int` or `String`).
 
+![Attribute types for Student class](img/student_class_data_types.png)
 
+While we use the names of the data types available in Java, this is not actually necessary for a UML class diagram. Some applications are modelled partly before the actual programming language is chosen. In this case general types such as `text`, `integer`, `boolean`, ... are often used. Most programming languages do have some form of these available.
 
-<!-- Later on they want to generate an email address.  the following information of each student: name, age, gender, s-number, address and cellphone number.* -->
+<!-- ##### Constructors
+
+When defining a constructor you should first determine what information is minimally required  -->
