@@ -311,7 +311,7 @@ When creating an application it can often be useful to put some diagrams on pape
 
 A class diagram is a static diagram that describes the attributes and methods of a class and the also the relationships between the different classes in an application. Class diagrams are widely used in the modeling of object oriented systems because they are the only UML diagrams, which can be mapped directly with object-oriented languages.
 
-Before we dive into the development of custom classes in Java we will document some example applications/solutions using nothing but visual UML class diagrams. The first few diagrams are actually not official UML class diagrams as certain concepts still need to be explained as we are advancing through the examples.
+Before we dive into the development of custom classes in Java we will document some example applications/solutions using nothing but visual UML class diagrams.
 
 The examples that follow will not model full applications but only certain parts from it.
 
@@ -333,7 +333,7 @@ camel is a common noun, so you do not capitalize the first letter.
 > #### Info::snake_case
 > Snake case (or snake_case) is the practice of writing compound words or phrases in which the elements are separated with one underscore character `_` and no spaces, with each element's initial letter usually lowercased within the compound and the first letter either upper or lower case - as in "foo_bar" and "Hello_world".
 
-The class shape in a class diagram consists of a rectangle with three rows. The top row contains the name of the class, the middle row has the attributes of the class, and the bottom section expresses the methods or operations that the class has. In a diagram, classes and subclasses are grouped together to show the relationship between objects of these classes.
+The class shape in a class diagram that consists of a rectangle with three rows. The top row contains the **name of the class**, the middle row has the **attributes of the class**, and the bottom section expresses the **methods or operations** that the class has. In a diagram, classes and subclasses are grouped together to show the relationship between objects of these classes.
 
 ![Start of a class diagram of LightBulb](img/light_bulb_properties.png)
 
@@ -343,7 +343,7 @@ Now what could one do with an object of the class `LightBulb`. Actually not all 
 
 ![A LightBulb class with methods](img/light_bulb_methods.png)
 
-When modeling software it's normal that not all details are available from the start. For example the type of the attributes should also be documented in the UML diagram, as are the arguments and return types of the methods. However sometimes those details haven't been decided yet. In that case we just leave them out.
+When modeling software it's normal that not all details are available from the start. For example the type of the attributes should also be documented in the UML diagram, as are the arguments and return types of the methods. However sometimes those details haven't been decided yet. In that case we just leave them out and add them later.
 
 ##### Access Specifiers - Data Hiding
 
@@ -361,21 +361,47 @@ I can influence some of these factors by for example:
 * offering you growth hormones
 * placing a nice crusty pizza hawai in front of you
 
-Restricting access to attributes and certain methods is called data hiding. The attributes of a class should always be made private. A user of your class should never be able to change the inner properties directly from outside the class.
+Restricting access to attributes and certain methods is called **data hiding**. The attributes of a class should always be made private. A user of your class should never be able to change the inner properties directly from outside the class. If you allow users access to the inner workings of your objects they will misuse it. **Declaring an attribute as public breaks data hiding.**
 
-How can one than change the state of the objects? Simple, by regulating the access to the state of the object using methods. In the case of the `LightBulb` two methods were added to be able to turn it off or on. Now what if the user has to be able to check the current state (see if it's on or off). For this you can create a method that is called for example `get_state()` which returns the value of the `state` attribute.
+How can one than change the state of objects? Simple, by regulating the access to the state of the object using methods. In the case of the `LightBulb` two methods were added to be able to turn it off or on. Now what if the user has to be able to check the current state (see if it's on or off). For this you can create a method that is called for example `getState()` which returns the value of the `state` attribute.
 
-![Adding a get_state() method to LightBulb](img/light_bulb_get_state.png)
+![Adding a getState() method to LightBulb](img/light_bulb_get_state.png)
+
+Notice that method names are camel cased in Java. Also this is a general agreement between all Java programmers.
+
+By allowing access to only the needed attributes through the use of methods, we can add for example validation before the actual attribute is updated with the new value. Take for example a class Rectangle that has two attributes `height` and `width`. If you would allow the user to directly access the attributes they could set the attributes to a negative value. That is not logical. By adding methods `setWidth()` and `setHeight()` the passed values can be validated and checked if they are positive.
 
 While methods can also be made private, often these are omitted from the UML diagram. This is often the case because most programmers find them cluttering the class diagram and they are often created as needed and not important for the outside user.
 
-#### A Student Class
+##### Constructors
+
+When creating new objects (instances) from classes in Java you need a couple of things:
+* Most of the time you need a reference to new object in the form of a variable
+* The `new` keyword to indicate to Java that you wish to create a new object from a certain class
+* The type of the variable (which is in most cases the name of the class)
+* The name of the constructor that needs to be called to initialize the new object.
+
+![Creating an Object](img/creating_an_object.png)
+
+As mentioned before a class can have multiple constructors. Take for example the `Rectangle` class from JavaFX [https://docs.oracle.com/javase/8/javafx/api/javafx/scene/shape/Rectangle.html](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/shape/Rectangle.html).
+
+![Multiple Constructors](img/rectangle_constructors.png)
+
+These give the freedom to the user of the class to tailor the initialization of the new objects to his/her needs. Do note that the constructors do not differ in name but do differ in the arguments that they take. Either the number of arguments or the types need to be different so Java can determine which constructor you are actually requesting. More on this later.
+
+Let us add a constructor to the `LightBulb` class that takes no arguments. Later on in Java this constructor needs to place the lightbulb in a valid state, so for example `off`.
+
+![Adding a constructor to LightBulb](img/light_bulb_constructors.png)
+
+Constructors are most of the time placed on top in the method list. This because these are the first methods you will need when making use of the class.
+
+<!-- #### A Student Class
 
 *An elementary school wishes us to build an application that keeps track of some information about their students. They want to store the gender of the student, the age of the student, an address and the cellphone number. They wish the application to automatically generate an email address of the school and an s-number to uniquely identify each student.*
 
 When modeling object oriented applications you should always keep a lookout for **nouns** (example car, point, record, cat, animal, user, ...) when describing the functionality of the application. These often denote candidates for classes.
 
-Here the core of the application is the perfect candidate for class, namely a student. In Java, and most other OOP languages the name of a class starts with a capital and so does each consecutive word. This is called Pascal Case.
+Here the core of the application is the perfect candidate for class, namely a student. In Java, and most other OOP languages the name of a class starts with a capital and so does each consecutive word. This is called Pascal Case. -->
 
 
 
