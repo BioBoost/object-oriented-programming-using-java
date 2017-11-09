@@ -92,3 +92,9 @@ while (i < scoreList.size() && i < 10) {
     i++;
 }
 ```
+
+## Assignment - Refactor to class
+
+Refactor your hangman game to a class `Hangman`. Add required attributes and remove the method arguments where needed.
+
+Local variables of methods that are only required in that single method should not me added as attributes.
