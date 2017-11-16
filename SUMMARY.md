@@ -92,6 +92,7 @@
 * [Week 2](assignments/week_2.md)
 * [Week 3](assignments/week_3.md)
 * [Week 7](assignments/week_7.md)
+* [Week 8](assignments/week_8.md)
 
 ----
 
