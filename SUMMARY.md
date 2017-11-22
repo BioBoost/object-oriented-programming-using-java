@@ -53,6 +53,7 @@
 <!-- * [Summary](all_about_objects/summary.md) -->
 <!-- * [Quiz](all_about_objects/quiz.md) -->
 * [Exercises](all_about_objects/exercises.md)
+* [Solutions](all_about_objects/solutions.md)
 
 
 <!-- ### Java -->

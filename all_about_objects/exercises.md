@@ -8,7 +8,7 @@ Take a look at the screenshot below of a Pokemon game. Can you identify the attr
 
 ![A Pidgey Pokemon](img/pokemon_pidgey.jpg)
 
-### Exercise 3 - Randomizer checker
+## Exercise 3 - Randomizer checker
 
 Create an application that calculates the average of a number of randomly generated numbers.
 
@@ -17,7 +17,7 @@ Make sure to select a low max (for example 50) or your sum will overflow.
 
 Make a small main program to show that the implementation works. Generate for example 5000 random numbers.
 
-### Exercise 4 - Modeling an Advanced Light Bulb
+## Exercise 4 - Modeling an Advanced Light Bulb
 
 Take the example from the course of a LightBulb. Now think about a more advanced light bulb where you wish to keep track of the number of hours that it was on (it breaks for example after 10'000 hours). Instead of two states this lightbulb can be dimmed. How would you save that property? Create a UML diagram of this LEDBulb.
 
@@ -51,7 +51,18 @@ means if the current changes, the voltage should also change and vice versa.
 
 Make sure to choose floating point values for all attributes of the resistor class.
 
-Make a small main program to show that the implementation works.
+Make sure that the following main code works:
+
+```java
+public static void main(String[] args) {
+  Resistor resistor = new Resistor(1000);
+  Resistor bridge = new Resistor();
+
+  resistor.setVoltage(1);
+  System.out.println("Current = " + resistor.getCurrent() + " A");
+  // Current = 0.001 A
+}
+```
 
 ## Exercise 7 - A Command Parser
 
@@ -81,4 +92,21 @@ Create a class Player that holds both a nickname (of type `string`) and his/her 
 
 Next create a class PlayerList that contains an expandable list of players (use for example an `ArrayList` for this). Create methods for your PlayerList class to add a player and to remove a player. To remove a player you will need to give his/her nickname as an argument to the remove method. Also add a method to find a player based on his/her nickname.
 
-Create a small main application to demonstrate that your class is working and how it should be used.
+The following main method should work with your classes:
+```java
+public static void main(String[] args) {
+  Player exeler = new Player("Exeler");
+  exeler.addPoints(23);
+  System.out.println("Player " + exeler.getNickname()
+      + " has " + exeler.getPoints() + " points");
+
+  final int MAX_PLAYERS = 5;
+  PlayerList joinedPlayers = new PlayerList(MAX_PLAYERS);
+
+  if (joinedPlayers.add(exeler)) {
+    System.out.println("Player joined");
+  } else {
+    System.out.println("Cannot join. List is full");
+  }
+}
+```
