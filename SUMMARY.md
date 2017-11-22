@@ -10,7 +10,9 @@
 
 ### Starting in Java
 
-* [Starting in Java](starting_in_java/readme.md)
+* [Introduction](starting_in_java/readme.md)
+* [Building Blocks](starting_in_java/building_blocks.md)
+* [Hello World](starting_in_java/hello_world.md)
 <!-- * [Summary](starting_in_java/summary.md) -->
 <!-- * [Quiz](starting_in_java/quiz.md) -->
 * [Exercises](starting_in_java/exercises.md)
