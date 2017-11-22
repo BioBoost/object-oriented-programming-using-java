@@ -32,16 +32,16 @@
 
 ### Making Decisions
 
-* [Introduction](making_decision/readme.md)
-* [Conditions](making_decision/conditions.md)
-* [Comparison Operators](making_decision/comparison_operators.md)
-* [Conditional Operators](making_decision/conditions_operators.md)
-* [The If Statement](making_decision/if.md)
-* [The If-Else Statement](making_decision/if_else.md)
-* [The Switch Statement](making_decision/switch.md)
-<!-- * [Summary](making_decision/summary.md) -->
-<!-- * [Quiz](making_decision/quiz.md) -->
-<!-- * [Exercises](making_decision/exercises.md) -->
+* [Introduction](making_decisions/readme.md)
+* [Conditions](making_decisions/conditions.md)
+* [Comparison Operators](making_decisions/comparison_operators.md)
+* [Conditional Operators](making_decisions/conditions_operators.md)
+* [The If Statement](making_decisions/if.md)
+* [The If-Else Statement](making_decisions/if_else.md)
+* [The Switch Statement](making_decisions/switch.md)
+<!-- * [Summary](making_decisions/summary.md) -->
+<!-- * [Quiz](making_decisions/quiz.md) -->
+<!-- * [Exercises](making_decisions/exercises.md) -->
 
 ### Loop Constructs
 
