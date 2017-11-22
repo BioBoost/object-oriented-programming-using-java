@@ -52,3 +52,33 @@ means if the current changes, the voltage should also change and vice versa.
 Make sure to choose floating point values for all attributes of the resistor class.
 
 Make a small main program to show that the implementation works.
+
+## Exercise 7 - A Command Parser
+
+Write an application that can call a number of methods based on the commands that the user types in the terminal. So for example implement the following commands:
+
+* help: give a list of available commands
+* exit: stop and exit the application
+* say <message>: print a message to the terminal
+
+Example:
+
+```text
+> say Hello world at all
+Hello world at all
+> help
+The following commands are available:
+  help: give a list of available commands
+  exit: stop and exit the application
+  say <message>: print a message to the terminal
+> exit
+Bye bye, see you next time.
+```
+
+## Exercise 8 - A Player List
+
+Create a class Player that holds both a nickname (of type `string`) and his/her score (of type `int`).
+
+Next create a class PlayerList that contains an expandable list of players (use for example an `ArrayList` for this). Create methods for your PlayerList class to add a player and to remove a player. To remove a player you will need to give his/her nickname as an argument to the remove method. Also add a method to find a player based on his/her nickname.
+
+Create a small main application to demonstrate that your class is working and how it should be used.
