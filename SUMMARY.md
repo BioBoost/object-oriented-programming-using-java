@@ -22,10 +22,11 @@
 <!-- * [Quiz](starting_in_java/quiz.md) -->
 * [Exercises](starting_in_java/exercises.md)
 
-### Storing and Processing Info
+### Storing and Processing Data
 
-* [Storing and Processing Info](storing_and_processing_information/readme.md)
-<!-- * [Summary](storing_and_processing_information/summary.md) -->
+* [Introduction](storing_and_processing_information/readme.md)
+* [Variables](storing_and_processing_information/variables.md)
+* [Mathematical Operators](storing_and_processing_information/mathematical_operators.md)
 <!-- * [Quiz](storing_and_processing_information/quiz.md) -->
 * [Exercises](storing_and_processing_information/exercises.md)
 
