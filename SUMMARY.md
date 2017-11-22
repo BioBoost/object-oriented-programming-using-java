@@ -35,7 +35,7 @@
 * [Introduction](making_decisions/readme.md)
 * [Conditions](making_decisions/conditions.md)
 * [Comparison Operators](making_decisions/comparison_operators.md)
-* [Conditional Operators](making_decisions/conditions_operators.md)
+* [Conditional Operators](making_decisions/conditional_operators.md)
 * [The If Statement](making_decisions/if.md)
 * [The If-Else Statement](making_decisions/if_else.md)
 * [The Switch Statement](making_decisions/switch.md)
