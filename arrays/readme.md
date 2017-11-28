@@ -1,6 +1,6 @@
 [Arrays](../arrays/readme.md)
 * [One Dimensional Arrays](../arrays/one_dimensional_arrays.md)
-<!-- * [For Each Loop](../arrays/for_each_loop.md) -->
+* [For Each Loop](../arrays/for_each_loop.md)
 * [Constant Values](../arrays/constant_values.md)
 <!-- * [Summary](../arrays/summary.md) -->
 <!-- * [Quiz](../arrays/quiz.md) -->
