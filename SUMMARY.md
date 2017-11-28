@@ -60,17 +60,6 @@
 <!-- * [Quiz](arrays/quiz.md) -->
 <!-- * [Exercises](arrays/exercises.md) -->
 
-<!-- ### Methods -->
-
-<!-- * [Methods](methods/readme.md) -->
-<!-- * [Summary](methods/summary.md) -->
-<!-- * [Quiz](methods/quiz.md) -->
-<!-- * [Exercises](methods/exercises.md) -->
-
-### Hangman Demo
-
-* [Hangman](demo_hangman/readme.md)
-
 ### All About Objects
 
 * [All About Objects](all_about_objects/readme.md)
@@ -85,6 +74,22 @@
 * [Solutions](all_about_objects/solutions.md)
 
 
+### Creating our own Classes
+
+* [Creating our own Classes](../creating_own_classes/readme.md)
+* [UML Class Diagrams](../creating_own_classes/uml_class_diagrams.md)
+* [Creating a Class](../creating_own_classes/creating_a_class.md)
+* [Attributes](../creating_own_classes/attributes.md)
+<!-- * [Methods](../creating_own_classes/methods.md) -->
+<!-- * [Constructors](../creating_own_classes/constructors.md) -->
+
+
+<!-- ### Methods -->
+
+<!-- * [Methods](methods/readme.md) -->
+<!-- * [Summary](methods/summary.md) -->
+<!-- * [Quiz](methods/quiz.md) -->
+<!-- * [Exercises](methods/exercises.md) -->
 
 
 
@@ -119,6 +124,12 @@
 * [Arrays](solutions/arrays.md)
 * [Inheritance](solutions/inheritance.md) -->
 
+
+----
+
+### Hangman Demo
+
+* [Hangman](demo_hangman/readme.md)
 
 ----
 ### Assignments
