@@ -76,12 +76,12 @@
 
 ### Creating our own Classes
 
-* [Creating our own Classes](../creating_own_classes/readme.md)
-* [UML Class Diagrams](../creating_own_classes/uml_class_diagrams.md)
-* [Creating a Class](../creating_own_classes/creating_a_class.md)
-* [Attributes](../creating_own_classes/attributes.md)
-<!-- * [Methods](../creating_own_classes/methods.md) -->
-<!-- * [Constructors](../creating_own_classes/constructors.md) -->
+* [Creating our own Classes](creating_own_classes/readme.md)
+* [UML Class Diagrams](creating_own_classes/uml_class_diagrams.md)
+* [Creating a Class](creating_own_classes/creating_a_class.md)
+* [Attributes](creating_own_classes/attributes.md)
+<!-- * [Methods](creating_own_classes/methods.md) -->
+<!-- * [Constructors](creating_own_classes/constructors.md) -->
 
 
 <!-- ### Methods -->
