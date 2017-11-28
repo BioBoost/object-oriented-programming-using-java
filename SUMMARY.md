@@ -14,7 +14,6 @@
 <!-- * [Exercises](introduction_to_computer_programming/exercises.md) -->
 
 ### Starting in Java
-
 * [Introduction](starting_in_java/readme.md)
 * [Building Blocks](starting_in_java/building_blocks.md)
 * [Hello World](starting_in_java/hello_world.md)
@@ -23,7 +22,6 @@
 * [Exercises](starting_in_java/exercises.md)
 
 ### Storing and Processing Data
-
 * [Introduction](storing_and_processing_data/readme.md)
 * [Variables](storing_and_processing_data/variables.md)
 * [Mathematical Operators](storing_and_processing_data/mathematical_operators.md)
@@ -31,7 +29,6 @@
 * [Exercises](storing_and_processing_data/exercises.md)
 
 ### Making Decisions
-
 * [Introduction](making_decisions/readme.md)
 * [Conditions](making_decisions/conditions.md)
 * [Comparison Operators](making_decisions/comparison_operators.md)
@@ -44,7 +41,6 @@
 <!-- * [Exercises](making_decisions/exercises.md) -->
 
 ### Loop Constructs
-
 * [Introduction](loop_constructs/readme.md)
 * [The For Loop](loop_constructs/for_loop.md)
 * [The While Loop](loop_constructs/while_loop.md)
@@ -55,12 +51,11 @@
 * [Exercises](loop_constructs/exercises.md)
 
 
-<!-- ### Arrays -->
-
-<!-- * [Introduction](arrays/readme.md) -->
-<!-- * [One Dimensional Arrays](arrays/one_dimensional_arrays.md) -->
+### Arrays
+* [Introduction](arrays/readme.md)
+* [One Dimensional Arrays](arrays/one_dimensional_arrays.md)
 <!-- * [For Each Loop](arrays/for_each_loop.md) -->
-<!-- * [Constant Values](arrays/constant_values.md) -->
+* [Constant Values](arrays/constant_values.md)
 <!-- * [Summary](arrays/summary.md) -->
 <!-- * [Quiz](arrays/quiz.md) -->
 <!-- * [Exercises](arrays/exercises.md) -->
