@@ -1,3 +1,13 @@
+[Introduction to Computer Programming](../introduction_to_computer_programming/readme.md)
+* [An Application](../introduction_to_computer_programming/an_application.md)
+* [A Programming Language](../introduction_to_computer_programming/a_programming_language.md)
+* [Levels of programming languages](../introduction_to_computer_programming/levels_of_programming.md)
+* [Console and GUI](../introduction_to_computer_programming/console_gui.md)
+* [How to become a programmer](../introduction_to_computer_programming/how_to_become_programmer.md)
+<!-- * [Summary](../introduction_to_computer_programming/summary.md) -->
+<!-- * [Quiz](../introduction_to_computer_programming/quiz.md) -->
+<!-- * [Exercises](../introduction_to_computer_programming/exercises.md) -->
+
 # Introduction to Computer Programming
 
 Today, most people don't need to know how a computer works. Most people can simply turn on a computer or a mobile phone and point at some little graphical object on the display, click a button or swipe a finger or two, and the computer does something. How to interact with a computer program is all the average person needs to know.

@@ -1,9 +1,3 @@
-# All About Objects
-
-This chapter will teach you some basics of the Object Oriented Programming, particularly on using objects.
-
-## Table of Contents
-
 [All About Objects](../all_about_objects/readme.md)
 * [Object Oriented Thinking](../all_about_objects/object_oriented_thinking.md)
 * [Creating Objects](../all_about_objects/creating_objects.md)
@@ -15,6 +9,9 @@ This chapter will teach you some basics of the Object Oriented Programming, part
 * [Exercises](../all_about_objects/exercises.md)
 * [Solutions](../all_about_objects/solutions.md)
 
+# All About Objects
+
+This chapter will teach you some basics of the Object Oriented Programming, particularly on using objects.
 
 <!-- TODO: Difference between primitive type and object reference variable -->
 <!-- Object diagram difference between primitive variable type and object reference -->
