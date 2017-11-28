@@ -57,7 +57,10 @@
 
 ### Arrays
 
-* [Arrays](arrays/readme.md)
+* [Introduction](arrays/readme.md)
+* [One Dimensional Arrays](arrays/one_dimensional_arrays.md)
+* [For Each Loop](arrays/for_each_loop.md)
+* [Constant Values](arrays/constant_values.md)
 <!-- * [Summary](arrays/summary.md) -->
 <!-- * [Quiz](arrays/quiz.md) -->
 <!-- * [Exercises](arrays/exercises.md) -->
@@ -76,10 +79,21 @@
 ### All About Objects
 
 * [All About Objects](all_about_objects/readme.md)
+* [Object Oriented Thinking](all_about_objects/object_oriented_thinking.md)
+* [Creating Objects](all_about_objects/creating_objects.md)
+* [Calling Methods on an Object](all_about_objects/calling_methods.md)
+* [The Random class](all_about_objects/random.md)
+* [The ArrayList class](all_about_objects/arraylist.md)
 <!-- * [Summary](all_about_objects/summary.md) -->
 <!-- * [Quiz](all_about_objects/quiz.md) -->
 * [Exercises](all_about_objects/exercises.md)
 * [Solutions](all_about_objects/solutions.md)
+
+
+
+
+
+
 
 
 <!-- ### Java -->
