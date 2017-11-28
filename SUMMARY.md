@@ -55,22 +55,22 @@
 * [Exercises](loop_constructs/exercises.md)
 
 
-### Arrays
+<!-- ### Arrays -->
 
-* [Introduction](arrays/readme.md)
-* [One Dimensional Arrays](arrays/one_dimensional_arrays.md)
-* [For Each Loop](arrays/for_each_loop.md)
-* [Constant Values](arrays/constant_values.md)
+<!-- * [Introduction](arrays/readme.md) -->
+<!-- * [One Dimensional Arrays](arrays/one_dimensional_arrays.md) -->
+<!-- * [For Each Loop](arrays/for_each_loop.md) -->
+<!-- * [Constant Values](arrays/constant_values.md) -->
 <!-- * [Summary](arrays/summary.md) -->
 <!-- * [Quiz](arrays/quiz.md) -->
 <!-- * [Exercises](arrays/exercises.md) -->
 
-### Methods
+<!-- ### Methods -->
 
-* [Methods](methods/readme.md)
+<!-- * [Methods](methods/readme.md) -->
 <!-- * [Summary](methods/summary.md) -->
 <!-- * [Quiz](methods/quiz.md) -->
-* [Exercises](methods/exercises.md)
+<!-- * [Exercises](methods/exercises.md) -->
 
 ### Hangman Demo
 
