@@ -1,4 +1,10 @@
-# Storing and processing information
+[Storing and processing data](../storing_and_processing_data/readme.md)
+* [Variables](../storing_and_processing_data/variables.md)
+* [Mathematical Operators](../storing_and_processing_data/mathematical_operators.md)
+<!-- * [Quiz](../storing_and_processing_data/quiz.md) -->
+* [Exercises](../storing_and_processing_data/exercises.md)
+
+# Storing and processing data
 
 The programs that we create need to store all sorts of data. From simple things such as numbers, characters and string to complex data types that a programmer can define for himself.
 

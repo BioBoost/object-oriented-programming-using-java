@@ -24,11 +24,11 @@
 
 ### Storing and Processing Data
 
-* [Introduction](storing_and_processing_information/readme.md)
-* [Variables](storing_and_processing_information/variables.md)
-* [Mathematical Operators](storing_and_processing_information/mathematical_operators.md)
-<!-- * [Quiz](storing_and_processing_information/quiz.md) -->
-* [Exercises](storing_and_processing_information/exercises.md)
+* [Introduction](storing_and_processing_data/readme.md)
+* [Variables](storing_and_processing_data/variables.md)
+* [Mathematical Operators](storing_and_processing_data/mathematical_operators.md)
+<!-- * [Quiz](storing_and_processing_data/quiz.md) -->
+* [Exercises](storing_and_processing_data/exercises.md)
 
 ### Making Decisions
 
