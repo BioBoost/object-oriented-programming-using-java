@@ -50,7 +50,6 @@
 <!-- * [Quiz](loop_constructs/quiz.md) -->
 * [Exercises](loop_constructs/exercises.md)
 
-
 ### Arrays
 * [Introduction](arrays/readme.md)
 * [One Dimensional Arrays](arrays/one_dimensional_arrays.md)
@@ -61,7 +60,6 @@
 <!-- * [Exercises](arrays/exercises.md) -->
 
 ### All About Objects
-
 * [All About Objects](all_about_objects/readme.md)
 * [Object Oriented Thinking](all_about_objects/object_oriented_thinking.md)
 * [Creating Objects](all_about_objects/creating_objects.md)
@@ -73,9 +71,7 @@
 * [Exercises](all_about_objects/exercises.md)
 * [Solutions](all_about_objects/solutions.md)
 
-
 ### Creating our own Classes
-
 * [Creating our own Classes](creating_own_classes/readme.md)
 * [UML Class Diagrams](creating_own_classes/uml_class_diagrams.md)
 * [Creating a Class](creating_own_classes/creating_a_class.md)
@@ -84,6 +80,17 @@
 <!-- * [Constructors](creating_own_classes/constructors.md) -->
 * [Exercises](creating_own_classes/exercises.md)
 * [Solutions](creating_own_classes/solutions.md)
+
+### Advances Classes
+<!-- * [Advances Classes](creating_own_classes/readme.md) -->
+<!-- * [Method Overloading](creating_own_classes/uml_class_diagrams.md) -->
+<!-- * [Composition](creating_own_classes/creating_a_class.md) -->
+<!-- * [Static Members](creating_own_classes/attributes.md) -->
+<!-- * [Constructors](creating_own_classes/constructors.md) -->
+<!-- * [Exercises](creating_own_classes/exercises.md) -->
+<!-- * [Solutions](creating_own_classes/solutions.md) -->
+
+
 
 <!-- ### Java -->
 
@@ -112,8 +119,6 @@
 
 * [Arrays](solutions/arrays.md)
 * [Inheritance](solutions/inheritance.md) -->
-
-
 ----
 
 ### Hangman Demo
