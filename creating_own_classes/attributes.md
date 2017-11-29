@@ -67,7 +67,7 @@ Let us consider a modern lightbulb which can be turned on, turned off or even di
 Knowing this the LightBulb class can be extended by adding an attribute `brightness` of type integer. Keeping the *data hiding* principle in mind, the access modifier is chosen to be `private.` This results to the code shown below. From now on the name of the package will be omitted to save place.
 
 ```java
-class LightBulb {
+public class LightBulb {
   // Attributes (instance variables) of the class
   private int brightness = 0;
 }
