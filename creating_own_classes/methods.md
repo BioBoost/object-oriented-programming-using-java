@@ -462,3 +462,136 @@ Resulting in the following UML class diagram:
 ![Adding a toString method to LightBulb](img/light_bulb_to_string.png)
 
 Notice how the return datatype of the `toString()` method is also specified in the UML diagram, in the same way as an attribute, by placing a colon `:` after the method and then stating the datatype (`String` in this case).
+
+#### Methods that take arguments
+
+Almost all methods do some sort of processing based on data. This data can be the attributes encapsulated in the class itself or it can be external information that is **passed via arguments** to the method.
+
+Take for example the `setName()` method shown below of the class `User`. It takes two pieces of external information via arguments:
+* the `firstname` of the user (as a String)
+* the `lastname` of the user (as a String)
+
+This information is then assigned to the internal attributes.
+
+```java
+public class User {
+  // Attributes
+  private String firstname;
+  private String lastname;
+  private String email;
+
+  public void setName(String firstname, String lastname) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+  }
+
+  public void generateEMailAddress(int yearOfBirth) {
+    this.email = firstname + "." + lastname +
+      "_" + yearOfBirth + "@vives.be";
+  }
+
+  @Override
+  public String toString() {
+    return firstname + " " + lastname + " <" + email + ">";
+  }
+}
+```
+
+A second method `generateEMailAddress()` makes both use of internal information and external information to generate an e-mail address for the user in the form of "firstname.lastname_yearOfBirth@vives.be". To do this the method requires the year in which the user was born. This is however only required for this method and is therefor not saved as an internal attribute.
+
+By adding a simple `toString()` method we can easily print the personal information of users in a form that can be used inside a mail program such as outlook.
+
+An example application:
+
+```java
+public static void main(String[] args) {
+  User mark = new User();
+  mark.setName("Mark", "Hennep");
+  mark.generateEMailAddress(1991);
+  System.out.println(mark);
+}
+```
+
+Which would output:
+
+```text
+Mark Hennep <Mark.Hennep_1991@vives.be>
+```
+
+As can be seen from the example code above, you can pass values to the method and/or variables. Do note that you have to pass them in the **correct order** and make sure they are of the **correct type**, otherwise your program will not run.
+
+Let us again extend the `LightBulb` class with a method that can set the brightness of the bulb. This method can be called `dim()` and take an integer value which represents the percentage used to determine the actual brightness. This is where the power of data hiding is again shown. Notice how we first check if the brightness percentage is contained within the valid range. If not we limit the brightness to its extreme's.
+
+```java
+public class LightBulb {
+  // Attributes (instance variables) of the class
+  private int brightness = 0;
+
+  @Override
+  public String toString() {
+    if (brightness == 0) {
+      return "Currently the light is turned off";
+    } else if (brightness == 255) {
+      return  "Currently the light is turned on";
+    } else {
+      return  "Currently the light is dimmed to a brightness of " + brightness;
+    }
+  }
+
+  public void on() {
+    brightness = 255;
+  }
+
+  public void off() {
+    brightness = 0;
+  }
+
+  public void dim(int percentage) {
+    if (percentage < 0) {
+      percentage = 0;
+    } else if (percentage > 100) {
+      percentage = 100;
+    }
+
+    brightness = (int)Math.round((1.0 * 255 / 100) * percentage);
+  }
+}
+```
+
+These safeguards can only be placed when access to internal state is regulated via methods. It makes the objects more resilient to errors and also more user-friendly. Note that the names of the arguments have no relation with the variables in the code that calls the method. They are local to the method itself.
+
+The actual calculation of the brightness results in a `double`, which is then rounded by the `Math.round()` method. However this method returns a `long` which cannot be directly assigned to an `int` variable because Java fears loss of data. However here the value is well within range of an integer. Therefore we can force the conversion by placing `(int)` before the resulting value.
+
+`percentage` is a local variable (actually an argument) of the `dim()` method. It only exists within the body of the dim method and can be changed and manipulated as required without actually changing the variable/value that was passed to the method in the calling code. This is because a copy of the actual value is made into the argument. This only works as-is because percentage is of a primitive datatype. The same is not true when passing objects to methods. In this case the object is not copied but the reference to the original object is. That means that the method to which the object reference is passed, has access to the original object and not to a copy of it.
+
+<!-- Should we place a more concise example here of the passing-object-ref -->
+
+Now our main application can finally change the brightness level of our bulb:
+
+```java
+public static void main(String[] args) {
+    LightBulb kitchen = new LightBulb();
+    System.out.println(kitchen);
+    kitchen.dim(50);         // Turn the light on for 50%
+    System.out.println(kitchen);
+    kitchen.dim(500);        // Turn the light on for 500% !!!!!
+    System.out.println(kitchen);
+    kitchen.off();             // Turn the light off
+    System.out.println(kitchen);
+}
+```
+
+Which would output:
+
+```text
+Currently the light is turned off
+Currently the light is dimmed to a brightness of 127
+Currently the light is turned on
+Currently the light is turned off
+```
+
+When the percentage exceeds the valid range, the brightness is set to its legal maximum (255). This results in the output text stating that bulb is turned on.
+
+Again the UML diagram of `LightBulb` can be updated with the `dim()` method this time. Arguments of methods are placed between the parentheses following the same conventions of attributes, namely the *name* followed by a colon `:` and a *datatype*.
+
+![Dim method of LightBulb](img/light_bulb_dim.png)
