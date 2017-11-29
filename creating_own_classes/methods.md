@@ -595,3 +595,118 @@ When the percentage exceeds the valid range, the brightness is set to its legal 
 Again the UML diagram of `LightBulb` can be updated with the `dim()` method this time. Arguments of methods are placed between the parentheses following the same conventions of attributes, namely the *name* followed by a colon `:` and a *datatype*.
 
 ![Dim method of LightBulb](img/light_bulb_dim.png)
+
+#### Methods that take arguments and return a result
+
+Last but not least methods can take arguments and return a value. The example code below shows a method `square()` of a class `MathHelper` that calculates the square of a number.  The input data is a number of type `int` and the return value would be `number * number` also of type `int`.
+
+```java
+public class MathHelper {
+  public int square(int number) {
+    return number * number;
+  }
+}
+```
+
+Notice that no variable is created to hold the value of `number * number` inside the method. Instead, the value is immediately returned. While it would not have been wrong to create a temporary variable to hold the result, it would make the code longer than needed.
+
+Calling this method inside your main would result in the following code:
+
+```java
+public static void main(String[] args) {
+  MathHelper helper = new MathHelper();
+  System.out.println("The square of 5 is " + helper.square(5));
+}
+```
+
+### Functions and Procedures
+
+Some programmers also speak about functions and procedures. However for object oriented languages this is not entirely correct. Functions and procedures are part of functional programming languages such as C. In those languages a procedure is a function that does not return a result value. In object oriented programming this distinction is not made and they are all called methods. Of course some object oriented languages allow you to define methods that are not part of a class, in this case the name functions can be considered correct.
+
+### Magic Values Cleanup
+
+Remember that a previous chapter stated that literal values inside your code are often a bad idea as they represent *magic values*. Take a look at the end result of the `LightBulb` class. We often used magic values such as `0` and `255`. Our code would be come a lot more maintainable if we were to replace these magic values with a `final` attribute initialized to these values. For example `MIN_BRIGHTNESS` and `MAX_BRIGHTNESS`.
+
+Current `LightBulb` class
+
+```java
+public class LightBulb {
+  // Attributes (instance variables) of the class
+  private int brightness = 0;
+
+  @Override
+  public String toString() {
+    if (brightness == 0) {
+      return "Currently the light is turned off";
+    } else if (brightness == 255) {
+      return  "Currently the light is turned on";
+    } else {
+      return  "Currently the light is dimmed to a brightness of " + brightness;
+    }
+  }
+
+  public void on() {
+    brightness = 255;
+  }
+
+  public void off() {
+    brightness = 0;
+  }
+
+  public void dim(int percentage) {
+    if (percentage < 0) {
+      percentage = 0;
+    } else if (percentage > 100) {
+      percentage = 100;
+    }
+
+    brightness = (int)Math.round((1.0 * 255 / 100) * percentage);
+  }
+}
+```
+
+Replacing the magic values with constant variables/attributes makes the code more clean and maintainable.
+
+```java
+public class LightBulb {
+  // Final attributes
+  private final int MIN_BRIGHTNESS = 0;
+  private final int MAX_BRIGHTNESS = 255;
+  private final int MIN_PERCENTAGE = 0;
+  private final int MAX_PERCENTAGE = 100;
+
+  // Attributes (instance variables) of the class
+  private int brightness = MIN_BRIGHTNESS;
+
+  @Override
+  public String toString() {
+    if (brightness == MIN_BRIGHTNESS) {
+      return "Currently the light is turned off";
+    } else if (brightness == MAX_BRIGHTNESS) {
+      return  "Currently the light is turned on";
+    } else {
+      return  "Currently the light is dimmed to a brightness of " + brightness;
+    }
+  }
+
+  public void on() {
+    brightness = MAX_BRIGHTNESS;
+  }
+
+  public void off() {
+    brightness = MIN_BRIGHTNESS;
+  }
+
+  public void dim(int percentage) {
+    if (percentage < MIN_PERCENTAGE) {
+      percentage = MIN_PERCENTAGE;
+    } else if (percentage > MAX_PERCENTAGE) {
+      percentage = MAX_PERCENTAGE;
+    }
+
+    brightness = (int)Math.round((1.0 * MAX_BRIGHTNESS / 100) * percentage);
+  }
+}
+```
+
+Notice that the last magic number `100` is not replaced by `MAX_PERCENTAGE`. This is because it actually is not the maximum percentage that the user can set. It is just a dividend to convert a number to a percentage. The minimum and maximum percentages allow us to limit the output brightness of the bulb. We could for example state that the maximum output percentage is 90% because then the lifespan of a bulb will be 1/3 longer (just a speculation here to make a point).
