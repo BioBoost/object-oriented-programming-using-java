@@ -339,3 +339,126 @@ Currently the light is turned off
 At the moment our `LightBulb` class can be visualized in UML using the following class diagram:
 
 ![UML Class Diagram of LightBulb](img/light_bulb_methods_on_off.png)
+
+#### Methods that return a value
+
+Most methods will have some sort of result that they want to share with the code that made the call to the method. It is stated that the method **returns a value**. This is achieved using the `return` keyword in Java followed by a value or the name of a variable.
+
+Methods can return a value without taking arguments. The most simple example would be the previous `printWelcome()` method. However instead of printing the message to the screen we could return it as a value allowing the code that calls the method to decide what to do with it (you could for example write it to a file, send it to a printer or put it into an html file).
+
+```java
+public class Demo {
+  public String createWelcomeMessage() {
+    String message = "Hello and Welcome to this program.";
+    message += "Here we print a simple message stating the purpose of the program.";
+    message += "This application is made by none other than mister Java Himself.";
+    return message;
+  }
+}
+```
+
+Notice how we create a variable `message` of type `String` to create the full message. This makes our code more readable. The eventual message String is then returned by the method by stating `return message` as the last statement in the method. Once the interpreter encounters a return statement it returns the result from the method and jumps back to the place where the method is originally called.
+
+The name of the method has also been changed from `printWelcome` to `createWelcomeMessage`. This because the method does something else compared to the previous one.
+
+Calling this method inside your main would result in the following code:
+
+```java
+public static void main(String[] args) {
+  // With a variable to store the return value of the method
+  Demo demo = new Demo();
+  String welcome = demo.createWelcomeMessage();
+  System.out.println(welcome);
+
+  // Or without a variable
+  System.out.println(demo.createWelcomeMessage());
+}
+```
+
+Two ways to print the return value of the `createWelcomeMessage()` are shown in the code above. A first stores the return value inside a variable and then prints the value of the variable. A second option consists of immediately passing the return value of `createWelcomeMessage()` to the `println` method. In this code either way works. It is up to you as a developer to decide which of these two options to use.
+
+##### The toString method
+
+In Java every object that is created automatically gets a number of methods that are provided by the Java language. One of these methods is the `toString()` method which is implicitly called when an object reference is placed inside a String context as for example:
+
+```java
+public static void main(String[] args) {
+  Demo demo = new Demo();
+
+  // Here an implicit call to demo.toString() is made by Java
+  System.out.println(demo);
+
+  // You can explicitly call the toString() method
+  System.out.println(demo.toString());
+}
+```
+
+The Java `toString()` method is used when we need a `String` representation of an object. It is defined in the class Object.
+
+For some classes that are part of the Java classes this method generates a sensible result. However custom classes created by ourselves return a cryptic text consisting of the name of the class and a hashed value of its internal state as shown below.
+
+```text
+exampleprogram.Demo@15db9742
+exampleprogram.Demo@15db9742
+```
+
+The result should be a concise but informative representation that is easy for a person to read. It is recommended that all classes override this method and add their own implementation.
+
+This can be achieved by adding the following method to your class (the method signature must be exact and the `override` annotation must also be present):
+
+```java
+@Override
+public String toString() {
+    return super.toString();
+}
+```
+
+Of course the return statement `return super.toString();` must be changed according to the representation you wish to return.
+
+For the `LightBulb` class we can actually refactor the `printInfo()` method to a `toString()` method and return a `String` instead of printing to the terminal. This also allows the user of our classes to decide what he/she does with the String representation.
+
+For example:
+```java
+public class LightBulb {
+  // Attributes (instance variables) of the class
+  private int brightness = 0;
+
+  @Override
+  public String toString() {
+    if (brightness == 0) {
+      return "Currently the light is turned off";
+    } else if (brightness == 255) {
+      return  "Currently the light is turned on";
+    } else {
+      return  "Currently the light is dimmed to a brightness of " + brightness;
+    }
+  }
+
+  public void on() {
+    brightness = 255;
+  }
+
+  public void off() {
+    brightness = 0;
+  }
+}
+```
+
+This would require our main to be refactored to:
+
+```java
+public static void main(String[] args) {
+    LightBulb kitchen = new LightBulb();
+    System.out.println(kitchen);
+    kitchen.on();         // Turn the light on
+    System.out.println(kitchen);
+    kitchen.off();         // Turn the light off
+    System.out.println(kitchen);
+}
+```
+
+Resulting in the following UML class diagram:
+
+![Adding a toString method to LightBulb](img/light_bulb_to_string.png)
+
+Notice how the return datatype of the `toString()` method is also specified in the UML diagram, in the same way as an attribute, by placing a colon `:` after the method and then stating the datatype (`String` in this case).
