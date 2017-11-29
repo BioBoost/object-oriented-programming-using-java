@@ -82,6 +82,8 @@
 * [Attributes](creating_own_classes/attributes.md)
 <!-- * [Methods](creating_own_classes/methods.md) -->
 <!-- * [Constructors](creating_own_classes/constructors.md) -->
+* [Exercises](creating_own_classes/exercises.md)
+* [Solutions](creating_own_classes/solutions.md)
 
 
 <!-- ### Methods -->
