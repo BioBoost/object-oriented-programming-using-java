@@ -17,7 +17,7 @@ A method can be though of as a building block of your application that performs 
 * It can take input data to use inside the method via arguments
 * It can produce an output value which the called of the method can use
 
-![Method as a Building Block](img/method_building_block.png)
+![Method as a Building Block](img/method_processing.png)
 
 The general structure of a method looks like this:
 
@@ -217,3 +217,125 @@ Some good examples are:
 * ...
 
 Method names should also reflect the result that they generate. For example `isPlayerAlive()` suggests that it returns a `boolean`, `getRadiusOfCircle()` suggests that it returns a `double`.
+
+#### Methods that do not return a value
+
+One of the most simple methods that can be created is one that prints a hello message to the user stating the purpose of your program.
+
+```java
+public class Demo {
+  public void printWelcome() {
+    System.out.println("Hello and Welcome to this program.");
+    System.out.println("Here we print a simple message stating the purpose of the program.");
+    System.out.println("This application is made by none other than mister Java Himself.");
+  }
+}
+```
+
+Notice that the return type is set to `void` - because the method actually does not return anything. It just prints some text to the terminal. Also notice that no parameters are needed as the method does not really need any data from outside of the method.
+
+Calling this method inside your main would result in the following code:
+
+```java
+public static void main(String[] args) {
+  Demo demo = new Demo();
+  demo.printWelcome();
+}
+```
+
+First an object of the class `Demo` is created. After which the method can be called on the object.
+
+Let us extend the `LightBulb` class and add a method that prints some information about the state of the bulb to the screen. A possible implementation is shown below.
+
+```java
+public class LightBulb {
+  // Attributes (instance variables) of the class
+  private int brightness = 0;
+
+  // Method without return value and no arguments
+  public void printInfo() {
+    if (brightness == 0) {
+      System.out.println("Currently the light is turned off");
+    } else if (brightness == 255) {
+      System.out.println("Currently the light is turned on");
+    } else {
+      System.out.println("Currently the light is dimmed to a brightness of " + brightness);
+    }
+  }
+}
+```
+
+Take note on how the `brightness` attribute can be accessed inside the `printInfo()` method. This is because the method is part of the class and can therefore access the private attributes of the `LightBulb`.
+
+To use this method an object first needs to be instantiated upon which the method can be called. The method does not require any external data so it does not take any arguments. So the parentheses can be left empty.
+
+```java
+public static void main(String[] args) {
+    LightBulb kitchen = new LightBulb();
+    kitchen.printInfo();
+}
+```
+
+which outputs:
+
+```text
+Currently the light is turned off
+```
+
+At the moment there is no way to turn the light on or off. Let us add two methods that allow us to do exactly that:
+* a method `on()` that turns the bulb on at full brightness (255)
+* a method `off()` that turns the bulb off, setting the brightness to 0
+
+The code below shows the implementation of `LightBulb` with both the methods `on()` and `off()`. Neither of these two methods return any data and neither require external data.
+
+```java
+public class LightBulb {
+  // Attributes (instance variables) of the class
+  private int brightness = 0;
+
+  // Method without return value and no arguments
+  public void printInfo() {
+    if (brightness == 0) {
+      System.out.println("Currently the light is turned off");
+    } else if (brightness == 255) {
+      System.out.println("Currently the light is turned on");
+    } else {
+      System.out.println("Currently the light is dimmed to a brightness of " + brightness);
+    }
+  }
+
+  public void on() {
+      brightness = 255;
+  }
+
+  public void off() {
+      brightness = 0;
+  }
+}
+```
+
+The `on()` and `off()` methods are an elegant way of letting us control the brightness of the bulb without giving public access to the brightness attribute itself. This makes sure that we, as developers of the `LightBulb` class, are in full control. They also make it more easy for the users of our class because they do not need to know of the limitations of the brightness. All they see are methods to turn the bulb on or off.
+
+Let's adapt the main method a bit:
+```java
+public static void main(String[] args) {
+    LightBulb kitchen = new LightBulb();
+    kitchen.printInfo();
+    kitchen.on();         // Turn the light on
+    kitchen.printInfo();
+    kitchen.off();         // Turn the light off
+    kitchen.printInfo();
+}
+```
+
+which results in the following output:
+
+```text
+Currently the light is turned off
+Currently the light is turned on
+Currently the light is turned off
+```
+
+At the moment our `LightBulb` class can be visualized in UML using the following class diagram:
+
+![UML Class Diagram of LightBulb](img/light_bulb_methods_on_off.png)
