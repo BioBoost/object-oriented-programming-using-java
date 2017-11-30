@@ -1,6 +1,8 @@
 # Week 8 - Cards Against Teachers
 
-For this assignment we will be creating a multiplayer version of "Cards Against Humanity".
+This assignment has been cancelled because due to North Korean missile test.
+
+<!-- For this assignment we will be creating a multiplayer version of "Cards Against Humanity".
 
 ## Basic Rules
 
@@ -116,4 +118,4 @@ A channel is a hosted game room where one of the players is the admin of that ro
 4. Create a method to add a player and a method to remove a player.
 5. Add a method that can set the host of the channel to a player.
 
-Test your code by creating a channel when the user issues a `host` command.
+Test your code by creating a channel when the user issues a `host` command. -->
