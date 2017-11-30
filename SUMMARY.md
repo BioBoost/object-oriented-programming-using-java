@@ -135,6 +135,7 @@
 * [Week 7](assignments/week_7.md)
 * [Week 8](assignments/week_8.md)
 * [Week 9](assignments/week_9.md)
+* [Week 10](assignments/week_10.md)
 
 ----
 
