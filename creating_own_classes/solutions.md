@@ -61,6 +61,40 @@ public class Resistor {
 
 ## Exercise 4 - A Command Parser
 
+The start of a command parser. Needs more implementation and refactoring to a class.
+
+```java
+public static void main(String[] args) {
+    Scanner console = new Scanner(System.in);
+    System.out.println("Please enter commands");
+    String userInput;
+    do {
+        System.out.print("> ");
+        userInput = console.nextLine().trim();
+            // trim() to remove whitespace at beginning and end
+
+        int space = userInput.indexOf(" ");
+        if (space < 0) {
+            // No space (single command?)
+        } else {
+            // Command with data
+            String command = userInput.substring(0, space);
+
+            String data = userInput.substring(space+1,
+                            userInput.length());
+
+            if (command.equals("say")) {
+                System.out.println(data);
+            } else if (command.equals("join")) {
+                System.out.println("Joining " + data);
+            }
+        }
+
+        //System.out.println(userInput);
+    } while(!userInput.equals("exit"));
+}
+```
+
 ## Exercise 5 - A Player List
 
 A Player class
