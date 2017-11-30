@@ -158,3 +158,41 @@ public class PlayerList {
     }
 }
 ```
+
+## Exercise 6 - Complex Number
+
+```java
+public class Complex {
+    // Private properties (attributes)
+    private int real;
+    private int imaginary;
+
+    // Constructor with arguments
+    public Complex(int imaginary, int real) {
+        this.imaginary = imaginary;
+        this.real = real;
+    }
+
+    // Default constructor (without arguments)
+    public Complex() {
+        this(0, 0);
+        // Same as below but cleaner with this(0, 0) => CODE REUSE
+        // imaginary = 0;
+        // real = 0;
+    }
+
+    // Adding two complex numbers
+    public void add(Complex number) {
+        // We can access private attributes of number
+        // because number is of type Complex, same
+        // to which add() belongs
+        this.imaginary += number.imaginary;
+        this.real += number.real;
+    }
+
+    @Override
+    public String toString() {
+        return "[" + real + ", " + imaginary + "i]";
+    }
+}
+```

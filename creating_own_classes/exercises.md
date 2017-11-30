@@ -91,3 +91,31 @@ public static void main(String[] args) {
   }
 }
 ```
+
+## Exercise 6 - Complex Number
+
+Create a class `Complex` to model a complex number.
+
+A complex number is a number that can be expressed in the form a + bi, where a and b are real numbers, and i is a solution of the equation x2 = −1, which is called an imaginary number because there is no real number that satisfies this equation. For the complex number a + bi, a is called the real part, and b is called the imaginary part.
+
+Model your class so the following code works:
+
+```java
+public static void main(String[] args) {
+    Complex number = new Complex(3, 15);
+    Complex base = new Complex(22, 11);
+    Complex origin = new Complex();
+
+    base.add(number);       // Result ? 25,26
+
+    System.out.println(base.toString());
+    System.out.println(base);   // Implicit call toString()
+}
+```
+
+and would output this:
+
+```text
+[26, 25i]
+[26, 25i]
+```
