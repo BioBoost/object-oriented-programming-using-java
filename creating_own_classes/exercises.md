@@ -119,3 +119,43 @@ and would output this:
 [26, 25i]
 [26, 25i]
 ```
+
+## Exercise 7 - ToDo list printer
+
+Create a small application that can hold a list of todo items. A todo item consists of a small descriptive string.
+
+Allow the user of your application to create todo items. Track them in a list. This list should have a title. You do not need to implement functionality to complete to-do's and so on. The application just needs to be able to create an overview of todo items.
+
+When the user is ready with adding items print them to the terminal in a nice form.
+
+For example (be creative):
+```text
+ToDo by this weekend:
+---------------------
+[ ] Mow the lawn
+[ ] Visit grandpa
+[ ] Solve exercises for OOP1
+[ ] Clean the bike
+[ ] Read book on Databases
+[ ] Study for exam of WebTech
+```
+
+Extra:
+Add a priority to a todo item and sort the list of items based on the priority (highest on top). Decide for yourself how to implement the priority:
+* for example integer value between 0 and 5
+* or just a `boolean` to indicate high priorities
+
+Example:
+```text
+ToDo by this weekend:
+---------------------
+High priorities
+[ ] Read book on Databases
+[ ] Study for exam of WebTech
+[ ] Visit grandpa
+[ ] Solve exercises for OOP1
+
+Low priorities
+[ ] Clean the bike
+[ ] Mow the lawn
+```

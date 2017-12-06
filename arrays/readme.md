@@ -4,7 +4,7 @@
 * [Constant Values](../arrays/constant_values.md)
 <!-- * [Summary](../arrays/summary.md) -->
 <!-- * [Quiz](../arrays/quiz.md) -->
-<!-- * [Exercises](../arrays/exercises.md) -->
+* [Exercises](../arrays/exercises.md)
 
 # Arrays
 

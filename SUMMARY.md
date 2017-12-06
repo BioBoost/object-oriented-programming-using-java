@@ -38,7 +38,7 @@
 * [The Switch Statement](making_decisions/switch.md)
 <!-- * [Summary](making_decisions/summary.md) -->
 <!-- * [Quiz](making_decisions/quiz.md) -->
-<!-- * [Exercises](making_decisions/exercises.md) -->
+* [Exercises](making_decisions/exercises.md)
 
 ### Loop Constructs
 * [Introduction](loop_constructs/readme.md)
@@ -57,7 +57,7 @@
 * [Constant Values](arrays/constant_values.md)
 <!-- * [Summary](arrays/summary.md) -->
 <!-- * [Quiz](arrays/quiz.md) -->
-<!-- * [Exercises](arrays/exercises.md) -->
+* [Exercises](arrays/exercises.md)
 
 ### All About Objects
 * [All About Objects](all_about_objects/readme.md)

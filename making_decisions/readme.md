@@ -7,7 +7,7 @@
 * [The Switch Statement](../making_decisions/switch.md)
 <!-- * [Summary](../making_decisions/summary.md) -->
 <!-- * [Quiz](../making_decisions/quiz.md) -->
-<!-- * [Exercises](../making_decisions/exercises.md) -->
+* [Exercises](../making_decisions/exercises.md)
 
 # Making Decisions
 
