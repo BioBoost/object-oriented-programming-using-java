@@ -27,7 +27,7 @@ public static void main(String[] args) {
 }
 ```
 
-## Sort an
+## Sort an array
 
 Complete the code below to sort a randomly generated number of integers in ascending order. Search the Internet for "selection sort". You will find enough information and examples. Do no copy / paste code, try to implement it for yourself.
 
