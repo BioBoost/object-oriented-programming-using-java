@@ -26,4 +26,4 @@ System.out.println("Total Positive: " + totalPositive);
 System.out.println("Total Negative: " + totalNegative);
 ```
 
-The example above shows how an if-else construct can be nested inside a while loop. While the number of times you can nest a structure inside another is directly limited it should be kept to a minimum. The deeper structures get nested the more complex your code starts to become. Later we will see different strategies to overcome this complexity.
+The example above shows how an if-else construct can be nested inside a while loop. While the number of times you can nest a structure inside another is not directly limited it should be kept to a minimum. The deeper structures get nested the more complex your code starts to become.

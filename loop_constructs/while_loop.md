@@ -1,6 +1,6 @@
 ## The while loop
 
-The while loop is used when the code block may not even run at all if the condition is not met. The condition is checked before the code block is executed.
+A while loop statement in the Java programming language repeatedly executes a statement block as long as a given condition is true. The condition is checked before the code block is executed. This means that the code block of the while loop may not even run at all if the condition is not met.
 
 While every while loop can also be written as a for loop that does not mean it should. Complex for loops can often be refactored into less complex while or do-while loops.
 
@@ -11,6 +11,10 @@ while (condition) {
   // Code block
 }
 ```
+
+This can also be translated into the flow chart shown below.
+
+![Flow Chart of a While Loop](img/flowchart_while.png)
 
 The code below prints out a list of random numbers that are dividable by a certain number. In this case it prints 10 numbers that are dividable by 5.
 
