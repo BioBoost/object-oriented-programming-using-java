@@ -4,7 +4,8 @@
         "image-captions",
         "simple-page-toc",
         "copy-code-button",
-        "include-codeblock"
+        "include-codeblock",
+        "ace"
     ],
     "pluginsConfig": {
         "callouts":
@@ -22,6 +23,9 @@
         "simple-page-toc": {
             "maxDepth": 3,
             "skipFirstH1": true
+        },
+        "include-codeblock": {
+            "template": "ace"
         }
     }
 }
