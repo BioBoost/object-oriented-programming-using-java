@@ -120,6 +120,8 @@ and would output this:
 [26, 25i]
 ```
 
+Check out the [solution](../creating_own_classes/solutions.md#exercise-6---complex-number) in the solution section.
+
 ## Exercise 7 - ToDo list printer
 
 Create a small application that can hold a list of todo items. A todo item consists of a small descriptive string.
