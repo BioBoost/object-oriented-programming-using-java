@@ -201,10 +201,18 @@ public class Complex {
 
 A basic implementation with command parser.
 
+MyToDoNow.java - The main application class
+
 [include](code/ToDoListApplication/src/todolistapplication/MyToDoNow.java)
+
+ToDoApp.java - The actual application class (kinda like our game class)
 
 [include](code/ToDoListApplication/src/todolistapplication/ToDoApp.java)
 
+ToDoList.java - Wrapper class for an ArrayList
+
 [include](code/ToDoListApplication/src/todolistapplication/ToDoList.java)
+
+ToDo.java - ToDo item
 
 [include](code/ToDoListApplication/src/todolistapplication/ToDo.java)
