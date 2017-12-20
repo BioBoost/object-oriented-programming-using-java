@@ -1,24 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package todolistapplication;
 
 import java.util.Scanner;
 
 public class ToDoApp {
-    
+
     // Attributes
     private boolean keepParsing = true;
     private ToDoList list;
-    
+
     // Default constructor (no arguments)
     public ToDoApp() {
         list = new ToDoList();
         parse();
     }
-    
+
     public void parse() {
         Scanner console = new Scanner(System.in);
         System.out.println("Please enter your commands");
@@ -38,7 +33,7 @@ public class ToDoApp {
             }
         } while(keepParsing);
     }
-    
+
     // Command parsing methods
     private void identifyCommand(String command) {
         if (command.equals("help")) {
@@ -54,7 +49,7 @@ public class ToDoApp {
             printUnknownCommand();
         }
     }
-    
+
     private void identifyCommand(String command, String data) {
         if (command.equals("new")) {             // With title
             list = new ToDoList(data);
@@ -67,7 +62,7 @@ public class ToDoApp {
             printUnknownCommand();
         }
     }
-    
+
     // These are the available command methods. We make them private because
     // only the command parser class itself uses them
     private void printHelp() {
@@ -81,11 +76,11 @@ public class ToDoApp {
         System.out.println("- print: print the list");
         System.out.println("- exit: quit the application");
     }
-    
+
     private void printUnknownCommand() {
         System.out.println("Unknown command. Type help for list of commands");
     }
-    
+
     private void printList() {
         System.out.println("" + list);
     }
