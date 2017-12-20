@@ -201,10 +201,10 @@ public class Complex {
 
 A basic implementation with command parser.
 
-[include](/creating_own_classes/code/ToDoListApplication/src/todolistapplication/MyToDoNow.java)
+[include](code/ToDoListApplication/src/todolistapplication/MyToDoNow.java)
 
-[include](/creating_own_classes/code/ToDoListApplication/src/todolistapplication/ToDoApp.java)
+[include](code/ToDoListApplication/src/todolistapplication/ToDoApp.java)
 
-[include](/creating_own_classes/code/ToDoListApplication/src/todolistapplication/ToDoList.java)
+[include](code/ToDoListApplication/src/todolistapplication/ToDoList.java)
 
-[include](/creating_own_classes/code/ToDoListApplication/src/todolistapplication/ToDo.java)
+[include](code/ToDoListApplication/src/todolistapplication/ToDo.java)
