@@ -140,7 +140,7 @@ ToDo by this weekend:
 [ ] Study for exam of WebTech
 ```
 
-Check out the [solution](../creating_own_classes/solutions.md##Exercise 7 - ToDo list printer) in the solution section.
+Check out the [solution](../creating_own_classes/solutions.md#exercise-7---todo-list-printer) in the solution section.
 
 Extra:
 Add a priority to a todo item and sort the list of items based on the priority (highest on top). Decide for yourself how to implement the priority:
