@@ -21,3 +21,99 @@ Each node in the scene‑graph has an id variable, a string. This is analogous t
 JavaFX CSS also supports pseudo‑classes, but does not implement the full range of pseudo‑classes.
 
 More information can be found at [https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html](https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html).
+
+### Creating a CSS file
+
+To add a stylesheet to your application start by creating a `.css` file inside your application (NetBeans) by right clicking the project and selecting `New => Other => Other => Cascading Style Sheet` as show in the screenshot below. Name it as you wish.
+
+![Creating a CSS file](img/creating_css_file.png)
+
+The actual styling is left as an exercise to the reader of this course. A Dark themed example is shown below which can be used to test. Credits go out to [http://code.makery.ch/library/javafx-8-tutorial/part4/](http://code.makery.ch/library/javafx-8-tutorial/part4/).
+
+```css
+.background {
+    -fx-background-color: #1d1d1d;
+}
+
+Label {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 0.6;
+}
+
+MenuBar {
+    -fx-background-color: derive(#1d1d1d,20%);
+}
+
+MenuBar .label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+/*Menu dropdown*/
+.context-menu {
+    -fx-background-color: derive(#1d1d1d,50%);
+}
+
+TextField {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+Button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #1d1d1d;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+Button:hover {
+    -fx-background-color: #3a3a3a;
+}
+
+Button:pressed, Button:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-text-fill: #1d1d1d;
+}
+
+Button:focused {
+    -fx-border-color: white, white;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+Button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+Button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+```
+
+To load the CSS file the simplest option is to add it as an attribute to the FXML root Node:
+
+```xml
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlwalktheplank.WalkThePlankController"
+    stylesheets="@darktheme.css">
+```
+
+As most styles are applied to the Node class names they will be applied automatically. However the background needs to be set as the `Style Class` for the root Node.
+
+```xml
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlwalktheplank.WalkThePlankController"
+    stylesheets="@darktheme.css" styleClass="background">
+```
+
+This can also be done from inside Scene Builder.
