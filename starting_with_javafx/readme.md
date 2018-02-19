@@ -2,6 +2,7 @@
 * [JavaFX Application Structure](../starting_with_javafx/javafx_application_structure.md)
 * [FXML](../starting_with_javafx/fxml.md)
 * [Basic Event Handling](../starting_with_javafx/basic_event_handling.md)
+* [Cascading Style Sheets](../starting_with_javafx/css.md)
 
 # Starting with JavaFX
 
