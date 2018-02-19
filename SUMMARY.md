@@ -85,7 +85,7 @@
 * [Starting with JavaFX](starting_with_javafx/readme.md)
 * [JavaFX Application Structure](starting_with_javafx/javafx_application_structure.md)
 * [FXML](starting_with_javafx/fxml.md)
-
+* [Event Handling](starting_with_javafx/event_handling.md)
 
 ### Advances Classes
 <!-- * [Advances Classes](creating_own_classes/readme.md) -->
