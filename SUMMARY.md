@@ -88,7 +88,7 @@
 * [Basic Event Handling](starting_with_javafx/basic_event_handling.md)
 * [Cascading Style Sheets](starting_with_javafx/css.md)
 
-### Advances Classes
+<!-- ### Advances Classes -->
 <!-- * [Advances Classes](creating_own_classes/readme.md) -->
 <!-- * [Method Overloading](creating_own_classes/uml_class_diagrams.md) -->
 <!-- * [Composition](creating_own_classes/creating_a_class.md) -->
@@ -133,7 +133,7 @@
 * [Hangman](demo_hangman/readme.md)
 
 ----
-### Assignments
+### Assignments (1st Semester)
 
 * [Assignments](assignments/readme.md)
 * [Week 1](assignments/week_1.md)
@@ -143,6 +143,14 @@
 * [Week 8](assignments/week_8.md)
 * [Week 9](assignments/week_9.md)
 * [Week 10](assignments/week_10.md)
+
+----
+
+### Assignments (2nd Semester)
+
+* [Assignments](assignments/readme.md)
+* [Week 13](assignments/week_13.md)
+* [Week 14](assignments/week_14.md)
 
 ----
 
