@@ -36,7 +36,7 @@ public class Player {
 }
 ```
 
-For this we first need to register a button handler for the `createPlayer` button, where `createPlayer` is the id of the button. This is achieved my opening the FXML file in Scene Builder, selecting the button and setting the method name at `Code => On Action` in the Inspector panel as shown below. Take for example a handler name `createPlayerHandler`.
+For this we first need to register a button handler for the `createPlayer` button, where `createPlayer` is the id of the button. This is achieved my opening the FXML file in Scene Builder, selecting the button and setting the method name at `Code => On Action` in the Inspector panel as shown below. Take for example a handler name `createPlayerHandler`. In the same panel you can set the id of the Node.
 
 ![Registering a Button Handler](img/registering_a_button_handler.png)
 
