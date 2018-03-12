@@ -88,6 +88,9 @@
 * [Basic Event Handling](starting_with_javafx/basic_event_handling.md)
 * [Cascading Style Sheets](starting_with_javafx/css.md)
 
+### Hands-On Visualizing Sensor Data
+* [Visualizing Sensor Data](hands_on/visualizing_sensor_data/readme.md)
+
 <!-- ### Advances Classes -->
 <!-- * [Advances Classes](creating_own_classes/readme.md) -->
 <!-- * [Method Overloading](creating_own_classes/uml_class_diagrams.md) -->
