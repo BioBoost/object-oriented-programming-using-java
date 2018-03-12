@@ -5,6 +5,7 @@
 * [Step 4 - Random Data](../../hands_on/visualizing_sensor_data/step_4_random_data.md)
 * [Step 5 - Changing Axis Labels](../../hands_on/visualizing_sensor_data/step_5_axis.md)
 * [Step 6 - Multiple Series](../../hands_on/visualizing_sensor_data/step_6_multiple_series.md)
+* [Step 7 - Refactor](../../hands_on/visualizing_sensor_data/step_7_refactor.md)
 
 # Hands-on - Visualizing Sensor Data
 

@@ -45,3 +45,6 @@ book.mobi
 /exams/solutions/HumidityApp/private/
 /exams/solutions/HumidityApp/build/
 /exams/solutions/HumidityApp/dist/
+hands_on/visualizing_sensor_data/code/SensorVisualizer/private/
+hands_on/visualizing_sensor_data/code/SensorVisualizer/build/
+hands_on/visualizing_sensor_data/code/SensorVisualizer/dist/
