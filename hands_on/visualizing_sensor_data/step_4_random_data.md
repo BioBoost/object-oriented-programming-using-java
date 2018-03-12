@@ -84,4 +84,4 @@ public class FXMLChartDisplayController implements Initializable {
 
 This results in a much cleaner emulation of a temperature sensor:
 
-![Emulating a Temperature Sensor](img/emulation_temp_sensor.pnd)
+![Emulating a Temperature Sensor](img/emulation_temp_sensor.png)
