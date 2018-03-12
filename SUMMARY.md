@@ -95,7 +95,7 @@
 * [Step 2 - The Controller](hands_on/visualizing_sensor_data/step_2_the_controller.md)
 * [Step 3 - Adding Data](hands_on/visualizing_sensor_data/step_3_adding_data.md)
 * [Step 4 - Random Data](hands_on/visualizing_sensor_data/step_4_random_data.md)
-
+* [Step 5 - Changing Axis Labels](hands_on/visualizing_sensor_data/step_5_axis.md)
 
 <!-- ### Advances Classes -->
 <!-- * [Advances Classes](creating_own_classes/readme.md) -->
