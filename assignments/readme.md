@@ -17,6 +17,8 @@ Make sure to upload your solution to the git remote. Also do not forget to add a
 
 ## Second Semester
 
-[Assignments](../assignments/readme.md)
+Please check the Toledo course which contains the assignments that need to be made and their according deadlines.
+
+<!-- [Assignments](../assignments/readme.md)
 * [Week 13](../assignments/week_13.md)
-* [Week 14](../assignments/week_14.md)
+* [Week 14](../assignments/week_14.md) -->
