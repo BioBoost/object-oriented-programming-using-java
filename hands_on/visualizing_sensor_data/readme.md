@@ -1,7 +1,8 @@
-[Visualizing Sensor Data](../../hands_on/visualizing_sensor_data/readme.md)
+[Introduction](../../hands_on/visualizing_sensor_data/readme.md)
 * [Step 1 - Adding a Chart](../../hands_on/visualizing_sensor_data/step_1_adding_a_chart.md)
 * [Step 2 - The Controller](../../hands_on/visualizing_sensor_data/step_2_the_controller.md)
 * [Step 3 - Adding Data](../../hands_on/visualizing_sensor_data/step_3_adding_data.md)
+* [Step 4 - Random Data](../../hands_on/visualizing_sensor_data/step_4_random_data.md)
 
 # Hands-on - Visualizing Sensor Data
 
