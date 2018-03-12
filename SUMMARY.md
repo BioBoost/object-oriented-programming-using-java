@@ -96,7 +96,8 @@
 * [Step 3 - Adding Data](hands_on/visualizing_sensor_data/step_3_adding_data.md)
 * [Step 4 - Random Data](hands_on/visualizing_sensor_data/step_4_random_data.md)
 * [Step 5 - Changing Axis Labels](hands_on/visualizing_sensor_data/step_5_axis.md)
-
+* [Step 6 - Multiple Series](hands_on/visualizing_sensor_data/step_6_multiple_series.md)
+*
 <!-- ### Advances Classes -->
 <!-- * [Advances Classes](creating_own_classes/readme.md) -->
 <!-- * [Method Overloading](creating_own_classes/uml_class_diagrams.md) -->
