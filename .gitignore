@@ -48,3 +48,6 @@ book.mobi
 hands_on/visualizing_sensor_data/code/SensorVisualizer/private/
 hands_on/visualizing_sensor_data/code/SensorVisualizer/build/
 hands_on/visualizing_sensor_data/code/SensorVisualizer/dist/
+hands_on/mqtt/code/MqttPublish/nbproject/private/
+hands_on/mqtt/code/MqttPublish/nbproject/build/
+hands_on/mqtt/code/MqttPublish/nbproject/dist/
