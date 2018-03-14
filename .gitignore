@@ -51,3 +51,6 @@ hands_on/visualizing_sensor_data/code/SensorVisualizer/dist/
 hands_on/mqtt/code/MqttPublish/nbproject/private/
 hands_on/mqtt/code/MqttPublish/nbproject/build/
 hands_on/mqtt/code/MqttPublish/nbproject/dist/
+hands_on/gson/code/JavaGsonExample/nbproject/private/
+hands_on/gson/code/JavaGsonExample/build/
+hands_on/gson/code/JavaGsonExample/dist/
