@@ -98,8 +98,8 @@
 * [Step 6 - Multiple Series](hands_on/visualizing_sensor_data/step_6_multiple_series.md)
 * [Step 7 - Refactor](hands_on/visualizing_sensor_data/step_7_refactor.md)
 
-### MQTT
-* [MQTT](mqtt/readme.md)
+### MQTT Essentials
+* [MQTT Essentials](mqtt/readme.md)
 * [Introducing MQTT](https://www.hivemq.com/blog/mqtt-essentials-part-1-introducing-mqtt)
 * [Publish & Subscribe Basics](https://www.hivemq.com/blog/mqtt-essentials-part2-publish-subscribe)
 * [Client, Broker and Connection Establishment](https://www.hivemq.com/blog/mqtt-essentials-part-3-client-broker-connection-establishment)
