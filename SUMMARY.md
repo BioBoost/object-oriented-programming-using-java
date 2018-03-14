@@ -109,6 +109,10 @@
 * [Persistent Session and Queuing Messages](https://www.hivemq.com/blog/mqtt-essentials-part-7-persistent-session-queuing-messages)
 * [Retained Messages](https://www.hivemq.com/blog/mqtt-essentials-part-8-retained-messages)
 
+### Hands-On Java MQTT
+* [Java MQTT](../../hands_on/mqtt/readme.md)
+* [Step 1 - Eclipse Paho Java Library](../../hands_on/mqtt/step_1_paho_java_client.md)
+* [Step 2 - Getting Started](../../hands_on/mqtt/step_2_getting_started.md)
 
 <!-- ### Advances Classes -->
 <!-- * [Advances Classes](creating_own_classes/readme.md) -->
