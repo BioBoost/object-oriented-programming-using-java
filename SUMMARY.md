@@ -116,7 +116,7 @@
 * [Step 3 - Deserialization of a Motorcycle](hands_on/gson/step_3_deserialization_motorcycle.md)
 * [Step 4 - Composition](hands_on/gson/step_4_composition.md)
 
-
+<!-- Trying to trigger rebuild -->
 
 <!-- ### Hands-On Java MQTT -->
 <!-- * [Java MQTT](hands_on/mqtt/readme.md) -->
