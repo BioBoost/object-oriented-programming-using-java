@@ -1,6 +1,6 @@
 [Introduction](../../hands_on/gson/readme.md)
 * [Step 1 - Adding Gson Dependency](../../hands_on/gson/step_1_adding_gson_dependency.md)
-* [Step 2 - Simple Object Serialization](../../hands_on/gson/simple_object_serialization.md)
+* [Step 2 - Simple Object Serialization](../../hands_on/gson/step_2_simple_object_serialization.md)
 * [Step 3 - Deserialization of a Motorcycle](../../hands_on/gson/step_3_deserialization_motorcycle.md)
 * [Step 4 - Composition](../../hands_on/gson/step_4_composition.md)
 
