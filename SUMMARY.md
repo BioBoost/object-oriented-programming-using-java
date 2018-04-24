@@ -126,6 +126,7 @@
 * [Vehicle Example](inheritance/vehicles_example.md)
 * [Computer Store Example](inheritance/computer_store_example.md)
 * [Is-a Relationships](inheritance/is_a_relationship.md)
+* [Summary](inheritance/summary.md)
 * [Exercises](inheritance/exercises.md)
 
 <!-- ### Interfaces -->
