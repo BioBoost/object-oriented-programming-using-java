@@ -54,3 +54,7 @@ hands_on/mqtt/code/MqttPublish/nbproject/dist/
 hands_on/gson/code/JavaGsonExample/nbproject/private/
 hands_on/gson/code/JavaGsonExample/build/
 hands_on/gson/code/JavaGsonExample/dist/
+/interfaces/code/PainterWithoutInterfaces/nbproject/private/
+/interfaces/code/PainterWithoutInterfaces/build/
+/interfaces/code/PainterWithInterfaces/nbproject/private/
+/interfaces/code/PainterWithInterfaces/build/
