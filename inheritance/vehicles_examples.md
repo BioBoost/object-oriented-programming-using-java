@@ -12,6 +12,8 @@ When taking a look at this example it is pretty obvious that the design includes
 >
 > In a UML class diagram inheritance is depicted using a solid line and a hollow arrow attached to the side of superclass.
 
-Note how some attributes (such as the `trailer` of a `Truck`) and methods (such as `board(passenger)` of `Bus`) cannot be generalized to the `Vehicle` class. They are specific to the subclasses. This is perfectly valid when implementing inheritance.
+While not documented inside the UML class diagrams, the subclasses `Truck`, `Racecar` and `Bus` also contain the attributes and methods of `Vehicle`.
+
+Some attributes (such as the `trailer` of a `Truck`) and methods (such as `board(passenger)` of `Bus`) cannot be generalized to the `Vehicle` class. They are specific to the subclasses. This is perfectly valid when implementing inheritance.
 
 By placing the common functionality and data inside a superclass a cleaner design is realized that also encourages code reuse.
