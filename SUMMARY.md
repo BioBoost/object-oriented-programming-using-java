@@ -124,7 +124,8 @@
 ### Inheritance
 * [Inheritance](inheritance/readme.md)
 * [Vehicle Example](inheritance/vehicles_example.md)
-
+* [Computer Store Example](inheritance/computer_store_example.md)
+* [Exercises](inheritance/exercises.md)
 
 <!-- ### Interfaces -->
 <!-- * [Interfaces](interfaces/readme.md) -->

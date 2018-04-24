@@ -1,8 +1,9 @@
 [Inheritance](../inheritance/readme.md)
 * [Vehicle Example](../inheritance/vehicles_example.md)
+* [Computer Store Example](../inheritance/computer_store_example.md)
 <!-- * [Summary](../inheritance/summary.md) -->
 <!-- * [Quiz](../inheritance/quiz.md) -->
-<!-- * [Exercises](../inheritance/exercises.md) -->
+* [Exercises](../inheritance/exercises.md)
 
 <!-- [TODO] Part of this chapter should be refactored to the OOT course. Making it language independent. -->
 
