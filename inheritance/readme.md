@@ -6,6 +6,7 @@
 * [Constructors and Inheritance](../inheritance/constructors_and_inheritance.md)
 * [Method Overriding](../inheritance/method_overloading.md)
 * [Implementing a WebShop](../inheritance/implementing_a_webshop.md)
+* [Accessibility](../inheritance/accessibility.md)
 * [Summary](../inheritance/summary.md)
 <!-- * [Quiz](../inheritance/quiz.md) -->
 * [Exercises](../inheritance/exercises.md)
