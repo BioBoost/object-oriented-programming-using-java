@@ -4,7 +4,7 @@
 * [Is-a Relationships](../inheritance/is_a_relationship.md)
 * [Inheritance in Java](../inheritance/inheritance_in_java.md)
 * [Constructors and Inheritance](../inheritance/constructors_and_inheritance.md)
-* [Method Overriding](../inheritance/method_overloading.md)
+* [Method Overriding](../inheritance/method_overriding.md)
 * [Implementing a WebShop](../inheritance/implementing_a_webshop.md)
 * [Accessibility](../inheritance/accessibility.md)
 * [Summary](../inheritance/summary.md)
