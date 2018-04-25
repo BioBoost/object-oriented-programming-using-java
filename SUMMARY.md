@@ -131,6 +131,7 @@
 * [Method Overriding](inheritance/method_overriding.md)
 * [Implementing a WebShop](inheritance/implementing_a_webshop.md)
 * [Accessibility](inheritance/accessibility.md)
+* [Composition over Inheritance](inheritance/composition_over_inheritance.md)
 * [Summary](inheritance/summary.md)
 * [Exercises](inheritance/exercises.md)
 
