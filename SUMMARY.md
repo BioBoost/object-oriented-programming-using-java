@@ -126,6 +126,8 @@
 * [Vehicle Example](inheritance/vehicles_example.md)
 * [Computer Store Example](inheritance/computer_store_example.md)
 * [Is-a Relationships](inheritance/is_a_relationship.md)
+* [Inheritance in Java](inheritance/inheritance_in_java.md)
+* [Constructors and Inheritance](inheritance/constructors_and_inheritance.md)
 * [Summary](inheritance/summary.md)
 * [Exercises](inheritance/exercises.md)
 
