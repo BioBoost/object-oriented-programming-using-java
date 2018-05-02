@@ -19,7 +19,7 @@ public class Animal {
     private String name;
     private int age;
 
-    public Product(String name, int age) {
+    public Animal(String name, int age) {
         // Initialization
     }
 }
