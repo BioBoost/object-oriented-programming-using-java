@@ -15,7 +15,8 @@ While this is certainly a useful exercise you can already feel that programming 
 > *Stephen Wolfram*
 
 {% hint style="warning" %}
-Don't blame the Computer, blame the programmer.
+**Don't blame the Computer, blame the programmer.**
+
 As a future programmer you should never state that the computer is doing something wrong when your applications fails, crashes or does something unexpected. You should instead ask yourself, did I tell the computer how to do the job correctly? Did I forget something? Did I misinterpret the problem or do I have the solution wrong?
 {% endhint %}
 
