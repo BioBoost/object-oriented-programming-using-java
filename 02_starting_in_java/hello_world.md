@@ -57,6 +57,8 @@ BUILD SUCCESSFUL (total time: 0 seconds)
 
 While not diving into many details here, there are however a couple of things which can be clarified about the code above.
 
+### Comments
+
 First of all, not all lines of text that are shown in the program are considered code. Some are actually comments which are not executed. There are
 two ways in Java to indicate that some text is a comment. The first is prepending a double slash `//` before your comment. This needs to
 be placed before each line of comments.
@@ -85,6 +87,8 @@ Do note that the initial code shows an `*` before each line in a block-comment. 
 It is completely normal as a beginning programmer to place a lot of comments inside your code. While this is helpful when learning to program, it is also kind of dangerous. Code typically changes while the project evolves and often comments do not. They can therefore contain wrong information about the code and become useless and even misleading. A good programmer (one that takes care of code) will not need a lot of comments. The best documentation is the code itself, of course provided that you take care of your naming of things and your code in general.
 {% endhint %}
 
+### The main Method
+
 A second important part of your first program in Java is the main method shown again below.
 
 ```java
@@ -109,6 +113,8 @@ public static void main(String[] args) {
     System.out.println("Hello World!");
 }
 ```
+
+### Terminal Output
 
 A lot can be said about this single line of code.
 
@@ -187,6 +193,8 @@ I am 1.86 meters tall
 ```
 
 The code above shows both integer numbers and floating point numbers. Floating point numbers use a point `.` as a decimal separator when specifying floating point numbers.
+
+### Escape Characters
 
 The `println` method also has a variant which does not print a new line at the end of the string.
 This method is called `print`. A newline can be displayed by
