@@ -22,10 +22,6 @@ x = 1 + 2;
 
 The variation between different programming languages can be quite extensive.
 
-> #### Assignment::Different Programming Languages
->
->  Find 5 examples of different programming languages. Try to find a small code example and determine if the language is interpreted or compiled.
-
 ### Graphical Programming Languages
 
 A little less than fifteen years ago, Mitchel Resnick and friends at MIT introduced a programming environment called Scratch. It provides a new approach to teaching computer programming through a graphical user interface that eliminates the possibility of making certain mistakes common in text-based programming.
