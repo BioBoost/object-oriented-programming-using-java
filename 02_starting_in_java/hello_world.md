@@ -20,9 +20,11 @@ Open NetBeans and create a new Project by selecting `File => New Project => Java
 
 It will automatically generate an empty application with the code shown below.
 
-> #### Info::Console Applications
->
-> When developing applications a choice must be made between a GUI and a console application. As discussed earlier, a console application has no real graphical user interface and interacts with the user via the terminal (console). The only option for input and output are essentially text. This course will focus on console applications. Object Oriented Programming 2 will introduce JavaFX allowing the creation of graphical applications in Java.
+{% hint style="info" %}
+**Console Applications**
+
+When developing applications a choice must be made between a GUI and a console application. As discussed earlier, a console application has no real graphical user interface and interacts with the user via the terminal (console). The only option for input and output are essentially text. This course will focus on console applications. Object Oriented Programming 2 will introduce JavaFX allowing the creation of graphical applications in Java.
+{% endhint %}
 
 ```java
 /*
@@ -75,11 +77,13 @@ Because this can be a bit of a nuisance when you have a big block of comments, y
   */
 ```
 
-Do note that the initial code shows an `*` before each line in a block-comment. This is a special notation that is called Javadoc. It allows automatic generation of Javadoc manual pages similar to the Java API at https://docs.oracle.com/javase/8/docs/api/. More information about Javadoc can be found at http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html.
+Do note that the initial code shows an `*` before each line in a block-comment. This is a special notation that is called Javadoc. It allows automatic generation of Javadoc manual pages similar to the Java API at [https://docs.oracle.com/javase/10/docs/api/](https://docs.oracle.com/javase/10/docs/api/). More information about Javadoc can be found at [http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html).
 
-> #### Warning::Too much Information
->
-> It is completely normal as a beginning programmer to place a lot of comments inside your code. While this is helpful when learning to program, it is also kind of dangerous. Code typically changes while the project evolves and often comments do not. They can therefore contain wrong information about the code and become useless and even misleading. A good programmer (one that takes care of code) will not need a lot of comments. The best documentation is the code itself, of course provided that you take care of your naming of things and your code in general.
+{% hint style="warning" %}
+**Too much Information**
+
+It is completely normal as a beginning programmer to place a lot of comments inside your code. While this is helpful when learning to program, it is also kind of dangerous. Code typically changes while the project evolves and often comments do not. They can therefore contain wrong information about the code and become useless and even misleading. A good programmer (one that takes care of code) will not need a lot of comments. The best documentation is the code itself, of course provided that you take care of your naming of things and your code in general.
+{% endhint %}
 
 A second important part of your first program in Java is the main method shown again below.
 
@@ -144,10 +148,7 @@ I am 31 years old and I am a teacher at VIVES University College
 
 Notice how every statement in the code is terminated (ended) with a semicolon. Also note that `println` starts a new line every time it is called with a string to display. The string we provide to `println` is called an **argument**. It is a piece of information that is given to a method so it can be used inside the method - to be displayed, processed or handled in another way.
 
-Forgetting to place a semicolon at the end of a statement will throw of the Java interpreter and generate what is known as a **syntax error**.
-Take for example the code below where the second `println` has not terminated correctly. In this case NetBeans will warn you, even
-before actually running the code. It will generate a message stating that a `;` is expected. The line of code will also be marked
-using red squiggly lines below the code. If you hover over the exclamation mark on the left side, the message *; expected* is shown.
+Forgetting to place a semicolon at the end of a statement will throw of the Java interpreter and generate what is known as a **syntax error**. Take for example the code below where the second `println` has not terminated correctly. In this case NetBeans will warn you, even before actually running the code. It will generate a message stating that a `;` is expected. The line of code will also be marked using red squiggly lines below the code. If you hover over the exclamation mark on the left side, the message *; expected* is shown.
 
 ```java
 public static void main(String[] args) {
@@ -215,4 +216,4 @@ using escape characters.
 BUILD SUCCESSFUL (total time: 0 seconds)
 ```
 
-More information about escape characters can be found at https://en.wikipedia.org/wiki/Escape_character.
+More information about escape characters can be found at [https://en.wikipedia.org/wiki/Escape_character](https://en.wikipedia.org/wiki/Escape_character).
