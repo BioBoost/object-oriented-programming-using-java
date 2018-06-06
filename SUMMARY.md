@@ -11,7 +11,7 @@
 * [How to become a programmer](introduction_to_computer_programming/how_to_become_programmer.md)
 <!-- * [Summary](introduction_to_computer_programming/summary.md) -->
 <!-- * [Quiz](introduction_to_computer_programming/quiz.md) -->
-<!-- * [Exercises](introduction_to_computer_programming/exercises.md) -->
+* [Challenges](introduction_to_computer_programming/challenges.md)
 
 ### Starting in Java
 * [Introduction](starting_in_java/readme.md)
