@@ -15,7 +15,7 @@
 * [Introduction](02_starting_in_java/readme.md)
 * [Building Blocks](02_starting_in_java/building_blocks.md)
 * [Hello World](02_starting_in_java/hello_world.md)
-* [Exercises](02_starting_in_java/exercises.md)
+* [Challenges](02_starting_in_java/challenges.md)
 
 ### Storing and Processing Data
 * [Introduction](storing_and_processing_data/readme.md)

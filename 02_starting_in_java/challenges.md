@@ -1,8 +1,10 @@
-## Exercise 1
+## Challenges
+
+### Printing Personalized Hello
 
 Create a program that prints out a message to the user saying hello and stating your name.
 
-## Exercise 2
+### Personal Details
 
 Create an application that prints out some personal information about yourself, like for example:
 * your name
