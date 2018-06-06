@@ -216,4 +216,15 @@ using escape characters.
 BUILD SUCCESSFUL (total time: 0 seconds)
 ```
 
-More information about escape characters can be found at [https://en.wikipedia.org/wiki/Escape_character](https://en.wikipedia.org/wiki/Escape_character).
+The table below lists the escape sequences supported by Java.
+
+| Escape Sequence | Description |
+| --- | --- | --- |
+| `\t` | Insert a tab in the text at this point. |
+| `\b` | Insert a backspace in the text at this point. |
+| `\n` | Insert a newline in the text at this point. |
+| `\r` | Insert a carriage return in the text at this point. |
+| `\f` | Insert a formfeed in the text at this point. |
+| `\'` | Insert a single quote character in the text at this point. |
+| `\"` | Insert a double quote character in the text at this point. |
+| `\\` | Insert a backslash character in the text at this point. |
