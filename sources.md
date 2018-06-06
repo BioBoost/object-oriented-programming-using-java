@@ -5,3 +5,10 @@
 * [Introduction to Computer Programming](http://guyhaas.com/bfoit/itp/Programming.html)
 * [Introduction to Programming/About Programming](https://en.wikiversity.org/wiki/Introduction_to_Programming/About_Programming)
 * [JavaFX CSS Reference Guide](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html)
+
+## Some Images
+
+* [https://growageneration.com/2013/02/18/scratch-programming-and-3rd-grade-common-core/](https://growageneration.com/2013/02/18/scratch-programming-and-3rd-grade-common-core/)
+* [https://en.wikipedia.org/wiki/Graphical_user_interface](https://en.wikipedia.org/wiki/Graphical_user_interface)
+* [https://en.wikipedia.org/wiki/Graphical_user_interface](https://en.wikipedia.org/wiki/Graphical_user_interface)
+* [https://en.wikiversity.org/wiki/Introduction_to_Programming/About_Programming](https://en.wikiversity.org/wiki/Introduction_to_Programming/About_Programming)

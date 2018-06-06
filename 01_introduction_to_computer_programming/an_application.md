@@ -22,6 +22,4 @@ As a future programmer you should never state that the computer is doing somethi
 
 Of course, computers don't understand recipes written on paper. Computers are machines, and at the most basic level, they are a collection of switches - where 1 represents "on" and 0 represents "off". Everything that a computer does is implemented in this most basic of all numbering systems - binary. If you really wanted to tell a computer what to do directly, you'd have to talk to it in binary, giving it coded sequences of 1s and 0s that tell it which instructions to execute. However, this is nearly impossible. In practice, we use a programming language.
 
-![Programming Language to Instruct Computer[^1]](img/Programming_language.png)
-
-[^1]: Source https://en.wikiversity.org/wiki/Introduction_to_Programming/About_Programming
+![Programming Language to Instruct Computer](img/Programming_language.png)

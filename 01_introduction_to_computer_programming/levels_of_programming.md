@@ -28,9 +28,7 @@ A little less than fifteen years ago, Mitchel Resnick and friends at MIT introdu
 
 Programs are constructed by connecting blocks, each representing some functionality available in the system.
 
-![Scratch Example[^2]](img/scratch_example.png)
-
-[^2]: Source: https://growageneration.com/2013/02/18/scratch-programming-and-3rd-grade-common-core/
+![Scratch Example)(img/scratch_example.png)
 
 The image above shows a simple program that generates a random number and gives the user three goes at guessing it. The shapes of the blocks determine where they can be placed to form an acceptable program.
 

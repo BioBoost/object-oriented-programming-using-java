@@ -1,3 +1,7 @@
+---
+description: This chapter will sketch a scene for the reader what computer programming is all about. It will introduce terms such as application, compiler, interpreter and such.
+---
+
 # Introduction to Computer Programming
 
 Today, most people don't need to know how a computer works. Most people can simply turn on a computer or a mobile phone and point at some little graphical object on the display, click a button or swipe a finger or two, and the computer does something. How to interact with a computer program is all the average person needs to know.
