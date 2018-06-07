@@ -2,14 +2,20 @@
 
 Let's jump right in and create a "Hello World" application in Java.
 
-Open NetBeans and create a new Project by selecting `File => New Project => Java Application`. Give is a sensible name such as "HelloWorld".
+Open NetBeans and create a new Project by selecting `File => New Project => Java Application`. Give it a sensible name such as "HelloWorld".
 
-It will automatically generate an empty application with the code shown below.
+{% hint style="warning" %}
+**Naming Things**
+
+Naming things correctly is one of the main responsibilities of a programmer. By giving things (applications, variables, methods, ...) decent names, you will make your own life and that of fellow programmers a lot easier.
+{% endhint %}
+
+One the wizard is finished it will automatically generate an empty application with the code shown below.
 
 {% hint style="info" %}
 **Console Applications**
 
-When developing applications a choice must be made between a GUI and a console application. As discussed earlier, a console application has no real graphical user interface and interacts with the user via the terminal (console). The only option for input and output are essentially text. This course will focus on console applications. Object Oriented Programming 2 will introduce JavaFX allowing the creation of graphical applications in Java.
+When developing applications a choice must be made between a GUI and a console application. As discussed earlier, a console application has no real graphical user interface and interacts with the user via the terminal (console). The default options for input and output are essentially text. This course will first focus on console applications after which it will introduce JavaFX allowing the creation of graphical applications.
 {% endhint %}
 
 ```java
