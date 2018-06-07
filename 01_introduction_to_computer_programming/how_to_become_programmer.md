@@ -1,4 +1,4 @@
-## How to become a programmer
+## How to Become a Programmer
 
 A programmer is generally tasked with producing a **solution to a problem** via a computer program, which can be reused as various particular instances of that problem arise. To accomplish this task, the programmer therefore must be able to **understand the problem**, derive an **appropriate solution**, and then be able to effectively **express that solution in a computer programming language**.
 
