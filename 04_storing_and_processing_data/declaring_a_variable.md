@@ -6,7 +6,7 @@ The type of the variable determines the size and layout of the variable's memory
 
 Once you provided the type and name, the variable can be used to store data.
 
-Let's take a look at an example where a variable stores the age of a person. In this case we need to define the variable to be of an *integral type*. In Java the data type is `int` (integer) for this, which can store *whole signed numbers*.
+Let's take a look at an example where a variable stores the age of a person. In this case we need to define the variable to be of an **integral type**. In Java the data type is `int` (integer) for this, which can store **whole signed numbers**.
 
 ```java
 public static void main(String[] args) {
