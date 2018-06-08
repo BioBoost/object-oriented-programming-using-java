@@ -20,11 +20,13 @@ Integer is not the only type that is supported by Java. A full overview of the d
 
 * `char`: The char data type is a single 16-bit Unicode character. It has a minimum value of 0 and a maximum value of 65,535 inclusive.
 
-> #### Warning::String is not a primitive datatype
->
->  Note that String is not listed above as a primitive datatype. That is because Strings are actually objects. More on this later.
+{% hint style="info" %}
+**String is not a primitive datatype**
 
-Examples of variable declarations of different data types:
+Note that String is not listed above as a primitive datatype. That is because Strings are actually objects. More on this later.
+{% endhint %}
+
+Examples of variable declarations of different primitive data types:
 
 ```java
 int numberOfStudents = 55;              // Simple integer
@@ -42,42 +44,6 @@ boolean isOlderThanEighteen = true;
 boolean isStillATeenager = false;
 ```
 
-A string in Java is always placed between double quotes, for example `"Hello my name is Nico"`. A single character is placed between single quotes, as also seen in the example code above. Special characters, such as an end-of-line `'\n'` can also be stored in a variable of type char.
-
-A character preceded by a backslash `\` is an escape sequence and has special meaning to the compiler. The following table shows the Java escape sequences:
-
-|Escape Sequence |	Description|
-| ------ | -------|
-|`\t` |	Insert a tab in the text at this point.|
-|`\b` |	Insert a backspace in the text at this point.|
-|`\n` |	Insert a newline in the text at this point.|
-|`\r` |	Insert a carriage return in the text at this point.|
-|`\f` |	Insert a formfeed in the text at this point.|
-|`\'` |	Insert a single quote character in the text at this point.|
-|`\"` |	Insert a double quote character in the text at this point.|
-|`\\` |	Insert a backslash character in the text at this point.|
+A string in Java is always placed between double quotes, for example `"Hello my name is Nico"`. A single character is placed between single quotes, as also seen in the example code above. Special characters, such as an end-of-line `'\n'` can also be stored in a variable of type char. A character preceded by a backslash `\` is an escape sequence and has special meaning to the compiler.
 
 These escape characters can be used inside a string or can be stored in a variable of type `char`.
-
-```java
-public static void main(String[] args) {
-    System.out.println("There\tis\ta\ttab\tbetween\teach\tword");
-    System.out.println("You can also use quotes here but they need to be escaped:");
-    System.out.println("--------------------------------------------------------");
-    System.out.println("\"C makes it easy to shoot yourself in the foot; C++ makes it harder,\nbut when you do it blows your whole leg off.\"");
-    System.out.println("by Bjarne Stroustrup");
-    System.out.println("--------------------------------------------------------");
-}
-```
-
-Which generates the following output:
-
-```text
-There	is	a	tab	between	each	word
-You can also use quotes here but the need to be escaped:
---------------------------------------------------------
-"C makes it easy to shoot yourself in the foot; C++ makes it harder,
-but when you do it blows your whole leg off."
-by Bjarne Stroustrup
---------------------------------------------------------
-```

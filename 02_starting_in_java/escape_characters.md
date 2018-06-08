@@ -7,22 +7,24 @@ to output newlines. These special characters that are prefixed with a `\` are ca
 
 ```java
 public static void main(String[] args) {
-    // TODO code application logic here
-    System.out.print("You can also print ");
-    System.out.print("text to the terminal ");
-    System.out.print("without starting a newline.");
-    System.out.println("");   // Force a newline
-    System.out.print("Or you can also force newlines\nusing escape characters.\n");
-    System.out.print(".............\n\n");
+    System.out.println("There\tis\ta\ttab\tbetween\teach\tword");
+    System.out.println("You can also use quotes here but they need to be escaped:");
+    System.out.println("--------------------------------------------------------");
+    System.out.println("\"C makes it easy to shoot yourself in the foot; C++ makes it harder,\nbut when you do it blows your whole leg off.\"");
+    System.out.println("by Bjarne Stroustrup");
+    System.out.println("--------------------------------------------------------");
 }
 ```
 
-Which outputs
+Which generates the following output:
 
 ```text
-You can also print text to the terminal without starting a newline.
-Or you can also force newlines
-using escape characters.
+There	is	a	tab	between	each	word
+You can also use quotes here but the need to be escaped:
+--------------------------------------------------------
+"C makes it easy to shoot yourself in the foot; C++ makes it harder,
+but when you do it blows your whole leg off."
+by Bjarne Stroustrup
 .............
 
 BUILD SUCCESSFUL (total time: 0 seconds)
