@@ -3,7 +3,7 @@
 The `println` method also has a variant which does not print a new line at the end of the string.
 This method is called `print`. A newline can be displayed by
 calling `println` with an empty string `""` as argument or you can add a special character `\n` inside your string
-to output newlines. These special characters that are prepended with a `\` are called escape characters. Most programming languages have them. The code below shows examples of all these techniques.
+to output newlines. These special characters that are prefixed with a `\` are called escape characters. Most programming languages have them. The code below shows examples of all these techniques.
 
 ```java
 public static void main(String[] args) {
