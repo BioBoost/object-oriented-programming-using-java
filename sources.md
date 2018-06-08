@@ -14,3 +14,4 @@
 * [https://en.wikiversity.org/wiki/Introduction_to_Programming/About_Programming](https://en.wikiversity.org/wiki/Introduction_to_Programming/About_Programming)
 * [https://www.haikudeck.com/test-deck-uncategorized-presentation-0b3abf30c5](https://www.haikudeck.com/test-deck-uncategorized-presentation-0b3abf30c5)
 * [https://en.wikipedia.org/wiki/%22Hello,_World!%22_program](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program)
+* [http://www.commitstrip.com/en/2016/09/09/the-mistakes-of-youth/](http://www.commitstrip.com/en/2016/09/09/the-mistakes-of-youth/)

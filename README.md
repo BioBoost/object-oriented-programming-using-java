@@ -16,9 +16,7 @@ This course is not about learning to use all sorts of tools or fancy integrated 
 
 The main focus lies in learning to think in an object oriented way and in the meantime learn some object oriented languages. While learning all these great things about objects we are not responsible for the fact that you might learn a thing or two about tools and project management.
 
-![CommitStrip - The mistakes of youth[^1]](http://www.commitstrip.com/wp-content/uploads/2016/09/Strip-Apprendre-a-etre-dev-650-finalenglish.jpg)
-
-[^1]: Source: http://www.commitstrip.com/en/2016/09/09/the-mistakes-of-youth/
+![CommitStrip - The mistakes of youth(img/commitstrip.jpg)
 
 ### Books
 
