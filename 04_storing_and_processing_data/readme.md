@@ -1,8 +1,6 @@
-[Storing and processing data](../storing_and_processing_data/readme.md)
-* [Variables](../storing_and_processing_data/variables.md)
-* [Mathematical Operators](../storing_and_processing_data/mathematical_operators.md)
-<!-- * [Quiz](../storing_and_processing_data/quiz.md) -->
-* [Exercises](../storing_and_processing_data/exercises.md)
+---
+A computer program typically stores and processed data. This chapter focusses on the building blocks available to store and manipulate primitive data types.
+---
 
 # Storing and processing data
 

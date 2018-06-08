@@ -1,8 +1,10 @@
-## Exercise 1
+## Challenges
+
+### Challenge 1
 
 Determine the result of 2 divided by 3. Next try out 2.0 divided by 3.
 
-## Exercise 2
+### Challenge 2
 
 Take the code below and execute it:
 
@@ -15,21 +17,21 @@ double result = a / b;
 
 How can you change only the last line to get a result of `2.5`?
 
-## Exercise 3
+### Challenge 3
 
 What is the remainder of 8759 divided by 33?
 
-## Exercise 4
+### Challenge 4
 
 When buying a product in the store you always need to pay VAT. Take for example a pair of shoes that costs 100eur net, you actually pay 121eur.
 
 Write a program that calculates how much the total bill would be if the net amount is 250eur.
 
-## Exercise 5
+### Challenge 5
 
 Determine the area of a rectangle with a side of 2.3cm and a side of 8.2cm. Make your program output a decent result to the user.
 
-## Exercise 6
+### Challenge 6
 
 Take the code below and change the variable `fullText` to contain all partial strings before it.
 

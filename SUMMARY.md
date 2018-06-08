@@ -35,8 +35,10 @@
 
 * [Introduction](04_storing_and_processing_data/readme.md)
 * [Variables](04_storing_and_processing_data/variables.md)
+* [Declaring a Variable](04_storing_and_processing_data/declaring_a_variable.md)
+* [Primitive Data Types](04_storing_and_processing_data/primitive_datatypes.md)
 * [Mathematical Operators](04_storing_and_processing_data/mathematical_operators.md)
-* [Exercises](04_storing_and_processing_data/exercises.md)
+* [Challenges](04_storing_and_processing_data/challenges.md)
 
 ### Making Decisions
 * [Introduction](making_decisions/readme.md)
