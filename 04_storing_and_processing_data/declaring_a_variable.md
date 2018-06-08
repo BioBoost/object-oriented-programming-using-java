@@ -57,11 +57,13 @@ public static void main(String[] args) {
 }
 ```
 
-> #### Hint::Declare a variable before using it
->
->  You must declare a variable before it can be used. This is a rule for many programming languages but not for all. Some programming languages will automatically create variables as they are used.
+{% hint style="info" %}
+**Declare a variable before using it**
 
-While the code below is perfect working code, you will not often see it being written by a more experienced programmer:
+You must declare a variable before it can be used. This is a rule for many programming languages but not for all. Some programming languages will automatically create variables as they are used.
+{% endhint %}
+
+While the code below is working perfectly, you will not often see it being written like this by a more experienced programmer.
 
 ```java
 public static void main(String[] args) {
@@ -78,4 +80,17 @@ public static void main(String[] args) {
 }
 ```
 
-It is important to always initialize a variable before using it. If you use the variable before initializing it, you may create bugs in your program. Often Java will not even allow the usage of a variable if it is not initialized. This safety net is not provided by all programming languages. For example C++ will allow you to use uninitialized variables. In this case their value is undetermined and often contains the values of the previous program that used that same location in memory.
+It is important to always initialize a variable before using it. If you use the variable before initializing it, you may create bugs in your program. Java and NetBeans will not even allow the usage of a variable if it is not initialized. This safety net is not provided by all programming languages. For example C++ will allow you to use uninitialized variables. In this case their value is undetermined and often contains garbage data of the previous program that used that same location in memory.
+
+Take for example the code below:
+
+```java
+public static void main(String[] args) {
+    int sum;
+    System.out.println("Sum = " + sum);
+}
+```
+
+Forcing Java to run this application will result in a crash:
+
+![Uninitialized Variable](img/uninitialized_variable.png)
