@@ -12,7 +12,7 @@
 * [How to become a programmer](01_introduction_to_computer_programming/how_to_become_programmer.md)
 * [Challenges](01_introduction_to_computer_programming/challenges.md)
 
-### Starting in Java
+<!-- ### Starting in Java
 
 * [Introduction](02_starting_in_java/readme.md)
 * [Hello World](02_starting_in_java/hello_world.md)
@@ -21,15 +21,15 @@
 * [The main Method](02_starting_in_java/main_method.md)
 * [Terminal Output](02_starting_in_java/terminal_output.md)
 * [Escape Characters](02_starting_in_java/escape_characters.md)
-* [Challenges](02_starting_in_java/challenges.md)
+* [Challenges](02_starting_in_java/challenges.md) -->
 
-### Basic Building Blocks
+<!-- ### Basic Building Blocks
 
 * [Introduction](03_basic_building_blocks/readme.md)
 * [Variables](03_basic_building_blocks/variables.md)
 * [Operators](03_basic_building_blocks/operators.md)
 * [Decision Making](03_basic_building_blocks/decision_making.md)
-* [Loop Constructs](03_basic_building_blocks/loop_constructs.md)
+* [Loop Constructs](03_basic_building_blocks/loop_constructs.md) -->
 
 ### Storing and Processing Data
 
