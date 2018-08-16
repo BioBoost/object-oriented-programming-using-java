@@ -1,35 +1,7 @@
 ## Variables in Java
 
-The programs that we create need to store all sorts of data. From simple things such as
-integers, floating point numbers, characters and Strings to complex data types that we
-define ourselves.
+<!-- toc -->
 
-This data is stored, manipulated and outputted through our program. The data itself
-is stored inside the memory of the computer or system the program is running on.
-
-### Declaring a variable
-
-To allow for easy access inside our programs source code, the variables have a symbolic name
-that can be used from within the source code.
-
-In Java, each variable has a specific type, which determines the size and layout of the variable's memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.
-
-> #### Hint::Declare a variable before using it
->
->  You must declare a variable before it can be used.
-
-In Java you need to specify the **type** of the variables followed by a **chosen name**. Optionally you can immediately initialize the variable by assigning a value to it.
-
-Examples of variable declaration with and without initialization:
-
-```java
-int age;
-int numberOfStudents = 55;    // Initialize to 55
-char startOfAlfabet = 'a';    // Initialize to 'a'
-double vatOnSalery;
-String helloWorld = "Hello World!";    // Initialize to "Hello World!"
-String nameOfStudent;
-```
 
 ### Primitive and non-primitive data types
 

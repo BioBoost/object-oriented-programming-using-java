@@ -1,17 +1,5 @@
 ## Solutions of Exercises on Arrays
 
-### Fibonacci numbers
-
-[TODO]
-
-### A dice throwing game
-
-[TODO]
-
-### Search for number
-
-[TODO]
-
 ### Sorting
 
 The SortedIntegerArray class:
