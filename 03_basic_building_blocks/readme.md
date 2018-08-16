@@ -1,5 +1,5 @@
 ---
-This chapter introduces the necessary buildings components of every programming language. It also introduces UML - a graphical way of representing code.
+description: This chapter introduces the necessary buildings components of every programming language. It also introduces UML - a graphical way of representing code.
 ---
 
 # Basic Building Blocks

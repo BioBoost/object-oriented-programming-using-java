@@ -1,5 +1,5 @@
 ---
-A computer program typically stores and processed data. This chapter focusses on the building blocks available to store and manipulate primitive data types.
+description: A computer program typically stores and processed data. This chapter focusses on the building blocks available to store and manipulate primitive data types.
 ---
 
 # Storing and processing data
