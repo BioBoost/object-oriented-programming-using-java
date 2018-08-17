@@ -28,7 +28,7 @@ A little less than fifteen years ago, Mitchel Resnick and friends at MIT introdu
 
 Programs are constructed by connecting blocks, each representing some functionality available in the system.
 
-![Scratch Example)(img/scratch_example.png)
+![Scratch Example](img/scratch_example.png)
 
 One of Scratch's strengths is the ease with which students can construct games and animated simulations and stories. Another strength is the Scratch website itself which provides access to many tutorials and a community of users with programs they've written.
 
