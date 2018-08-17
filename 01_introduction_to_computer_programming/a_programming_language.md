@@ -24,15 +24,9 @@ The computer interpreter performs the same function: it reads an instruction in 
 
 There are advantages for both types of software development. As a generalization, **compiled programs are faster to run but slower to develop**. Compiled programs often run faster because the computer only needs to execute the previously translated instructions. In interpreted languages, every time the program is run the computer also needs to translate each of the instructions. This translation causes a delay, slowing the execution of the program. On the other hand, interpreted languages are often written in a smaller time frame, because whole program does not need to be compiled each time a new feature is implemented.
 
-The table below gives an overview of the most important differences between a compiler and an interpreter.
+Below is an overview of the most important differences between a compiler and an interpreter.
 
-| &nbsp; | A Compiler | An Interpreter |
-| --- | --- | --- |
-| Input | Takes an entire program as its input | Takes a single line of code as its input |
-| Output | An executable | None |
-| Execution Speed | Faster | Slower as each instruction needs to be translated to machine code |
-| Development Speed | Slower as it needs to be compiled every time | Faster |
-| Errors | Often harder to find as code might be optimized | Easier as execution happens line by line |
+![Main differences between compiler and interpreter](img/compiled_versus_interpreted.png)
 
 #### What About Java
 
