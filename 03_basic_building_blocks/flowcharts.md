@@ -14,20 +14,20 @@ A quick overview of the most common used symbols is given below. They will be di
 
 A **terminal** indicates the start or ending of an application, sub-process, ... It is most often represented using a rounded (fillet) rectangle. They usually contain the word "Start" or "End", or another phrase signaling the start or end of a process.
 
-![Flowchart Terminal](img/flowchart_terminal.png)
+![Terminal](img/flowchart_terminal.png)
 
 A basic rectangle is used to represent a **process**. This is an action or operation that changes a value, form, or location of data.
 
-![Flowchart Process](img/flowchart_process.png)
+![Process](img/flowchart_process.png)
 
 The flow of operation is indicated using a **flowline**. This is a line connecting one symbol with another. While arrowheads are only required if the flow is not the standard top-to-bottom or left-to right, they are almost always added anyways.
 
-![Flowchart Flowlines](img/flowchart_arrows.png)
+![Flowlines](img/flowchart_arrows.png)
 
 When multiple path of execution can be taken based on a condition, an diamond is used to represent a **decision**. The operation is commonly a yes/no question or true/false test.
 
-![Flowchart Decision](img/flowchart_decision.png)
+![Decision](img/flowchart_decision.png)
 
 A **predefined process** shows a named process which is defined somewhere else. It is represented as a rectangle with double-struck vertical edges. The name of the predefiness process is placed inside the inner rectangle bounds.
 
-![Flowchart Predefined Process](img/flowchart_predefined_process.png)
+![Predefined Process](img/flowchart_predefined_process.png)
