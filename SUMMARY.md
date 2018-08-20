@@ -26,6 +26,7 @@
 ### Basic Building Blocks
 
 * [Introduction](03_basic_building_blocks/readme.md)
+* [Flowcharts](03_basic_building_blocks/flowcharts.md)
 * [Variables](03_basic_building_blocks/variables.md)
 * [Operators](03_basic_building_blocks/operators.md)
 * [Decision Making](03_basic_building_blocks/decision_making.md)
