@@ -31,3 +31,13 @@ When multiple path of execution can be taken based on a condition, an diamond is
 A **predefined process** shows a named process which is defined somewhere else. It is represented as a rectangle with double-struck vertical edges. The name of the predefiness process is placed inside the inner rectangle bounds.
 
 ![Predefined Process](img/flowchart_predefined_process.png)
+
+### Not a strict standard
+
+Flowcharts are a bit of a free-for-all tool to document a process. This means that if you let 5 developers model a process using flowcharts, you will get 5 different flowcharts. They will all model the same process and use the same symbols but the actual implementation of the blocks will be different.
+
+Take the examples below. They all ask the user for his/her age and store it somewhere for later processing but the actual notations inside the symbols use different approaches.
+
+![Asking the age of the user](img/flowchar_age_input.png)
+
+One is not more correct than the other. They are just written from a different view of the process and each developer will need to make this out for himself. There are only two requirements: it should be informative and understandable. There is no use in creating documentation that makes things less clear.
