@@ -6,17 +6,4 @@ Computer memory can be thought of a huge cabinet with millions of small drawers.
 
 ![Memory is analogous to a huge cabinet with millions of small drawers](img/drawers_memory.png)
 
-As a student you actually have already been using variables for quite a while. When doing math you also use symbolic names for variables. For example
-
-```text
-x = 15
-y = 13
-
-p = x * y
-```
-
-Or when defining a linear equation
-
-```text
-y = f(x) = ax + b
-```
+<!-- TODO: Talk about the type of a variable and the size of it -->
