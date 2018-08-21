@@ -20,17 +20,19 @@
 * [Operators](02_basic_building_blocks/operators.md)
 * [Decision Making](02_basic_building_blocks/decision_making.md)
 * [Loop Constructs](02_basic_building_blocks/loop_constructs.md)
+* [Functions](02_basic_building_blocks/functions.md)
+* [Challenges](02_basic_building_blocks/challenges.md)
 
 <!-- ### Starting in Java
 
-* [Introduction](02_starting_in_java/readme.md)
-* [Hello World](02_starting_in_java/hello_world.md)
-* [Hello World in Java](02_starting_in_java/hello_world_in_java.md)
-* [Comments](02_starting_in_java/comments.md)
-* [The main Method](02_starting_in_java/main_method.md)
-* [Terminal Output](02_starting_in_java/terminal_output.md)
-* [Escape Characters](02_starting_in_java/escape_characters.md)
-* [Challenges](02_starting_in_java/challenges.md) -->
+* [Introduction](03_starting_in_java/readme.md)
+* [Hello World](03_starting_in_java/hello_world.md)
+* [Hello World in Java](03_starting_in_java/hello_world_in_java.md)
+* [Comments](03_starting_in_java/comments.md)
+* [The main Method](03_starting_in_java/main_method.md)
+* [Terminal Output](03_starting_in_java/terminal_output.md)
+* [Escape Characters](03_starting_in_java/escape_characters.md)
+* [Challenges](03_starting_in_java/challenges.md) -->
 
 <!-- ### Storing and Processing Data
 
