@@ -24,7 +24,9 @@ Most of the ideas, knowledge and understanding is achieved by reading books. It 
 
 But don't only become book-smart. Also become do-smart. Make exercises, solve problems, create programs, beat challenges, test new things, ...
 
-Some really good books about object oriented programming are listed below.
+**Beginning Java Programming: The Object-Oriented Approach** is written by Bart Baesens, Aimee Backiel and Seppe vanden Broucke. It provides readers a decent education on Java so they can apply their new skills in the real world. The book discusses the fundamentals of Java programming language. The book places an emphasis on OOP principles, and is geared for those who want to use Java in an applied environment while learning Java.
+
+![Beginning Java Programming: The Object-Oriented Approach by Bart Baesens, Aimee Backiel and Seppe vanden Broucke](img/beginning_java_programming.jpg)
 
 **The Object-Oriented Thought Process** is written by Matt Weisfeld specifically for students. It provides a solutions-oriented approach to object-oriented programming. You will learn to understand the proper uses of inheritance and composition, the difference between aggregation and association, and the important distinction between interfaces and implementations.
 
