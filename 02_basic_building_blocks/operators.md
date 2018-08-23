@@ -1,6 +1,16 @@
 ## Operators
 
-Most programs will performs all sorts of operations on data they have at their disposal. We often say that **they process the data**. For this processing a programming language needs **operators**. Many of the operators you will already be familiar with from Math. Some examples are multiplication `*`, addition `+`, subtraction `-`, assignment `=` and so on.
+Most programs will performs all sorts of operations on data they have at their disposal. We often say that **they process the data**. For this processing a programming language needs **operators**. Many of the operators you will already be familiar with from Math.
+
+While different programming languages use different operators, the most basic math operators are most often available. These are easy to understand because they have the same functionality as in math. The following operators are the most common ones to do basic math operations:
+
+| Operator | Meaning |
+| --- | --- |
+| `=` | Assignment operator |
+| `+` | Addition operator |
+| `-` | Subtraction operator |
+| `*` | Multiplication operator |
+| `/` | Division operator |
 
 ### Body Mass Index example
 
