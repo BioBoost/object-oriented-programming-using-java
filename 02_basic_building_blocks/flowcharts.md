@@ -32,6 +32,10 @@ A **predefined process** shows a named process which is defined somewhere else. 
 
 ![Predefined Process](img/flowchart_predefined_process.png)
 
+A **note** is used to clarify something in your flowchart. It can give a general description of the process or elaborate a certain action or part of your process. Use where needed. 
+
+![Note](img/flowchart_note.png)
+
 ### Not a strict standard
 
 Flowcharts are a bit of a free-for-all tool to document a process. This means that if you let 5 developers model a process using flowcharts, you will get 5 different flowcharts. They will all model the same process and use the same symbols but the actual implementation of the blocks will be different.
