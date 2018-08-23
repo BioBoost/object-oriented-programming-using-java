@@ -16,15 +16,15 @@ A **terminal** indicates the start or ending of an application, sub-process, ...
 
 ![Terminal](img/flowchart_terminal.png)
 
-A basic rectangle is used to represent a **process**. This is an action or operation that changes a value, form, or location of data.
+A basic rectangle is used to represent a **process step**. This is an action or operation that changes a value, outputs something to the user, ...
 
-![Process](img/flowchart_process.png)
+![Process step](img/flowchart_process.png)
 
 The flow of operation is indicated using a **flowline**. This is a line connecting one symbol with another. While arrowheads are only required if the flow is not the standard top-to-bottom or left-to right, they are almost always added anyways.
 
 ![Flowlines](img/flowchart_arrows.png)
 
-When multiple path of execution can be taken based on a condition, an diamond is used to represent a **decision**. The operation is commonly a yes/no question or true/false test.
+When multiple path of execution can be taken based on a condition, a diamond is used to represent a **decision**. The operation is commonly a *yes/no* question or *true/false* test.
 
 ![Decision](img/flowchart_decision.png)
 
