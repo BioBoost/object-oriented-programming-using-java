@@ -16,15 +16,19 @@ A **terminal** indicates the start or ending of an application, sub-process, ...
 
 ![Terminal](img/flowchart_terminal.png)
 
-A basic rectangle is used to represent a **process step**. This is an action or operation that changes a value, outputs something to the user, ...
+A basic rectangle is used to represent a **process step**. This is an action or operation that changes a value, takes an internal action, ...
 
-![Process step](img/flowchart_process.png)
+![Process step](img/flowchart_process_step.png)
 
 The flow of operation is indicated using a **flowline**. This is a line connecting one symbol with another. While arrowheads are only required if the flow is not the standard top-to-bottom or left-to right, they are almost always added anyways.
 
 ![Flowlines](img/flowchart_arrows.png)
 
-When multiple path of execution can be taken based on a condition, a diamond is used to represent a **decision**. The operation is commonly a *yes/no* question or *true/false* test.
+A parallellogram is known as a data input/output node. Input can come from the terminal or another source. Output can for example be printing a text to the user via the terminal, or writing something to a file. Some developers don't bother to to use the parallelogram shape and just use a standard rectangle.
+
+![Data Input/Output](img/flowchart_input_output.png)
+
+When multiple paths of execution can be taken based on a condition, a diamond is used to represent a **decision**. The operation is commonly a *yes/no* question or *true/false* test.
 
 ![Decision](img/flowchart_decision.png)
 
@@ -35,6 +39,8 @@ A **predefined process** shows a named process which is defined somewhere else. 
 A **note** is used to clarify something in your flowchart. It can give a general description of the process or elaborate a certain action or part of your process. Use where needed. 
 
 ![Note](img/flowchart_note.png)
+
+There are more flowchart symbols, but these are the ones you will need most.
 
 ### Not a strict standard
 
