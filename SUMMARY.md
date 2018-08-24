@@ -176,7 +176,7 @@
 
 <!-- * [Hangman](demo_hangman/readme.md) -->
 
-----
+<!-- ---- -->
 
 <!-- ### Assignments (1st Semester)
 
@@ -199,10 +199,10 @@
 
 <!-- ---- -->
 
-### Exam Assignments
+<!-- ### Exam Assignments
 
 * [Exam Assignments](exams/readme.md)
-* [Exam Assignment 2017 (OOP1)](exams/2017_oop1.md)
+* [Exam Assignment 2017 (OOP1)](exams/2017_oop1.md) -->
 
 ----
 
