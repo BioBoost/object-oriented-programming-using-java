@@ -12,4 +12,4 @@ Almost every programming language out there has a number of basics building bloc
 * **Loop constructs** to repeat certain operations a number of times.
 * **Functions** allow functionality to be grouped so it can be easily reused.
 
-More high-level programming languages introduce more advanced tools that allow a developer to create applications for more complex problems without making the application overly complex. Some common concepts are classes, inheritance, interfaces, multithreading, collections, lambda-expressions, generics, ... Some of these will be introduced in the more advanced chapters of this course.
+More high-level programming languages introduce more advanced tools that allow a developer to create applications for more complex problems without making the application overly complex. Some common concepts are classes, inheritance, interfaces, multi-threading, collections, lambda-expressions, generics, ... Some of these will be introduced in the more advanced chapters of this course.

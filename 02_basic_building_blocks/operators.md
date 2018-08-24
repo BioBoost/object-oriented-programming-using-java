@@ -26,6 +26,6 @@ Next the BMI can be calculated using the formula `weight / (height * height)`, w
 
 For this small program we would need at least three variables: `weight`, `height` and `bmi`.
 
-This appliciation could be modelled using the flowchart shown below:
+This application could be modelled using the flowchart shown below:
 
 ![Flowchart of simple BMI application](img/flowchart_bmi_example.png)

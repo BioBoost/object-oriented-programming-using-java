@@ -24,7 +24,7 @@ The flow of operation is indicated using a **flowline**. This is a line connecti
 
 ![Flowlines](img/flowchart_arrows.png)
 
-A parallellogram is known as a data input/output node. Input can come from the terminal or another source. Output can for example be printing a text to the user via the terminal, or writing something to a file. Some developers don't bother to to use the parallelogram shape and just use a standard rectangle.
+A parallelogram is known as a data input/output node. Input can come from the terminal or another source. Output can for example be printing a text to the user via the terminal, or writing something to a file. Some developers don't bother to to use the parallelogram shape and just use a standard rectangle.
 
 ![Data Input/Output](img/flowchart_input_output.png)
 
@@ -32,7 +32,7 @@ When multiple paths of execution can be taken based on a condition, a diamond is
 
 ![Decision](img/flowchart_decision.png)
 
-A **predefined process** shows a named process which is defined somewhere else. It is represented as a rectangle with double-struck vertical edges. The name of the predefiness process is placed inside the inner rectangle bounds.
+A **predefined process** shows a named process which is defined somewhere else. It is represented as a rectangle with double-struck vertical edges. The name of the predefined process is placed inside the inner rectangle bounds.
 
 ![Predefined Process](img/flowchart_predefined_process.png)
 
@@ -48,6 +48,6 @@ Flowcharts are a bit of a free-for-all tool to document a process. This means th
 
 Take a quick look at the examples below. They all ask the user for his/her age and store it somewhere for later processing but the actual notations inside the symbols use different approaches.
 
-![Asking the age of the user](img/flowchar_age_input.png)
+![Asking the age of the user](img/flowchart_age_input.png)
 
 One is not more correct than the other. They are just written from a different view of the process and each developer will need to make this out for himself. There are only two requirements: it should be informative and understandable. There is no use in creating documentation that makes things less clear.

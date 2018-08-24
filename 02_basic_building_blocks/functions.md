@@ -28,7 +28,7 @@ This example also proves the black box principle. While there are many algorithm
 
 ### Functions in flowcharts
 
-Functions in flowcharts are actually called sub-processes. Each sub-process is a named flowchart on itself that can be used from inside another (sub-)process. Inputs and outputs are of less importance when using of defining sub-processes in flowcharts. These are more language specific. Calling a sub-process is achieved by placing a rectangle with double-struck vertical edges with the name of the sub-process inside of it.
+Functions in flowcharts are actually called sub-processes. Each sub-process is a named flowchart on itself that can be used from inside another (sub-)process. Inputs and outputs are of less importance when using or defining sub-processes in flowcharts. These are more language specific. Calling a sub-process is achieved by placing a rectangle with double-struck vertical edges with the name of the sub-process inside of it.
 
 Take a look at the example flowchart below. It models a very simple guessing game. The game generates a random number between 0 and 1000. The user is asked to guess the number, while the game states if the user should guess higher or lower.
 
