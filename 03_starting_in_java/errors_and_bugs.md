@@ -71,3 +71,5 @@ Logic or semantic errors are the hardest to catch. These are the kind of errors 
 Some common sources of bugs are bad understanding of the problem being solved, wrong implementation of the solution, errors in formulas or formatting.
 
 These type of errors are the hardest to find as they will not always be obvious. Take for example a 3D shooter where in very rare cases you can glitch through a wall. Often these occasions are rare and often their cause is very hard to find (might be a model problem, a rounding error, a client-server deviation).
+
+![PUBG - Glitch allows player to see through walls](img/pubg_glitch.jpg)
