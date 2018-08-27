@@ -32,6 +32,7 @@
 * [The main Method](03_starting_in_java/main_method.md)
 * [Terminal Output](03_starting_in_java/terminal_output.md)
 * [Escape Characters](03_starting_in_java/escape_characters.md)
+* [Errors and Bugs](03_starting_in_java/errors_and_bugs.md)
 * [Challenges](03_starting_in_java/challenges.md)
 
 <!-- ### Storing and Processing Data
