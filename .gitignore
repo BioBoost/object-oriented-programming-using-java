@@ -29,6 +29,9 @@ book.pdf
 book.epub
 book.mobi
 
+# Ignore PDFs
+*.pdf
+
 # Netbeans projects
 /demo_hangman/code/HangmanTheGame/nbproject/private/
 /demo_hangman/code/HangmanTheGame/build/
