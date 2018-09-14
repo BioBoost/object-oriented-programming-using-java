@@ -9,13 +9,7 @@
 
 ### Basic Building Blocks
 
-* [Introduction](02_basic_building_blocks/readme.md)
-* [Flowcharts](02_basic_building_blocks/flowcharts.md)
-* [Variables](02_basic_building_blocks/variables.md)
-* [Operators](02_basic_building_blocks/operators.md)
-* [Decision Making](02_basic_building_blocks/decision_making.md)
-* [Loop Constructs](02_basic_building_blocks/loop_constructs.md)
-* [Functions](02_basic_building_blocks/functions.md)
+* [Basic Building Blocks](02_basic_building_blocks/readme.md)
 * [Challenges](02_basic_building_blocks/challenges.md)
 
 ### Starting in Java
