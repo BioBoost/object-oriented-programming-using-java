@@ -8,7 +8,7 @@ Check out my github repos: [https://github.com/BioBoost](https://github.com/BioB
 
 ## Requirements
 
-To follow along you will at least need to install Java and an IDE like NetBeans. You can find a tutorial for the installation of NetBeans in the [Software Installation Guide @ https://sillevl.gitbooks.io/software-installation-guide](https://sillevl.gitbooks.io/software-installation-guide).
+To follow along you will at least need to install Java and an IDE like NetBeans. You can find a tutorial for the installation of NetBeans in the [Software Installation Guide @ https://vives.gitbook.io/software-installation-guide/](https://vives.gitbook.io/software-installation-guide/).
 
 ## About this course
 
