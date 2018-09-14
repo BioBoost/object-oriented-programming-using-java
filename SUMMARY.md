@@ -14,14 +14,7 @@
 
 ### Starting in Java
 
-* [Introduction](03_starting_in_java/readme.md)
-* [Hello World](03_starting_in_java/hello_world.md)
-* [Hello World in Java](03_starting_in_java/hello_world_in_java.md)
-* [Comments](03_starting_in_java/comments.md)
-* [The main Method](03_starting_in_java/main_method.md)
-* [Terminal Output](03_starting_in_java/terminal_output.md)
-* [Escape Characters](03_starting_in_java/escape_characters.md)
-* [Errors and Bugs](03_starting_in_java/errors_and_bugs.md)
+* [Starting in Java](03_starting_in_java/readme.md)
 * [Challenges](03_starting_in_java/challenges.md)
 
 <!-- ### Storing and Processing Data
