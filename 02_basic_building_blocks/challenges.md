@@ -1,5 +1,9 @@
 ## Challenges
 
+### Identify the data
+
+<!-- TODO: Put some challenges here where the students needs to determine the data required (variables). -->
+
 ### BMI Personalization
 
 Extend the BMI example (section operators) to ask the user for his/her name and gender so a more personalized message can be outputted to the terminal.
