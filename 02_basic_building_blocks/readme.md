@@ -4,19 +4,19 @@ description: This chapter introduces the necessary buildings blocks of every pro
 
 # Basic Building Blocks
 
-Almost every programming language out there has a number of basics building blocks required to solve problems and build programs.
+Almost every programming language out there has a number of basic building blocks required to solve problems and build programs.
 
 * **Variables** label memory locations where data is stored and allow for ease of access.
 * **Operators** allow the manipulation of the data stored in memory.
 * **Decision making** allows multiple paths of execution based on conditions.
-* **Loop constructs** to repeat certain operations a number of times.
+* **Loop constructs** repeat certain operations a number of times.
 * **Functions** allow functionality to be grouped so it can be easily reused.
 
 More high-level programming languages introduce more advanced tools that allow a developer to create applications for more complex problems without making the application overly complex. Some common concepts are classes, inheritance, interfaces, multi-threading, collections, lambda-expressions, generics, ... Some of these will be introduced in the more advanced chapters of this course.
 
 ## Flowcharts
 
-Flowcharts are **a structured graphical way to document process flow**. Flowcharts already exists since 1921 and were introduced by Frank and Lillian Gilbreth in the presentation "Process Charts: First Steps in Finding the One Best Way to do Work". The Gilbreths' tools quickly found their way into industrial engineering curricula. In the early 1930s, an industrial engineer, Allan H. Mogensen began to train business people in the use of some of the tools of industrial engineering.
+Flowcharts are **a structured graphical way to document process flow**. Flowcharts already exist since 1921 and were introduced by Frank and Lillian Gilbreth in the presentation "Process Charts: First Steps in Finding the One Best Way to do Work". The Gilbreths' tools quickly found their way into industrial engineering curricula. In the early 1930s, an industrial engineer, Allan H. Mogensen began to train business people in the use of some of the tools of industrial engineering.
 
 Flowcharts allow developers to document algorithms, application logic, data flows, ... in a visual manner. Graphical representations have proven to be very useful in the software development world, even to people who don't know how to program.
 
@@ -26,7 +26,7 @@ Consider an example: a disco bar which has a bouncer at the door that checks if 
 
 ### Common used Symbols
 
-A quick overview of the most common used symbols is given below. They will be discussed in more detail later in this chapter.
+A quick overview of the most common used symbols is given below.
 
 A **terminal** indicates the start or ending of an application, sub-process, ... It is most often represented using a rounded (fillet) rectangle. They usually contain the word "Start" or "End", or another phrase signaling the start or end of a process.
 
@@ -40,7 +40,7 @@ The flow of operation is indicated using a **flowline**. This is a line connecti
 
 ![Flowlines](img/flowchart_arrows.png)
 
-A parallelogram is known as a data input/output node. Input can come from the terminal or another source. Output can for example be printing a text to the user via the terminal, or writing something to a file. Some developers don't bother to to use the parallelogram shape and just use a standard rectangle.
+A parallelogram is known as a **data input/output** node. Input can come from the terminal (console) or another source. Output can for example be printing a text to the user via the terminal, or writing something to a file. Some developers don't bother to use the parallelogram shape and just use a standard rectangle.
 
 ![Data Input/Output](img/flowchart_input_output.png)
 
@@ -56,7 +56,7 @@ A **note** is used to clarify something in your flowchart. It can give a general
 
 ![Note](img/flowchart_note.png)
 
-There are more flowchart symbols, but these are the ones you will need most.
+There are more flowchart symbols, but these are the ones you will need the most.
 
 ### Not a strict standard
 
@@ -80,7 +80,7 @@ A symbolic name associated with a value and whose associated value may be change
 
 ### Variables in Math
 
-As a student you actually have already been using variables for quite a while. When doing math you also use symbolic names for variables. In the example below, `x`, `y` and `p` are all variables.
+As a student you actually have already been using variables for quite a while. When doing math you also use symbolic names as variables. In the example below, `x`, `y` and `p` are all variables.
 
 ```text
 x = 15
@@ -97,7 +97,7 @@ y = f(x) = ax + b
 
 ### Using variables
 
-Variables and the data they hold are used for all sorts of things. Producing new values based on the available data, making decisions, outputting information to the user, sending information to the Internet, and so on.
+Variables and the data they hold are used for all sorts of things. Producing new values based on the available data, making decisions, outputting information to the user, and so on.
 
 Consider the bouncer example again from the start of this chapter:
 
@@ -114,7 +114,7 @@ While not directly apparent, an application typically handles a lot of informati
 
 ## Operators
 
-Most programs will performs all sorts of operations on data they have at their disposal. We often say that **they process the data**. For this processing a programming language needs **operators**. Many of the operators you will already be familiar with from Math.
+Most programs will performs all sorts of operations on data they have at their disposal. We often say that **they process the data**. For this processing, a programming language needs **operators**. Many of the operators you will already be familiar with from Math.
 
 While different programming languages use different operators, the most basic math operators are most often available. These are easy to understand because they have the same functionality as in math. The following operators are the most common ones to do basic math operations:
 
@@ -150,9 +150,9 @@ Computer programs often have different things to do based on a certain situation
 
 This is also called **branching** (think about the branches of a tree). A branch is an instruction in a computer program that can cause a computer to begin executing a different instruction sequence and thus deviate from its default behavior of executing instructions in order.
 
-A decision asks a question. The answer to the question determines which arrow you follow out of the decision shape. Always make sure to label the branch arrows coming from a decision.
+A decision asks a question, more commonly referred to as the **condition**. The answer to the question determines which arrow you follow out of the decision shape. Always make sure to label the branch arrows coming from a decision.
 
-Take a good look at the example below of a possible students evening routine. Take a note on the different decisions that are shown. Now you should notice where the term branching refers to.
+Take a good look at the example below of a possible students evening routine. Take a note on the different decisions that are shown. Now you should understand where the term branching comes from.
 
 ![A Students Evening Routine](img/flowchart_evening_routine.png)
 
@@ -166,7 +166,7 @@ At least two arrows should emerge from a decision symbol. If your choice is not 
 
 Software is ideal for executing repetitive tasks (things that have to be done multiple times). To be able to do things multiple times a programming languages needs some sort **loop constructs**.
 
-Programming languages often multiple looping constructs, such as for loops, while loops, foreach loops, do-while loops, ... While these can all be modelled using flowcharts, we don't actually have to know them to be able to create a loop in a flowchart.
+Programming languages often support multiple looping constructs, such as for loops, while loops, foreach loops, do-while loops, ... While these can all be modelled using flowcharts, we don't actually have to know them to be able to create a loop in a flowchart.
 
 All we need is a condition in a flowchart that is checked. In one of the outcomes we loop again, in the other we quit the loop. Which outcome you use to quit the loop is up to you.
 
@@ -192,7 +192,7 @@ Functions usually **take in data**, **process it**, and **return a result**. How
 
 Ideally, a function performs a single, related action. Functions provide better modularity for your application and a high degree of code reusing.
 
-Programming lanuages often have many built-in functions that can be used by the developer. On the other hand, as a developer you are also able to create your own functions.
+Programming languages often have many built-in functions that can be used by the developer. On the other hand, as a developer you are also able to create your own functions.
 
 {% hint style="tip" %}
 **Definition of a function**
@@ -212,7 +212,7 @@ This example also proves the black box principle. While there are many algorithm
 
 ### Functions in flowcharts
 
-Functions in flowcharts are actually called sub-processes. Each sub-process is a named flowchart on itself that can be used from inside another (sub-)process. Inputs and outputs are of less importance when using or defining sub-processes in flowcharts. These are more language specific. Calling a sub-process is achieved by placing a rectangle with double-struck vertical edges with the name of the sub-process inside of it.
+Functions in flowcharts are actually called **sub-processes**. Each sub-process is a named flowchart on itself that can be used from inside another (sub-)process. Inputs and outputs are of less importance when using or defining sub-processes in flowcharts. These are more language specific. Calling a sub-process is achieved by placing a rectangle with double-struck vertical edges with the name of the sub-process inside of it.
 
 Take a look at the example flowchart below. It models a very simple guessing game. The game generates a random number between 0 and 1000. The user is asked to guess the number, while the game states if the user should guess higher or lower.
 
