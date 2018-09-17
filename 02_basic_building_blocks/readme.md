@@ -208,7 +208,7 @@ A well-known example of a function is the square root math operation. Every prog
 
 ![Black Box Square Root Function](img/function_sqrt.png)
 
-This example also proves the black box principle. While there are many algorithms available to determine the square root of a number, we as a user of the square root function don't care how the result is accomplished. Ofcourse we need to know what inputs the function requires and what output it will generate.
+This example also proves the black box principle. While there are many algorithms available to determine the square root of a number, we as a user of the square root function don't care how the result is accomplished. Of course we need to know what inputs the function requires and what output it will generate.
 
 ### Functions in flowcharts
 
