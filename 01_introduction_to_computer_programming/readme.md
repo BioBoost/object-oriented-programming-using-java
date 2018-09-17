@@ -92,7 +92,7 @@ This is analogous to the role that a human interpreter performs. For example, ra
 
 The computer interpreter performs the same function: it reads an instruction in one programming language, translates it into machine code, and then executes the machine code version. Once that instruction is out of the way it moves along to the next, performing exactly the same task, in much the same way that the interpreter of the Harry Potter novel would move on to the next line once the first has been related. Unlike compiled programs, at no point is a complete, discrete, machine code version of the program produced: at any point in time only a small number of instructions exist as machine code versions, and these will be removed from the computer's memory when they are no longer required.
 
-There are advantages for both types of software development. As a generalization, **compiled programs are faster to run but slower to develop**. Compiled programs often run faster because the computer only needs to execute the previously translated instructions. In interpreted languages, every time the program is run the computer also needs to translate each of the instructions. This translation causes a delay, slowing the execution of the program. On the other hand, interpreted languages are often written in a smaller time frame, because whole program does not need to be compiled each time a new feature is implemented.
+There are advantages for both types of software development. As a generalization, **compiled programs are faster to run but slower to develop**. Compiled programs often run faster because the computer only needs to execute the previously translated instructions. In interpreted languages, every time the program is run the computer also needs to translate each of the instructions. This translation causes a delay, slowing the execution of the program. On the other hand, interpreted languages are often written in a smaller time frame, because the whole program does not need to be compiled each time a new feature is implemented.
 
 Below is an overview of the most important differences between a compiler and an interpreter.
 
@@ -100,17 +100,17 @@ Below is an overview of the most important differences between a compiler and an
 
 #### What About Java
 
-Java implementations typically use a two-step compilation process. Java source code is compiled down to bytecode by the Java compiler. The bytecode is then executed by a Java Virtual Machine (JVM). Modern JVMs use a technique called Just-in-Time (JIT) compilation to compile the bytecode to native instructions understood by hardware CPU on the fly at runtime.
+Java implementations typically use a two-step compilation process. Java source code is compiled down to bytecode by the Java compiler. The bytecode is then executed by a Java Virtual Machine (JVM). Modern JVMs use a technique called Just-in-Time (JIT) compilation to compile the bytecode to native instructions understood by hardware CPU's on the fly at runtime.
 
-Some implementations of JVM may choose to interpret the bytecode instead of JIT compiling it to machine code, and running it directly. While this is still considered an "interpreter," It's quite different from interpreters that read and execute the high level source code (i.e. in this case, Java source code is not interpreted directly, the bytecode, output of Java compiler, is.)
+Some implementations of JVM may choose to interpret the bytecode instead of JIT compiling it to machine code, and running it directly. While this is still considered an "interpreter", it's quite different from interpreters that read and execute the high level source code (i.e. in this case, Java source code is not interpreted directly, the bytecode, output of Java compiler, is.)
 
-It is technically possible to compile Java down to native code ahead-of-time and run the resulting binary. It is also possible to interpret the Java code directly.
+It is technically possible to compile Java down to native code **ahead-of-time** and run the resulting binary. This is the case with applications running on smartphones. The compilation process takes places after the package is downloaded from the store. It is also possible to interpret the Java code directly.
 
 ![Java Code Execution Process](img/java_jvm_execution.png)
 
-## Levels of Progamming Languages
+## Levels of Programming Languages
 
-Programming languages are described in levels. **Low-level languages** are close to machine code, high-level programming languages are closer to natural languages. At the most basic level (or "lowest level") is **assembly language**. This language is just a direct translation of the binary instructions the computer executes - each assembly language instruction directly relates to one instruction in machine code. Thus just as every kind of processor architecture has its own machine code, each processor architecture also has its own assembly language.
+Programming languages are described in levels. **Low-level languages** are close to machine code, **high-level programming languages** are closer to natural languages. At the most basic level (or "lowest level") is **assembly language**. This language is just a direct translation of the binary instructions the computer executes - each assembly language instruction directly relates to one instruction in machine code. Thus just as every kind of processor architecture has its own machine code, each processor architecture also has its own assembly language.
 
 An assembly example:
 
