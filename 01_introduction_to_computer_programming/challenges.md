@@ -11,3 +11,11 @@ Search the Internet for the meaning of a "processor architecture". Try to find 5
 ### Java Virtual Machine
 
 Find at least 5 platforms on which Java Virtual Machine runs.
+
+### Making a Sandwich
+
+Describe the process of making a ham and cheese sandwich. Now imagine you had to explain in to a computer. Have you forgotten anything that would be obvious for us humans?
+
+### Biggest Number in a List
+
+Imagine you had a list of numbers: `1, 18, 5, 12, 11, 0, 33, 105, 20, 88, 9, 32`. How would you determine the biggest number? Document the algorithm in plain English how you would achieve this.
