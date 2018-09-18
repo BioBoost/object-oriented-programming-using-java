@@ -6,6 +6,7 @@
 
 * [Introduction to Computer Programming](01_introduction_to_computer_programming/readme.md)
 * [Challenges](01_introduction_to_computer_programming/challenges.md)
+* [Multiple Choice](01_introduction_to_computer_programming/multiple_choice.md)
 
 ### Basic Building Blocks
 
