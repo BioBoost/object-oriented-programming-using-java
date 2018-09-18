@@ -1,6 +1,6 @@
 ## Multiple Choice
 
-1. When an application it being run, we often state that the application ...
+1. When an application is being run, we often state that the application ...
 
 | Key | Answer |
 |---|---|
