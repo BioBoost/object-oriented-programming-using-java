@@ -16,5 +16,5 @@ Create an application that prints out some personal information about yourself, 
 
 Try to concatenate strings with actual numbers like for example:
 ```java
-System.out.println("I am " + 3 " feet tall");
+System.out.println("I am " + 3 + " feet tall");
 ```
