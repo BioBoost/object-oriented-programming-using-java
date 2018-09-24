@@ -39,15 +39,13 @@ public static void main(String[] args) {
     ageOfPerson = 31;
 
     // The variable name can also be used to retrieve the data
-    System.out.println("I am " + ageOfPerson + " years old and I am a teacher at VIVES University College");
+    System.out.println("I am " + ageOfPerson + " years old and I am a teacher at VIVES University");
 }
 ```
 
-The data referred to by the variable can be changed using the **assignment operator** `=`. This is basically the same as in
-math. On the left hand side you have the variable which you want to assign and on the right hand side the value.
+The data referred to by the variable can be changed using the **assignment operator** `=`. This is basically the same as in math. On the left hand side you have the variable which you want to assign and on the right hand side the value.
 
-When you wish to use the content of the variable, all you need to do is state the symbolic name where you would otherwise
-use a value.
+When you wish to use the content of the variable, all you need to do is state the symbolic name where you would otherwise use a value.
 
 This also means that one variable can be used to assign a value to another.
 
@@ -144,7 +142,7 @@ Examples of variable declarations of different primitive data types:
 ```java
 int numberOfStudents = 55;              // Simple integer
 
-char startOfAlfabet = 'a';              // Characters (from the alphabet) or other symbols
+char startOfAlphabet = 'a';              // Characters (from the alphabet) or other symbols
 char dollarSign = '$';
 char endOfLine = '\n';
 
