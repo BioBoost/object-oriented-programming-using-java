@@ -77,11 +77,9 @@ public static void main(String[] args) {
 }
 ```
 
-{% hint style="info" %}
-**Declare a variable before using it**
-
-You must declare a variable before it can be used. This is a rule for many programming languages but not for all. Some programming languages will automatically create variables as they are used.
-{% endhint %}
+> **WARNING** - **Declare a variable before using it**
+>
+> You must declare a variable before it can be used. This is a rule for many programming languages but not for all. Some programming languages will automatically create variables as they are used.
 
 While the code below is working perfectly, you will not often see it being written like this by a more experienced programmer.
 
@@ -137,18 +135,16 @@ Integer is not the only type that is supported by Java. A full overview of the d
 
 * `char`: The char data type is a single 16-bit Unicode character. It has a minimum value of 0 and a maximum value of 65,535 inclusive.
 
-{% hint style="info" %}
-**String is not a primitive datatype**
-
-Note that String is not listed above as a primitive datatype. That is because Strings are actually objects. More on this later.
-{% endhint %}
+> **HINT** - **String is not a primitive datatype**
+>
+> Note that String is not listed above as a primitive datatype. That is because Strings are actually objects. More on this later.
 
 Examples of variable declarations of different primitive data types:
 
 ```java
 int numberOfStudents = 55;              // Simple integer
 
-char startOfAlfabet = 'a';              // Characters (from the alfabet) or other symbols
+char startOfAlfabet = 'a';              // Characters (from the alphabet) or other symbols
 char dollarSign = '$';
 char endOfLine = '\n';
 
