@@ -147,7 +147,7 @@ char dollarSign = '$';
 char endOfLine = '\n';
 
 // Floating point numbers
-float averageWaterUseage = 3870.35478;  
+float averageWaterUsage = 3870.35478;  
 double averageStudentScore = 12.5;      
 
 // Booleans can only be true or false
