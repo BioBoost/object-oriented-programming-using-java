@@ -19,7 +19,7 @@
 
 ### Storing and Processing Data
 
-* [Introduction](04_storing_and_processing_data/readme.md)
+* [Storing and Processing Data](04_storing_and_processing_data/readme.md)
 * [Challenges](04_storing_and_processing_data/challenges.md)
 
 
