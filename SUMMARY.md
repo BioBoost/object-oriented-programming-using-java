@@ -29,13 +29,6 @@
 * [Making Decisions](05_making_decisions/readme.md)
 * [Challenges](05_making_decisions/challenges.md)
 
-
-<!-- ### Making Decisions
-
-
-* [The Switch Statement](making_decisions/switch.md)
-* [Exercises](making_decisions/exercises.md) -->
-
 <!-- ### Loop Constructs
 * [Introduction](loop_constructs/readme.md)
 * [The For Loop](loop_constructs/for_loop.md)
