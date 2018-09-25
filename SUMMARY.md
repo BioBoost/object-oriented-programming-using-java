@@ -16,6 +16,7 @@
 
 * [Starting in Java](03_starting_in_java/readme.md)
 * [Challenges](03_starting_in_java/challenges.md)
+* [Multiple Choice](03_starting_in_java/multiple_choice.md)
 
 ### Storing and Processing Data
 
