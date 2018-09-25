@@ -10,6 +10,53 @@ For example:
 Hello, this application was developed by Nico De Witte.
 ```
 
+### Fix the Syntax Errors
+
+Fix the syntax errors in the following applications. Take note of the different error messages given by NetBeans.
+
+#### Application 1
+
+```java
+public static void main(String[] args) {
+    System.out.println("Hello world")
+}
+```
+
+#### Application 2
+
+```java
+public static void main(String[] args) {
+    System.out.println("Hello user");
+    System.out.printn("I am a student at VIVES University");
+    System.out.print("I really like playing games and going out.\n");
+}
+```
+
+#### Application 3
+
+```java
+public static void main(String[] args) {
+    System.out.println("I have a total of " + 124 " achievements on Steam.");
+}
+```
+
+#### Application 4
+
+```java
+public static void main(String[] args) {
+    System.out.println("The circumference of the planet is " + "40,075 km";
+}
+```
+
+#### Application 5
+
+```java
+public static void main(String[] args) {
+    system.out.println("One programmer said to another:");
+    system.out.println("I need a </br>");
+}
+```
+
 ### Personal Details
 
 Create an application that prints out some personal information about yourself, like for example:
