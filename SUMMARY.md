@@ -26,8 +26,8 @@
 
 ### Making Decisions
 
-* [Making Decisions](05_making_decisions/readme.md)
-* [Challenges](05_making_decisions/challenges.md)
+<!-- * [Making Decisions](05_making_decisions/readme.md) -->
+<!-- * [Challenges](05_making_decisions/challenges.md) -->
 
 <!-- ### Loop Constructs
 * [Introduction](loop_constructs/readme.md)
