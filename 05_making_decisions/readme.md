@@ -97,11 +97,13 @@ int age = 16;
 boolean isAChild = ((age >= 0) && (age <= 14));      // false
 ```
 
+While the inner parentheses are optional they do contribute to the readability of the expression.
+
 > **HINT** - **Info::De Morgan's Laws**
 >
 > In some cases it can be useful to rewrite complex conditions using De Morgan's Laws [https://en.wikipedia.org/wiki/De_Morgan%27s_laws](https://en.wikipedia.org/wiki/De_Morgan%27s_laws). Do take note that shorter not always implies more readable or less complex.
 
-Please be aware that every sub-part of a boolean expression must be a complete boolean expression. Thus if you want to know if `A` is either `10` or `20`, you cannot state `(A == 10 || 20)`. This is interpreted by the computer as: ( (A == 10) || (20) ). Below is an example of the correct and incorrect ways to combined two queries about the same variable.
+Please be aware that every sub-part of a boolean expression must be a complete boolean expression. Thus if you want to know if `A` is either `10` or `20`, you cannot state `(A == 10 || 20)`. You need to express both operands as full conditional expressions: `(A == 10 || A == 20)`.
 
 > **WARNING** - **Lazy evaluation**
 >
