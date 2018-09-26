@@ -78,7 +78,7 @@ These work as you know them from the **Boolean algebra**. The `||` (**OR**) oper
 
 Next is the **truth table** for all three conditional operators.
 
-| `A` | `B` | `A \|\| B` | `A && B` | `!A` | `!B` |
+| `A` | `B` | <code>A &#124;&#124; B</code> | `A && B` | `!A` | `!B` |
 |---|---|---|---|---|---|
 | `false` | `false` | `false` | `false` | `true` | `true` |
 | `false` | `true` | `true` | `false` | `true` | `false` |
