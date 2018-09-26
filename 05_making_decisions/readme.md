@@ -109,7 +109,7 @@ Please be aware that every sub-part of a boolean expression must be a complete b
 >
 > These operators exhibit **"short-circuiting"** behavior, which means that the second operand is evaluated only if needed. This is also called lazy evaluation. So for example in an OR statement, if the first operand is `true`, the outcome must also be `true`. For this reason the second operand is not checked anymore.
 
-## The if-statement
+## The if statement
 
 The `if` statement is the most basic of all the control flow statements. It tells your program to execute a certain section of code only if a particular condition evaluates to `true`. If the condition evaluates to `false` the execution jumps to the code after the if statement.
 
@@ -128,12 +128,12 @@ if (condition) {
 
 This can be visually represented using the next flowchart.
 
-![General if-statement](img/if_statement.png)
+![General if statement](img/if_statement.png)
 
 Take a simple example that tests if the score of the student is below 70%. If that is the case, an encouraging speech is outputted to the terminal.
 
 ```java
-int studentScore = 30;
+int studentScore = 30;      // Change this number to test the if statement
 //...
 System.out.println("Your score is " + studentScore + "%");
 if (studentScore < 70) {
@@ -144,15 +144,44 @@ if (studentScore < 70) {
 
 If the condition evaluates to `false` (meaning that the score is equal or above 70), control jumps to the end of the if statement.
 
-## The if-else Statement
-
-<!-- Voorbeeld van hoe we andere message willen als score groter is dan 50%? -->
-
-The if-else statement provides a secondary path of execution when an "if" clause evaluates to `false`. Taking the previous example you could output a "good job" speech when the students score is equal or above 70%.
+When the code block consists of **only a single line of code**, the **curly brackets `{}` can be left out**. However, for code readability reasons we strongly advice against it.
 
 ```java
-Random random = new Random();
-int studentScore = random.nextInt(101);
+int studentScore = 30;      // Change this number to test the if statement
+//...
+System.out.println("Your score is " + studentScore + "%");
+if (studentScore >= 70)
+  System.out.println("Good job. Keep at it");
+```
+
+## The if-else statement
+
+The if-else statement provides a secondary path of execution when the `if` clause evaluates to `false`. This basically means that in the `true` case something will happen and in `false` case something else will happen.
+
+The general syntax of an if-else statement is:
+
+```java
+// Code before the if-else statement
+
+if (condition) {
+    // Code inside if body
+    // Executed when condition evaluates to true
+} else {
+    // Code inside else body
+    // Executed when condition evaluates to false
+}
+
+// Code after the if-else statement
+```
+
+This can be visually represented using the next flowchart.
+
+![General if-else statement](img/if_else_statement.png)
+
+Taking the previous example you could output a "good job" speech when the students score is equal or above 70%.
+
+```java
+int studentScore = 30;      // Change this number to test the if-else statement
 //...
 System.out.println("Your score is " + studentScore + "%");
 if (studentScore < 70) {
@@ -163,13 +192,59 @@ if (studentScore < 70) {
 }
 ```
 
-The if-else statement can be extended with **even more if-else statements**. Each if-else will need a new condition that needs to be checked. The first one that evaluates to true is executed, after which control jumps to the end of the if-else statements.
+## Nesting if-else statements
 
-Let's extend our grading example to be a bit more student friendly:
+It is perfectly legal to nest if-else structures inside of each other. Take for example the code below where the message to the user is a bit more personalized based on the gender of the student.
 
 ```java
-Random random = new Random();
-int studentScore = random.nextInt(101);
+int studentScore = 30;      // Change this number to test the if-else statement
+char gender = 'm';          // Change the gender to `f` to test for female
+//...
+System.out.println("Your score is " + studentScore + "%");
+if (studentScore < 70) {
+  if (gender == 'm') {
+    System.out.println("Come on buddy, you will need to work a little harder.");
+  } else {
+    System.out.println("Come on miss, you will need to work a little harder.");
+  }
+  System.out.println("You can do it. Still got some time till the exams.");
+} else {
+  System.out.println("Good job. Keep up the good work.");
+}
+```
+
+A nested if-else construct can also be used to create multiple branches (paths of execution) based on different conditions. Take for example the code below that display a more user-friendly message to the student.
+
+```java
+int studentScore = 30;      // Change this number to test the if-else statement
+//...
+
+// Example of a multi-branch if-else statement
+if (studentScore >= 90) {
+  System.out.println("Omg, good job. Keep up the work.");
+} else {
+  if (studentScore >= 70) {
+    System.out.println("Some room for improvement but you are on your way.");
+  } else {
+    if (studentScore >= 50) {
+      System.out.println("Ok. But you may want to considering studying a bit more.");
+    } else {
+      if (studentScore >= 30) {
+        System.out.println("Come on buddy, you will need to work a little harder.");
+      } else {
+        System.out.println("You may want to cancel your holiday vacation for studying.");
+      }
+    }
+  }
+}
+```
+
+The previous code is **not very clear** and **hard to read**. However, the code can be changed a bit making it much more maintainable and readable. When the body of the branch consists of a single line of code, the curly brackets are optional. Now in many programming languages the whole if-else construct is considered a single statement - an if-else statement.
+
+Now if one were to remove the curly brackets from the else-clauses (except for the last one) this would imply that the previous code can be rewritten as:
+
+```java
+int studentScore = 30;      // Change this number to test the if-else statement
 //...
 System.out.println("Your score is " + studentScore + "%");
 if (studentScore >= 90) {
@@ -185,97 +260,123 @@ if (studentScore >= 90) {
 }
 ```
 
-You may have noticed that the value of `studentScore` can satisfy more than one expression in the compound statement. However the conditions are checked sequentially and once a condition is satisfied, the appropriate statements are executed and the remaining conditions are not evaluated.
+This is perfectly legal and is common-practice among developers. The above constructs is actually referred to as an if-elseif-else construct and is a special form of nested if-else statements.
+
+The if-elseif-else statement can be extended with as much elseif statements as required. **Each elseif will need a new condition** that needs to be checked. The conditions are **checked from top to bottom** and the first one that evaluates to `true` is executed, after which control jumps to the end of the if-elseif-else statement.
+
+```java
+// Code before the if-elseif-else statement
+
+if (condition_1) {
+   // Code to be executed if condition_1 is true
+} else if(condition_2) {
+   // Code to be executed if condition_1 is false and condition_2 is true
+} else if (condition_3) {
+   // Code to be executed if condition_1 and condition_2 are false and condition_3 is true
+} else {
+   // Code to be executed if all conditions evaluate to false
+}
+
+// Code after the if-elseif-else statement
+```
+
+Note that the else-clause is optional as it is with the if-else statement.
+
+This can be visually represented using the next flowchart.
+
+![An if-elseif-else statement](img/if_elseif_else_statement.png)
 
 ## The Switch Statement
 
-<!-- MAPS to a multi decision in flowchart -->
-
-Let us take a look at some code that will allow the user to enter the number of the day of the week. The program will than determine the name of the day and output it to the user.
+Take a look at some code that will tell the user what the day of the week is based on its integral value (1 tot 7). First some example code is shown using a nested if-else statement.
 
 ```java
-Scanner console = new Scanner(System.in);
-int dayOfTheWeek = 0;
+int dayOfTheWeek = 3;       // Number from 1 to 7
 
-do {
-  System.out.print("What day of the week is it today [1-7]?");
-  dayOfTheWeek = console.nextInt();
-
-  if (dayOfTheWeek == 1) {
-      System.out.println("Ah ok, than it's Monday today");
-  } else if (dayOfTheWeek == 2) {
-      System.out.println("Ah ok, than it's Tuesday today");
-  } else if (dayOfTheWeek == 3) {
-      System.out.println("Ah ok, than it's Wednesday today");
-  } else if (dayOfTheWeek == 4) {
-      System.out.println("Ah ok, than it's Thursday today");
-  } else if (dayOfTheWeek == 5) {
-      System.out.println("Ah ok, than it's Friday today");
-  } else if (dayOfTheWeek == 6) {
-      System.out.println("Ah ok, than it's Saturday today");
-  } else if (dayOfTheWeek == 7) {
-      System.out.println("Ah ok, than it's Sunday today");
-  } else {
-      System.out.println("Not a valid day of the week");
-  }
-} while (dayOfTheWeek < 1 || dayOfTheWeek > 7);
+if (dayOfTheWeek == 1) {
+    System.out.println("Today it is Monday today");
+} else if (dayOfTheWeek == 2) {
+    System.out.println("Today it is Tuesday today");
+} else if (dayOfTheWeek == 3) {
+    System.out.println("Today it is Wednesday today");
+} else if (dayOfTheWeek == 4) {
+    System.out.println("Today it is Thursday today");
+} else if (dayOfTheWeek == 5) {
+    System.out.println("Today it is Friday today");
+} else if (dayOfTheWeek == 6) {
+    System.out.println("Today it is Saturday today");
+} else if (dayOfTheWeek == 7) {
+    System.out.println("Today it is Sunday today");
+} else {
+    System.out.println("Not a valid day of the week");
+}
 ```
 
-When checking a single variable for equality using multiple if-else statements, it can be replaced with another structure called a switch structure. The template of the switch structure is shown below. Each case needs a single integral literal value to compare the variable against. If it matches (equals) than the code between the colon `:` and the `break;` statement is executed. The break is required for the switch to be stopped when a match is found.
+When checking a single variable for equality using multiple if-else statements, it can be replaced with another structure called a `switch` structure. The template of the switch structure is shown below. Each case needs a single integral literal value to compare the variable against. If it matches (equals) than the code between the colon `:` and the `break;` statement is executed. The `break` is required for the switch to be stopped when a match is found.
 
 ```java
-switch (<variable>) {
-  case <integral_literal_1>:
+// Code before the switch statement
+
+switch (variable) {
+  case integral_literal_1:
     // Code to be executed
     break;
-  case <integral_literal_2>:
+  case integral_literal_2:
     // Code to be executed
     break;
-  case <integral_literal_3>:
+  case integral_literal_3:
     // Code to be executed
     break;
   // ...
   default:
     // Code to be executed in case no match found
 }
+
+// Code after the switch statement
 ```
+
+The **default case is optional**. It's use is the same as the else-clause.
+
+This can be visually represented using the next flowchart. Notice the difference with the if-elseif-else statement where each branch contains a new condition.
+
+![A switch statement](img/switch_statement.png)
+
+Note how the condition for each branch is an automatic equality check. It is not possible to use a switch statement to check for example if a variables value is bigger than a certain value.
 
 Replacing the if-else structure of the day-of-the-week example with a switch statement results in the following code.
 
 ```java
-Scanner console = new Scanner(System.in);
-int dayOfTheWeek = 0;
+int dayOfTheWeek = 3;       // Number from 1 to 7
 
-do {
-  System.out.print("What day of the week is it today [1-7]?");
-  dayOfTheWeek = console.nextInt();
-
-  switch (dayOfTheWeek) {
-      case 1:
-          System.out.println("Ah ok, than it's Monday today");
-          break;
-      case 2:
-          System.out.println("Ah ok, than it's Tuesday today");
-          break;
-      case 3:
-          System.out.println("Ah ok, than it's Wednesday today");
-          break;
-      case 4:
-          System.out.println("Ah ok, than it's Thursday today");
-          break;
-      case 5:
-          System.out.println("Ah ok, than it's Friday today");
-          break;
-      case 6:
-          System.out.println("Ah ok, than it's Saturday today");
-          break;
-      case 7:
-          System.out.println("Ah ok, than it's Sunday today");
-          break;
-      default:
-          System.out.println("Not a valid day of the week");
-  }
-} while (dayOfTheWeek < 1 || dayOfTheWeek > 7);
+switch (dayOfTheWeek) {
+    case 1:
+        System.out.println("Ah ok, than it's Monday today");
+        break;
+    case 2:
+        System.out.println("Ah ok, than it's Tuesday today");
+        break;
+    case 3:
+        System.out.println("Ah ok, than it's Wednesday today");
+        break;
+    case 4:
+        System.out.println("Ah ok, than it's Thursday today");
+        break;
+    case 5:
+        System.out.println("Ah ok, than it's Friday today");
+        break;
+    case 6:
+        System.out.println("Ah ok, than it's Saturday today");
+        break;
+    case 7:
+        System.out.println("Ah ok, than it's Sunday today");
+        break;
+    default:
+        System.out.println("Not a valid day of the week");
+}
 ```
+
+## Which to use when
+
+As a starting programmer you may struggle a bit in the beginning on how to express more complex decision making structures. The choice is not always easy and depends a lot on the problem you are trying to solve. If you have more than 1 option in mind, consider using the one that is more clear and readable.
 
 No general rule exists for when to use which construct. Some programmers don't like the `switch` statement. In most cases it is a case of preference.

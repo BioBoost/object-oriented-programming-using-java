@@ -16,3 +16,7 @@ Fill in the table below with the correct outcomes of the boolean expressions.
 | `false` | `false` | `true` | `!((!B) || (!C))` | |
 | `false` | `true` | `true` | `A && (!A)` | |
 | `true` | `true` | `false` | `((!A) || (!B) && C) && !C` | |
+
+### Checking if negative
+
+Write an application that requests a number from the user. Tell the user of the number is negative, positive or 0.
