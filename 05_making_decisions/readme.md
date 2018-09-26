@@ -4,15 +4,28 @@ description: This chapter introduces the basic constructs that allow branching i
 
 # Making Decisions
 
-The statements inside your source files are generally executed from top to bottom, in the order that they appear. Control flow statements, however, break up the flow of execution by employing decision making, enabling your program to conditionally execute particular blocks of code. This section describes the decision-making statements if, if-else, and switch supported by the Java programming language.
+The statements inside your source files are **generally executed from top to bottom**, in the order that they appear. Control flow constructs, however, break up the flow of execution by employing **decision making**, enabling your program to **conditionally execute particular blocks of code**. This section describes the decision-making statements `if`, `if-else`, and `switch` supported by the Java programming language.
 
 ## Conditions
 
-To allow our program to make certain decisions we first need to take a look at conditions and how they are evaluated.
+A computer program must often make **choices** on how to proceed, take for example:
 
-A condition is some sort of comparison (or a combination of comparisons) that can be evaluated by the compiler or interpreter. After solving all comparisons and combining all the individual parts, the compiler resolves it to a single resulting value that is `true` or `false` (also keywords in Java), which are actually values the data type `boolean` can take. Generally spoken we state that the compiler evaluates the condition to be true or false.
+* if the user enters invalid data give him/her a message, otherwise process the data.
+* if the ball bounces the edge of the screen, change trajectory, else keep going forward.
+* if all the data has been processed, end the program, else continue to the next data item.
+* if the player has lives left continue the game, else show a game over screen.
 
-The `true` and `false` values can differ from language to language, however internal in memory `false` is most of the time "0" and `true` is "not 0".
+In flowcharts, these decisions are easily identified by the **diamond shape** with the question inside.
+
+![Making Decisions](img/making_decisions.png)
+
+Your application will make a choice based on what is called a **condition** (a representation of the question as it were). Usually this is in the form of a mathematical expression using equals, less-than, greater-than, different from, ...
+
+A condition is some **sort of comparison** (or a combination of comparisons) that can be **evaluated** by the compiler or interpreter. After solving all comparisons and combining all the individual parts, the compiler **resolves** it to a **single resulting value** that is `true` or `false` (also keywords in Java). These are actually values that the data type `boolean` can take.
+
+> **DEFINITION** - **Evaluating a condition**
+>
+> Evaluating a condition is **the process of determining the result of that condition**. The end result of a condition after the evaluation has taken place is always `true` or `false`. The `true` and `false` values can differ from language to language, however internally in memory `false` is most of the time "0" and `true` is "not 0". Generally spoken one can state that the compiler **evaluates the condition to be true or false**.
 
 ## Comparison Operators
 
@@ -48,6 +61,8 @@ Note how we need to use two equality signs `==` to test if two values are equal,
 While the comparison operators will not often be used in a situation as shown in the code above, they will often be used when making decisions in your program.
 
 ## Conditional Operators
+
+<!-- You can combine more than one condition into a single condition as long as in the end, the expression only produces one value (true or false). -->
 
 When creating more complex conditional statements you will need to use the conditional operators to create combinations of conditions.
 
@@ -140,6 +155,8 @@ if (studentScore >= 90) {
 You may have noticed that the value of `studentScore` can satisfy more than one expression in the compound statement. However the conditions are checked sequentially and once a condition is satisfied, the appropriate statements are executed and the remaining conditions are not evaluated.
 
 ## The Switch Statement
+
+<!-- MAPS to a multi decision in flowchart -->
 
 Let us take a look at some code that will allow the user to enter the number of the day of the week. The program will than determine the name of the day and output it to the user.
 
