@@ -29,7 +29,7 @@ A condition is some **sort of comparison** (or a combination of comparisons) tha
 
 ## Comparison Operators
 
-The table below shows the available comparison operators that can be used in Java to build a condition.
+Comparison operators allow us to **build conditional expressions** using mathematical operators. The table below shows the available comparison operators.
 
 | Operator | Description |
 |---|---|
@@ -40,9 +40,11 @@ The table below shows the available comparison operators that can be used in Jav
 | < | less than |
 | <= | less than or equal to |
 
-Since a conditional statement actually produces a single `true` or `false` result, this result can actually be assigned to a variable of type `boolean`.
+Note how two equality signs `==` are used to test if two values are equal, while a single sign `=` is used for assignment. Using a single sign for a comparison is a mistake often made by beginning programmers.
 
-Let's take a look at some examples of comparison operators:
+Since a conditional expression actually produces a single `true` or `false` result, this result can be assigned to a variable of type `boolean`.
+
+Take a look at the code below, which contains some examples of comparison operations:
 
 ```java
 int a = 4;
@@ -56,17 +58,15 @@ result = (a == b);  // a equal to b - false
 result = (a != b);  // a is not equal to b - true
 ```
 
-Note how we need to use two equality signs `==` to test if two values are equal, while we use a single sign `=` for assignment.
+The parentheses are optional here but are used to make the code more clear.
 
 While the comparison operators will not often be used in a situation as shown in the code above, they will often be used when making decisions in your program.
 
 ## Conditional Operators
 
-<!-- You can combine more than one condition into a single condition as long as in the end, the expression only produces one value (true or false). -->
+As long as the expression only produces a single resulting value (`true` or `false`), conditions can be **combined** using **conditional operators**. This is often necessary when creating more complex conditional expressions.
 
-When creating more complex conditional statements you will need to use the conditional operators to create combinations of conditions.
-
-The table below gives an overview of the available conditional operators in Java.
+The next table provides an overview of the available conditional operators in Java.
 
 | Operator | Description |
 |---|---|
@@ -74,24 +74,38 @@ The table below gives an overview of the available conditional operators in Java
 | &#124;&#124; | OR |
 | ! | NOT |
 
-These work as you know them from the Boolean algebra. The `||` (OR) operator will return `true` if either of the operands evaluate to `true`. The `&&` (AND) operator will return `true` if both operands evaluate to `true`. A logical expression can be negated by placing the `!` (NOT) operator in front of it.
+These work as you know them from the **Boolean algebra**. The `||` (**OR**) operator will return `true` if either of the operands evaluate to `true`. The `&&` (**AND**) operator will return `true` if both operands evaluate to `true`. A logical expression can be negated by placing the `!` (**NOT**) operator in front of it.
+
+Next is the **truth table** for all three conditional operators.
+
+| `A` | `B` | `A || B` | `A && B` | `!A` | `!B` |
+|---|---|---|---|---|---|
+| `false` | `false` | `false` | `false` | `true` | `true` |
+| `false` | `true` | `true` | `false` | `true` | `false` |
+| `true` | `false` | `true` | `false` | `false` | `true` |
+| `true` | `true` | `true` | `true` | `false` | `false` |
+
+In the table above, `A` and `B` are the operands of the conditional operators. When writing a combined expression in code these operand are most often conditional expressions with each containing a comparison operation.
+
+Take for example an expression that checks if `number` is within a range of [0, 100]. This would be coded as:
+`boolean isInRange = ((number >= 0) && (number <= 100>));`. This expression can also be written using a less than and greater than comparison, but then the boundaries would be `-1` and `101`.
 
 The code example below checks if a person is a child based on it's `age` (between 0 and 14 years of age).
 
 ```java
 int age = 16;
-boolean isAChild = (age >= 0 && age <= 14);      // false
+boolean isAChild = ((age >= 0) && (age <= 14));      // false
 ```
 
 > **HINT** - **Info::De Morgan's Laws**
 >
 > In some cases it can be useful to rewrite complex conditions using De Morgan's Laws [https://en.wikipedia.org/wiki/De_Morgan%27s_laws](https://en.wikipedia.org/wiki/De_Morgan%27s_laws). Do take note that shorter not always implies more readable or less complex.
 
-<!-- How to break here? -->
+Please be aware that every sub-part of a boolean expression must be a complete boolean expression. Thus if you want to know if `A` is either `10` or `20`, you cannot state `(A == 10 || 20)`. This is interpreted by the computer as: ( (A == 10) || (20) ). Below is an example of the correct and incorrect ways to combined two queries about the same variable.
 
 > **WARNING** - **Lazy evaluation**
 >
-> These operators exhibit **"short-circuiting"** behavior, which means that the second operand is evaluated only if needed. This is also called lazy evaluation. So for example in an OR statement, if the first operand is true, the outcome must also be true. For this reason the second operand is not checked anymore.
+> These operators exhibit **"short-circuiting"** behavior, which means that the second operand is evaluated only if needed. This is also called lazy evaluation. So for example in an OR statement, if the first operand is `true`, the outcome must also be `true`. For this reason the second operand is not checked anymore.
 
 ## The if statement
 
