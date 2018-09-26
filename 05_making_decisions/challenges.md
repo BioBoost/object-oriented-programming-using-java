@@ -6,17 +6,13 @@ Fill in the table below with the correct outcomes of the boolean expressions.
 
 | A | B | C | Expression | Outcome of Expression |
 | --- | --- | --- | --- | --- |
-| `false` | `false` | `false` | `A && B` | |
-| `true` | `true` | `false` | `(!A) && B` | |
-| `true` | `true` | `true` | `(!A) && (!B) && C` | |
-| `false` | `false` | `false` | `A || B` | |
-| `false` | `true` | `false` | `!(B && C)` | |
-| `false` | `true` | `false` | `C || (!C)` | |
-| `false` | `false` | `false` | `!(B || C)` | |
-| `false` | `false` | `true` | `!((!B) || (!C))` | |
-| `false` | `true` | `true` | `A && (!A)` | |
-| `true` | `true` | `false` | `((!A) || (!B) && C) && !C` | |
-
-### Checking if negative
-
-Write an application that requests a number from the user. Tell the user of the number is negative, positive or 0.
+| `false` | `false` | `false` | <code>A && B</code> | |
+| `true` | `true` | `false` | <code>(!A) && B</code> | |
+| `true` | `true` | `true` | <code>(!A) && (!B) && C</code> | |
+| `false` | `false` | `false` | <code>A &#124;&#124; B</code> | |
+| `false` | `true` | `false` | <code>!(B && C)</code> | |
+| `false` | `true` | `false` | <code>C &#124;&#124; (!C)</code> | |
+| `false` | `false` | `false` | <code>!(B &#124;&#124; C)</code> | |
+| `false` | `false` | `true` | <code>!((!B) &#124;&#124; (!C))</code> | |
+| `false` | `true` | `true` | <code>A && (!A)</code> | |
+| `true` | `true` | `false` | <code>((!A) &#124;&#124; (!B) && C) && !C</code> | |
