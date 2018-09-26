@@ -65,3 +65,18 @@ String fullText;
 ```
 
 Print out the variable `fullText` so the whole message is shown to the user.
+
+## Circle Properties
+
+Write a Java program to determine the area and perimeter of a circle. They can be calculated using the formulas below:
+
+```math
+area = radius x radius x pi
+perimeter = 2 x radius x pi
+```
+
+Make sure all the variables are of type `double`.
+
+Print all the parameters to the terminal (radius, diameter, area and perimeter) so the user had a nice overview.
+
+You can create a variable to hold an approximation to the value of pi. However, Java can supply a more accurate version of PI. Can you find on the Internet how to access/use this value?
