@@ -1,5 +1,21 @@
 ## Challenges
 
+This chapter may require you to request input from the user. This can be achieved by using the code below:
+
+```java
+public static void main(String[] args) {
+    Scanner console = new Scanner(System.in);
+
+    System.out.print("Please enter a number: ");
+    int number = console.nextInt();
+    System.out.println("You entered the value " + number);
+}
+```
+
+This code snippet requests a number from the user and stores it in the variable `number`. It then outputs it back to the terminal.
+
+Do note that if you input anything else than a integral number, the application will crash. Don't worry about it for the moment. This will be fixed later on in the course.
+
 ### Boolean Expressions
 
 Fill in the table below with the correct outcomes of the boolean expressions.
@@ -19,15 +35,7 @@ Fill in the table below with the correct outcomes of the boolean expressions.
 
 ### Check if negative
 
-Start with the following code:
-
-```java
-public static void main(String[] args) {
-    int number = 12;
-    
-    // Check number below and output message
-}
-```
+Start with the code snippet provided at the start of this challenge chapter to request a number from the user.
 
 Now output a message based on the value of number:
 
@@ -35,4 +43,29 @@ Now output a message based on the value of number:
 * if `number` is 0, output the message: "The number is zero"
 * if `number` is positive, output the message: "The number is positive"
 
-Change the value of `number` to test your code.
+Run the application multiple times with different input to test your app.
+
+### Square
+
+Create an application that requests the length of a side of a square. Calculate the circumference and the area. Output both to the user.
+
+For example:
+```text
+Please enter side of square in meters: 5
+
+The circumference is: 20 meters
+The area is: 25 square meters
+```
+
+### Minimum and Maximum
+
+Create an application that requests two numbers from the user. Determine which number of the two is the biggest and then output your findings to the user.
+
+For example:
+```text
+Please enter first number: 15
+Please enter second number: 88
+
+The biggest number is: 88
+The smallest number is: 15
+```
