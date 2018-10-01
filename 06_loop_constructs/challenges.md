@@ -35,3 +35,24 @@ Output a pyramid to the console as shown below.
  ---------
 -----------
 ```
+
+### Higher / Lower
+
+Create the higher / lower game. First the application should generate a secret random number (see code below). The user is then requested to enter numbers. After each guess you should output to the user if he/she has to guess higher or lower.
+
+If the secret number is guessed, output a congratulations to the user.
+
+To generate a random number, you can use the code below:
+
+```java
+public static void main(String[] args) {
+    Random generator = new Random();
+
+    // Generate a random number between 0 (inclusive) and 5000 (exclusive)
+    int secret = generator.nextInt(5000);
+}
+```
+
+You will also need to import the Random library by adding `import java.util.Random;` to the top of your java file.
+
+As an extra you can also output the number of guesses that were needed to guess the number.
