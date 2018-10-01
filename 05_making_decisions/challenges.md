@@ -1,4 +1,4 @@
-## Challenges
+## Chapter 05 - Making Decisions - Challenges
 
 This chapter may require you to request input from the user. This can be achieved by using the code below:
 

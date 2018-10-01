@@ -1,4 +1,4 @@
-## Challenges
+## Chapter 02 - Basic Building Blocks - Challenges
 
 ### Smartphone
 

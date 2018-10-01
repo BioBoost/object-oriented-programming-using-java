@@ -1,4 +1,4 @@
-## Challenge
+## Chapter 06 - Loop Constructs - Challenges
 
 ### From 1 to 10
 

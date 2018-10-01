@@ -1,4 +1,4 @@
-## Challenges
+## Chapter 03 - Starting in Java - Challenges
 
 ### Printing Personalized Hello
 
