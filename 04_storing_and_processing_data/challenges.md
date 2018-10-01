@@ -91,3 +91,12 @@ Properties of circle:
 Thank you for using the app.
 ```
 You can create a variable to hold an approximation to the value of pi. However, Java can supply a more accurate version of PI. Can you find on the Internet how to access/use this value?
+
+### Concatenation and Addition
+
+Explain the difference in output between the following two lines of code:
+
+```java
+System.out.println("Berekening 1: " + 12 + 88);
+System.out.println("Berekening 2: " + (12 + 88));
+```
