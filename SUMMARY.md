@@ -29,13 +29,9 @@
 * [Making Decisions](05_making_decisions/readme.md)
 * [Challenges](05_making_decisions/challenges.md)
 
-<!-- ### Loop Constructs
-* [Introduction](loop_constructs/readme.md)
-* [The For Loop](loop_constructs/for_loop.md)
-* [The While Loop](loop_constructs/while_loop.md)
-* [The Do While Loop](loop_constructs/do_while_loop.md)
-* [Nesting Control Structures](loop_constructs/nesting_control_structures.md)
-* [Exercises](loop_constructs/exercises.md) -->
+### Loop Constructs
+* [Loop Constructs](06_loop_constructs/readme.md)
+* [Challenges](06_loop_constructs/challenges.md)
 
 <!-- ### Arrays
 * [Introduction](arrays/readme.md)

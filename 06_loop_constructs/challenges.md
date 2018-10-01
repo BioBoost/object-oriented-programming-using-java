@@ -1,4 +1,6 @@
-## Exercise 1
+## Challenge
+
+### From 1 to 10
 
 Print the list of numbers from 1 tot 10 to the console.
 
@@ -6,9 +8,9 @@ Print the list of numbers from 1 tot 10 to the console.
 1 2 3 4 5 6 7 8 9 10
 ```
 
-## Exercise 2
+### Even or Uneven
 
-Create a program that prints out the number 0 to 10 and states if they are even or uneven. Do the even and uneven check using the remainder operator `%`.
+Create a program that prints out the numbers 0 to 10 and states if they are even or uneven. Do the even and uneven check using the modulo operator `%`.
 
 Example output:
 
@@ -21,7 +23,7 @@ Example output:
 10 (even)
 ```
 
-## Exercise 3
+### Pyramid
 
 Output a pyramid to the console as shown below.
 
