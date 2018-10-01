@@ -2,7 +2,7 @@
 description: A computer program typically stores and processed data. This chapter focusses on the building blocks available to store and manipulate primitive data types.
 ---
 
-# Storing and processing data
+# Chapter 04 - Storing and processing data
 
 The programs that we create need to store all sorts of data. From basic information such as numbers, characters and strings to complex data types that a programmer can define for himself.
 
