@@ -12,7 +12,7 @@ public static void main(String[] args) {
 }
 ```
 
-This code snippet requests a number from the user and stores it in the variable `number`. It then outputs it back to the terminal.
+This code snippet requests a number from the user and stores it in the variable `number`. It then outputs it back to the terminal. Feel free to change the name of the variable to suit your application.
 
 Do note that if you input anything else than a integral number, the application will crash. Don't worry about it for the moment. This will be fixed later on in the course.
 
