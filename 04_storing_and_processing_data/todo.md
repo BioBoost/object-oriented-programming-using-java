@@ -14,3 +14,5 @@ Op het einde van het hoofdstuk een sectie plaatsen: requesting data from the use
     int number = console.nextInt();
     System.out.println("You entered the value " + number);
 ```
+
+Explain that we create variables when we need them ! This means no declarations at the start of method.
