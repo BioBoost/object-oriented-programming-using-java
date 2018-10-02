@@ -28,6 +28,7 @@
 
 * [Making Decisions](05_making_decisions/readme.md)
 * [Challenges](05_making_decisions/challenges.md)
+* [Test Yourself](05_making_decisions/test_yourself.md)
 
 ### Loop Constructs
 * [Loop Constructs](06_loop_constructs/readme.md)
