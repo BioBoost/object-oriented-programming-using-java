@@ -4,22 +4,22 @@
 
 In the most left column is a piece of data that is stored inside of the computers memory. What would be a possible data type for each piece of information? In some cases multiple data types would be valid.
 
-| Data | byte | int | double | boolean | char | String |
-| --- | --- | --- | --- | --- | --- | --- |
-| 128 | [] | [] | [] | [] | [] | [] |
-| -12 | [] | [] | [] | [] | [] | [] |
-| a | [] | [] | [] | [] | [] | [] |
-| Hello World | [] | [] | [] | [] | [] | [] |
-| 108.6 | [] | [] | [] | [] | [] | [] |
-| true | [] | [] | [] | [] | [] | [] |
-| Spoorwegstraat 12, 8200 Brugge | [] | [] | [] | [] | [] | [] |
-| A | [] | [] | [] | [] | [] | [] |
-| 0471 11 18 23 | [] | [] | [] | [] | [] | [] |
-| 3.14 | [] | [] | [] | [] | [] | [] |
-| x | [] | [] | [] | [] | [] | [] |
-| ZZ Top | [] | [] | [] | [] | [] | [] |
-| false | [] | [] | [] | [] | [] | [] |
-| -778.81323 | [] | [] | [] | [] | [] | [] |
+| Data | int | double | boolean | char | String |
+| --- | --- | --- | --- | --- | --- |
+| 128 | [] | [] | [] | [] | [] |
+| -12 | [] | [] | [] | [] | [] |
+| a | [] | [] | [] | [] | [] |
+| Hello World | [] | [] | [] | [] | [] |
+| 108.6 | [] | [] | [] | [] | [] |
+| true | [] | [] | [] | [] | [] |
+| Spoorwegstraat 12, 8200 Brugge | [] | [] | [] | [] | [] |
+| A | [] | [] | [] | [] | [] |
+| 0471 11 18 23 | [] | [] | [] | [] | [] |
+| 3.14 | [] | [] | [] | [] | [] |
+| x | [] | [] | [] | [] | [] |
+| ZZ Top | [] | [] | [] | [] | [] |
+| false | [] | [] | [] | [] | [] |
+| -778.81323 | [] | [] | [] | [] | [] |
 
 ### Basic Division
 
