@@ -75,3 +75,28 @@ public static void main(String[] args) {
 You will also need to import the Random library by adding `import java.util.Random;` to the top of your java file.
 
 As an extra you can also output the number of guesses that were needed to guess the number.
+
+### Menu Options for Rectangle
+
+Build an application that allows the user to calculate the area and circumference of a rectangle using the formulas:
+
+```math
+area = (width * height)
+circumference = 2 * (width + height)
+```
+
+The application should present the user with a menu as shown below to let the user select his/her next action.
+
+```text
+Welcome to the rectangle calculator. Please select one of the options below.
+
+1. Set the base of the rectangle
+2. Set the height of the rectangle
+3. Calculate the area
+4. Calculate the circumference
+5. Exit
+---------------------------------
+Please choose your action (number):
+```
+
+When the user chooses an action the action should be performed, after which the user should be presented with the menu again so he/she can choose his/her action.
