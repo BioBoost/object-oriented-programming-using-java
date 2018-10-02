@@ -334,7 +334,7 @@ If you wish to convert the user's input into a double you can request this from 
   System.out.println("You entered the value " + number);
 ```
 
-#### Random numbers
+### Random numbers
 
 An other approach to get data is to generate it randomly. The `Random` class of Java also provides us with the tools to generate all sorts of random numbers.
 
