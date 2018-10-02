@@ -295,7 +295,7 @@ Basically when a user enters something via the terminal, it is considered to be 
 
 #### Integral and Double Values
 
-Below is a code snippet that shows how to use the Scanner to **parse the input from the user as an integer** by asking the Scanner for the `nextInt()`. Do take note that if the user inputted anything else than an integer, the application will crash. Feel free to test this. For the moment this cannot be solved with the knowledge we posses. This will be fixed later in the course.
+Below is a code snippet that shows how to use the `Scanner` class to **parse the input from the user as an integer** by asking the `Scanner` class for the `nextInt()`. Do take note that if the user inputted anything else than an integer, the application will crash. Feel free to test this. For the moment this cannot be solved with the knowledge we posses. This will be fixed later in the course.
 
 ```java
   // Create a Scanner called console and configure
@@ -312,7 +312,7 @@ Below is a code snippet that shows how to use the Scanner to **parse the input f
   System.out.println("You entered the value " + number);
 ```
 
-You will also need to add an import statement for the `Scanner` library at the top of your Java file, just below the `package` statement:
+You will also need to add an import statement for the `Scanner` at the top of your Java file, just below the `package` statement. Or you can let NetBeans do it by selecting the error and pressing `ALT-ENTER` and choosing the import action.
 
 ```java
 package myjavapackage;
@@ -332,4 +332,39 @@ If you wish to convert the user's input into a double you can request this from 
   double number = console.nextDouble();
   
   System.out.println("You entered the value " + number);
+```
+
+#### Random numbers
+
+An other approach to get data is to generate it randomly. The `Random` class of Java also provides us with the tools to generate all sorts of random numbers.
+
+The code snippet belows contains the necessary code to generate integral numbers between `0` and the provided maximum (exclusive) bound.
+
+```java
+// The Random generator that allows us to
+// generate numbers
+Random generator = new Random();
+
+// Request a new integral number between [0, 100[
+// The provided maximum is exclusive
+int number = generator.nextInt(100);
+
+// Output result
+System.out.println("A random number: " + number);
+```
+
+You will also need to add an import statement for the `Random` class at the top of your Java file, just below the `package` statement. Or you can let NetBeans do it by selecting the error and pressing `ALT-ENTER` and choosing the import action.
+
+```java
+package myjavapackage;
+
+import java.util.Random;
+
+// ...
+```
+
+The `Random` class can also generate random floating point values between `0` and `1`. This can be achieved by calling the `nextDouble()` method. No upper limit can be provided here. You need to do this yourself.
+
+```java
+double real = generator.nextDouble();
 ```
