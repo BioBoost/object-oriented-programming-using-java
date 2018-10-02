@@ -23,6 +23,26 @@ Example output:
 10 (even)
 ```
 
+### Summation
+
+Request multiple numbers from the user and output the sum at the end of the application. Let the user stop inputting numbers by for example entering `0`. Make sure to inform the user how to stop the process of entering numbers.
+
+Example output:
+
+```text
+Welcome to the summation application.
+
+Please enter an integral number (0 to stop): 15
+Please enter an integral number (0 to stop): 32
+Please enter an integral number (0 to stop): -16
+Please enter an integral number (0 to stop): 0
+
+The total sum is 31
+
+Thank you for using our application.
+```
+
+
 ### Pyramid
 
 Output a pyramid to the console as shown below.
