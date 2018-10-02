@@ -42,7 +42,6 @@ The total sum is 31
 Thank you for using our application.
 ```
 
-
 ### Pyramid
 
 Output a pyramid to the console as shown below.
