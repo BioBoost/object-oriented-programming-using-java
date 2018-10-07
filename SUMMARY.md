@@ -31,8 +31,13 @@
 * [Test Yourself](05_making_decisions/test_yourself.md)
 
 ### Loop Constructs
+
 * [Loop Constructs](06_loop_constructs/readme.md)
 * [Challenges](06_loop_constructs/challenges.md)
+
+### Strings
+
+* [Strings](07_strings/readme.md)
 
 ----
 

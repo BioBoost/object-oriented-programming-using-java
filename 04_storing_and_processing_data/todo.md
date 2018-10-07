@@ -7,3 +7,5 @@ Echter eerst aan bord gebracht met %100 en dan aangegeven wat een off by 1 error
 In de eerste challenge mag die byte kolom weg.
 
 Explain that we create variables when we need them ! This means no declarations at the start of method.
+
+Have we explained literals somewhere ?
