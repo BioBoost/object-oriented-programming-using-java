@@ -16,3 +16,5 @@ Op het einde van het hoofdstuk een sectie plaatsen: requesting data from the use
 ```
 
 Explain that we create variables when we need them ! This means no declarations at the start of method.
+
+Have we explained literals somewhere ?
