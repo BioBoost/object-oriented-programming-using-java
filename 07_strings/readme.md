@@ -2,7 +2,7 @@
 description: The data processed by a application often consists of text. To store this type of data we need String and the possibility to manipulate them.
 ---
 
-# Strings
+# Chapter 07 - Strings
 
 `String` is probably the most commonly used data type for variables in Java. It is so popular that you actualle already have been using strings since the beginning of this course. Remember your first statement?
 
