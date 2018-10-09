@@ -100,3 +100,32 @@ Please choose your action (number):
 ```
 
 When the user chooses an action the action should be performed, after which the user should be presented with the menu again so he/she can choose his/her action.
+
+### Fibonacci numbers
+
+Create an simple that calculates the first 20 numbers of the Fibonacci sequence and outputs them to the terminal. Calculate the sum of the numbers. It should be _17710_.
+
+In mathematics, the Fibonacci numbers are the numbers in the following integer sequence, called the Fibonacci sequence, and characterized by the fact that, every number after the first two is the sum of the two preceding ones. Start the series at the number 1.
+
+Example:
+
+```text
+1, 1, 2, 3, 5, 8, ...
+```
+
+### A dice throwing game
+
+Simulate a dice throwing game. Allow the user of your application to select the number of throws that can be simulated and also the number of eyes for the throws.
+
+For example:
+
+```text
+This is a dice throwing simulator. Select the number of throws you wish to simulate and the eyes of the dice to use.
+
+Number of throws to simulate? 3
+Number of eyes of the dice to use? 20
+
+Throw 1: 12
+Throw 2: 2
+Throw 3: 19
+```
