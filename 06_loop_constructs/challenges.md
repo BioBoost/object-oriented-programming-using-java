@@ -113,6 +113,8 @@ Example:
 1, 1, 2, 3, 5, 8, ...
 ```
 
+Extra: Let the user decide at the start of your application how many numbers to generate.
+
 ### A dice throwing game
 
 Simulate a dice throwing game. Allow the user of your application to select the number of throws that can be simulated and also the number of eyes for the throws.
