@@ -162,6 +162,42 @@ int[] anArray = {
 
 Here the length of the array is determined by the number of values provided between the curly braces `{}`.
 
+## The length of an Array
+
+As mentioned before, the arrays created in Java are no primitive types. They can hold primitive types, but the array itself is an object. Objects have data and methods. One of the most used data members of an array is its `length`. By using it's length in the for loop condition, our code becomes cleaner and less prone to errors.
+
+So the earlier example:
+
+```java
+// Creating an array numbers with 10 elements of type integer.
+int[] numbers = new int[10];
+
+// Initialize the elements with the values 0 to 9
+for (int i = 0; i < 10; i++) {
+    // Assign the current value of i to the element at index i
+    numbers[i] = i;
+}
+```
+
+can be refactor to:
+
+```java
+// Creating an array numbers with 10 elements of type integer.
+int[] numbers = new int[10];
+
+// Initialize the elements with the values 0 to 9
+for (int i = 0; i < numbers.length; i++) {
+    // Assign the current value of i to the element at index i
+    numbers[i] = i;
+}
+```
+
+Which makes it easier to change. If we now increase the array to `20` elements, the for loop can remain untouched.
+
+> **WARNING** - **Length is not a method**
+>
+> Do note that `length` is actually a data member of an array and not a method. That is why we do not add parentheses after `length`. This is important distinction to make.
+
 ## Foreach Loop
 
 Iterating over an array or collection is often uglier than it needs to be. Consider the following example, which contains an array of five integers and calculates the average:
@@ -170,7 +206,7 @@ Iterating over an array or collection is often uglier than it needs to be. Consi
 int myList[] = {1, 5, 43, 2, 0};
 
 int sum = 0;
-for (int i = 0; i < 5; i++) {
+for (int i = 0; i < myList.length; i++) {
   sum += myList[i];
 }
 
