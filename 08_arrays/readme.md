@@ -161,3 +161,91 @@ int[] anArray = {
 ```
 
 Here the length of the array is determined by the number of values provided between the curly braces `{}`.
+
+## Foreach Loop
+
+Iterating over an array or collection is often uglier than it needs to be. Consider the following example, which contains an array of five integers and calculates the average:
+
+```java
+int myList[] = {1, 5, 43, 2, 0};
+
+int sum = 0;
+for (int i = 0; i < 5; i++) {
+  sum += myList[i];
+}
+
+System.out.println("Average = " + sum/5.0);
+```
+
+The iteration variable `i` is just clutter. Furthermore, it is an opportunity for error. The iteration variable occurs four times in each loop: that is three chances to get it wrong. The foreach construct gets rid of the clutter and the opportunity for error. The foreach construct is a loop that iterates over a list/array and loops for each element inside of it. It follows the syntax shown next:
+
+```java
+for (<type> <name_of_local_variable> : <name_of_array>) {
+    // Here you can use <name_of_local_variable> which refers
+    // to the current element of the iteration
+}
+```
+
+Here is how the previous code example looks like with the foreach construct:
+
+```java
+int myList[] = {1, 5, 43, 2, 0};
+
+int sum = 0;
+for (int value : myList) {
+    sum += value;
+}
+System.out.println("Average = " + sum/5.0);
+```
+
+When you see the colon `:` read it as "in". The loop above reads as **"for each int value in myList"**. As can be seen from the code, the foreach makes the code a lot cleaner. It preserves all of the type safety, while removing the remaining clutter. A huge advantage is that you do not need to declare the iteration variable. The compiler does this for you behind your back, but you need not concern yourself with it.
+
+> **INFO** - **Enhanced For Loop**
+>
+> The foreach loop is also known as the enhanced for loop in the world of programming.
+
+### Limitations of foreach loop
+
+So when should you use the for-each loop? Any time you can. It can make your code a lot more cleaner. Unfortunately, it cannot be used everywhere.
+
+Consider the situations listed below where a for-each loop cannot be used.
+
+**A foreach loop cannot be used if you wish to modify the array itself.** The local variable used with the foreach construct is a copy of the actual element in the array, so you are only changing the copy.
+
+```java
+for (int val : values) {
+    // Only changes the local `val` variable and not the actual array element
+    val = val * 2;
+}
+```
+
+This also means that a foreach cannot be used to initialize an array or collection.
+
+**Foreach loops do not keep track of an iteration variable.** This means it is not possible to use an array index inside the foreach loop.
+
+**Foreach only iterates forward over the array in single steps.**
+
+```java
+int values[] = {1, 5, 43, 2, 0};
+
+// Impossible to do with a for-each
+for (int i = values.length-1; i > 0; i--) {
+    System.out.print(values[i] + " ");
+}
+```
+
+**For-each loops are not useable when one must iterate over multiple collections/arrays at the same time.**
+
+```java
+int temperatures1[] = { 23, 14, 144, 23, 44 };
+int temperatures2[] = { 23, 22, 144, 33, 44 };
+
+// Not possible to do with a for-each loop
+for (int i = 0; i < temperatures1.length; i++) {
+    if (temperatures1[i] != temperatures2[i]) {
+        System.out.println("Temperatures differ");
+    }
+}
+```
+
+These shortcomings were known by the designers, who made a conscious decision to go with a clean, simple construct that would cover the great majority of cases.
