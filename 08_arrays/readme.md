@@ -285,3 +285,13 @@ for (int i = 0; i < temperatures1.length; i++) {
 ```
 
 These shortcomings were known by the designers, who made a conscious decision to go with a clean, simple construct that would cover the great majority of cases.
+
+## Summary
+
+A short summary on arrays in Java:
+
+* A Java array variable can also be declared like other variables with [] after the data type.
+* The variables in the array are ordered and each have an index beginning from 0.
+* The size of an array must be known when it is created. It cannot be changed after creation.
+* The size of an array must be specified by an integral value and not long or short.
+* Since arrays are objects in Java, we can find their length using member length. This is different from C/C++ where we find length using sizeof.
