@@ -39,6 +39,11 @@
 
 * [Strings](07_strings/readme.md)
 
+### Arrays
+
+* [Arrays](08_arrays/readme.md)
+* [Challenges](08_arrays/challenges.md)
+
 ----
 
 ### Sources
