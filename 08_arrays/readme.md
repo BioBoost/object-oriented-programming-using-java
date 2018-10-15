@@ -68,7 +68,7 @@ Each item in an array is called an **element**, and each element is accessed by 
 Of course the previous statement can be split up into the declaration and creation of the array as shown in the next code snippet.
 
 ```java
-int someNumbers[];          // Declaring an array variable someNumbers
+int[] someNumbers;          // Declaring an array variable someNumbers
 someNumbers = new int[10];  // Creating an array of 10 elements and storing the reference in someNumbers
 ```
 
@@ -203,7 +203,7 @@ Which makes it easier to change. If we now increase the array to `20` elements, 
 Iterating over an array or collection is often uglier than it needs to be. Consider the following example, which contains an array of five integers and calculates the average:
 
 ```java
-int myList[] = {1, 5, 43, 2, 0};
+int[] myList = {1, 5, 43, 2, 0};
 
 int sum = 0;
 for (int i = 0; i < myList.length; i++) {
@@ -225,7 +225,7 @@ for (<type> <name_of_local_variable> : <name_of_array>) {
 Here is how the previous code example looks like with the foreach construct:
 
 ```java
-int myList[] = {1, 5, 43, 2, 0};
+int[] myList = {1, 5, 43, 2, 0};
 
 int sum = 0;
 for (int value : myList) {
@@ -262,7 +262,7 @@ This also means that a foreach cannot be used to initialize an array or collecti
 **Foreach only iterates forward over the array in single steps.**
 
 ```java
-int values[] = {1, 5, 43, 2, 0};
+int[] values = {1, 5, 43, 2, 0};
 
 // Impossible to do with a for-each
 for (int i = values.length-1; i > 0; i--) {
@@ -273,8 +273,8 @@ for (int i = values.length-1; i > 0; i--) {
 **For-each loops are not useable when one must iterate over multiple collections/arrays at the same time.**
 
 ```java
-int temperatures1[] = { 23, 14, 144, 23, 44 };
-int temperatures2[] = { 23, 22, 144, 33, 44 };
+int[] temperatures1 = { 23, 14, 144, 23, 44 };
+int[] temperatures2 = { 23, 22, 144, 33, 44 };
 
 // Not possible to do with a for-each loop
 for (int i = 0; i < temperatures1.length; i++) {
