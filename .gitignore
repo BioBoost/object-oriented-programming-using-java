@@ -32,6 +32,9 @@ book.mobi
 # Ignore PDFs
 *.pdf
 
+# Ignore vscode files
+.vscode
+
 # Netbeans projects
 /demo_hangman/code/HangmanTheGame/nbproject/private/
 /demo_hangman/code/HangmanTheGame/build/
