@@ -175,10 +175,27 @@ This can be represented using a simple diagram:
 
 ### Copying Variables
 
-<!-- TODO: Another big difference:
+So in other words when you copy a variable of a primitive type, you are making a copy of the value.
 
-int a = b;
-String a = b; -->
+Example:
+
+```java
+int number = 15;
+int secondNumber = number;
+```
+
+![Primitive copy](img/primitive_copy.png)
+
+Changing `secondNumber` will not have any effect on the original `number`.
+
+However the situation changes when dealing with references to objects. In this case the object is not copied, but the reference held by the variable is copied. This means that you get another reference pointing towards the same object.
+
+```java
+String hello = "Hello World";
+String greeting = hello;
+```
+
+![Reference copy](img/reference_copy.png)
 
 ### The null value
 
