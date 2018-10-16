@@ -30,11 +30,7 @@ All you need to know at the moment about a class is the following:
 * A class internally **contains data**, in the case of a `String` this is a sequence of characters.
 * A class **has methods**, which are like actions that can be requested from the objects create from the class.
 
-## Creating Strings
-
-There are two options to create strings. The first we have already used, which is direct assignment of a String literal. The second option is using the approach of using the `new` keyword, as we have done already with classes such as `Scanner` and `Random`.
-
-### Using String literals
+## Creating Strings using Literals
 
 The most direct way to create a string is to assign a string **literal** to a variable of type `String` as shown in the next code example.
 
@@ -47,7 +43,27 @@ System.out.println(greetings);
 
 When Java encounters a string literal in our code (`"Hello there. What a fascinating world we live in"` in the previous example), it will automatically create an object of the class `String` and place our literal value inside of it.
 
-### Using the new keyword
+## The Java String pool
+
+Each time you create a String literal using the syntax shown in the following example, the JVM checks the "string pool" first. If the string already exists in the pool, a reference to the pooled object is returned. If the string doesn't exist in the pool, a new string object is created and placed in the pool. For example:
+
+```java
+String hello = "Hello World";
+String myName = "John Rambo";
+String greetings = "Hello World";
+```
+
+In the previous example, only two string objects will be created. First, the JVM will not find any string object with the value `"Hello World"` in the string pool, that is why it will create a new object. Again for the second statement, the JVM will not find any string object with the value `"John Rambo"` in the string pool. A new object is created and stored in the variable.
+
+For the third statement the pool is checked again and this time a string with the value "Hello World" is found. The JVM will make the `greetings` variable point to the string that was found.
+
+![The Java String pool](img/string_pool.png)
+
+One of the main reasons for this is saving memory.
+
+## Creating Strings using the new keyword
+
+There are two options to create strings. The first we have already used, which is direct assignment of a String literal. The second option is using the approach of using the `new` keyword, as we have done already with classes such as `Scanner` and `Random`.
 
 As with any other class, you can create objects from classes by using the `new` keyword.
 
@@ -58,7 +74,28 @@ String greetings = new String("Hello there. What a fascinating world we live in"
 System.out.println(greetings);
 ```
 
-This approach is the **general way of creating objects from classes**, but is rarely seen in cases of strings. This because the previous approach is shorter.
+This approach is the **general way of creating objects from classes**, but is rarely seen in cases of strings. This because this approach will force the creating of new String objects and therefore not use the String pool.
+
+## Strings are Immutable
+
+An **object whose internal state cannot be changed after it is created** is known as **an Immutable object**. The String class is such an example. Objects of type String cannot be changed. If you assign a new value to a String variable, actually a new String object is created (of course after the pool is checked if that value is not present).
+
+So for example the following code will result in a string pool as shown in the image following the code.
+
+```java
+String hello = "Hello World";
+
+String greetings = "Hello World";
+greetings = "Hello from Java";
+```
+
+![Changing an Immutable String](img/immutable.png)
+
+If one thinks about it, it's quite logical that String objects are immutable. Otherwise the string pool would not be practical if other variables would be able to modify your objects.
+
+> **INFO** - **String Interning**
+>
+> The string pool is the JVM's particular implementation of the concept of string interning. In computer science, string interning is a method of storing only one copy of each distinct string value, which must be immutable. Interning strings makes some string processing tasks more time- or space-efficient at the cost of requiring more time when the string is created or interned. The distinct values are stored in a string intern pool.
 
 ## Strings have methods
 
@@ -109,48 +146,72 @@ for (int i = 0; i < helloWorld.length(); i++) {
 // Result: H e l l o   W o r l d   f r o m   J a v a !
 ```
 
-## The Java String pool
+## Values versus References
 
-Each time you create a String literal, the JVM checks the "string pool" first. If the string already exists in the pool, a reference to the pooled object is returned. If the string doesn't exist in the pool, a new string object is created and placed in the pool. For example:
+When you declare a variable of a primitive type in Java, the variable will label the memory location where the actual value is stored that you assigned via the variable.
+
+Example:
+
+```java
+double pi = 3.1415;
+System.out.println(pi);       // Output: 3.1415
+```
+
+This can be represented using a simple diagram:
+
+![Variable holding primitive value](img/primitive_value.png)
+
+However when you create an object and assign the result of the `new` statement to a variable, the variable will not hold the object itself. It will instead hold a **reference** to the location of the object in memory.
+
+Example:
 
 ```java
 String hello = "Hello World";
-String myName = "John Rambo";
-String greetings = "Hello World";
 ```
 
-In the previous example, only two string objects will be created. Firstly, JVM will not find any string object with the value `"Hello World"` in the string pool, that is why it will create a new object. Again for the second statement, the JVM will not find any string object with the value `"John Rambo"` in the string pool. A new object is created and stored in the variable.
+This can be represented using a simple diagram:
 
-For the third statement the pool is checked again and this time a string with the value "Hello World" is found. The JVM will make the `greetings` variable point to the string that was found.
+![Variable holding reference to String object](img/object_reference.png)
 
-![The Java String pool](img/string_pool.png)
+### Copying Variables
 
-One of the main reasons for this is saving memory.
+<!-- TODO: Another big difference:
 
-## Strings are Immutable
+int a = b;
+String a = b; -->
 
-An **object whose internal state cannot be changed after it is created** is known as **an Immutable object**. The String class is such an example. Objects of type String cannot be changed. If you assign a new value to a String variable, actually a new String object is created (of course after the pool is checked if that value is not present).
+### The null value
 
-So for example the following code will result in a string pool as shown in the image following the code.
+When declaring a variable of a non-primitive type without assigning a value to it, it has nothing to reference. This is indicated in the Java language using the `null` reference.
+
+Graphically this can be represented as:
+
+![Variable containing null reference](img/null_reference.png)
+
+We can later assign a reference to it by for example creating a new object and assigning it to the variable as follows:
 
 ```java
-String hello = "Hello World";
-
-String greetings = "Hello World";
-greetings = "Hello from Java";
+String hello;
+//...
+hello = "Greetings from OOP";
 ```
 
-![Changing an Immutable String](img/immutable.png)
+As of Java 10, the JVM will not allow the usage of a local variable that has not been initialized. This because when a method is called on a null-reference, your program will crash.
 
-If one thinks about it, it's quite logical that String objects are immutable. Otherwise the string pool would not be practical if other variables would be able to modify your objects.
+If there is any chance that the reference you are using is `null`, then you should first check for it as shown in the code below:
 
-> **INFO** - **String Interning**
-> 
-> The string pool is the JVM's particular implementation of the concept of string interning. In computer science, string interning is a method of storing only one copy of each distinct string value, which must be immutable. Interning strings makes some string processing tasks more time- or space-efficient at the cost of requiring more time when the string is created or interned. The distinct values are stored in a string intern pool.
+```java
+// ...
+if (hello != null) {
+  System.out.println("The length of hello = " + hello.length());
+}
+```
 
 ## Comparing Strings
 
-Since String are not primitive types in Java, but actually objects, **they cannot be compared using the equality operator** `==`. Actually in this case you are comparing references and not the actual content of the objects. More on this later.
+<!-- TODO: Uitgebreider zoals aan bord gebracht -->
+
+Since String are not primitive types in Java, but actually objects, **they cannot be compared using the equality operator** `==`. Actually in this case you are comparing references and not the actual content of the objects.
 
 To compare strings you need to use the `equals()` method as shown below.
 
