@@ -226,9 +226,32 @@ if (hello != null) {
 
 ## Comparing Strings
 
-<!-- TODO: Uitgebreider zoals aan bord gebracht -->
-
 Since String are not primitive types in Java, but actually objects, **they cannot be compared using the equality operator** `==`. Actually in this case you are comparing references and not the actual content of the objects.
+
+Take a look at the examples below to prove this.
+
+```java
+String hello = "Hello";       // Reference to new object in string pool
+String greeting = "Hello";    // Reference to same objects as hello in string pool
+
+System.out.println("hello == greeting ? " + (hello == greeting));
+  // true => because both references point to the same object
+
+String hi = new String("Hello");    // Does not make use of string pool
+                                    // forced as new object
+System.out.println("hello == hi ? " + (hello == hi));
+  // false => 2 different references to 2 objects with the same text inside
+
+String anotherHi = hi;    // Copies the reference and not the object itself
+System.out.println("anotherHi == hi ? " + (anotherHi == hi));
+  // true => because both references point to the same object
+```
+
+The resulting object diagram after all these statements is shown below.
+
+![String references](img/string_references.png)
+
+So in other words we cannot use the equality operator `==` to compare the actual content of objects. Only to check if the reference held by the variable points to the same object.
 
 To compare strings you need to use the `equals()` method as shown below.
 
@@ -244,5 +267,3 @@ if (name.equals("Jesus")) {
     System.out.println("Hi " + name);
 }
 ```
-
-Feel free to change the example and test it with the equality operator.
