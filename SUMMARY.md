@@ -38,6 +38,7 @@
 ### Strings
 
 * [Strings](07_strings/readme.md)
+* [Challenges](07_strings/challenges.md)
 
 ### Arrays
 
