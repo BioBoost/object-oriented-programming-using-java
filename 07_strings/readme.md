@@ -21,14 +21,14 @@ Java actually has two categories of data types:
 * **Primitive data types**: char, byte, short, int, long, double, float and boolean.
 * **Non-primitive data types**: String, ArrayList, Complex, Random, ...
 
-Primitive data types are simple and integrated in the language (they are most of the time keywords in the language itself). Non-primitive data types are actually classes. This means that when we use the String data type we are actually using objects of the class String. The cool thing about non-primitive data types is that we can create our own as we shall see later in this course.
+**Primitive data types are simple and integrated in the language** (they are most of the time keywords in the language itself). **Non-primitive data types are actually classes**. This means that when we use the String data type we are actually using objects of the class String. The cool thing about non-primitive data types is that we can create our own as we shall see later in this course.
 
 All you need to know at the moment about a class is the following:
 
 * A class is like a blueprint that is used to create objects from that class.
-* The name of a class, in this case `String`, **acts just as a data type**. This means that we can create variables of type `String`. Actually the variable points to **an object of that class**.
+* The **name** of a class, in this case `String`, **acts just as a data type**. This means that we can create variables of type `String`. Actually the variable points to **an object of that class**.
 * A class internally **contains data**, in the case of a `String` this is a sequence of characters.
-* A class **has methods**, which are like actions that can be requested from the objects create from the class.
+* A class **has methods**, which are like actions that can be requested from the objects created from the class.
 
 ## Creating Strings using Literals
 
@@ -45,7 +45,9 @@ When Java encounters a string literal in our code (`"Hello there. What a fascina
 
 ## The Java String pool
 
-Each time you create a String literal using the syntax shown in the following example, the JVM checks the "string pool" first. If the string already exists in the pool, a reference to the pooled object is returned. If the string doesn't exist in the pool, a new string object is created and placed in the pool. For example:
+Each time you create a String using the literal syntax shown in the following example, the JVM checks the **String Pool** first.
+
+The String Pool in Java is a pool of Strings stored in Java Heap Memory. When a String variable is created and assigned a value, the JVM searches the pool for a String of equal value. If found, the Java compiler will simply return a reference to the existing memory address, without allocating additional memory. If the string doesn't exist in the pool, a new string object is created and placed in the pool. For example:
 
 ```java
 String hello = "Hello World";
