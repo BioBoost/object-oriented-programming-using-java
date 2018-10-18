@@ -14,4 +14,4 @@ Want more of this? Check out [https://www.hackerrank.com/dashboard](https://www.
 * [Caesar Encryption](/hack_at_it/caesar_encryption/readme.md)
 * [Caesar Encryption](../hack_at_it/caesar_encryption/readme.md) -->
 
-{% page-ref page="hack_at_it/caesar_encryption/readme.md" %}
+{% page-ref page="./caesar_encryption/readme.md" %}
