@@ -47,6 +47,12 @@
 
 ----
 
+### Hack @ IT
+
+* [Hack @ IT](hack_at_it/readme.md)
+
+----
+
 ### Sources
 
 * [Sources](sources.md)
