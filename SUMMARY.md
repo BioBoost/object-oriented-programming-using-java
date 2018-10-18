@@ -53,6 +53,12 @@
 
 ----
 
+### Assignments
+
+* [Linear Equation](assignments/linear_equation/readme.md)
+
+----
+
 ### Sources
 
 * [Sources](sources.md)
