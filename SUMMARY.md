@@ -51,6 +51,7 @@
 
 * [Hack @ IT](hack_at_it/readme.md)
   * [Caesar Encryption](hack_at_it/caesar_encryption/readme.md)
+    * [Solution](hack_at_it/caesar_encryption/solution.md)
 
 ----
 
