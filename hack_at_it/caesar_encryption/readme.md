@@ -33,4 +33,4 @@ Wt{{~/u"~|/$wt/f~"{s/~u/Yp&p/'wt"t/'t/rp}/t}r") $/$wx}v#/{xzt/Kw$|{M/$pv#;/xu/7@
 
 ### Solution
 
-The solution can be found [here](caesar_encryption/solution.md).
+The solution can be found [here](solution.md).
