@@ -4,21 +4,61 @@
 
 ### Introduction to Computer Programming
 
-* [Introduction](01_introduction_to_computer_programming/readme.md)
-* [An Application](01_introduction_to_computer_programming/an_application.md)
-* [A Programming Language](01_introduction_to_computer_programming/a_programming_language.md)
-* [Levels of programming languages](01_introduction_to_computer_programming/levels_of_programming.md)
-* [Console and GUI](01_introduction_to_computer_programming/console_gui.md)
-* [How to become a programmer](01_introduction_to_computer_programming/how_to_become_programmer.md)
+* [Introduction to Computer Programming](01_introduction_to_computer_programming/readme.md)
 * [Challenges](01_introduction_to_computer_programming/challenges.md)
+* [Multiple Choice](01_introduction_to_computer_programming/multiple_choice.md)
+
+### Basic Building Blocks
+
+* [Basic Building Blocks](02_basic_building_blocks/readme.md)
+* [Challenges](02_basic_building_blocks/challenges.md)
 
 ### Starting in Java
 
-* [Introduction](02_starting_in_java/readme.md)
-* [Hello World](02_starting_in_java/hello_world.md)
-* [Hello World in Java](02_starting_in_java/hello_world_in_java.md)
-* [Comments](02_starting_in_java/comments.md)
-* [The main Method](02_starting_in_java/main_method.md)
-* [Terminal Output](02_starting_in_java/terminal_output.md)
-* [Escape Characters](02_starting_in_java/escape_characters.md)
-* [Challenges](02_starting_in_java/challenges.md)
+* [Starting in Java](03_starting_in_java/readme.md)
+* [Challenges](03_starting_in_java/challenges.md)
+* [Multiple Choice](03_starting_in_java/multiple_choice.md)
+
+### Storing and Processing Data
+
+* [Storing and Processing Data](04_storing_and_processing_data/readme.md)
+* [Challenges](04_storing_and_processing_data/challenges.md)
+
+### Making Decisions
+
+* [Making Decisions](05_making_decisions/readme.md)
+* [Challenges](05_making_decisions/challenges.md)
+* [Test Yourself](05_making_decisions/test_yourself.md)
+
+### Loop Constructs
+
+* [Loop Constructs](06_loop_constructs/readme.md)
+* [Challenges](06_loop_constructs/challenges.md)
+
+### Strings
+
+* [Strings](07_strings/readme.md)
+* [Challenges](07_strings/challenges.md)
+
+### Arrays
+
+* [Arrays](08_arrays/readme.md)
+* [Challenges](08_arrays/challenges.md)
+
+----
+
+### Hack @ IT
+
+* [Hack @ IT](hack_at_it/readme.md)
+
+----
+
+### Assignments
+
+* [Linear Equation](assignments/linear_equation/readme.md)
+
+----
+
+### Sources
+
+* [Sources](sources.md)

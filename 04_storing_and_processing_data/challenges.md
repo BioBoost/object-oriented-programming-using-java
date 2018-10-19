@@ -1,10 +1,31 @@
-## Challenges
+## Chapter 04 - Storing and processing data - Challenges
 
-### Challenge 1
+### Data Types
+
+In the most left column is a piece of data that is stored inside of the computers memory. What would be a possible data type for each piece of information? In some cases multiple data types would be valid.
+
+| Data | int | double | boolean | char | String |
+| --- | --- | --- | --- | --- | --- |
+| 128 | [] | [] | [] | [] | [] |
+| -12 | [] | [] | [] | [] | [] |
+| a | [] | [] | [] | [] | [] |
+| Hello World | [] | [] | [] | [] | [] |
+| 108.6 | [] | [] | [] | [] | [] |
+| true | [] | [] | [] | [] | [] |
+| Spoorwegstraat 12, 8200 Brugge | [] | [] | [] | [] | [] |
+| A | [] | [] | [] | [] | [] |
+| 0471 11 18 23 | [] | [] | [] | [] | [] |
+| 3.14 | [] | [] | [] | [] | [] |
+| x | [] | [] | [] | [] | [] |
+| ZZ Top | [] | [] | [] | [] | [] |
+| false | [] | [] | [] | [] | [] |
+| -778.81323 | [] | [] | [] | [] | [] |
+
+### Basic Division
 
 Determine the result of 2 divided by 3. Next try out 2.0 divided by 3.
 
-### Challenge 2
+### Floating Point Division
 
 Take the code below and execute it:
 
@@ -17,21 +38,21 @@ double result = a / b;
 
 How can you change only the last line to get a result of `2.5`?
 
-### Challenge 3
+### Remainder
 
 What is the remainder of 8759 divided by 33?
 
-### Challenge 4
+### Calculating VAT
 
-When buying a product in the store you always need to pay VAT. Take for example a pair of shoes that costs 100eur net, you actually pay 121eur.
+When buying a product in the store you always need to pay VAT (taxes). Take for example a pair of shoes that costs 100eur net, you actually pay 121eur.
 
 Write a program that calculates how much the total bill would be if the net amount is 250eur.
 
-### Challenge 5
+### Rectangle Area
 
-Determine the area of a rectangle with a side of 2.3cm and a side of 8.2cm. Make your program output a decent result to the user.
+Determine the area of a rectangle with a side of 2.3cm and a side of 8.2cm. Make your program outputs a decent result to the user.
 
-### Challenge 6
+### String Concatenation
 
 Take the code below and change the variable `fullText` to contain all partial strings before it.
 
@@ -44,3 +65,38 @@ String fullText;
 ```
 
 Print out the variable `fullText` so the whole message is shown to the user.
+
+## Circle Properties
+
+Write a Java program to determine the area and circumference of a circle. They can be calculated using the formulas below:
+
+```math
+area = radius x radius x pi
+circumference = 2 x radius x pi
+```
+
+Make sure all the variables are of type `double`.
+
+Print all the parameters to the terminal (radius, diameter, area and circumference) so the user had a nice overview. For example:
+
+```text
+Hello and welcome to the Circle Properties app.
+
+Properties of circle:
+- radius: 2.15 meters
+- diameter: 4.30 meters
+- circumference: 13.51 meters
+- area: 14.52 square meters
+
+Thank you for using the app.
+```
+You can create a variable to hold an approximation to the value of pi. However, Java can supply a more accurate version of PI. Can you find on the Internet how to access/use this value?
+
+### Concatenation and Addition
+
+Explain the difference in output between the following two lines of code:
+
+```java
+System.out.println("Berekening 1: " + 12 + 88);
+System.out.println("Berekening 2: " + (12 + 88));
+```
