@@ -29,7 +29,7 @@ Because the mathematical concept of a matrix can be represented as a two-dimensi
 
 ## One-Dimensional Arrays
 
-An array is a **container object** that holds a **fixed number of values** of a **single type** (all elements need to be of the same size in memory). The length of an array is established when the array is created. After creation, its length is fixed.
+An array is a **container object** that holds a **fixed number of values** of a **single type** (all elements need to be the same size in memory). The length of an array is established when the array is created. After creation, its length is fixed.
 
 ### Creating 1D arrays
 
@@ -41,7 +41,7 @@ A one-dimensional array is created using the following syntax template:
 
 where
 
-* `<type>` can be either a primitive (`int`, `double`, ...) or non-primitive (class) datatype.
+* `<type>` can be either a primitive (`int`, `double`, ...) or non-primitive datatype(class, such as `String` for example).
 * `<variable_name>` is the name of the variable that represents the array.
 * `<size>` is a positive integral value indicating how many elements the array consists of.
 
@@ -51,7 +51,7 @@ Notice the square brackets `[]` that declare this variable to be an array of ele
 >
 > It is also possible to create an array using the C++ syntax `<type> <variable_name>[];` where the square brackets are placed after the variable name. This style comes from the C/C++ language and was adopted in Java to accommodate C/C++ programmers. However placing the brackets with the type is the preferred way for Java programmers.
 
-The example code below shows how to declare and create an array of 10 integers:
+The example code below shows how to declare and create an array of `10` integers:
 
 ```java
 // Creating an array someNumbers with 10 elements of type integer.
@@ -83,7 +83,7 @@ Array elements can be accessed using the **index operator** `[]`, the element in
 <variable_name>[<index>];
 ```
 
-This syntax can both be used for **assign a value** to it as **accessing its current value**.
+This syntax can both be used for **assigning a value** to it as **accessing its current value**.
 
 Take the code example that follows. It creates an array `numbers` of 10 integers, where the elements are assigned the iterator value of the for loop.
 
@@ -102,7 +102,7 @@ This would result in the following array:
 
 ![Array of consecutive numbers](img/array_for_init.png)
 
-The following example stores 5 integers requested from the user. Once all numbers are inputted the total and average are reported back to the user.
+The following example stores 5 integers requested from the user. Once all numbers are inputted, the total and average are reported back to the user.
 
 ```java
 Scanner console = new Scanner(System.in);
@@ -163,11 +163,11 @@ int[] anArray = {
 };
 ```
 
-Here the length of the array is determined by the number of values provided between the curly braces `{}`.
+Here the length of the array is determined by the number of values provided between the curly braces `{}`. Note that it is also not needed to create an actual array object using the `new` operator. This is done automatically by Java for you.
 
 ## The length of an Array
 
-As mentioned before, the arrays created in Java are no primitive types. They can hold primitive types, but the array itself is an object. Objects have data and methods. One of the most used data members of an array is its `length`. By using it's length in the for loop condition, our code becomes cleaner and less prone to errors.
+As mentioned before, the arrays created in Java are no primitive types. While an array can hold primitive types, the array itself is an object. Objects have data and methods. One of the most used data members of an array is its `length`. By using it's length in the for loop condition, our code becomes cleaner and less prone to errors.
 
 So the earlier example:
 
@@ -199,7 +199,7 @@ Which makes it easier to change. If we now increase the array to `20` elements, 
 
 > **WARNING** - **Length is not a method**
 >
-> Do note that `length` is actually a data member of an array and not a method. That is why we do not add parentheses after `length`. This is important distinction to make.
+> Do note that `length` is actually a data member of an array and not a method, this compared to the `length()` method of a String. That is why we do not add parentheses after `length`. This is an important distinction to make.
 
 ## Foreach Loop
 
@@ -216,7 +216,7 @@ for (int i = 0; i < myList.length; i++) {
 System.out.println("Average = " + sum/5.0);
 ```
 
-The iteration variable `i` is just clutter. Furthermore, it is an opportunity for error. The iteration variable occurs four times in each loop: that is three chances to get it wrong. The foreach construct gets rid of the clutter and the opportunity for error. The foreach construct is a loop that iterates over a list/array and loops for each element inside of it. It follows the syntax shown next:
+The iteration variable `i` is just clutter. Furthermore, it is an opportunity for error. The iteration variable occurs four times in each loop: that is four chances to get it wrong. The foreach construct gets rid of the clutter and the opportunity for error. The **foreach construct** is a loop that **iterates over a list/array and loops for each element** inside of it. It follows the syntax shown next:
 
 ```java
 for (<type> <name_of_local_variable> : <name_of_array>) {
@@ -245,9 +245,9 @@ When you see the colon `:` read it as "in". The loop above reads as **"for each 
 
 ### Limitations of foreach loop
 
-So when should you use the for-each loop? Any time you can. It can make your code a lot more cleaner. Unfortunately, it cannot be used everywhere.
+So when should you use the foreach loop? Any time you can. It can make your code a lot more cleaner. Unfortunately, it cannot be used everywhere.
 
-Consider the situations listed below where a for-each loop cannot be used.
+Consider the situations listed below where a foreach loop cannot be used.
 
 **A foreach loop cannot be used if you wish to modify the array itself.** The local variable used with the foreach construct is a copy of the actual element in the array, so you are only changing the copy.
 
@@ -267,13 +267,13 @@ This also means that a foreach cannot be used to initialize an array or collecti
 ```java
 int[] values = {1, 5, 43, 2, 0};
 
-// Impossible to do with a for-each
+// Impossible to do with a foreach
 for (int i = values.length-1; i > 0; i--) {
     System.out.print(values[i] + " ");
 }
 ```
 
-**For-each loops are not useable when one must iterate over multiple collections/arrays at the same time.**
+**Foreach loops are not useable when one must iterate over multiple collections/arrays at the same time.**
 
 ```java
 int[] temperatures1 = { 23, 14, 144, 23, 44 };
@@ -294,7 +294,7 @@ These shortcomings were known by the designers, who made a conscious decision to
 A short summary on arrays in Java:
 
 * A Java array variable can also be declared like other variables with [] after the data type.
-* The variables in the array are ordered and each have an index beginning from 0.
+* The variables in the array are ordered and have an index beginning from 0.
 * The size of an array must be known when it is created. It cannot be changed after creation.
 * The size of an array must be specified by an integral value and not long or short.
-* Since arrays are objects in Java, we can find their length using member length. This is different from C/C++ where we find length using sizeof.
+* Since arrays are objects in Java, we can find their length using the data member `length`.
