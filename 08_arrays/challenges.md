@@ -34,6 +34,10 @@ Below is a list of the powers of from 0 till 15.
 
 Can you explain the last negative number if you increase the array to `32` numbers?
 
+### Search an Array
+
+Create an array of 100 random numbers. Now ask the user for a number and print **all** the indexes of where the number in the array can be found. Feel free to output the resulting array too.
+
 ### Frequency Table of Random Numbers
 
 Generate 1000 random numbers between `0` and `20`. Do not store the numbers themselves that were generated. Instead create a frequency table to store the number of times each value was generated.
