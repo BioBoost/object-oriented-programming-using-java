@@ -4,17 +4,20 @@ description: Applications often have to process lists of data. To store this inf
 
 # Chapter 08 - Arrays
 
-An array is a **data structure** consisting of a **collection of elements**, each identified by at least one array **index** or **key**. An array is stored so that the **position of each element can be computed from its index** by a mathematical formula. The simplest type of data structure is a linear array, also called **one-dimensional array**.
+An array is a **data structure** consisting of a **collection of elements**, each identified by at least one array **index** or **key**. An array is stored so that the **position of each element can be computed from its index** by a mathematical formula. The simplest type of data structure is a linear array, also called a **one-dimensional array**.
 
 > **INFO** - **Zero-based indexing**
 >
-> When information is stored in an array, individual elements are selected by an index that is usually a non-negative scalar integer. An index maps the array to the stored information. Most programming languages use **zero-based indexing** (index starts at 0). This leads to simpler implementation where the index refers to an offset from the starting position of an array, so the first element has an offset of zero.
+> When information is stored in an array, individual elements are selected by an index that is usually a non-negative scalar integer. An index maps the array to the stored information. Most programming languages use **zero-based indexing** (index starts at 0). This leads to a simpler implementation where the index refers to an offset from the starting position of an array, so the first element has an offset of zero.
 
-For example, an array of ten 32-bit (4 bytes) integer variables, with indices 0 through 9, may be stored as 10 words at memory addresses 2000, 2004, 2008, ... 2036, so that the element with index `i` has the address `2000 + 4 × i`. The memory address of the first element of an array is called first address or foundation address.
-
-Arrays are among the oldest and most important data structures, and are used by almost every program. They are also used to implement many other data structures, such as **lists** and **strings**. They effectively **exploit the addressing logic of computers**. In most modern computers and many external storage devices, the memory is a one-dimensional array of words, whose indices are their addresses.
+Arrays are among the oldest and most important data structures, and are used by almost every program. They are also used to implement many other data structures, such as **lists** and **strings**. They effectively **exploit the addressing logic of computers**.
 
 Arrays are useful mostly because the element indices can be computed at run time. Among other things, this feature allows a single iterative statement to process arbitrarily many elements of an array. For that reason, the elements of an array data structure are **required to have the same size** and **should use the same data representation**.
+
+Take for example the following array that stores 10 integers (4 bytes each). They are indexed from `0` to `9`.
+
+![Array of Integers](img/array_of_integers.png)
+
 
 Arrays are often used to implement tables, especially lookup tables; the word **table** is sometimes used as a synonym of array.
 
@@ -26,7 +29,7 @@ Because the mathematical concept of a matrix can be represented as a two-dimensi
 
 ## One-Dimensional Arrays
 
-An array is a **container object** that holds a **fixed number of values** of a **single type**. The length of an array is established when the array is created. After creation, its length is fixed.
+An array is a **container object** that holds a **fixed number of values** of a **single type** (all elements need to be of the same size in memory). The length of an array is established when the array is created. After creation, its length is fixed.
 
 ### Creating 1D arrays
 
