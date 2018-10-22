@@ -298,3 +298,87 @@ A short summary on arrays in Java:
 * The size of an array must be known when it is created. It cannot be changed after creation.
 * The size of an array must be specified by an integral value and not long or short.
 * Since arrays are objects in Java, we can find their length using the data member `length`.
+
+## Arrays of Strings
+
+If arrays need to have elements of the same size, then how can one create arrays of `String`, which can be of various types. Simple, because non-primitive types are referenced. This means that the array will not hold `String` elements, but **references to `String` elements**.
+
+Consider the example below that stores a list of funny catchphrases and outputs a random one to the user.
+
+```java
+String [] quotes = {
+  "The best thing about a boolean is even if you are wrong, you are only off by a bit.",
+  "Before software can be reusable it first has to be usable.",
+  "I think Microsoft named .Net so it wouldn’t show up in a Unix directory listing.",
+  "Without requirements or design, programming is the art of adding bugs to an empty text file.",
+  "There are two ways to write error-free programs; only the third one works.",
+  "Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the universe trying to produce bigger and better idiots. So far, the universe is winning.",
+  "Don’t worry if it doesn’t work right. If everything did, you’d be out of a job. ",
+  "There are only two kinds of programming languages: those people always bitch about and those nobody uses."
+};
+
+Random random = new Random();
+
+System.out.println("Here's a quote for you: "
+  + quotes[random.nextInt(quotes.length)]);
+```
+
+While each string has a difference length, the array actually stores references to `String` objects, so in other words the elements of the array are of equal size.
+
+## 2D Arrays
+
+2D arrays are declared by specifying a second pair of square brackets. Both when creating the array as for accessing the elements. The size for each dimension must also be specified.
+
+```java
+<type>[][] <variable_name> = new <type>[<size_dimension_1>][size_dimension_2];
+```
+
+Consider the following example which creates a 3x3 matrix to host the playfield of a tic-tac-toe game:
+
+```java
+char[][] playfield = new char[3][3];
+
+for (int r = 0; r < playfield.length; r++) {
+  for (int c = 0 ; c < playfield[r].length; c++) {
+    playfield[r][c] = '.';    // Initialize each field
+    System.out.print(playfield[r][c] + " ");
+  }
+  System.out.println("");
+}
+```
+
+Notice that we need a nested for loop to be able to traverse the 2D array. Also note how we get the length of the second dimension array inside the condition of the inner for loop.
+
+## Java Jagged Arrays
+
+Once you understand that a Java array can hold elements of references to non-primitive types, than it is not to hard to image that we can store references to other arrays inside an array elements. When you wish to create a matrix like array, you can use the previous array. However if the **sub-arrays are not of equal size**, you can assign each element a reference to another array. This is also **called a jagged array.**
+
+Example of a jagged array:
+
+```java
+int[][] jagged = new int[10][];
+
+for (int r = 0; r < jagged.length; r++) {
+  jagged[r] = new int[r+1];   // Create sub-array with size of r+1
+  System.out.print("[" + r + "]: ");
+  for (int c = 0 ; c < jagged[r].length; c++) {
+    System.out.print(".");
+  }
+  System.out.println("");
+}
+```
+
+Which would output:
+
+```text
+[0]: .
+[1]: ..
+[2]: ...
+[3]: ....
+[4]: .....
+[5]: ......
+[6]: .......
+[7]: ........
+[8]: .........
+[9]: ..........
+```
