@@ -55,3 +55,19 @@ Meaning value `0` was generated 7 times out of 1000 and value `1` was generated 
 Print the full frequency table after generating the 1000 numbers.
 
 What did you expect as outcome ? Try increasing the number of values you generate.
+
+### Sorting using Selection Sort
+
+Generate an array of 10 random numbers (with a value below 100 for example). Sort the randomly generated numbers of integers in ascending order. Search the Internet for "selection sort". You will find enough information and examples. Do no copy / paste code, try to implement it for yourself.
+
+Print the list of numbers before and after the sorting.
+
+Example:
+
+```text
+Creating an array of 10 numbers:
+54 6 2 66 99 31 1 0 87 44
+
+Sorting ascending:
+0 1 2 6 31 44 54 66 87 99
+```
