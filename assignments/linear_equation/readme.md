@@ -78,7 +78,3 @@ The x-intercept occurs for x = -0.61403
 Do not worry if the number of decimals after the floating point are a bit different.
 
 You can use the example above as a check for your program.
-
-## Solution
-
-The solution to this assignment can be found [here](solution.md).

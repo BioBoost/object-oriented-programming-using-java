@@ -57,7 +57,9 @@
 
 ### Assignments
 
+* [Number Characteristics](assignments/number_characteristics/readme.md)
 * [Linear Equation](assignments/linear_equation/readme.md)
+  * [Solution](assignments/linear_equation/solution.md)
 
 ----
 
