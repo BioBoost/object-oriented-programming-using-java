@@ -86,7 +86,7 @@ Another example:
 ```text
 Please enter a word to search for random vowel: asparagus
 
-Eurika!! I picked the random vowel 'a' and found it in "asparagus".
+Eureka!! I picked the random vowel 'a' and found it in "asparagus".
 ```
 
 ### Search in a String
@@ -128,4 +128,40 @@ over
 the
 lazy
 dog
+```
+
+### Secrets
+
+Create a variable called `secret` of type `String` an initialize it with a single word (choose it yourself). Display the secret to the user but do not show the actual letters. Show some symbol instead of each letter which you can pick for yourself. Show as much symbols as that there are letters.
+
+Now let the user guess for letters of the secret word. If the user finds a letter, display the secret again but this time with the guessed letter revealed.
+
+You are basically creating the core of a Hangman game here.
+
+Example:
+
+```text
+Hello and welcome to the Secret Word game.
+I have a word in mind of 5 letters. Can u guess it letter by letter?
+
+Secret: #####
+
+Guess a letter: y
+Sorry no match.
+Guess a letter: h
+Nice guess!
+Secret: h####
+Guess a letter: p
+Sorry no match.
+Guess a letter: e
+Nice guess!
+Secret: he###
+Guess a letter: l
+Nice guess!
+Secret: hell#
+Guess a letter: o
+Nice guess!
+Secret: hello
+
+Eureka!! You found my secret word.
 ```
