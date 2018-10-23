@@ -71,3 +71,14 @@ Creating an array of 10 numbers:
 Sorting ascending:
 0 1 2 6 31 44 54 66 87 99
 ```
+
+### 2D Array Summation
+
+Create a matrix of random integer values. Print it to the terminal together with the sum of each row and each columns in the format shown below.
+
+```text
+[ 1   5   16  ] 22
+[ 5   4   9   ] 18
+[ 3   1   0   ] 4
+  8   10  25
+```
