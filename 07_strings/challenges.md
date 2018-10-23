@@ -61,6 +61,34 @@ Please enter a word to check for palindrome: Radar
 The word "radar" reversed is "radar". This is a palindrome.
 ```
 
+### Check for Character
+
+Request a single word from the user. This can be accomplished using the `next()` method of `Scanner`.
+
+Now creating the following String variable inside your application:
+
+```java
+String vowels = "aeiou";
+```
+
+Next select a random vowel from the String. Search the word that was provided by the user and display an appropriate message to the user if the vowel was found inside the string provided by the user.
+
+Example:
+
+```text
+Please enter a word to search for random vowel: Banana
+
+I picked the random vowel 'u' and did not find it in "banana".
+```
+
+Another example:
+
+```text
+Please enter a word to search for random vowel: asparagus
+
+Eurika!! I picked the random vowel 'a' and found it in "asparagus".
+```
+
 ### Search in a String
 
 Create an application that requests a sentence from the user. Save the sentence in a String variable. Next check if the sentence contains a specific word. You can choose this word yourself. Check the String API for a method that allows you to search in a String.
