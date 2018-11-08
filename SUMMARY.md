@@ -47,6 +47,12 @@
 
 ----
 
+### Object Oriented Thinking
+
+* [Object Oriented Thinnking](https://vives.gitbook.io/oot/)
+
+---
+
 ### Hack @ IT
 
 * [Hack @ IT](hack_at_it/readme.md)
