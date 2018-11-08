@@ -49,7 +49,7 @@
 
 ### Object Oriented Thinking
 
-* [Object Oriented Thinnking](https://vives.gitbook.io/oot/)
+* [Object Oriented Thinking](https://vives.gitbook.io/oot/)
 
 ---
 
