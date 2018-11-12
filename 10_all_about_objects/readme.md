@@ -23,6 +23,7 @@ Take a look at the example below that creates a new instance of the `Random` cla
 // inside a variable called generator
 Random generator = new Random();
 ```
+
 The first part `Random generator` is actually the same syntax as used with a variable of a primitive type such as `int` or `double`. You first specify the type, in this case it is the **name of the class** instead of the primitive type, and next you choose a **name for your variable**.
 
 Similar to initializing a primitive variable, you can also split the **declaration** and **initialization** in two lines. However most often you will see this being done using a single line of code.
@@ -75,7 +76,7 @@ Random generator = new Random();
 for (int i = 0; i < 10; i++) {
   // Calling the nextInt() method on our generator
   // By supplying extra information via arguments,
-  // the method can use external data to adjust its behaviour
+  // the method can use external data to adjust its behavior
   int nextInt = generator.nextInt(100);
   System.out.print(nextInt + " ");
 }
@@ -107,7 +108,7 @@ System.out.print("Random numbers with SEED = " + 1337 + ":");
 for (int i = 0; i < 10; i++) {
   // Calling the nextInt() method on our generator
   // By supplying extra information via arguments,
-  // the method can use external data to adjust its behaviour
+  // the method can use external data to adjust its behavior
   System.out.print(" " + generator.nextInt(150));
 }
 ```
@@ -140,7 +141,7 @@ System.out.print("Random numbers with SEED = " + 1337 + ":");
 for (int i = 0; i < 10; i++) {
   // Calling the nextInt() method on our generator
   // By supplying extra information via arguments,
-  // the method can use external data to adjust its behaviour
+  // the method can use external data to adjust its behavior
   System.out.print(" " + generator.nextInt(150));
 }
 ```
