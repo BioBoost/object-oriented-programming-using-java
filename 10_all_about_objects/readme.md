@@ -32,7 +32,7 @@ Which will output 10 random values:
 15 81 20 81 16 13 73 24 52 37
 ```
 
-The first part `Rectangle livingRoom` or `Rectangle bedroom` is actually the same syntax as used with a variable of a primitive type such as `int` or `double`. You first specify the type, in this case it is the **name of the class** instead of the primitive type, and next you choose a **name for your variable**.
+The first part `Random generator` is actually the same syntax as used with a variable of a primitive type such as `int` or `double`. You first specify the type, in this case it is the **name of the class** instead of the primitive type, and next you choose a **name for your variable**.
 
 Similar to initializing a primitive variable, you can also split the **declaration** and **initialization** in two lines. However most often you will see this being done using a single line of code.
 
