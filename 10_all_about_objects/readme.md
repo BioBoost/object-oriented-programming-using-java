@@ -148,3 +148,63 @@ for (int i = 0; i < 10; i++) {
 While the previous code does exactly the same, it demonstrates that some classes posses multiple constructors, allowing us - as the user of the class - to select the constructor that suits our needs best. Always take a look at the documentation to see which constructors are available.
 
 Some classes only have constructors that have arguments. This means that an object cannot be created without outside information.
+
+## The ArrayList class
+
+While arrays allow us to store multiple items of a certain type in a single place they do have their limitations. The biggest one is that **an array has a predefined length that cannot be changed**. If you wish to add more items you need to create a new array and copy the items from the original array to the new array.
+
+This is where the `ArrayList` class comes in to play. It allows us to store items in a container without having to give the storage capacity beforehand. When items get added, the **size of the ArrayList is automatically increased**.
+
+Just as an array, an ArrayList is a **sequential list**. In other words, the order of the elements will not change.
+
+Its most important methods are:
+
+* `add(element)`, which appends the specified element to the end of this list.
+* `clear()`, which removes all the elements from the list.
+* `get​(int index)`, which retrieves the element at the given index. Comparable to the square brackets `[]` operators of the basic array.
+
+More information about the ArrayList class can be found at [https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html).
+
+While an ArrayList can be used to store primitive data types, they will not be stored as such in memory. When providing primitive data types to an ArrayList object, these primitive types will be **boxed** inside object of a class storing the primitive data type inside. In other words, an `int` will be stored inside of object of the class `Integer`.
+
+To let Java know what information to expect, the type needs to be specified when creating an ArrayList. The code fragment below shows an example of an ArrayList used to store randomly created integral values.
+
+```java
+Random generator = new Random();
+
+// Create an ArrayList object to store the integers
+ArrayList<Integer> randomNumbers = new ArrayList();
+
+for (int i = 0; i < 10; i++) {
+  randomNumbers.add(generator.nextInt(100));
+}
+
+// A for loop can be used to iterate over the ArrayList
+System.out.println("Some random numbers:");
+for (int i = 0; i < randomNumbers.size(); i++) {
+  System.out.print(randomNumbers.get(i) + " ");
+}
+```
+
+The above example can also be rewritten to use a foreach loop, which makes for cleaner code.
+
+```java
+Random generator = new Random();
+
+// Create an ArrayList object to store the integers
+ArrayList<Integer> randomNumbers = new ArrayList();
+
+for (int i = 0; i < 10; i++) {
+  randomNumbers.add(generator.nextInt(100));
+}
+
+// A foreach can also be used on an ArrayList
+System.out.println("Some random numbers:");
+for (int number : randomNumbers) {
+  System.out.print(number + " ");
+}
+```
+
+If you do not understand each line of code above, make sure to read the online documentation of the class and methods.
+
+The example above makes use of different classes and objects. It shows the actual power of object oriented programming. The instances of the different classes provide a certain functionality, accessible via the methods of the objects of those classes. The different objects interact with one another by sending messages to each other.
