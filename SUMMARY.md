@@ -56,9 +56,12 @@
 * [All About Objects](10_all_about_objects/readme.md)
 <!-- * [Challenges](10_all_about_objects/challenges.md) -->
 
-----
+### Creating Classes
 
----
+<!-- * [Creating Classes](11_creating_classes/readme.md) -->
+* [Challenges](11_creating_classes/challenges.md)
+
+----
 
 ### Hack @ IT
 
