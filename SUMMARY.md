@@ -61,6 +61,11 @@
 * [Defining Classes](11_defining_classes/readme.md)
 * [Challenges](11_defining_classes/challenges.md)
 
+### Methods
+
+* [Methods](12_methods/readme.md)
+<!-- * [Challenges](12_methods/challenges.md) -->
+
 ----
 
 ### Hack @ IT
