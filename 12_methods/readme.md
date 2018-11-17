@@ -221,9 +221,9 @@ public class DemoApplication {
 
 ### Naming your Methods
 
-Giving your methods a clear name is very important. Methods that have names like *doSomething*, *process*, *count*, ... have no meaning at all. A method should always have a name that says exactly what it is doing. Do not be afraid of longer method names (do however be sensible about it).
+Giving your methods a **clear name** is very important. Methods that have names like *doSomething*, *process*, *count*, ... have no meaning at all. A method should always have a name that **says exactly what it is doing**. Do not be afraid of longer method names (do however be sensible about it).
 
-There are some rules that are followed by all Java programmers concerning naming things. For methods the rules are:
+There are some rules that are followed by all Java programmers concerning naming things. For methods the **rules** are:
 
 * always start with a lowercase letter
 * don't place spaces, underscores or other special characters between words
@@ -237,4 +237,4 @@ Some good examples are (each is preceded with a variable containing a reference 
 * player.isAlive()
 * ...
 
-Method names should also reflect the result that they generate. For example `isAlive()` suggests that it returns a `boolean`, `getRadius()` suggests that it returns a `double`.
+Method names should also **reflect the result that they generate**. For example `isAlive()` suggests that it returns a `boolean`, `getRadius()` suggests that it returns a `double`. That does however not mean that you should name methods as `getRadiusAsDouble()`. Bad idea.
