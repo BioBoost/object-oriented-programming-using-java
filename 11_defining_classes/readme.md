@@ -141,11 +141,13 @@ It is also perfectly legal to initialize instance variables when declaring them 
 Public attributes can be accessed from outside of the object using the member operator `.`. This means that one can create a Point object and access the `x` and `y` attributes as shown in the following code snippet.
 
 ```java
-Point center = new Point();
-System.out.println("[" + center.x + ", " + center.y + "]");
-center.x = 15.66;
-center.y = -3.12;
-System.out.println("[" + center.x + ", " + center.y + "]");
+public static void main(String[] args) {
+  Point center = new Point();
+  System.out.println("[" + center.x + ", " + center.y + "]");
+  center.x = 15.66;
+  center.y = -3.12;
+  System.out.println("[" + center.x + ", " + center.y + "]");
+}
 ```
 
 Which outputs:
@@ -164,3 +166,73 @@ In its current state the `Point` class can be visualized using the class diagram
 ![Class diagram of Point](img/point_class.png)
 
 The second row of the class rectangle is this time populated with a list of attributes. Both attributes are `public` so they are preceded with a plus sign `+`.
+
+## Adding Behavior
+
+The nicest part about objects is that they can contain both data and behavior. This makes them standalone entities that have a state and a way to change that state using methods. 
+
+Consider the previous code example of the `Point` class.
+
+```java
+public static void main(String[] args) {
+  Point center = new Point();
+  System.out.println("[" + center.x + ", " + center.y + "]");
+  center.x = 15.66;
+  center.y = -3.12;
+  System.out.println("[" + center.x + ", " + center.y + "]");
+}
+```
+
+Would this code not be nicer if one could request from the center `Point` to print itself? This would lead to code that looks like this:
+
+```java
+public static void main(String[] args) {
+  Point center = new Point();
+  center.print();
+  center.x = 15.66;
+  center.y = -3.12;
+  center.print();
+}
+```
+
+A `print()` method would make a logical part of the class `Point`.
+
+### Adding a print method
+
+Adding a simple `print()` method to the `Point` class is not that hard. Custom methods can be added to a class by placing them between the curly braces of the class as shown next:
+
+```java
+class Point {
+  // Both x and y are attributes of the class Point
+  public double x = 0;
+  public double y = 0;
+
+  public void print() {
+    System.out.println("[" + x + ", " + y + "]");
+  }
+}
+```
+
+Most of the syntax shown previous will be explained in the next chapters. The only important things to notice here is that the method also needs to be made `public` if you wish to be able to call it from main.
+
+Another important this to note is that the `center.` notation is removed from the `x` and `y` variables inside the `println()` call. This is not needed anymore as we can access the attributes directly by their name when we are inside a method of that same class.
+
+Now the code below should output exactly the same as previously, but it is structured much more logically. All the data and behaviour of a point is encapsulated inside of the class `Point`.
+
+```java
+public static void main(String[] args) {
+  Point center = new Point();
+  center.print();
+  center.x = 15.66;
+  center.y = -3.12;
+  center.print();
+}
+```
+
+### UML Class Diagram of Point
+
+In its current state the `Point` class can be visualized using the class diagram shown below.
+
+![Class diagram of Point](img/point_class_with_print.png)
+
+The third row of the class rectangle is this time populated with a list of methods. The `print()` method is `public` so it is preceded with a plus sign `+`.
