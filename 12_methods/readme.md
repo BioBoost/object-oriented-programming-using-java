@@ -80,6 +80,8 @@ The main method is what is called the **entry point** of your application. It is
 
 Calling a method is not that hard. Actually you have already called a couple of methods without realizing it. To call a method you need to state it's name, supply the correct arguments and place parentheses around those arguments. Last but not least you need to place a semicolon `;` at the end.
 
+Important to note is that **methods are most of the time called on objects**. This means that we request an action from an object. This course will introduce some exceptions to this later.
+
 ### The println method
 
 Let us take a look at the `println` method you have been calling for some time.
