@@ -65,7 +65,15 @@ Notice the `public` keyword which is called an **access modifier**. An access mo
 * The **default Java access modifier**, which is declared **by not writing any access modifier at all**. This means that class can only be used by other resources included in the same package. This is why it is also often referred to as package access.
 * `public`, meaning that any other resource can make use of this class.
 
-### Creating Objects
+### UML Class Diagram of LightBulb
+
+In its current state the `LightBulb` class can be visualized using the class diagram shown below.
+
+![Start of a class diagram of LightBulb](img/light_bulb_class.png)
+
+The class shape in a class diagram consists of a rectangle with three rows. The top row contains the **name of the class**, the middle row contains the **attributes of the class** (the data of the objects), and the bottom section expresses the **methods and/or constructors** (the behavior) that the class has. In a class diagram, classes and subclasses are grouped together to show the relationship between objects of these classes.
+
+## Creating Objects
 
 To create objects from the `LightBulb` class one just needs to follow the object creation syntax:
 
@@ -88,15 +96,7 @@ Notice the similarity again with creating an object of the class `Random` or `Sc
 
 For the moment this is all the functionality that LightBulb has. Not much use for us like this.
 
-### UML Class Diagram of LightBulb
-
-In its current state the `LightBulb` class can be visualized using the class diagram shown below.
-
-![Start of a class diagram of LightBulb](img/light_bulb_class.png)
-
-The class shape in a class diagram consists of a rectangle with three rows. The top row contains the **name of the class**, the middle row contains the **attributes of the class** (the data of the objects), and the bottom section expresses the **methods and/or constructors** (the behavior) that the class has. In a class diagram, classes and subclasses are grouped together to show the relationship between objects of these classes.
-
-## Attributes
+## Adding Data
 
 Attributes hold the information and properties required by the object. They define the **data** that the object is holding or the state that it is in. Attributes are very similar to the variables that we already know. That is why we often also refer to attributes as **instance variables**, meaning variables of a class instance (aka object).
 
