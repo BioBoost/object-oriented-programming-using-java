@@ -245,3 +245,19 @@ In its current state the `Point` class can be visualized using the class diagram
 ![Class diagram of Point](img/point_class_with_print.png)
 
 The third row of the class rectangle is this time populated with a list of methods. The `print()` method is `public` so it is preceded with a plus sign `+`.
+
+## Access Modifiers - Data Hiding
+
+While perfectly legal, in most cases it is considered blasphemy to make attributes `public` unless they are `final`.
+
+> **INFO** - **Final (instance) variables**
+>
+> Final variables can only be assigned once. That means that they can only be initialized after which their value cannot be changed anymore. Variables and attributes can be made final by placing the keyword `final` before the data type.
+
+Why would one not make everything public and allow the user of the class access to everything? Because objects should NOT be able to directly change attributes of other objects. This is a necessity for two reasons: to **protect the user of the class** from himself and to **protect the class from the user**. *Things that are hidden cannot be misused*.
+
+Restricting access to attributes and certain methods is called **data hiding**. The attributes of a class should almost always be made private. A user of your class should never be able to change the inner properties directly from outside the class. If you allow users access to the inner workings of your objects they will misuse it. **Declaring an attribute as public breaks data hiding.**
+
+Then how can one than change the state of objects? Simple, by regulating the access to the state of the object using methods. This allows the developer of the class to place safeguards where needed.
+
+Take for example a class `Rectangle` which has a `width` and a `height` attribute. If these were public, there would be nothing to stop the user from assigning negative values to these attributes. This would be illogical. In many cases this can introduce bugs that the developer of the class never saw coming. By adding methods to set these attributes, the values can be checked for sanity.
