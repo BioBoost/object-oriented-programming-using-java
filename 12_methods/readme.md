@@ -238,3 +238,71 @@ Some good examples are (each is preceded with a variable containing a reference 
 * ...
 
 Method names should also **reflect the result that they generate**. For example `isAlive()` suggests that it returns a `boolean`, `getRadius()` suggests that it returns a `double`. That does however not mean that you should name methods as `getRadiusAsDouble()`. Bad idea.
+
+#### Methods that do not return a value and take no input
+
+The perfect example of a method that does not return a value and takes no input is the previous `print()` method of the class `Point`.
+
+```java
+class Point {
+  // Both x and y are attributes of the class Point
+  public double x = 0;
+  public double y = 0;
+
+  // A method called print
+  public void print() {
+    System.out.println("[" + x + ", " + y + "]");
+  }
+}
+```
+
+Notice that the return type is set to `void` - because the method actually **does not return anything**. It just prints some text to the terminal. Also notice that no arguments are needed as the method does not really need any data from outside of the method. It has all the data it requires (`x` and `y`).
+
+Calling this method inside your main would result in the following code:
+
+```java
+public static void main(String[] args) {
+  Point origin = new Point();
+  origin.print();
+}
+```
+
+First an object of the class `Point` is created. After which the method `print()` can be called on the object.
+
+Let us extend the `LightBulb` class and add a method that prints some information about the state of the bulb to the screen. A possible implementation is shown below.
+
+```java
+public class LightBulb {
+  // Attributes (instance variables) of the class
+  public boolean state = false;
+
+  // Method without return value and no arguments
+  public void print() {
+    if (state) {
+      System.out.println("Currently the light is turned on");
+    } else {
+      System.out.println("Currently the light is turned off");
+    }
+  }
+}
+```
+
+Take note on how the `state` attribute can be accessed inside the `print()` method. This is because the method is part of the class and can therefore access all the attributes of the `LightBulb`.
+
+To use this method, first an object needs to be instantiated upon which the method can be called. The method does not require any external data so it does not take any arguments. So the parentheses can be left empty.
+
+```java
+public static void main(String[] args) {
+    LightBulb kitchen = new LightBulb();
+    kitchen.print();
+    kitchen.state = true;
+    kitchen.print();
+}
+```
+
+which outputs:
+
+```text
+Currently the light is turned off
+Currently the light is turned on
+```
