@@ -414,7 +414,7 @@ Two ways to print the return value of the `getString()` are shown in the code ab
 >
 > Unless you have a good reason, it's most of the time a bad idea to place `System.out.println()` statements inside your custom classes. This limits their use. What if the user of your class wanted to format the output differently. If you decide to send it to the terminal directly instead of returning the actual String, you are limiting the capabilities of your classes.
 
-##### The toString method
+#### The toString method
 
 In Java every object that is created automatically gets a number of methods that are provided by the Java language. One of these methods is the `toString()` method which is **implicitly called when an object reference is placed inside a String context** as for example:
 
@@ -500,7 +500,7 @@ Resulting in the following UML class diagram:
 
 Notice how the return datatype of the `toString()` method is also specified in the UML diagram, in the same way as an attribute, by placing a colon `:` after the method and then stating the datatype (`String` in this case).
 
-#### Methods that take arguments and return nothing
+### Methods that take arguments and return nothing
 
 Almost all methods do some sort of processing based on data. This data can be the attributes encapsulated in the class itself or it can be external information that is **passed via arguments** to the method.
 
@@ -592,7 +592,7 @@ Private methods are often omitted from UML class diagrams as they are cannot be 
 
 Arguments of methods are placed between the parentheses following the same conventions of attributes, namely the *name* followed by a colon `:` and a *datatype*.
 
-##### A Dimmable LedLight
+#### A Dimmable LedLight
 
 Consider an advanced version of the previous `LightBulb` class, called `LedLight`. While still being a sort of light, this `LedLight` does not have an on/off state, but it has a brightness value.
 
