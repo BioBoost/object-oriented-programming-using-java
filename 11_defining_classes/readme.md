@@ -258,6 +258,6 @@ Why would one not make everything public and allow the user of the class access 
 
 Restricting access to attributes and certain methods is called **data hiding**. The attributes of a class should almost always be made private. A user of your class should never be able to change the inner properties directly from outside the class. If you allow users access to the inner workings of your objects they will misuse it. **Declaring an attribute as public breaks data hiding.**
 
-Then how can one than change the state of objects? Simple, by regulating the access to the state of the object using methods. This allows the developer of the class to place safeguards where needed.
+Then how can one than change the state of objects? Simple, by **regulating the access to the state of the object using methods**. This allows the developer of the class to place safeguards where needed.
 
 Take for example a class `Rectangle` which has a `width` and a `height` attribute. If these were public, there would be nothing to stop the user from assigning negative values to these attributes. This would be illogical. In many cases this can introduce bugs that the developer of the class never saw coming. By adding methods to set these attributes, the values can be checked for sanity.
