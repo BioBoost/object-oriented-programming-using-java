@@ -195,7 +195,7 @@ Is does not matter if you place methods before or after the attributes. The orde
 **Example below is wrong**, the method is inside the body of another method.
 
 ```java
-public class DemoApplication {
+public class Demo {
   public void someMethod() {
     public void anotherMethod() {
       // This is NOT OK!
