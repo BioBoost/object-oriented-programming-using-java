@@ -169,7 +169,7 @@ The second row of the class rectangle is this time populated with a list of attr
 
 ## Adding Behavior
 
-The nicest part about objects is that they can contain both data and behavior. This makes them standalone entities that have a state and a way to change that state using methods. 
+The nicest part about objects is that they **can contain both data and behavior**. This makes them **standalone entities** that have a state and a way to change that state using methods.
 
 Consider the previous code example of the `Point` class.
 
