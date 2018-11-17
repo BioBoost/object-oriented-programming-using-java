@@ -67,7 +67,15 @@ Notice the `public` keyword which is called an **access modifier**. An access mo
 
 ### Creating Objects
 
-To create objects from the `LightBulb` class one just needs to call the default constructor as shown below and save the reference to the new object inside a variable of the same type as the class.
+To create objects from the `LightBulb` class one just needs to follow the object creation syntax:
+
+```java
+<ClassName> <variable_name> = new <ClassName>();
+```
+
+With this a new object will be created of the class and a reference to it will be stored inside of the variable.
+
+Consider the example shown below for the `LightBulb` class. Here a new instance of the class is requested using the `new` keyword and a reference to it is stored inside of a variable called `kitchen`.
 
 ```java
 public static void main(String[] args) {
@@ -87,3 +95,83 @@ In its current state the `LightBulb` class can be visualized using the class dia
 ![Start of a class diagram of LightBulb](img/light_bulb_class.png)
 
 The class shape in a class diagram consists of a rectangle with three rows. The top row contains the **name of the class**, the middle row contains the **attributes of the class** (the data of the objects), and the bottom section expresses the **methods and/or constructors** (the behavior) that the class has. In a class diagram, classes and subclasses are grouped together to show the relationship between objects of these classes.
+
+## Attributes
+
+Attributes hold the information and properties required by the object. They define the **data** that the object is holding or the state that it is in. Attributes are very similar to the variables that we already know. That is why we often also refer to attributes as **instance variables**, meaning variables of a class instance (aka object).
+
+Just as variables, attributes can be of any primitive types or they can contain references to other objects. They also need a name which allows us to use refer to them inside the methods of the objects.
+
+Remember that Java knows the following primitive types:
+
+![Java Primitive data types](img/java_primitive_data_types.png)
+
+Different from a normal local variable, an attribute also requires an **access modifier** to specify who can access the attribute. This can be any of the following:
+
+* `public`: anyone can access the attribute - depicted with a plus sign `+` in UML.
+* The default Java access modifier, which is declared by not writing any access modifier at all. This means that attribute can only be used by other classes included in the same package. This is why it is also often referred to as package access. There is no equivalent sign in UML for this (leave empty).
+* `protected`: only the class itself or classes derived from this class can access the attributes - depicted with a hashtag `#` in UML. More on this later.
+* `private`: only the class itself can access the attribute - depicted with a minus sign `-` in UML.
+
+This leads to the following syntax template for adding attributes to a class:
+
+```java
+class <ClassName> {
+  // Attributes of the class
+  <access_modifier> <data_type> <attribute_name> = <init_value>;
+}
+```
+
+Notice how the access modifier is placed before the declaration of the instance variable.
+
+Consider the example below of a class Point that holds the two coordinate values of a point in a 2D space.
+
+```java
+class Point {
+  // Both x and y are attributes of the class Point
+  public double x = 0;
+  public double y = 0;
+}
+```
+
+As can be seen from the previous code snippet, the declaration of attributes is very similar to the declaration of local variables. They just need to be placed inside the curly braces of the class they belong to.
+
+It is also perfectly legal to initialize instance variables when declaring them. This can also be done inside the constructor as will be seen later on.
+
+Instance variables are initialized by Java to default values:
+
+* whole numbers (`integer`, `long`, `char`, ...) default to `0`
+* real numbers (`float` and `double`) default to `0.0`
+* `boolean` values default to `false`
+* object references default to `null`
+
+> **WARNING** - **Initialize Attributes**
+>
+> While Java makes sure that all variables and instance variables are initialized, it is most of the time a good idea to do it yourself. That way you will always think about which is a sane default value for each attribute. On top of that, it is a good habit as not every programming language will initialize variables for you, take C++ for example. Do always at least make sure to **initialize object references** as calling methods on `null` will crash your application.
+
+Public attributes can be accessed from outside of the object using the member operator `.`. This means that one can create a Point object and access the `x` and `y` variables as shown in the following code snippet.
+
+```java
+Point center = new Point();
+System.out.println("[" + center.x + ", " + center.y + "]");
+center.x = 15.66;
+center.y = -3.12;
+System.out.println("[" + center.x + ", " + center.y + "]");
+```
+
+Which outputs:
+
+```text
+[0.0, 0.0]
+[15.66, -3.12]
+```
+
+The previous example shows that the values of attributes can both be retrieved and changed from outside of the class if they are `public`.
+
+### UML Class Diagram of Point
+
+In its current state the `Point` class can be visualized using the class diagram shown below.
+
+![Class diagram of Point](img/point_class.png)
+
+The second row of the class rectangle is this time populated with a list of attributes. Both attributes are `public` so they are preceded with a plus sign `+`.
