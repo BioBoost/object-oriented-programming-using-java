@@ -162,3 +162,59 @@ The `nextInt()` method does not take any arguments, however you do need to place
 ### Java API
 
 A lot of information about all the methods that are available in Java can be found at the API website of Oracle: [https://docs.oracle.com/javase/10/docs/api/](https://docs.oracle.com/javase/10/docs/api/). Try to look up some information on the `Scanner` class and the methods that it has available.
+
+## Creating our own Methods
+
+A method should be kept **as small as possible** to **do a single task**. Often it is stated that a perfect method has no more than 5 lines of code. The shorter the method the easier it will be to understand what it is doing. However, as a beginning programmer this will be hard to achieve.
+
+A method will most often use some sort of input data, do some processing on it and return a result based on it's findings. The input data is often supplied using arguments passed to the method when it is called.
+
+![Methods](./img/method_processing.png)
+
+As stated before, arguments are very similar to a variable you create inside your main. They require both a **type** and a **name**. If you wish your method to take multiple arguments, you can separate them using a comma `,`. Important to note is that every argument needs a type, even if multiple arguments have the same type.
+
+### Where to place your own methods
+
+For the moment there are two places where we can place our own methods:
+
+* Inside our own classes such as `LightBulb` and `Point`.
+* Inside the application class where `main` resides. More on this later
+
+All methods need to be placed between the curly braces `{}` of the class itself. Make sure not to place methods inside the body of other methods. Some examples are shown below.
+
+```java
+public class Demo {
+  public void someMethod() {
+    // This is ok!
+  }
+}
+```
+
+Remember the `print()` method of the `Point` class in the previous chapter.
+
+```java
+class Point {
+  // Both x and y are attributes of the class Point
+  public double x = 0;
+  public double y = 0;
+
+  // A method called print
+  public void print() {
+    System.out.println("[" + x + ", " + y + "]");
+  }
+}
+```
+
+Is does not matter if you place methods before or after the attributes. The order of the methods has no influence. You can place them in any order inside the class body. A general rule is to place the things that a user of your class requires for using it at the top.
+
+**Example below is wrong**, the method is inside the body of another method.
+
+```java
+public class DemoApplication {
+  public void someMethod() {
+    public void anotherMethod() {
+      // This is NOT OK!
+    }
+  }
+}
+```
