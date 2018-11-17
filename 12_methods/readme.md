@@ -75,3 +75,88 @@ The main method is what is called the **entry point** of your application. It is
 > **INFO** - **Command Arguments**
 >
 > An example of arguments that are passed to an application can be seen in the command `git clone https://github.com/BioBoost/object-oriented-programming-using-java`. Here `git` is the name of the application. `clone` and `https://github.com/BioBoost/object-oriented-programming-using-java` are two arguments that are passed to the application so it can act upon this data.
+
+## Calling methods
+
+Calling a method is not that hard. Actually you have already called a couple of methods without realizing it. To call a method you need to state it's name, supply the correct arguments and place parentheses around those arguments. Last but not least you need to place a semicolon `;` at the end.
+
+### The println method
+
+Let us take a look at the `println` method you have been calling for some time.
+
+```java
+System.out.println("Hello and welcome to Java");
+```
+
+The actual name of the method here is `println`. The use of `System.out` is not important for the moment. The `println` method takes a single argument, namely a String that will be printed to the terminal.
+
+### The substring method of String
+
+Let us first take a look at an existing method of the `String` class called `substring`. The following information has been grabbed from the official Java API [https://docs.oracle.com/javase/10/docs/api/java/lang/String.html](https://docs.oracle.com/javase/10/docs/api/java/lang/String.html):
+
+```text
+public String substring(int beginIndex, int endIndex)
+
+Returns a new string that is a substring of this string. The substring begins at the specified beginIndex and extends to the character at index endIndex - 1. Thus the length of the substring is endIndex-beginIndex.
+
+Examples:
+ "hamburger".substring(4, 8) returns "urge"
+ "smiles".substring(1, 5) returns "mile"
+
+Parameters:
+  beginIndex - the beginning index, inclusive.
+  endIndex - the ending index, exclusive.
+
+Returns:
+  the specified substring.
+```
+
+A graphical representation of this method is shown below. The method can extract a piece of String from a larger String based on the start and end positions you provide the method. The method is called on an object of type `String`, in other words, the method belongs to the class `String`. Also note from the description of the method above that the method is `public` is therefor be used from outside of the `String` class.
+
+It takes two pieces of information as arguments (input data):
+
+* `beginIndex` (of type `int`) that provides the starting point from where the extraction should start
+* `endIndex` (of type `int`) that provides the ending point from where the extraction should stop
+
+![A Graphical Representation of substring](img/method_substring.png)
+
+The result of the method is again a value of type `String` that contains a part of the full string.
+
+To call the method we first need to create an object of type `String`. Next we need to provide the input data (arguments) required by the method to perform it's job. Last we need to save the result that the method returns. This is again a `String` reference.
+
+```java
+public static void main(String[] args) {
+  // We need a string object
+  String helloWorld = "Hello World!";
+
+  // Next we call the substring method on the String object and save the
+  // result inside another String
+  String hello = helloWorld.substring(0, 5);
+
+  // Now we can use the result from the method
+  System.out.println(hello);
+}
+```
+
+which will output:
+
+```text
+Hello
+```
+
+### The nextInt method of Scanner
+
+Another example is the Scanner method `nextInt()`. An example is shown below.
+
+```java
+Scanner console = new Scanner(System.in);
+
+System.out.print("Please enter a number: ");
+int number = console.nextInt();
+```
+
+The `nextInt()` method does not take any arguments, however you do need to place the empty parentheses behind its name. It does however return a value of type `int`. This can be assigned to a variable so it can be used later in our code.
+
+### Java API
+
+A lot of information about all the methods that are available in Java can be found at the API website of Oracle: [https://docs.oracle.com/javase/10/docs/api/](https://docs.oracle.com/javase/10/docs/api/). Try to look up some information on the `Scanner` class and the methods that it has available.
