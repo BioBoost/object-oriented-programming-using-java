@@ -223,3 +223,133 @@ Some good examples are (each is preceded with a variable containing a reference 
 * ...
 
 Method names should also **reflect the result that they generate**. For example `isAlive()` suggests that it returns a `boolean`, `getRadius()` suggests that it returns a `double`. That does however not mean that you should name methods as `getRadiusAsDouble()`. Bad idea.
+
+### Methods that do not return a value and take no input
+
+The perfect example of a method that does not return a value and takes no input is a method that prints something to to the terminal. For example a welcome message or instructions on how to use the application.
+
+```java
+public class Demo {
+  // Method without return value and no arguments
+  public void printWelcome() {
+    System.out.println("Hello and Welcome to this program.");
+    System.out.println("Here we print a simple message stating the purpose of the program.");
+    System.out.println("This application is made by none other than mister Java Himself.");
+  }
+}
+```
+
+Notice that the return type is set to `void` - because the method actually does not return anything. It just prints some text to the terminal. Also notice that no arguments are required as the method does not need any data from outside of the method.
+
+Calling this method inside your main would result in the following code:
+
+```java
+public static void main(String[] args) {
+  Demo demo = new Demo();
+  demo.printWelcome();
+}
+```
+
+First an object of the class `Demo` is created. After which the method can be called on the object.
+
+#### Turning the LightBulb on and off
+
+Returning to the `LightBulb` class, this can also be used to change the internal state of a class, in other words to turn the light on or off. More importantly, by adding `on()` and `off()` methods to the `LightBulb` class, the internal state of the class can be made `private`. This will make sure that we adhere to the data hiding principle.
+
+So the previous implementation:
+
+```java
+public class LightBulb {
+  // Attributes (instance variables) of the class
+  public boolean state = false;
+}
+```
+
+can be changed to:
+
+```java
+public class LightBulb {
+  // The methods of our class
+  public void on() {
+    state = true;
+  }
+
+  public void off() {
+    state = false;
+  }
+
+  // Attributes (instance variables) of the class
+  private boolean state = false;
+}
+```
+
+The attributes have been moved to the bottom of the class. It is common practice to place the things that the user of the requires first at the top of the class. Since the user of our `LightBulb` class should not interact with the internal `state` directly, it is placed at the bottom.
+
+To use these methods, first an object needs to be instantiated upon which the methods can be called. The methods do not require any external data so they do not take any arguments. The parentheses can therefore be left empty.
+
+An example application might be:
+
+```java
+public static void main(String[] args) {
+  LightBulb kitchen = new LightBulb();
+  kitchen.on();
+  kitchen.off();
+}
+```
+
+Now how can one check if the light is on or off. The `state` cannot be accessed directly from the main. The most elegant solution that can be provisioned at the moment is to add a method that prints the current state of the light to the terminal.
+
+```java
+public class LightBulb {
+  // The methods of our class
+  public void on() {
+    state = true;
+  }
+
+  public void off() {
+    state = false;
+  }
+
+  public void print() {
+    if (state) {
+      System.out.println("The light is turned on");
+    } else {
+      System.out.println("The light is turned off");
+    }
+  }
+
+  // Attributes (instance variables) of the class
+  private boolean state = false;
+}
+```
+
+Take note on how the `state` attribute can be accessed inside the `print()` method. This is because the method is part of the class and can therefore access all the attributes of the `LightBulb`, even the private ones.
+
+As a demo:
+
+```java
+public static void main(String[] args) {
+  LightBulb kitchen = new LightBulb();
+  kitchen.print();
+  kitchen.on();
+  kitchen.print();
+  kitchen.off();
+  kitchen.print();
+}
+```
+
+Which outputs:
+
+```text
+The light is turned off
+The light is turned on
+The light is turned off
+```
+
+The `on()` and `off()` methods are an elegant way of letting us control the internal state of the `LightBulb`. The code in main is also much cleaner. All behavior of the LightBulb is now nicely available through the `on()` and `off()` methods.
+
+At the moment the `LightBulb` class can be visualized in UML using the following class diagram:
+
+![UML Class Diagram of LightBulb](img/lightbulb_on_off.png)
+
+Notice how the attribute prefix has been changed to `-` to denote that the attribute has become `private.
