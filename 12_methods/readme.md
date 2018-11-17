@@ -353,3 +353,145 @@ At the moment the `LightBulb` class can be visualized in UML using the following
 ![UML Class Diagram of LightBulb](img/lightbulb_on_off.png)
 
 Notice how the attribute prefix has been changed to `-` to denote that the attribute has become `private.
+
+### Methods that return a value but take no input
+
+Most methods will have some sort of result that they want to share with the code that made the call to the method. It is stated that the method **returns a value**. This is achieved using the `return` keyword in Java followed by a value or the name of a variable or attribute.
+
+Methods can return a value without taking arguments. The most simple example would be the previous `print()` method of the class `LightBulb`. However instead of printing the message to the screen we could return it as a value allowing the code that calls the method to decide what to do with it (you could for example write it to a file, send it to a printer or put it into an html file).
+
+```java
+public class LightBulb {
+  // The methods of our class
+  public void on() {
+    state = true;
+  }
+
+  public void off() {
+    state = false;
+  }
+
+  public String getString() {
+    if (state) {
+      return "The light is turned on";
+    } else {
+      return "The light is turned off";
+    }
+  }
+
+  // Attributes (instance variables) of the class
+  private boolean state = false;
+}
+```
+
+Important to note is that the return type of the method needs to be changed from `void` to `String`.
+
+Once the interpreter encounters a return statement it returns the result from the method and jumps back to the place where the method is originally called. This example also shows that it is perfectly legal to have multiple return statements.
+
+The name of the method has also been changed from `print` to `getString`. This because the method does something else compared to the previous one, so it requires to be renamed.
+
+Calling this method inside your main would result in the following code:
+
+```java
+public static void main(String[] args) {
+  // With a variable to store the return value of the method
+  LightBulb kitchen = new LightBulb();
+  String result = kitchen.getString();
+  System.out.println(result);
+
+  // Or without a variable
+  System.out.println(kitchen.getString());
+}
+```
+
+Two ways to print the return value of the `getString()` are shown in the code above. A first stores the return value inside a variable and then prints the value of the variable. A second option consists of immediately passing the return value of `getString()` to the `println` method. Either way works. It is up to you as a developer to decide which of these two options to use.
+
+> **WARNING** - **Don't print inside Classes**
+>
+> Unless you have a good reason, it's most of the time a bad idea to place `System.out.println()` statements inside your custom classes. This limits their use. What if the user of your class wanted to format the output differently. If you decide to send it to the terminal directly instead of returning the actual String, you are limiting the capabilities of your classes.
+
+##### The toString method
+
+In Java every object that is created automatically gets a number of methods that are provided by the Java language. One of these methods is the `toString()` method which is **implicitly called when an object reference is placed inside a String context** as for example:
+
+```java
+public static void main(String[] args) {
+  LightBulb kitchen = new LightBulb();
+
+  // Here an implicit call to kitchen.toString() is made by Java
+  System.out.println(kitchen);
+
+  // You can explicitly call the toString() method
+  System.out.println(kitchen.toString());
+}
+```
+
+The Java `toString()` method is used when we need a `String` representation of an object. It is defined in the special class `Object`.
+
+For some classes that are part of the Java library, this method generates a sensible result. However custom classes created by ourselves return a cryptic text consisting of the name of the class and a hashed value of its internal state as shown below.
+
+```text
+exampleprogram.LightBulb@15db9742
+exampleprogram.LightBulb@15db9742
+```
+
+The result should be a concise but informative representation that is easy for a person to read. It is recommended that all classes override this method and add their own implementation.
+
+This can be achieved by adding the following method to your class (the method signature must be exact and the `override` annotation must also be present):
+
+```java
+@Override
+public String toString() {
+    return "Some String representation of your object";
+}
+```
+
+Of course the return statement `return "Some String representation of your object";` must be changed according to the representation you wish to return.
+
+For the `LightBulb` class we can actually refactor the `getString()` method to the `toString()` method. This will remove the need for the explicit method call in main.
+
+For example:
+
+```java
+public class LightBulb {
+  // The methods of our class
+  public void on() {
+    state = true;
+  }
+
+  public void off() {
+    state = false;
+  }
+
+  @Override
+  public String toString() {
+    if (state) {
+      return "The light is turned on";
+    } else {
+      return "The light is turned off";
+    }
+  }
+
+  // Attributes (instance variables) of the class
+  private boolean state = false;
+}
+```
+
+This allows our main to be refactored to:
+
+```java
+public static void main(String[] args) {
+    LightBulb kitchen = new LightBulb();
+    System.out.println(kitchen);
+    kitchen.on();         // Turn the light on
+    System.out.println(kitchen);
+    kitchen.off();         // Turn the light off
+    System.out.println(kitchen);
+}
+```
+
+Resulting in the following UML class diagram:
+
+![Adding a toString method to LightBulb](img/lightbulb_tostring.png)
+
+Notice how the return datatype of the `toString()` method is also specified in the UML diagram, in the same way as an attribute, by placing a colon `:` after the method and then stating the datatype (`String` in this case).
