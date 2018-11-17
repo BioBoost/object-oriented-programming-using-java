@@ -124,7 +124,7 @@ class <ClassName> {
 
 Notice how the access modifier is placed before the declaration of the instance variable.
 
-Consider the example below of a class Point that holds the two coordinate values of a point in a 2D space.
+Consider the example below of a class Point that holds the two coordinate values of a point in a 2D space. For now, the attributes are made accessible from the outside of the object declaring them public.
 
 ```java
 class Point {
@@ -134,22 +134,11 @@ class Point {
 }
 ```
 
-As can be seen from the previous code snippet, the declaration of attributes is very similar to the declaration of local variables. They just need to be placed inside the curly braces of the class they belong to.
+The declaration of attributes is very similar to the declaration of local variables. They just need to be placed inside the curly braces of the class they belong to.
 
-It is also perfectly legal to initialize instance variables when declaring them. This can also be done inside the constructor as will be seen later on.
+It is also perfectly legal to initialize instance variables when declaring them by assigning them a value. This will make sure that when an object of the class is created, the attributes have a valid value.
 
-Instance variables are initialized by Java to default values:
-
-* whole numbers (`integer`, `long`, `char`, ...) default to `0`
-* real numbers (`float` and `double`) default to `0.0`
-* `boolean` values default to `false`
-* object references default to `null`
-
-> **WARNING** - **Initialize Attributes**
->
-> While Java makes sure that all variables and instance variables are initialized, it is most of the time a good idea to do it yourself. That way you will always think about which is a sane default value for each attribute. On top of that, it is a good habit as not every programming language will initialize variables for you, take C++ for example. Do always at least make sure to **initialize object references** as calling methods on `null` will crash your application.
-
-Public attributes can be accessed from outside of the object using the member operator `.`. This means that one can create a Point object and access the `x` and `y` variables as shown in the following code snippet.
+Public attributes can be accessed from outside of the object using the member operator `.`. This means that one can create a Point object and access the `x` and `y` attributes as shown in the following code snippet.
 
 ```java
 Point center = new Point();
