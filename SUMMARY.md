@@ -58,7 +58,7 @@
 
 ### Creating Classes
 
-<!-- * [Creating Classes](11_creating_classes/readme.md) -->
+* [Creating Classes](11_creating_classes/readme.md)
 * [Challenges](11_creating_classes/challenges.md)
 
 ----
