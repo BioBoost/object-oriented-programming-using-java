@@ -190,22 +190,7 @@ public class Demo {
 }
 ```
 
-Remember the `print()` method of the `Point` class in the previous chapter.
-
-```java
-class Point {
-  // Both x and y are attributes of the class Point
-  public double x = 0;
-  public double y = 0;
-
-  // A method called print
-  public void print() {
-    System.out.println("[" + x + ", " + y + "]");
-  }
-}
-```
-
-Is does not matter if you place methods before or after the attributes. The order of the methods has no influence. You can place them in any order inside the class body. A general rule is to place the things that a user of your class requires for using it at the top.
+Is does not matter if you place methods before or after the attributes. The order of the methods has no influence. You can place them in any order inside the class body.
 
 **Example below is wrong**, the method is inside the body of another method.
 
