@@ -78,7 +78,7 @@ The class shape in a class diagram consists of a rectangle with three rows. The 
 To create objects from the `LightBulb` class one just needs to follow the object creation syntax:
 
 ```java
-<ClassName> <variable_name> = new <ClassName>();
+ClassName variableName = new ClassName();
 ```
 
 With this a new object will be created of the class and a reference to it will be stored inside of the variable.
@@ -92,15 +92,15 @@ public static void main(String[] args) {
 }
 ```
 
-Notice the similarity again with creating an object of the class `Random` or `Scanner`.
+Notice the similarity with creating an object of the class `Random` or `Scanner`.
 
 For the moment this is all the functionality that LightBulb has. Not much use for us like this.
 
 ## Adding Data
 
-Attributes hold the information and properties required by the object. They define the **data** that the object is holding or the state that it is in. Attributes are very similar to the variables that we already know. That is why we often also refer to attributes as **instance variables**, meaning variables of a class instance (aka object).
+Attributes hold the information and properties required by the object. They define the **data** that the object is holding or the state that it is in. Attributes are very similar to the variables that we already know. That is why attributes are also often referred to as **instance variables**, meaning variables of a class instance (aka object).
 
-Just as variables, attributes can be of any primitive types or they can contain references to other objects. They also need a name which allows us to use refer to them inside the methods of the objects.
+Just as variables, attributes can be of any primitive data type or they can contain references to other objects. They also need a name which allows them to be used inside the methods of the objects.
 
 Remember that Java knows the following primitive types:
 
@@ -116,15 +116,15 @@ Different from a normal local variable, an attribute also requires an **access m
 This leads to the following syntax template for adding attributes to a class:
 
 ```java
-class <ClassName> {
+class ClassName {
   // Attributes of the class
-  <access_modifier> <data_type> <attribute_name> = <init_value>;
+  <access_modifier> <data_type> attributeName = <init_value>;
 }
 ```
 
-Notice how the access modifier is placed before the declaration of the instance variable.
+Notice how the **access modifier is placed before the declaration** of the instance variable.
 
-Consider the example below of a class Point that holds the two coordinate values of a point in a 2D space. For now, the attributes are made accessible from the outside of the object declaring them public.
+Consider the example below of a class Point that holds the two coordinate values of a point in a 2D space. For now, the attributes are made accessible from the outside of the object declaring them `public`.
 
 ```java
 class Point {
@@ -159,16 +159,7 @@ Which outputs:
 
 The previous example shows that the values of attributes can both be retrieved and changed from outside of the class if they are `public`.
 
-The `LightBulb` class can also be extended by adding an attribute to it to keep its current state: on or off. The easiest choice here is an attribute called `state` of `boolean` type.
-
-```java
-public class LightBulb {
-  // Attributes (instance variables) of the class
-  public boolean state = false;
-}
-```
-
-### UML Class Diagrams of Point and LightBulb
+### UML Class Diagrams of Point
 
 In its current state the `Point` class can be visualized using the class diagram shown below.
 
@@ -176,11 +167,17 @@ In its current state the `Point` class can be visualized using the class diagram
 
 The second row of the class rectangle is this time populated with a list of attributes. Both attributes are `public` so they are preceded with a plus sign `+`.
 
-![Class diagram of LightBulb](./img/lightbulb_state.png)
+### UML Class Diagrams of Point
+
+In its current state the `Point` class can be visualized using the class diagram shown below.
+
+![Class diagram of Point](./img/point_class.png)
+
+The second row of the class rectangle is this time populated with a list of attributes. Both attributes are `public` so they are preceded with a plus sign `+`.
 
 ## Adding Behavior
 
-The nicest part about objects is that they **can contain both data and behavior**. This makes them **standalone entities** that have a state and a way to change that state using methods.
+The nicest part about objects is that they **can contain both data and behavior**. This makes them **standalone entities** that have a state and a way to change or act upon that state using methods.
 
 Consider the previous code example of the `Point` class.
 
@@ -225,9 +222,9 @@ class Point {
 }
 ```
 
-Most of the syntax shown previous will be explained in the next chapters. The only important things to notice here is that the method also needs to be made `public` if you wish to be able to call it from main.
+Most of the syntax shown previous will be explained in the next chapters. An important thing to notice here is that the method also needs to be made `public` if you wish to be able to call it from main.
 
-Another important thing to note is that the `center.` notation is removed from the `x` and `y` variables inside the `println()` call. This is not needed anymore as we can access the attributes directly by their name when we are inside a method of that same class.
+Another important thing to note is that the `center.` notation is removed from the `x` and `y` variables inside the `println()` call. This is not needed anymore as the attributes can be accessed directly by their name inside a method of that same class.
 
 Now the code below should output exactly the same as previously, but it is structured much more logically. All the data and behavior of a point is encapsulated inside of the class `Point`.
 
