@@ -40,9 +40,9 @@ The general structure of a method in Java looks like:
 * **access_modifier** - It defines the access type of the method (`public`, `protected` or `private`) and it defaults to package access if you specify none;
   
   * `public`: everyone can use the method - depicted with a plus sign `+` in UML.
-  * `protected`: only classes that inherit from this class can use the method - depicted with a hashtag `#` in UML. More on this later
-  * none specified - package access, meaning only other classes in the same package can call the method - there is no equivalent sign in UML for this (leave empty)
-  * `private`: the method can only be used inside the class itself - depicted with a minus sign `-` in UML. Most often private methods are excluded from the UML class diagram as they are of part of the inner workings of the class.
+  * none specified - package access, meaning only other classes in the same package can call the method - there is no equivalent sign in UML for this (leave empty).
+  * `protected`: only classes that inherit from this class can use the method - depicted with a hashtag `#` in UML. More on this later.
+  * `private`: the method can only be used inside the class itself - depicted with a minus sign `-` in UML. Most often private methods are excluded from the UML class diagram as they are part of the inner workings of the class.
 
 * **return_data_type** - A method **may or may not return a value** (a single result value of the method). This can be any of the data types used for variables (e.g. `int`, `double`, `char`, references to objects such as `String` and any other types, even arrays such as for example `int[]`). If no value is returned, the *return_data_type* should be set to `void`.
 
