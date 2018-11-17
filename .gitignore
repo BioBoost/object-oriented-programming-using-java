@@ -35,6 +35,10 @@ book.mobi
 # Ignore vscode files
 .vscode
 
+# Ignore Playground
+playground/
+Playground/
+
 # Netbeans projects
 /demo_hangman/code/HangmanTheGame/nbproject/private/
 /demo_hangman/code/HangmanTheGame/build/
