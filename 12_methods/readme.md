@@ -500,6 +500,37 @@ Resulting in the following UML class diagram:
 
 Notice how the return datatype of the `toString()` method is also specified in the UML diagram, in the same way as an attribute, by placing a colon `:` after the method and then stating the datatype (`String` in this case).
 
+#### Getters
+
+Methods that take no arguments and return a value are often used to provide read access to the internal state of objects. In this case these methods are often called **getters** while prefixed with `get....()`.
+
+Take for example the class `Point`. If its internal coordinates are kept private, they are inaccessible from the main. The `toString()` method is handy to print its coordinates to the terminal, but not really for further processing.
+
+It would be much more convenient if the coordinates were accessible via two methods: `getX()` and `getY()`. This is the common practice.
+
+```java
+class Point {
+
+  public void print() {
+    System.out.println("[" + x + ", " + y + "]");
+  }
+
+  public double getX() {
+    return x;
+  }
+
+  public double getY() {
+    return y;
+  }
+
+  // Both x and y are attributes of the class Point
+  private double x = 0;
+  private double y = 0;
+}
+```
+
+While the implementation of these methods is simplistic at most, they do provide access to the private internal values.
+
 ### Methods that take arguments and return nothing
 
 Almost all methods do some sort of processing based on data. This data can be the attributes encapsulated in the class itself or it can be external information that is **passed via arguments** to the method.
