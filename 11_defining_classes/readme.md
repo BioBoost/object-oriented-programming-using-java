@@ -2,7 +2,7 @@
 description: This chapter teaches how to create custom objects and classes.
 ---
 
-# Chapter 11 - Creating our own Classes
+# Chapter 11 - Defining our own Classes
 
 Creating custom classes is one of the main responsibilities of an object oriented programmer. As stated before, an application is a collection of objects that interact with each other. These objects are created based on a class developed by a programmer. If we wish to implement some functionality that is not yet available in the language or it is not exactly what we need, we are required to build it ourselves.
 

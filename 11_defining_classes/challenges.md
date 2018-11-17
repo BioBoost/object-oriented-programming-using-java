@@ -1,4 +1,8 @@
-## Chapter 11 - Creating Classes - Challenges
+# Chapter 11 - Defining our own Classes - Challenges
+
+## A Point Class
+
+## A Square Class
 
 ### Circle Properties
 

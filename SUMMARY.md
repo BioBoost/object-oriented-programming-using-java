@@ -56,10 +56,10 @@
 * [All About Objects](10_all_about_objects/readme.md)
 <!-- * [Challenges](10_all_about_objects/challenges.md) -->
 
-### Creating Classes
+### Defining Classes
 
-* [Creating Classes](11_creating_classes/readme.md)
-* [Challenges](11_creating_classes/challenges.md)
+* [Defining Classes](11_defining_classes/readme.md)
+* [Challenges](11_defining_classes/challenges.md)
 
 ----
 
