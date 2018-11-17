@@ -64,7 +64,7 @@
 ### Methods
 
 * [Methods](12_methods/readme.md)
-<!-- * [Challenges](12_methods/challenges.md) -->
+* [Challenges](12_methods/challenges.md)
 
 ----
 
