@@ -207,6 +207,7 @@ class Point {
   public double x = 0;
   public double y = 0;
 
+  // A method called print
   public void print() {
     System.out.println("[" + x + ", " + y + "]");
   }
