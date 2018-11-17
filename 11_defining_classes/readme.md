@@ -167,14 +167,6 @@ In its current state the `Point` class can be visualized using the class diagram
 
 The second row of the class rectangle is this time populated with a list of attributes. Both attributes are `public` so they are preceded with a plus sign `+`.
 
-### UML Class Diagrams of Point
-
-In its current state the `Point` class can be visualized using the class diagram shown below.
-
-![Class diagram of Point](./img/point_class.png)
-
-The second row of the class rectangle is this time populated with a list of attributes. Both attributes are `public` so they are preceded with a plus sign `+`.
-
 ## Adding Behavior
 
 The nicest part about objects is that they **can contain both data and behavior**. This makes them **standalone entities** that have a state and a way to change or act upon that state using methods.
