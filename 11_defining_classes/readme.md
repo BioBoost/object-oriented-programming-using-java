@@ -215,9 +215,9 @@ class Point {
 
 Most of the syntax shown previous will be explained in the next chapters. The only important things to notice here is that the method also needs to be made `public` if you wish to be able to call it from main.
 
-Another important this to note is that the `center.` notation is removed from the `x` and `y` variables inside the `println()` call. This is not needed anymore as we can access the attributes directly by their name when we are inside a method of that same class.
+Another important thing to note is that the `center.` notation is removed from the `x` and `y` variables inside the `println()` call. This is not needed anymore as we can access the attributes directly by their name when we are inside a method of that same class.
 
-Now the code below should output exactly the same as previously, but it is structured much more logically. All the data and behaviour of a point is encapsulated inside of the class `Point`.
+Now the code below should output exactly the same as previously, but it is structured much more logically. All the data and behavior of a point is encapsulated inside of the class `Point`.
 
 ```java
 public static void main(String[] args) {
