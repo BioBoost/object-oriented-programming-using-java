@@ -297,6 +297,8 @@ public static void main(String[] args) {
     kitchen.print();
     kitchen.state = true;
     kitchen.print();
+    kitchen.state = false;
+    kitchen.print();
 }
 ```
 
@@ -305,4 +307,54 @@ which outputs:
 ```text
 Currently the light is turned off
 Currently the light is turned on
+Currently the light is turned off
 ```
+
+Turning the light on or off requires us to change the internal state of the light and assigning it a `boolean` value. Would it not be nicer to have an `on()` and `off()` method to change the state of the light?
+
+The code below shows the implementation of `LightBulb` with both the methods `on()` and `off()`. Neither of these two methods return any data and neither require external data.
+
+```java
+public class LightBulb {
+  // Attributes (instance variables) of the class
+  public boolean state = false;
+
+  // Method without return value and no arguments
+  public void print() {
+    if (state) {
+      System.out.println("Currently the light is turned on");
+    } else {
+      System.out.println("Currently the light is turned off");
+    }
+  }
+
+  public void on() {
+      state = true;
+  }
+
+  public void off() {
+      state = false;
+  }
+}
+```
+
+The `on()` and `off()` methods are an elegant way of letting us control the internal state of the `LightBulb`.
+
+This allows us to refactor the main application to the following:
+
+```java
+public static void main(String[] args) {
+    LightBulb kitchen = new LightBulb();
+    kitchen.print();
+    kitchen.on();
+    kitchen.print();
+    kitchen.off();
+    kitchen.print();
+}
+```
+
+Much nicer and cleaner. All behavior of the LightBulb is now nicely available through the `on()` and `off()` methods.
+
+At the moment the `LightBulb` class can be visualized in UML using the following class diagram:
+
+![UML Class Diagram of LightBulb](img/lightbulb_on_off.png)
