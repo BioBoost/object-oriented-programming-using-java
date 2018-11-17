@@ -159,6 +159,15 @@ Which outputs:
 
 The previous example shows that the values of attributes can both be retrieved and changed from outside of the class if they are `public`.
 
+The `LightBulb` class can also be extended by adding an attribute to it to keep its current state: on or off. The easiest choice here is to add an attribute called `state` of `boolean` type.
+
+```java
+public class LightBulb {
+  // Attributes (instance variables) of the class
+  public boolean state = false;
+}
+```
+
 ### UML Class Diagrams of Point
 
 In its current state the `Point` class can be visualized using the class diagram shown below.
