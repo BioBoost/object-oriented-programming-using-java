@@ -1,17 +1,3 @@
-## Exercise 1 - Modeling an Advanced Light Bulb
-
-Take the example from the course of a LightBulb. Now think about a more advanced light bulb where you wish to keep track of the number of hours that it was on (it breaks for example after 10'000 hours). Instead of two states this lightbulb can be dimmed. How would you save that property? Create a UML diagram of this LEDBulb.
-
-## Exercise 2 - Circumference and area of a parallelogram
-
-Create a class that stores the base and height of a parallelogram.
-
-![Parallelogram](img/parallelogram.png)
-
-Add two methods to the class. One to determine the area and one to determine the circumference of the parallelogram.
-
-Make a small main program to show that the implementation works.
-
 ## Exercise 3 - A resistor model
 
 Create a class that simulates the behavior of a resistor. You should be able
