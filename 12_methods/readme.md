@@ -1,5 +1,5 @@
 ---
-description: Defining custom methods is a daily job an OOP programmer. This chapter introduces the basics of methods
+description: Defining custom methods is a daily job of an OOP programmer. This chapter introduces the basics of methods
 ---
 
 # Methods
@@ -90,11 +90,11 @@ Let us take a look at the `println` method you have been calling for some time.
 System.out.println("Hello and welcome to Java");
 ```
 
-The actual name of the method here is `println`. The use of `System.out` is not important for the moment. The `println` method takes a single argument, namely a String that will be printed to the terminal.
+The actual name of the method here is `println`. The use of `System.out` is not important for the moment. The `println` method takes a single argument, namely a String that will be printed to the terminal. This is information that is passed when the method is called. To be able to print something to the terminal, the `println` must know what to print.
 
 ### The substring method of String
 
-Let us first take a look at an existing method of the `String` class called `substring`. The following information has been grabbed from the official Java API [https://docs.oracle.com/javase/10/docs/api/java/lang/String.html](https://docs.oracle.com/javase/10/docs/api/java/lang/String.html):
+Take a look at a more complicated example of method of the class `String` called `substring`. The following information has been grabbed from the official Java API [https://docs.oracle.com/javase/10/docs/api/java/lang/String.html](https://docs.oracle.com/javase/10/docs/api/java/lang/String.html):
 
 ```text
 public String substring(int beginIndex, int endIndex)
@@ -175,9 +175,9 @@ As stated before, arguments are very similar to a variable you create inside you
 
 ### Where to place your own methods
 
-For the moment there are two places where we can place our own methods:
+For the moment there are two places where custom methods can be placed:
 
-* Inside our own classes such as `LightBulb` and `Point`.
+* Inside the classes you created such as `LightBulb` and `Point`.
 * Inside the application class where `main` resides. More on this later
 
 All methods need to be placed between the curly braces `{}` of the class itself. Make sure not to place methods inside the body of other methods. Some examples are shown below.
@@ -238,123 +238,3 @@ Some good examples are (each is preceded with a variable containing a reference 
 * ...
 
 Method names should also **reflect the result that they generate**. For example `isAlive()` suggests that it returns a `boolean`, `getRadius()` suggests that it returns a `double`. That does however not mean that you should name methods as `getRadiusAsDouble()`. Bad idea.
-
-#### Methods that do not return a value and take no input
-
-The perfect example of a method that does not return a value and takes no input is the previous `print()` method of the class `Point`.
-
-```java
-class Point {
-  // Both x and y are attributes of the class Point
-  public double x = 0;
-  public double y = 0;
-
-  // A method called print
-  public void print() {
-    System.out.println("[" + x + ", " + y + "]");
-  }
-}
-```
-
-Notice that the return type is set to `void` - because the method actually **does not return anything**. It just prints some text to the terminal. Also notice that no arguments are needed as the method does not really need any data from outside of the method. It has all the data it requires (`x` and `y`).
-
-Calling this method inside your main would result in the following code:
-
-```java
-public static void main(String[] args) {
-  Point origin = new Point();
-  origin.print();
-}
-```
-
-First an object of the class `Point` is created. After which the method `print()` can be called on the object.
-
-Let us extend the `LightBulb` class and add a method that prints some information about the state of the bulb to the screen. A possible implementation is shown below.
-
-```java
-public class LightBulb {
-  // Attributes (instance variables) of the class
-  public boolean state = false;
-
-  // Method without return value and no arguments
-  public void print() {
-    if (state) {
-      System.out.println("Currently the light is turned on");
-    } else {
-      System.out.println("Currently the light is turned off");
-    }
-  }
-}
-```
-
-Take note on how the `state` attribute can be accessed inside the `print()` method. This is because the method is part of the class and can therefore access all the attributes of the `LightBulb`.
-
-To use this method, first an object needs to be instantiated upon which the method can be called. The method does not require any external data so it does not take any arguments. So the parentheses can be left empty.
-
-```java
-public static void main(String[] args) {
-    LightBulb kitchen = new LightBulb();
-    kitchen.print();
-    kitchen.state = true;
-    kitchen.print();
-    kitchen.state = false;
-    kitchen.print();
-}
-```
-
-which outputs:
-
-```text
-Currently the light is turned off
-Currently the light is turned on
-Currently the light is turned off
-```
-
-Turning the light on or off requires us to change the internal state of the light and assigning it a `boolean` value. Would it not be nicer to have an `on()` and `off()` method to change the state of the light?
-
-The code below shows the implementation of `LightBulb` with both the methods `on()` and `off()`. Neither of these two methods return any data and neither require external data.
-
-```java
-public class LightBulb {
-  // Attributes (instance variables) of the class
-  public boolean state = false;
-
-  // Method without return value and no arguments
-  public void print() {
-    if (state) {
-      System.out.println("Currently the light is turned on");
-    } else {
-      System.out.println("Currently the light is turned off");
-    }
-  }
-
-  public void on() {
-      state = true;
-  }
-
-  public void off() {
-      state = false;
-  }
-}
-```
-
-The `on()` and `off()` methods are an elegant way of letting us control the internal state of the `LightBulb`.
-
-This allows us to refactor the main application to the following:
-
-```java
-public static void main(String[] args) {
-    LightBulb kitchen = new LightBulb();
-    kitchen.print();
-    kitchen.on();
-    kitchen.print();
-    kitchen.off();
-    kitchen.print();
-}
-```
-
-Much nicer and cleaner. All behavior of the LightBulb is now nicely available through the `on()` and `off()` methods.
-
-At the moment the `LightBulb` class can be visualized in UML using the following class diagram:
-
-![UML Class Diagram of LightBulb](img/lightbulb_on_off.png)
