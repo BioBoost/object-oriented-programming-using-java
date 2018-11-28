@@ -66,6 +66,11 @@
 * [Methods](12_methods/readme.md)
 * [Challenges](12_methods/challenges.md)
 
+### Constructors
+
+* [Constructors](13_constructors/readme.md)
+<!-- * [Challenges](13_constructors/challenges.md) -->
+
 ----
 
 ### Hack @ IT
