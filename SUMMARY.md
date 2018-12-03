@@ -86,6 +86,7 @@
 * [Number Characteristics](assignments/number_characteristics/readme.md)
 * [Linear Equation](assignments/linear_equation/readme.md)
   * [Solution](assignments/linear_equation/solution.md)
+* [LineSegment](https://github.com/oop-solutions-and-demos/oop1_assignment_linesegment-app-with-solution)
 
 ----
 
