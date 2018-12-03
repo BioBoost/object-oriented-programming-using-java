@@ -1,6 +1,6 @@
 # Multiple Choice Solutions
 
-## Introduction to Computer Programming
+## Chapter 01 - Introduction to Computer Programming
 
 | Question | Solution |
 | --- | --- |
@@ -13,9 +13,7 @@
 | 7 | A |
 | 8 | B |
 
-## Basic Building Blocks
-
-## Starting in Java
+## Chapter 03 - Starting in Java
 
 | Question | Solution |
 | --- | --- |
