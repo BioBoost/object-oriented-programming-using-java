@@ -64,3 +64,30 @@
     * [ ] an escape sequence
     * [ ] a statement
     * [ ] a method
+
+9. When we forget to place a curly brace than we create a ...
+
+    * [ ] bug
+    * [ ] runtime error
+    * [ ] syntax error
+    * [ ] system fault
+
+10. How do we call `\n`, `\t`, `\r` ?
+
+    * [ ] Insert characters
+    * [ ] Terminators
+    * [ ] Strings
+    * [ ] Escape characters
+
+11. How do we call a piece/line of code as shown below?
+
+    ```java
+    System.out.println("Single line of code here");
+    int number = 15;
+    double size = number * 3.3;
+    ```
+
+    * [ ] Decisions
+    * [ ] Statements
+    * [ ] Conditions
+    * [ ] Operators

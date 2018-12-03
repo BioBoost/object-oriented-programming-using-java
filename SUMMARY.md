@@ -12,6 +12,7 @@
 
 * [Basic Building Blocks](02_basic_building_blocks/readme.md)
 * [Challenges](02_basic_building_blocks/challenges.md)
+* [Multiple Choice](02_basic_building_blocks/multiple_choice.md)
 
 ### Starting in Java
 
@@ -23,12 +24,14 @@
 
 * [Storing and Processing Data](04_storing_and_processing_data/readme.md)
 * [Challenges](04_storing_and_processing_data/challenges.md)
+* [Multiple Choice](04_storing_and_processing_data/multiple_choice.md)
 
 ### Making Decisions
 
 * [Making Decisions](05_making_decisions/readme.md)
 * [Challenges](05_making_decisions/challenges.md)
 * [Test Yourself](05_making_decisions/test_yourself.md)
+* [Multiple Choice](05_making_decisions/multiple_choice.md)
 
 ### Loop Constructs
 
@@ -55,7 +58,6 @@
 ### All About Objects
 
 * [All About Objects](10_all_about_objects/readme.md)
-<!-- * [Challenges](10_all_about_objects/challenges.md) -->
 
 ### Defining Classes
 
@@ -70,7 +72,6 @@
 ### Constructors
 
 * [Constructors](13_constructors/readme.md)
-<!-- * [Challenges](13_constructors/challenges.md) -->
 
 ----
 

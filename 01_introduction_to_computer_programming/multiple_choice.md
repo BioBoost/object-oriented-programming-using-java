@@ -55,3 +55,19 @@
     * [ ] It's a console application
     * [ ] It's a background service
     * [ ] It's a browser application
+
+9. What is an algorithm?
+
+    * [ ] A number of solutions for a problem
+    * [ ] A mathematical list of steps
+    * [ ] A solution without loops
+    * [ ] An ordered sequence of steps to solve a problem
+
+10. What is missing in the cloud symbol in the middle?
+
+    ![Whats in the middle?](./img/cloud_in_middle.png)
+
+    * [ ] Compiler
+    * [ ] Assembler
+    * [ ] Language
+    * [ ] Interpreter

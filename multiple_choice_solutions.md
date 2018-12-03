@@ -12,6 +12,14 @@
 | 6 | C |
 | 7 | A |
 | 8 | B |
+| 9 | D |
+| 10 | A |
+
+## Chapter 02 - Basic Building Blocks
+
+| Question | Solution |
+| --- | --- |
+| 1 | C |
 
 ## Chapter 03 - Starting in Java
 
@@ -25,6 +33,28 @@
 | 6 | D |
 | 7 | A |
 | 8 | C |
+| 9 | C |
+| 10 | D |
+| 11 | B |
+
+## Chapter 04 - Storing and processing data
+
+| Question | Solution |
+| --- | --- |
+| 1 | D |
+| 2 | A |
+| 3 | C |
+| 4 | A |
+| 5 | D |
+
+## Chapter 05 - Making Decisions
+
+| Question | Solution |
+| --- | --- |
+| 1 | D |
+| 2 | B |
+| 3 | D |
+| 4 | A |
 
 ## Chapter 06 - Loop Constructs
 
