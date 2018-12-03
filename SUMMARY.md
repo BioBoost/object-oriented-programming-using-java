@@ -83,7 +83,7 @@
 
 ### Assignments
 
-* [Number Characteristics](assignments/number_characteristics/readme.md)
+* [Number Characteristics](https://github.com/oop-solutions-and-demos/oop1_assignment_number_characteristics-with-solution)
 * [Linear Equation](https://github.com/oop-solutions-and-demos/oop1_assignment_linear_equation-with-solution)
 * [LineSegment](https://github.com/oop-solutions-and-demos/oop1_assignment_linesegment-app-with-solution)
 
