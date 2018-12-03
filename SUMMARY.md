@@ -34,6 +34,7 @@
 
 * [Loop Constructs](06_loop_constructs/readme.md)
 * [Challenges](06_loop_constructs/challenges.md)
+* [Multiple Choice](06_loop_constructs/multiple_choice.md)
 
 ### Strings
 

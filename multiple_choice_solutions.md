@@ -25,3 +25,15 @@
 | 6 | D |
 | 7 | A |
 | 8 | C |
+
+## Chapter 06 - Loop Constructs
+
+| Question | Solution |
+| --- | --- |
+| 1 | B |
+| 2 | C |
+| 3 | B |
+| 4 | A |
+| 5 | C |
+| 6 | A |
+| 7 | D |
