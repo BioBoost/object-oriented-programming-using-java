@@ -53,3 +53,7 @@ For the exact details on the LABs, exams and tests you should take a look at the
 ## Extra practice
 
 While this course does contain a lot of exercises and things to try, you are encouraged to find extra practice or inspiration on the Internet. A good source is [https://www.sololearn.com/](https://www.sololearn.com/). SoloLearn has a large collection of FREE code learning content, from beginner to pro! Choose from thousands of programming topics to learn coding. They also host a heap of challenges. While most solutions are also available they have not been checked and approved by the teacher of this course. Be critical about the solutions and try to apply the things you have learned in this course.
+
+### License
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
