@@ -165,3 +165,31 @@ Secret: hello
 
 Eureka!! You found my secret word.
 ```
+
+### Decimal to Hex convertor
+
+Create a Java program that converts a decimal number (0 till 255) to hexadecimal number (0x00 to 0xFF). Only a single byte is required.
+
+Java has no native support for hexadecimal notation so you will need to create a String for the hexadecimal number. The easiest solution lies in the usage of the the division operator `/` and the modulo operator `%`.
+
+Example:
+
+```text
+This program can convert decimal numbers from 0 to 255 to a hexadecimal notation.
+
+Please input your decimal number (0 to 255): 288
+Sorry, cannot convert negative numbers or numbers greater than 255.
+Please input your decimal number (0 to 255): 16
+
+The number 16 in decimal notation is represented as 0x10 in hexadecimal notation.
+
+Thank you for using our software.
+```
+
+Characters can also be used in simple calculations as shown below:
+
+```java
+char a = 'a';
+
+System.out.println("The character after " + a + " is " + (char)(a+1) + ".");
+```
