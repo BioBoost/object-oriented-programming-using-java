@@ -249,3 +249,76 @@ This would not be possible as Java would not be able to differentiate between th
 ```java
 Rectangle top = new Rectangle(50, 50);           // 50x50 at [0, 0] or 1x1 at [50, 50] ??????
 ```
+
+## A Copy Constructor
+
+A copy constructor is a constructor that takes in an object of the same class. It uses this object to make a copy of its data into the object being initialized.
+
+A copy constructor is used to:
+
+* create a copy of an already existing object
+* initialize the new object from another one of the same type.
+
+The syntax for a copy constructor is quitte straight forward:
+
+```java
+public <classname>(<classname> original) {
+  // copy each attribute via other constructors or setters
+}
+```
+
+Since the copy constructor is part of the same class as the original object is instantiated of, it also has direct access to the private attributes.
+
+Take the previous `Point` class as an example:
+
+```java
+public class Point {
+  // Private properties (attributes)
+  private double x;
+  private double y;
+
+  // Constructor with arguments
+  public Point(double x, double y) {
+    this.x = x;
+    this.y = y;
+  }
+
+  // Default constructor (without arguments)
+  public Point() {
+    this(0, 0);
+  }
+
+  // Copy constructor
+  public Point(Point original) {
+    this(original.x, original.y);
+  }
+}
+```
+
+The example code below shows the difference between copying the reference to a `Point` object using `=` and creating an actual copy of the object in a separate instance using the copy constructor.
+
+```java
+public static void main(String[] args) {
+  // Creating an object of type Point
+  Point original = new Point(123, 23);
+  System.out.println("Original: " + original);
+
+  // This actually just creates a second
+  // reference to the same object
+  Point secondReference = original;
+  System.out.println("Reference copy: " + secondReference);
+
+  // Now let us make a real copy using the
+  // copy constructor of Point
+  Point copy = new Point(original);
+  System.out.println("Real copy: " + copy);
+}
+```
+
+Which would output something similar to:
+
+```text
+Original: Point@368239c8
+Reference copy: Point@368239c8
+Real copy: Point@9e89d68
+```
