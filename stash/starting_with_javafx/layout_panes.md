@@ -1,0 +1,1 @@
+![Layout Panes](img/layout_panes.png)
