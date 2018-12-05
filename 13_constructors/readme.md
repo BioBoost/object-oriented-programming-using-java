@@ -259,7 +259,7 @@ A copy constructor is used to:
 * create a copy of an already existing object
 * initialize the new object from another one of the same type.
 
-The syntax for a copy constructor is quitte straight forward:
+The syntax for a copy constructor is quite straight forward:
 
 ```java
 public <classname>(<classname> original) {
