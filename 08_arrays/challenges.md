@@ -72,6 +72,32 @@ Sorting ascending:
 0 1 2 6 31 44 54 66 87 99
 ```
 
+### Swapping Values
+
+Often when reordering elements in an array (for example when sorting) two values need to be swapped places.
+
+Take the following piece of code and write some code below the first `for` loop to swap the first and the last elements of the `values` array. In other words the arrays should contain the following values after swapping the elements: `3, 2, 1`.
+
+```java
+public static void main(String[] args) {
+  // Array with 3 values
+  int[] values = { 1, 2, 3 };
+
+  System.out.println("Original array:");
+  for (int i = 0; i < values.length; i++) {
+    System.out.print(values[i] + " ");
+  }
+
+  // Write some code here to swap
+  // the first and the last element of the array
+
+  System.out.println("\n\nAltered array:");
+  for (int i = 0; i < values.length; i++) {
+    System.out.print(values[i] + " ");
+  }
+}
+```
+
 ### 2D Array Summation
 
 Create a matrix of random integer values. Print it to the terminal together with the sum of each row and each columns in the format shown below.
