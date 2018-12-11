@@ -9,6 +9,35 @@ Normal version: The quick brown fox jumps over the lazy dog
 Uppercase version: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
 ```
 
+### Character Range
+
+A character (`char` datatype in Java) in most programming languages is nothing but a number. The first 128 character representations are called the ASCII values (ASCII stands for American Standard Code for Information Interchange). So an ASCII code is the numerical representation of a character such as 'a' or '@'. Below is a list of these values.
+
+![ASCII Codes, source: http://www.lookuptables.com 2010](img/ascii_codes.png)
+
+The code below requests a single character from the user. It checks if the inputted character is a lowercase alphabet letter. Expand the code so it also states if the character is a capital letter or a number. Characters can be compared just as numbers.
+
+Take a good look at how the comparison is applied to a character datatype. Also note the difference between `1` which is the number and `'1'` which is the character.
+
+```java
+Scanner console = new Scanner(System.in);
+
+System.out.print("Please input a single character: ");
+char character = console.next().charAt(0);
+
+System.out.print("\nThe character " + character + " is a ");
+if (character >= 'a' && character <= 'z') {
+  System.out.println("lowercase letter");
+}
+```
+
+Example output:
+
+```text
+Please input a single character: 1
+The character 1 is a number
+```
+
 ### Reading the Users Name
 
 Ask the user of your application for his/her name and store this data inside a String variable. Output a personalized message.
