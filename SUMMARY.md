@@ -80,7 +80,7 @@
 * [Hack @ IT](hack_at_it/readme.md)
 * [Caesar Encryption](hack_at_it/caesar_encryption/readme.md)
   * [Solution](hack_at_it/caesar_encryption/solution.md)
-* [Complex Numbers](hack_at_it/complex_numbers/readme.md)
+* [Complex Numbers](https://github.com/oop-solutions-and-demos/oop1_challenge_complex-app)
 
 ----
 
