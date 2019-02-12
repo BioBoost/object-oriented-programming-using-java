@@ -98,6 +98,12 @@
 
 ----
 
+### Videos
+
+* [Videos](videos.md)
+
+----
+
 ### Sources
 
 * [Sources](sources.md)
