@@ -81,6 +81,12 @@
 
 ----
 
+### Hands On
+
+* [Hands on MQTT](30_hands_on_mqtt/readme.md)
+
+----
+
 ### Hack @ IT
 
 * [Hack @ IT](hack_at_it/readme.md)
