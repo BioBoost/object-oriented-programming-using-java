@@ -145,6 +145,20 @@ public interface IMQTTMessageHandler {
 
 ### Usage
 
+Before starting with the MQTT client, you will need to add the Paho MQTT library as a dependency to your maven project. This can be accomplished by adding the following underneath the `project` tag inside of the `pom.xml` file:
+
+```xml
+<project>
+    <dependencies>
+        <dependency>
+            <groupId>org.eclipse.paho</groupId>
+            <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
+            <version>1.2.0</version>
+        </dependency>
+    </dependencies>
+</project>
+```
+
 Now you can create a new MQTT client:
 
 ```java
