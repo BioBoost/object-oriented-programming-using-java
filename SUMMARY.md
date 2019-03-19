@@ -84,6 +84,7 @@
 ### Hands On
 
 * [Hands on MQTT](30_hands_on_mqtt/readme.md)
+* [Hands on GSON](31_hands_on_gson/readme.md)
 
 ----
 
