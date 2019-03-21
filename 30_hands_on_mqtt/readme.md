@@ -12,171 +12,89 @@ This chapter is currently linking to MQTT Essentials by HiveMQ [https://www.hive
 
 ## Simple MQTT Client Library
 
-Not finished yet. Requires more documentation and Java files should be placed inside of library.
+To start using the `SimpleMQTTClient` class, you first need to add the library as a dependency to your project.
 
-### A Simple MQTT Client
-
-Place the following code in a file called `SimpleMQTTClient.java`. Make sure to change the package declaration to suit your own project.
-
-```java
-package be.vives.bug.javafx.mqtt;
-
-import java.util.HashMap;
-import java.util.Random;
-import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
-import org.eclipse.paho.client.mqttv3.MqttCallback;
-import org.eclipse.paho.client.mqttv3.MqttClient;
-import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
-import org.eclipse.paho.client.mqttv3.MqttException;
-import org.eclipse.paho.client.mqttv3.MqttMessage;
-import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
-
-public class SimpleMQTTClient implements MqttCallback {
-    private MqttClient client;
-    private String broker = "tcp://mqtt.labict.be:1883";
-    private String clientId;
-    private int qos = 2;            // Exactly once
-    private MemoryPersistence persistence;
-    private MqttConnectOptions connectionOptions;
-    private HashMap<String, IMQTTMessageHandler> subscriptions;
-
-    public SimpleMQTTClient(String clientId) {
-      subscriptions = new HashMap<>();
-      Random random = new Random();
-      this.clientId = clientId + random.nextInt();
-      setupMqtt();
-    }
-
-    public SimpleMQTTClient() {
-      this("guest");
-    }
-
-    private void setupMqtt() {
-      try {
-        persistence = new MemoryPersistence();
-        client = new MqttClient(broker, clientId, persistence);
-        connectionOptions = new MqttConnectOptions();
-        connectionOptions.setCleanSession(true);
-        client.connect(connectionOptions);
-        client.setCallback(this);
-      } catch(MqttException me) {
-        System.out.println("Failed to connect to broker");
-        System.out.println("reason " + me.getReasonCode());
-        System.out.println("msg " + me.getMessage());
-        System.out.println("loc " + me.getLocalizedMessage());
-        System.out.println("cause " + me.getCause());
-        System.out.println("excep " + me);
-        me.printStackTrace();
-      }
-    }
-
-    public void publish(String message, String topic) {
-      try {
-        MqttMessage mqttMessage = new MqttMessage(message.getBytes());
-        mqttMessage.setQos(qos);
-        client.publish(topic, mqttMessage);
-      } catch (MqttException me) {
-        System.out.println("Failed to publish message");
-        System.out.println(me);
-      }
-    }
-
-    public void subscribe(String topic, IMQTTMessageHandler handler) {
-      try {
-        client.subscribe(topic);
-        subscriptions.put(topic, handler);
-      } catch(MqttException me) {
-        System.out.println("Failed to connect to broker");
-        System.out.println("reason " + me.getReasonCode());
-        System.out.println("msg " + me.getMessage());
-        System.out.println("loc " + me.getLocalizedMessage());
-        System.out.println("cause " + me.getCause());
-        System.out.println("excep " + me);
-        me.printStackTrace();
-      }
-    }
-
-    public void disconnect() {
-      try {
-        client.disconnect();
-        client.close();
-      } catch (MqttException me) {
-        System.out.println("Failed to disconnect");
-        System.out.println(me);
-      }
-    }
-
-    @Override
-    public void connectionLost(Throwable thrwbl) {
-      System.out.println("Lost connection with broker");
-    }
-
-    @Override
-    public void messageArrived(String topic, MqttMessage mm) throws Exception {
-      IMQTTMessageHandler handler = subscriptions.get(topic);
-      if (handler != null) {
-        handler.messageArrived(topic, mm.toString());
-      } else {
-        System.out.println("No handler for topic " + topic);
-      }
-    }
-
-    @Override
-    public void deliveryComplete(IMqttDeliveryToken imdt) {
-    }
-}
-```
-
-### A Message Handler Interface
-
-Place the following code in a file called `IMQTTMessageHandler.java`. Make sure to change the package declaration to suit your own project.
-
-```java
-package be.vives.bug.javafx.mqtt;
-
-/**
- *
- * @author BioBoost
- */
-public interface IMQTTMessageHandler {
-    public void messageArrived(String topic, String message);
-}
-```
-
-### Usage
-
-Before starting with the MQTT client, you will need to add the Paho MQTT library as a dependency to your maven project. This can be accomplished by adding the following underneath the `project` tag inside of the `pom.xml` file:
+Do this by first adding the JitPack repositories to your `pom.xml` file:
 
 ```xml
 <project>
-    <dependencies>
-        <dependency>
-            <groupId>org.eclipse.paho</groupId>
-            <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
-            <version>1.2.0</version>
-        </dependency>
-    </dependencies>
-</project>
+  ...
+  <repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+  </repositories>
 ```
 
-Now you can create a new MQTT client:
+and then by adding the library itself as a dependency to the same `pom.xml` file.
+
+```xml
+<project>
+  ...
+  <dependencies>
+    ...
+    <dependency>
+        <groupId>com.github.BioBoost</groupId>
+        <artifactId>java_simple_mqtt_client</artifactId>
+        <version>0.1.2</version>
+    </dependency>
+```
+
+Now you should be able to import the classes into your application:
+
+```java
+import be.biosplanet.bioboost.mqtt.simple_mqtt_client.*;
+```
+
+### A Simple MQTT Client
+
+The UML class diagram of the `SimpleMQTTClient` class is shown below:
+
+![UML Class Diagram of SimpleMQTTClient](./img/simple_mqtt_client.png)
+
+To create a SimpleMQTTClient object, you can use any of the given contructors. The ones without a `broker` will automatically connect to `mqtt.labict.be`.
+
+For example using the default constructor:
 
 ```java
 SimpleMQTTClient client = new SimpleMQTTClient();
 ```
 
-Publishing messages to a topic:
+From this point on messages can be easily published to a given topic:
 
 ```java
-client.publish("Hello world from Java", "test/oop2/hello_world");
-  // Message: "Hello world from Java"
+client.publish("test/oop2/hello_world", "Hello world from Java");
   // Topic: "test/oop2/hello_world"
+  // Message: "Hello world from Java"
 ```
 
-Subscribing to incoming messages from a topic:
+### A Message Handler Interface
+
+When subscribing to a topic, the client needs to know where to redirect the received messages. This is handled using an interface called `IMQTTMessageHandler`. Implementing the `messageArrived` method in your own classes, allows your objects to be registered as message receivers.
+
+You can pass an object of a class that implements the `IMQTTMessageHandler` explicitly, for example an `FXMLController`:
 
 ```java
-client.subscribe("test/oop2/incoming", new IMQTTMessageHandler(){
+public class FXMLController implements Initializable, IMQTTMessageHandler {
+  // ...
+
+  @Override
+  public void initialize(URL url, ResourceBundle rb) {
+    client.subscribe("test/oop2/bug/health", this);
+  }
+
+  @Override
+  public void messageArrived(String topic, String message) {
+    System.out.println("Received message " + message + " on topic " + topic);
+  }
+}
+```
+
+Or you can use an anonymous inner class object:
+
+```java
+client.subscribe("test/oop2/hello_world", new IMQTTMessageHandler() {
   @Override
   public void messageArrived(String topic, String message) {
     System.out.println("Received message " + message + " on topic " + topic);
