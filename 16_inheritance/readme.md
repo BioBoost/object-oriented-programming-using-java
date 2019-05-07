@@ -24,6 +24,12 @@ The third approach is to create a new class as a subtype of an existing class. Y
 
 These three approaches are important cornerstones of an object oriented programming language.
 
+## Introducing Inheritance
+
+Inheritance allows a class to inherit (get) the properties and methods of another class. In other words, the **subclass** inherits the state and behavior from the **base class**. The subclass is also called the **derived class** while the base class is also known as the **super-class**. The derived classes can add their own additional attributes and methods. These additional attributes and methods differentiate the derived classes from the base class.
+
+A super-class can have any number of subclasses. In Java a subclass can have only one superclass.
+
 ## Vehicle Example
 
 Consider a first example that models the classes `Truck`, `Racecar` and `Bus`. Each have a number of attributes and some methods. Below is a partial UML class diagram of the classes modeled without the use of inheritance. Each class has the full functionality implemented into the class itself.
