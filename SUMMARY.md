@@ -73,6 +73,10 @@
 
 * [Constructors](13_constructors/readme.md)
 
+### Exceptions
+
+* [Exceptions](14_exceptions/readme.md)
+
 ----
 
 ### Starting with JavaFX
