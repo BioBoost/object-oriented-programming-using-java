@@ -75,3 +75,25 @@ Now taking a closer look at the classes, something can be noticed. Does a game h
 Actually the class `Product` is not entirely accurate after games came into play. While each computer hardware product does have a model and brand, software and games do not. Basically we need to add a class `Hardware` which inherits from the `Product` class. Then our hardware products can inherit from `Hardware` and implicitly also from `Product`, while `Game` directly inherits from `Product`.
 
 ![Adding a Hardware class](img/computer_store_with_hardware.png)
+
+## Is-a Relationships
+
+The superclass and subclass have an **"is-a"** relationship between them. Take the basic example of pets shown below.
+
+![Pets](img/pets.png)
+
+Here we can for example state that a `Cat` is-a `Pet`, a `Bunny` is-a `Pet` and a `Dog` is-a `Pet`.
+
+If you cannot logically state that 'subclass' is-a 'superclass' than you made a mistake to make 'subclass' inherit from 'superclass'. An example of this would be the case when you would create a subclass `Mosquito` from `Pet` because `Mosquito` also has color, favorite food and an age. This may seem DRY but it is illogical. You can't state that `Mosquito` is-a `Pet`.
+
+If we needed to model both a `Bus` class and a `Car` class it makes perfect sense to create a `Vehicle` class and make both `Bus` and `Car` inherit from them. It's perfectly valid to state that
+
+* a `Bus` is a `Vehicle`
+* a `Car` is a `Vehicle`
+
+However it would of been illogical to make `**` inherit from `Car` or vice versa as it would not have been logical to state that:
+
+* a Bus is a Car
+* a Car is a Bus
+
+A `ChoppingCart` should not inherit from `Vehicle` because it has wheels.
