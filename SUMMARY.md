@@ -77,6 +77,10 @@
 
 * [Exceptions](14_exceptions/readme.md)
 
+### Inheritance
+
+* [Inheritance](16_inheritance/readme.md)
+
 ----
 
 ### Starting with JavaFX
