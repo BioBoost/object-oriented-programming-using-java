@@ -241,3 +241,149 @@ Woef, woef woef
 ```
 
 Note that while `Dog` is-a `Pet` and `Cat` is-a `Pet`, we cannot ask the `Cat` to `bark()` or the `Dog` to `miauw()`.
+
+## Accessibility
+
+Attributes and methods are declared with an **access specifier** such as `private`, `protected` or `public`. These allow the developer to determine who can access the class, attributes or methods.
+
+When inheriting from a base class it is important to understand that you **cannot access the private attributes or methods of the base class** inside your subclass.
+
+Let's take a look at our Pet example.
+
+
+![UML class diagram of Cat and Dog inheriting from Pet](./img/pet_dog_cat.png)
+
+In the `Pet` class we declared `name` and `age` to be `private` (as it should), but that also means that the `Cat` and `Dog` classes cannot access these attributes, even while they did inherit them.
+
+This means that the following implementation of a `Dog` barking would not be feasible as `name` would not be accessible from the subclass `Dog`:
+
+```java
+public class Dog extends Pet {
+  // The Dog class inherits from the Pet class
+
+  // ...
+
+  public void bark() {
+    System.out.println(name + " goes woef, woef woef");
+  }
+}
+```
+
+To fix this, two options are available:
+
+* the attributes `name` and `age` could be made `protected` instead of `private`, meaning that they cannot be accessed from outside of the `Pet` class, except from classes inheriting from `Pet`.
+* adding getters and/or setters for the attributes of the base this.
+
+The first approach would replace the `private` access modifier with the `protected` modifier as shown below:
+
+```java
+public class Pet {
+
+  public Pet() {
+    this("unknown", 0);     // Call another constructor
+  }
+
+  public Pet(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  @Override
+  public String toString() {
+    return "The pet " + name + " has an age of "
+      + age + " years.";
+  }
+
+  // Protected = accessible by current class
+  // and classes inheriting from it
+  protected String name = "unknown";
+  protected int age = 0;
+}
+```
+
+In most cases the second approach takes preference. Because otherwise the subclass could misuse the attributes. Guarding attributes using getters and setters is most often the preferred approach.
+
+```java
+public class Pet {
+
+  public Pet() {
+    this("unknown", 0);     // Call another constructor
+  }
+
+  public Pet(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  @Override
+  public String toString() {
+    return "The pet " + name + " has an age of "
+      + age + " years.";
+  }
+
+  private String name = "unknown";
+  private int age = 0;
+}
+```
+
+Let's take another example: consider a class `SpaceObject` with a subclass `Planet`. Than we also create a class `Space` which is composed of several `Planet`s. As shown below, `protected` attributes and methods are noted using the `#` symbol in UML.
+
+![A Space example using protected attributes](img/space_objects.png)
+
+In the example the `size` of a SpaceObject can only be accessed by `SpaceObject` itself, not even by the subclass `Planet`. However `origin` is accessible by both `SpaceObject` and all of its subclasses (such as `Planet`). However not accessible from outside. `MAX_SIZE` is a `final` and `static` class variable which is made `public` and so accessible by all. However as it is `final` it can only be read and not written.
+
+Let's make an overview
+
+| Attribute of SpaceObject | Accessible by Planet? | Accessible by Space? |
+|----|----|----|
+|size|NO|NO|
+|origin|YES|NO|
+|MAX_SIZE|YES|YES|
+
+The same rules apply for access specifiers of methods.
+
+With all this in mind we could change the implementation of `bark()` with:
+
+```java
+public class Dog extends Pet {
+  // The Dog class inherits from the Pet class
+
+  // ...
+
+  public void bark() {
+    System.out.println(getName() + " goes woef, woef woef");
+  }
+}
+```
+
+and for our class `Cat`:
+
+```java
+public class Cat extends Pet {
+  // The Cat class inherits from the Pet class
+
+  // ...
+
+  public void miauw() {
+    System.out.println(getName() + " goes miauw, miauw ...");
+  }
+}
+```
+
+Which would result in the output:
+
+```text
+The pet Jenni has an age of 11 years.
+The pet Oscar has an age of 3 years.
+The pet Sam has an age of 2 years.
+Oscar goes miauw, miauw ...
+Sam goes woef, woef woef
+```
