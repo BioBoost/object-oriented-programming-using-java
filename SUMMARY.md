@@ -73,9 +73,9 @@
 
 * [Constructors](13_constructors/readme.md)
 
-### Exceptions
+<!-- ### Exceptions -->
 
-* [Exceptions](14_exceptions/readme.md)
+<!-- * [Exceptions](14_exceptions/readme.md) -->
 
 ### Inheritance
 
