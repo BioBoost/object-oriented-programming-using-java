@@ -250,7 +250,6 @@ When inheriting from a base class it is important to understand that you **canno
 
 Let's take a look at our Pet example.
 
-
 ![UML class diagram of Cat and Dog inheriting from Pet](./img/pet_dog_cat.png)
 
 In the `Pet` class we declared `name` and `age` to be `private` (as it should), but that also means that the `Cat` and `Dog` classes cannot access these attributes, even while they did inherit them.
@@ -348,7 +347,7 @@ Let's make an overview
 |origin|YES|NO|
 |MAX_SIZE|YES|YES|
 
-The same rules apply for access specifiers of methods.
+The same rules apply for access modifiers of methods.
 
 With all this in mind we could change the implementation of `bark()` with:
 
@@ -387,3 +386,81 @@ The pet Sam has an age of 2 years.
 Oscar goes miauw, miauw ...
 Sam goes woef, woef woef
 ```
+
+## Constructors and inheritance
+
+When creating objects, Java will not only call the constructor of the type you are creating but it will **implicitly call a constructor of each base class**. Let's take a look at the inheritance hierarchy below.
+
+![Inheritance hierarchy of computer hardware](img/computer_hardware_inheritance.png)
+
+When for example creating an object of type `ServerProcessor`, the constructor of `ServerProcessor` will implicitly call the constructor of `Processor` which will call the constructor of `Hardware` which will call the constructor of `Product`. These calls are provided by default by Java and are done before anything else. That means that the rest of you constructor code will be executed after the constructor call to the base class.
+
+This basically means that the `Product` will be constructed first, next the `Hardware`, after which the `Processor` and last the `ServerProcessor`. This is a bit logical as you can only initialize the specific data of `Hardware` after the data of `Product` has been initialized.
+
+There is however a catch to this whole construction system.
+
+Remember that if you do not define a constructor in Java, it will provide you with a **default constructor** for a class. However once you create a constructor yourself Java will not provide this default constructor anymore. That means if you create a single constructor that takes arguments, your class will not have a default constructor anymore.
+
+Let us take a look at a simplified version of the previous `Pet` class:
+
+```java
+public class Pet {
+
+  public Pet(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  private String name = "unknown";
+  private int age = 0;
+}
+```
+
+The implementation above defines a single constructor taking a `name` and an `age`. This means that we can only construct objects using that constructor an **NOT** as follows:
+
+```java
+// This fails because Pet has no default constructor !!
+Pet bunny = new Pet();
+```
+
+Now take a subclass `Bunny` of `Pet` as defined below. As can be seen a single constructor is provided.
+
+```java
+public class Bunny extends Pet {
+    private boolean livesInside;
+
+    public Bunny(String name, int age, boolean livesInside) {
+        // Initialization
+    }
+}
+```
+
+The implementation of `Bunny` will actually not work because Java will add an implicit call to the default constructor of `Pet` as the first line of code in the `Bunny` class. In other words, currently no default constructor exists for the base class `Pet`, resulting in an application that will fail.
+
+This can be fixed using two approaches:
+
+* **add a default constructor to the base class**. This is however not always possible or even advisable as you may not have access to the implementation of the base class or it might not make sense to add a default constructor.
+* **add an explicit call to the correct constructor of the base class**. This can be achieved by using the keyword `super` which can be called as a method `super()` to indicate that a base class constructor needs to be called first.
+
+The second approach mostly takes the preference. Important to note here is that this call to the base class constructor has to happen **before anything** else in the constructor. This means that `super()` will be the first line of code inside your constructor in this case.
+
+Let us apply this knowledge to the `Bunny` class.
+
+```java
+public class Bunny extends Pet {
+    private boolean livesInside;
+
+    public Bunny(String name, int age, boolean livesInside) {
+        super(name, age);    // Call correct base class constructor FIRST !!!!
+
+        // Rest of initialization for Bunny
+        this.livesInside = livesInside;
+    }
+}
+```
+
+To summarize:
+
+* Java provides a default constructor if you provide no constructor(s). This is the one that takes no arguments.
+* With inheritance each constructor is called from bottom to top but actually executed from top to bottom.
+* If no default constructor exists for the base class you will need to add one or call another constructor explicitly as the first line of code in the current class constructor using  `super()` and provide the required arguments.
