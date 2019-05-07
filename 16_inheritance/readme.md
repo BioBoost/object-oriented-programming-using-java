@@ -97,3 +97,147 @@ However it would of been illogical to make `**` inherit from `Car` or vice versa
 * a Car is a Bus
 
 A `ChoppingCart` should not inherit from `Vehicle` because it has wheels.
+
+## Inheritance in Java
+
+To implement inheritance in Java all you need is a base class and a subclass. The subclass needs to **extend** the base class and this can be accomplished by using the `extends` keyword as shown below in the code template.
+
+```java
+public class <subclass> extends <baseclass> {
+  // Implementation
+}
+```
+
+Note that *extending* the base class is exactly what we are doing when implementing inheritance. We take a general class and add something to it: data, behavior or both.
+
+Depending on the context and strategy, inheritance can also be though of as **generalization**, where functionality of subclasses is extracted and placed inside a more generalized super class.
+
+### Pets
+
+Below is an example of a class `Cat` that inherits from a class `Pet`, a baseclass for all sorts of possible pets. A `Pet` has an `age` and a `name`. Each class inheriting from `Pet` will also have these properties.
+
+![Pet superclass and Cat subclass](./img/pet_cat.png)
+
+A matching implementation in Java is shown below for the class `Pet`
+
+```java
+public class Pet {
+
+  public Pet() {
+    this("unknown", 0);     // Call another constructor
+  }
+
+  public Pet(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  @Override
+  public String toString() {
+    return "The pet " + name + " has an age of "
+      + age + " years.";
+  }
+
+  private String name = "unknown";
+  private int age = 0;
+}
+```
+
+The implementation of the class `Cat` is a bit similar if we wish to have similar constructors for a `Cat`. The big difference is that a `Cat` can make a specific noise, namely `Miauw`.
+
+```java
+public class Cat extends Pet {
+  // The Cat class inherits from the Pet class
+
+  public Cat() {
+    this("Moesti", 0);  // Call other constructor of Cat
+  }
+
+  public Cat(String name, int age) {
+    super(name, age);   // Call specific constructor of Pet
+  }
+
+  public void miauw() {
+    System.out.println("Miauw, miauw ...");
+  }
+}
+```
+
+Note that we can call a constructor from inside another constructor in the same class using the `this` keyword. One can also call a specific constructor of the baseclass by using the keyword `super`. Otherwise the default constructor of the base class will be called.
+
+Note that when using `super` or `this` to call another constructor, it needs to be the first statement inside that constructor. No other initialization or statements can come before it.
+
+A small demo app could be:
+
+```java
+public static void main(String[] args) {
+  Pet pet = new Pet("Jenni", 11);
+  Cat cat = new Cat("Oscar", 3);
+
+  System.out.println(pet);
+  System.out.println(cat);
+
+  cat.miauw();
+}
+```
+
+Which would output:
+
+```text
+The pet Jenni has an age of 11 years.
+The pet Oscar has an age of 3 years.
+Miauw, miauw ...
+```
+
+Adding a `Dog` class is not all that difficult. Just `extend` the `Pet` class, add constructors and a method to allow the `Dog` to bark.
+
+![Pet superclass, Cat and Dog subclasses](./img/pet_dog_cat.png)
+
+This would result in the following implementation in Java:
+
+```java
+public class Dog extends Pet {
+  // The Dog class inherits from the Pet class
+
+  public Dog() {
+    this("Fiddo", 0);     // Call another constructor
+  }
+
+  public Dog(String name, int age) {
+    super(name, age);   // Call specific constructor of Pet
+  }
+
+  public void bark() {
+    System.out.println("Woef, woef woef");
+  }
+}
+```
+
+Extending the main application to test the `Dog` class could result in:
+
+```java
+public static void main(String[] args) {
+  Pet pet = new Pet("Jenni", 11);
+  Cat cat = new Cat("Oscar", 3);
+  Dog dog = new Dog("Sam", 2);
+
+  System.out.println(pet);
+  System.out.println(cat);
+  System.out.println(dog);
+
+  cat.miauw();
+  dog.bark();
+}
+```
+
+Which would output:
+
+```text
+The pet Jenni has an age of 11 years.
+The pet Oscar has an age of 3 years.
+The pet Sam has an age of 2 years.
+Miauw, miauw ...
+Woef, woef woef
+```
+
+Note that while `Dog` is-a `Pet` and `Cat` is-a `Pet`, we cannot ask the `Cat` to `bark()` or the `Dog` to `miauw()`.
