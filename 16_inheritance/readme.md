@@ -122,17 +122,8 @@ A matching implementation in Java is shown below for the class `Pet`
 
 ```java
 public class Pet {
-
-  public String getName() {
-    return name;
-  }
-
   public void setName(String name) {
     this.name = name;
-  }
-
-  public int getAge() {
-    return age;
   }
 
   public void setAge(int age) {
@@ -319,6 +310,10 @@ public class Pet {
 }
 ```
 
+Resulting in the UML diagram:
+
+![UML class diagram of Cat and Dog inheriting from Pet](./img/pet_dog_cat_getters.png)
+
 Let's take another example: consider a class `SpaceObject` with a subclass `Planet`. Than we also create a class `Space` which is composed of several `Planet`s. As shown below, `protected` attributes and methods are noted using the `#` symbol in UML.
 
 ![A Space example using protected attributes](img/space_objects.png)
@@ -396,6 +391,8 @@ public class Pet {
     this.name = name;
     this.age = age;
   }
+
+  // ...
 
   private String name = "unknown";
   private int age = 0;
