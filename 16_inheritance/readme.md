@@ -249,7 +249,7 @@ Let's take a look at our Pet example.
 
 ![UML class diagram of Cat and Dog inheriting from Pet](./img/pet_dog_cat.png)
 
-In the `Pet` class we declared `name` and `age` to be `private` (as it should), but that also means that the `Cat` and `Dog` classes cannot access these attributes, even while they did inherit them.
+In the `Pet` class we declared `name` and `age` to be `private` (as it should), but that also means that the `Cat` and `Dog` classes cannot access these attributes directly, even while they did inherit them.
 
 This means that the following implementation of a `Dog` barking would not be feasible as `name` would not be accessible from the subclass `Dog`:
 
@@ -274,16 +274,6 @@ The first approach would replace the `private` access modifier with the `protect
 
 ```java
 public class Pet {
-
-  public Pet() {
-    this("unknown", 0);     // Call another constructor
-  }
-
-  public Pet(String name, int age) {
-    this.name = name;
-    this.age = age;
-  }
-
   @Override
   public String toString() {
     return "The pet " + name + " has an age of "
@@ -302,21 +292,20 @@ In most cases the second approach takes preference. Because otherwise the subcla
 ```java
 public class Pet {
 
-  public Pet() {
-    this("unknown", 0);     // Call another constructor
-  }
-
-  public Pet(String name, int age) {
-    this.name = name;
-    this.age = age;
-  }
-
   public String getName() {
     return name;
   }
 
+  public void setName(String name) {
+    this.name = name;
+  }
+
   public int getAge() {
     return age;
+  }
+
+  public void setAge(int age) {
+    this.age = age;
   }
 
   @Override
@@ -377,7 +366,7 @@ public class Cat extends Pet {
 Which would result in the output:
 
 ```text
-The pet Jenni has an age of 11 years.
+The pet Ozzy has an age of 0 years.
 The pet Oscar has an age of 3 years.
 The pet Sam has an age of 2 years.
 Oscar goes miauw, miauw ...
