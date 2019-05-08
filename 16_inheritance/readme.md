@@ -123,12 +123,19 @@ A matching implementation in Java is shown below for the class `Pet`
 ```java
 public class Pet {
 
-  public Pet() {
-    this("unknown", 0);     // Call another constructor
+  public String getName() {
+    return name;
   }
 
-  public Pet(String name, int age) {
+  public void setName(String name) {
     this.name = name;
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  public void setAge(int age) {
     this.age = age;
   }
 
@@ -143,38 +150,29 @@ public class Pet {
 }
 ```
 
-The implementation of the class `Cat` is a bit similar if we wish to have similar constructors for a `Cat`. The big difference is that a `Cat` can make a specific noise, namely `Miauw`.
+The implementation of the class `Cat` is very simple as we only need to extend the existing `Pet` class. The only difference is that a `Cat` can make a specific noise, namely `Miauw`.
 
 ```java
 public class Cat extends Pet {
   // The Cat class inherits from the Pet class
 
-  public Cat() {
-    this("Moesti", 0);  // Call other constructor of Cat
-  }
-
-  public Cat(String name, int age) {
-    super(name, age);   // Call specific constructor of Pet
-  }
-
   public void miauw() {
-    System.out.println("Miauw, miauw ...");
+    System.out.println(getName() + " goes miauw, miauw ...");
   }
 }
 ```
-
-Note that we can call a constructor from inside another constructor in the same class using the `this` keyword. One can also call a specific constructor of the baseclass by using the keyword `super`. Otherwise the default constructor of the base class will be called.
-
-Note that when using `super` or `this` to call another constructor, it needs to be the first statement inside that constructor. No other initialization or statements can come before it.
 
 A small demo app could be:
 
 ```java
 public static void main(String[] args) {
-  Pet pet = new Pet("Jenni", 11);
-  Cat cat = new Cat("Oscar", 3);
-
+  Pet pet = new Pet();
+  pet.setName("Ozzy");
   System.out.println(pet);
+
+  Cat cat = new Cat();
+  cat.setName("Oscar");
+  cat.setAge(3);
   System.out.println(cat);
 
   cat.miauw();
@@ -184,12 +182,12 @@ public static void main(String[] args) {
 Which would output:
 
 ```text
-The pet Jenni has an age of 11 years.
+The pet Ozzy has an age of 0 years.
 The pet Oscar has an age of 3 years.
 Miauw, miauw ...
 ```
 
-Adding a `Dog` class is not all that difficult. Just `extend` the `Pet` class, add constructors and a method to allow the `Dog` to bark.
+Adding a `Dog` class is not all that difficult. Just `extend` the `Pet` class and a method to allow the `Dog` to bark.
 
 ![Pet superclass, Cat and Dog subclasses](./img/pet_dog_cat.png)
 
@@ -199,16 +197,8 @@ This would result in the following implementation in Java:
 public class Dog extends Pet {
   // The Dog class inherits from the Pet class
 
-  public Dog() {
-    this("Fiddo", 0);     // Call another constructor
-  }
-
-  public Dog(String name, int age) {
-    super(name, age);   // Call specific constructor of Pet
-  }
-
   public void bark() {
-    System.out.println("Woef, woef woef");
+    System.out.println(getName() + " goes woef, woef woef");
   }
 }
 ```
@@ -217,15 +207,22 @@ Extending the main application to test the `Dog` class could result in:
 
 ```java
 public static void main(String[] args) {
-  Pet pet = new Pet("Jenni", 11);
-  Cat cat = new Cat("Oscar", 3);
-  Dog dog = new Dog("Sam", 2);
-
+  Pet pet = new Pet();
+  pet.setName("Ozzy");
   System.out.println(pet);
+
+  Cat cat = new Cat();
+  cat.setName("Oscar");
+  cat.setAge(3);
   System.out.println(cat);
-  System.out.println(dog);
 
   cat.miauw();
+
+  Dog dog = new Dog();
+  dog.setName("Sam");
+  dog.setAge(2);
+  System.out.println(dog);
+
   dog.bark();
 }
 ```
@@ -233,7 +230,7 @@ public static void main(String[] args) {
 Which would output:
 
 ```text
-The pet Jenni has an age of 11 years.
+The pet Ozzy has an age of 0 years.
 The pet Oscar has an age of 3 years.
 The pet Sam has an age of 2 years.
 Miauw, miauw ...
