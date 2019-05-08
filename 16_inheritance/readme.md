@@ -387,7 +387,7 @@ There is however a catch to this whole construction system.
 
 Remember that if you do not define a constructor in Java, it will provide you with a **default constructor** for a class. However once you create a constructor yourself Java will not provide this default constructor anymore. That means if you create a single constructor that takes arguments, your class will not have a default constructor anymore.
 
-Let us take a look at a simplified version of the previous `Pet` class:
+Let us take a look at a more advances version of the previous `Pet` class where we add an initialization constructor that takes the `name` and `age` of the `Pet` as arguments:
 
 ```java
 public class Pet {
@@ -407,6 +407,9 @@ The implementation above defines a single constructor taking a `name` and an `ag
 ```java
 // This fails because Pet has no default constructor !!
 Pet bunny = new Pet();
+
+// We need to supply the required data
+Pet bunny = new Pet("Anthon", 4);
 ```
 
 Now take a subclass `Bunny` of `Pet` as defined below. As can be seen a single constructor is provided.
