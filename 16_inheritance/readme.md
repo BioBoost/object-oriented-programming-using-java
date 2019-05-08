@@ -91,7 +91,7 @@ If we needed to model both a `Bus` class and a `Car` class it makes perfect sens
 * a `Bus` is a `Vehicle`
 * a `Car` is a `Vehicle`
 
-However it would of been illogical to make `**` inherit from `Car` or vice versa as it would not have been logical to state that:
+However it would of been illogical to make `Bus` inherit from `Car` or vice versa as it would not have been logical to state that:
 
 * a Bus is a Car
 * a Car is a Bus
