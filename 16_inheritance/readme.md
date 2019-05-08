@@ -157,7 +157,7 @@ public class Cat extends Pet {
   // The Cat class inherits from the Pet class
 
   public void miauw() {
-    System.out.println(getName() + " goes miauw, miauw ...");
+    System.out.println("Miauw, miauw ...");
   }
 }
 ```
@@ -198,7 +198,7 @@ public class Dog extends Pet {
   // The Dog class inherits from the Pet class
 
   public void bark() {
-    System.out.println(getName() + " goes woef, woef woef");
+    System.out.println("Woef, woef woef");
   }
 }
 ```
