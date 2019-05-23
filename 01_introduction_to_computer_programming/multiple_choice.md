@@ -42,7 +42,7 @@
     * [ ] Low Level Language
     * [ ] Natural Language
 
-7. What is true about the Visual Studio application ?
+7. What is true about the Visual Studio Code application ?
 
     * [ ] It's a GUI application
     * [ ] It's a console application
@@ -71,3 +71,24 @@
     * [ ] Assembler
     * [ ] Language
     * [ ] Interpreter
+
+11. How do you call the result of a compiler/interpreter that can be processed by the processor of a computer?
+
+    * [ ] Assembler
+    * [ ] Programming code
+    * [ ] Machine code
+    * [ ] Low level code
+
+12. What is a big advantage of programming language that is interpreted instead of compiled?
+
+    * [ ] Faster execution
+    * [ ] Faster development
+    * [ ] Less language syntax
+    * [ ] No need for machine code
+
+13. How is the application called that interprets Java byte code and translates it to native instructions that are understood by the processor of the machine it is running on?
+
+    * [ ] The Java compiler
+    * [ ] JIT
+    * [ ] Javac
+    * [ ] JVM

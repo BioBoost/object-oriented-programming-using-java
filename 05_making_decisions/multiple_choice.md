@@ -45,3 +45,56 @@
     * [ ] `Nice one, access granted`
     * [ ] Nothing
     * [ ] It crashes
+
+5. What is the value of `a` that will be printed to the terminal?
+
+    ```java
+    int a = 15;
+    if (true || (a > 100)) {
+        a = a + 2;
+    }
+    System.out.println("a = " + a);
+    ```
+
+    * [ ] `17`
+    * [ ] `16`
+    * [ ] `15`
+    * [ ] `2`
+
+6. Which of the operators below is a comparison operator?
+
+    * [ ] `!=`
+    * [ ] `%`
+    * [ ] `||`
+    * [ ] `[]`
+
+7. What is the resulting value in `E`?
+
+    ```java
+    boolean A = true;
+    boolean B = false;
+    boolean C = true;
+    boolean D = (A && B ) || C;
+    boolean E = (!D) || (!A);
+    ```
+
+    * [ ] `true`
+    * [ ] `false`
+    * [ ] `null`
+    * [ ] `undefined`
+
+8. What condition is required (in place of `<condition_here>`) to get a list of all even numbers between 0 (inclusive) and 100 (exclusive)?
+
+    ```java
+    System.out.print("All even numbers between 0 and 100: ");
+    for (int i = 0; i < 100; i++) {
+        if (<condition_here>) {
+            System.out.print(i + " ");
+        }
+    }
+    ```
+
+    * [ ] `i / 2 == 0`
+    * [ ] `i * 2 == 0`
+    * [ ] `i - 2 == i + 2`
+    * [ ] `i % 2 == 0`

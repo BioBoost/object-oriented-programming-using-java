@@ -43,11 +43,13 @@
 
 * [Strings](07_strings/readme.md)
 * [Challenges](07_strings/challenges.md)
+* [Multiple Choice](07_strings/multiple_choice.md)
 
 ### Arrays
 
 * [Arrays](08_arrays/readme.md)
 * [Challenges](08_arrays/challenges.md)
+* [Multiple Choice](08_arrays/multiple_choice.md)
 
 ----
 
@@ -58,20 +60,24 @@
 ### All About Objects
 
 * [All About Objects](10_all_about_objects/readme.md)
+* [Multiple Choice](10_all_about_objects/multiple_choice.md)
 
 ### Defining Classes
 
 * [Defining Classes](11_defining_classes/readme.md)
 * [Challenges](11_defining_classes/challenges.md)
+* [Multiple Choice](11_defining_classes/multiple_choice.md)
 
 ### Methods
 
 * [Methods](12_methods/readme.md)
 * [Challenges](12_methods/challenges.md)
+* [Multiple Choice](12_methods/multiple_choice.md)
 
 ### Constructors
 
 * [Constructors](13_constructors/readme.md)
+* [Multiple Choice](13_constructors/multiple_choice.md)
 
 <!-- ### Exceptions -->
 
