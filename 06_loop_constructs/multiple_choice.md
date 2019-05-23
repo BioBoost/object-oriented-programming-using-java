@@ -7,6 +7,8 @@
     * [ ] A do while loop
     * [ ] You do not need a loop for this
 
+---
+
 2. What type of loop is depicted below?
 
     ![Type of Loop ?](./img/type_of_loop.png)
@@ -15,6 +17,8 @@
     * [ ] A for loop
     * [ ] A do while loop
     * [ ] This is not a loop
+
+---
 
 3. How do we call the part `int i = 0` in the code snippet below?
 
@@ -29,12 +33,16 @@
     * [ ] The conditional check
     * [ ] The iteration
 
+---
+
 4. You wish to generate random numbers until you reach a number that is divisible by 9. What type of loop statement would your require for this?
 
     * [ ] A do while loop
     * [ ] A for loop
     * [ ] A while loop
     * [ ] You do not need a loop for this
+
+---
 
 5. What is the output of the following code snippet?
 
@@ -49,6 +57,8 @@
     * [ ] `0 3 6 9`
     * [ ] `3 6 9`
 
+---
+
 6. This is a(n) ...
 
     ```java
@@ -61,6 +71,8 @@
     * [ ] bug
     * [ ] syntax error
     * [ ] a loop that will never execute
+
+---
 
 7. To what does the output of this code snippet refer?
 
@@ -83,6 +95,8 @@
     * [ ] The history of the Internet
     * [ ] A movie
 
+---
+
 8. What is the last value of `i` that will be outputted to the terminal?
 
     ```java
@@ -98,12 +112,16 @@
     * [ ] `88`
     * [ ] `90`
 
+---
+
 9. In which of the situations below could you use a for-each loop?
 
     * [ ] When you want to print each element from an array to the terminal
     * [ ] When you wish to print each element from an array together with it's index
     * [ ] When you wish to manipulate the values inside an array
     * [ ] When you wish to iterate over multiple arrays
+
+---
 
 10. Which construct is preferred in the following situation?
 
@@ -113,6 +131,8 @@
     * [ ] A while loop
     * [ ] A foreach loop (enhanced for loop)
     * [ ] A switch case
+
+---
 
 11. What is the output of the following piece of code?
 
@@ -158,6 +178,8 @@
 
     * [ ] None of the above
 
+---
+
 12. What is the problem with the code below (you can safely assume that the necessary imports are made)?
 
     ```java
@@ -179,6 +201,8 @@
     * [ ] An uninitialized variable
     * [ ] An incorrect datatype for the variable
 
+---
+
 13. What constructor is depicted below?
 
     ![Unknown Construct](./img/unknown_construct.png)
@@ -187,6 +211,8 @@
     * [ ] A while loop
     * [ ] An if statement
     * [ ] An if-else statement
+
+---
 
 14. Take the code construct below as a reference. In what order are the different parts of a for-loop executed/evaluated?
 
