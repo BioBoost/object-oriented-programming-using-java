@@ -194,7 +194,7 @@
     for (<Initialization>; <Condition>; <Increment>) {
       // <Code block>
     }
-    ```java
+    ```
 
     * [ ] Option A
 
