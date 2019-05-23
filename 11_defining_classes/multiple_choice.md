@@ -1,6 +1,6 @@
 ## Chapter 11 - Defining Classes - Multiple Choice
 
-1. A class is blueprint that ...
+1. A class is a blueprint that ...
 
     * [ ] has a name, contains attributes and data
     * [ ] contains attributes and code
