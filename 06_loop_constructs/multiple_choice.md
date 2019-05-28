@@ -179,7 +179,7 @@
     * [ ] An uninitialized variable
     * [ ] An incorrect datatype for the variable
 
-13. What constructor is depicted below?
+13. What construction is depicted below?
 
     ![Unknown Construct](./img/unknown_construct.png)
 
